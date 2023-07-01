@@ -1,0 +1,147 @@
+{% extends 'web/layout.html' %} {% load static %} {% load ui_tags %} {% block title %}Scheme Registration{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %} {% block keywords %} {% settings_value 'APP_NAME'
+%} {% endblock %} {% block css %} {% endblock %} {% block pre_load_js %} {% endblock %} {% block body %}
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय योजना </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">योजनेचा अर्ज</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <!--                <div class="col-md-6">-->
+                <!--                    <label for="male">क्षेत्र :</label>-->
+                <!--                </div>-->
+                <!--                <div class="col-md-6">-->
+                <!--                    <label for="male">{{ scheme.department.sector.name }}</label>-->
+                <!--                </div>-->
+                <h2
+                    class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                    style="color: #3f42a1; font-size: 35px"
+                >
+                    अर्जदाराची माहिती
+                </h2>
+                <br />
+                <table class="table table-bordered" style="font-size: 20px">
+                    <tbody>
+                        <tr>
+                            <td style="width: 300px">विभाग :</td>
+                            <td>{{ scheme.department.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>योजना :</td>
+                            <td>{{ scheme.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>नाव :</td>
+                            <td>{{ request.user.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>ईमेल :</td>
+                            <td>{{request.user.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2
+                    class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                    style="color: #3f42a1; font-size: 35px"
+                >
+                    योजनेचा अर्ज व कागदपत्रे जोडा
+                </h2>
+                <br />
+                <table class="table table-bordered" style="font-size: 20px">
+                    <tbody>
+                        <form
+                            method="POST"
+                            enctype="multipart/form-data"
+                            action="{% url 'web:scheme_registration_updates' scheme.id %}"
+                        >
+                            {% csrf_token %}
+                            <tr>
+                                <td>योजनेचा अर्ज जोडा :</td>
+                                <td>
+                                    <input type="file" name="arza" class="scheme_registration_media_file" required />
+                                </td>
+                            </tr>
+                            {% for value in registration_media %}
+                            <tr>
+                                <td>
+                                    <label name="{{value.name}}" value="{{value.name}}">{{value.name}}</label>
+                                </td>
+                                <td>
+                                    <input class="scheme_registration_media_file" type="file" name="{{value.name}}" />
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <td>
+                                    <button
+                                        type="submit"
+                                        class="
+                                            btn btn-block
+                                            rounded-0
+                                            white-color
+                                            fables-main-hover-background-color fables-second-background-color
+                                            font-16
+                                            semi-font
+                                        "
+                                        style="color: #fff; font-size: 20px"
+                                    >
+                                        Update करा
+                                    </button>
+                                </td>
+                            </tr>
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+            <br />
+            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold" style="color: #3f42a1; font-size: 35px">
+                अर्जासोबत जोडायची कागदपत्रांची यादी
+            </h2>
+            <br />
+
+            <table class="table table-bordered table-striped table-hover" style="font-size: 20px">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 130px">अनु. क्रमांक</th>
+                        <th scope="col">माहिती</th>
+                        <th scope="col">लिंक</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doc in scheme.scheme_documents.all %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ doc.name }}</td>
+                        {% if doc.link %}
+                        <td><a href="{{ doc.link }}" target="_blank">{{ doc.link }}</a></td>
+                        {% else %}
+                        <td><a href="{{ doc.link }}" target="_blank"></a></td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br /><br />
+        </div>
+    </div>
+</div>
+
+{% endblock %} {% block post_load_js %}
+<!-- <script>
+    $('.scheme_registration_media_select_options').change(function() {
+      $(this).closest('tr').find('.scheme_registration_media_file').prop("name",$('option:selected', this).data('key'));;
+    });
+</script> -->
+{% endblock%}

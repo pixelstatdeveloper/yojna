@@ -1,0 +1,271 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:sanstha_sabha' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+          <div class="form-header text-center row">
+            <h7>  संस्था सभासद अर्ज   <br/>जिल्हा ग्रंथालय अधिकारी कार्यालय,नागपूर</h7>
+          </div>
+          <h6 class=" text-right" style="font-weight: 500;"> अर्ज किंमत रुपये २५/-</h6>
+          <br/>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-5">
+                  <input type="text" name="sansname" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="संस्थेचे नाव"/>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-group form-row">अर्ज दिल्याचा दिनांक</label>
+                </div>
+                <div class="col-md-4">
+                  <input type="date" name="form_date" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <div class="form-header text-center row">
+            <h7> संस्था सभासद अर्ज   <br/><b> जिल्हा ग्रंथालय अधिकारी कार्यालय,</b> <br/> पटवर्धन मैदानजवळ,  धंतोली नागपुर ४४००१२ <br/>
+              दूरध्वनी क्रमांक २४२०१९४
+             </h7>
+          </div>
+          <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> जिल्हा ग्रंथपाल </h6>
+            <h6 class=" text-left" style="font-weight: 500;"> जिल्हा ग्रंथालय अधिकारी कार्यालय,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> नागपूर ४४००१२.</h6>
+          </br>
+            <h6 class=" text-left" style="font-weight: 500;">महोदय ,</h6>
+            <h6 class=" text-justify" style="font-weight: 500;"> आम्ही , आपल्या शासकीय जिल्हा ग्रंथालयाचा सभासद होऊ इच्छितो. 
+              आमच्या संबंधीची पूर्ण माहिती खालील प्रमाणे देत आहोत. खालील माहितीत बद्दल झाल्यास अगर आमचा पत्ता बदलल्यास, 
+              असा बदल आपल्या कार्यालयास ताबडतोब कळविण्यात येईल . यासोबत अनामत रक्कम रु. २५००/- व प्रवेश शुल्क रु.  ७५०/- (द्विवार्षिक) 
+              जमा करीत आहोत.</h6>
+              <h6 class=" text-right" style="font-weight: 500;">आपला,</h6>
+            </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-1">
+                    <label class="form-group form-row">नाव:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="name3" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">अर्ज जमा करण्याच दिनांक  :</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="date" name="form_date1" class="form-control" required />
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">अर्जदाराची स्वाक्षरी :</label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="file" name="singh" class="form-control" required />
+                  </div> 
+                </div>
+              </div>
+            </div>
+             <h6 class=" text-left" style="font-weight: 500;"><b> वेळ: सकाळी १०.३० ते सायंकाळी ५.३०   </b> </h6>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sansthaname" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" संस्थेचे /ग्रंथालयाचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="संस्थेचा / ग्रंथालयाचा संपूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="non_kr" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="संस्थेचा नोंदणी क्रमांक"/>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row">नोंदणी प्रमाणपत्राची सत्यप्रत सोबत जोडण्यात यावी:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="satyaprat" class="form-control" required />
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sachivname1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" सचिवाचे पूर्ण नाव " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="सचिवाचा संपूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="granth_sankhya" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder=" संस्थेचे ग्रंथालय असल्यास एकूण ग्रंथसंख्या"/>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="sabh_sankhya" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="सभासदांची संख्या"/>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="devghevi" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" देवघेवीसाठी लागणाऱ्या ग्रंथाची संख्या व वाडमय प्रकार " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="tharav_kr" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="कार्यकारी मंडळाचा ठराव क्रमांक" />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row">कार्यकारी मंडळाचा ठराव दिनांक :</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="date" name="tharav_date" class="form-control" required />
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row">ठरावाची सत्यप्रत सोबत जोडण्यात यावी :</label>
+                  </div>
+                  <div class="col-md-8">
+                    <input type="file" name="satyaprat1" class="form-control" required />
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;">कार्यकारी मंडळातील सदस्यांची नावे :</h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="karya_sadasya1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                 placeholder="१)" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="karya_sadasya2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                placeholder="२)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="karya_sadasya3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                 placeholder="३)" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="karya_sadasya4" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                placeholder=" ४)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="karya_sadasya5" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                 placeholder="५)" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="karya_sadasya6" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                placeholder="६)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="karya_sadasya7" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                 placeholder="७)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="itar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                 placeholder="इतर माहिती" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-center" style="font-weight: 500;">  मी आपल्या ग्रंथालयाच्या संस्था सभासदत्वाचे नियम वाचले असून त्याचे मी पालन करीन.</h6>
+            <h6 class=" text-right" style="font-weight: 500;"> सचिव</h6>
+            <br/>
+            <h6 class=" text-justify" style="font-weight: 500;">संस्था सभासदत्वासाठी सचिव श्री/ श्रीमती <span><input type="text" name="shri"/></span>  यांनी 
+              सादर केलेल्या अर्जाची मी शिफारस करतो / करते. ग्रंथ हरविल्यास, गहाळ झाल्यास, फाटल्यास मी त्यास जबाबदार राहीन.</h6>
+              <h6 class=" text-right" style="font-weight: 500;"> अध्यक्ष</h6>
+              <br/>
+              <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">संस्थेचा शिक्का :</label>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="file" name="shikka" class="form-control" required />
+                  </div>  
+                </div>
+              </div>
+            </div>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

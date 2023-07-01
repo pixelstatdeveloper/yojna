@@ -1,0 +1,69 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय योजना</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Arya', sans-serif!important;">कागदपत्रे</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                        style="color:#3F42A1;font-size:30px;">कागदपत्रे </h2><br />
+                </div>
+                <div class="col-md-6"><br />
+                    <a href="{% url 'web:profile' %}" type="submit" name="yojn" class="btn fables-second-background-color yojana_mainbotton
+                    "> प्रोफाइल</a>
+                </div>
+                <div class="col-md-12">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                        <thead class="text-center" style="font-size:16px;">
+                            <tr>
+                                <th scope="col">कागदपत्रांची नावे</th>
+								<th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+							{% for i in docs %}
+							<tr>
+								<td class="text-center">{{i.category}}</td>
+								<td class="text-center"><a href='{% firstof i.file_path i.arza %}' class="btn btn-primary" style="width:70px!important;" target="_blank">View</a></td>
+							</tr>
+							{% endfor %}
+
+						</tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /> <br />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+{% endblock %}

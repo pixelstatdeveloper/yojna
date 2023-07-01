@@ -1,0 +1,505 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <div class="form-header text-center">
+            <h5> महाराष्ट्र शासन </h5>
+            <h5>आदिवासी विकास विभाग</h5>
+            <div class="row" style="margin-top: 15px;">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 text-center">
+                    <h5><b>घरकुल योजनेचा लाभ मिळण्यासाठी अर्जाचा नमुना</b></h5>
+                </div>
+              </div>
+            </div>
+                <br>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> <b>प्रति,</b></h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp;<b>प्रकल्प अधिकारी ,</b> </h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; <b>एकात्मिक आदिवास विकास प्रकल्प ,</b></h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                      <div class="col-md-12" style="margin-left: 40px;">
+                        <label class="form-group form-row"> <b>{{up.jilha}}</b></label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                      <div class="col-md-4">
+                        <label class="form-group form-row"><b>अर्जदाराचे संपूर्ण नाव</b> </label>
+                      </div>
+                      <div class="col-md-8">
+                        <label class="form-group form-row">: {{up.name}}</label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="form-group form-row"><b>संपूर्ण पत्ता</b> </label>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-group form-row">: {{up.address}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row"><b>जात (आदिम जमाती)</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row">: {{up.jat}}</label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row"><b>जन्म दिनांक</b></label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">: {{up.birthdate}}</label>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b> वय</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.age}}</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b> लिंग</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.gender}}</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b> वैवाहिक दर्जा</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.married}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.married == "विवाहित" %}
+              <div class="form-group">
+                <div class="input-icon" >
+                  <h6 class="text-left" style="margin-bottom: 10px;"><b>विवाहित असल्यास,</b></h6>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अपत्य संख्या:</b></label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                      <label class="form-group form-row"><b>मुले</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.son}}</label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                      <label class="form-group form-row"><b>मुली</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.daughter}}</label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                      <label class="form-group form-row"><b>एकूण</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.total_child}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>कुटुंबातील व्यक्तींची संख्या:</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right"><b>महिला</b></label>
+                    </div>
+                    <div class="col-md-1">
+                      <label class="form-group form-row">: {{up.ladies}}</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>पुरुष</b></label>
+                    </div>
+                    <div class="col-md-1">
+                      <label class="form-group form-row">: {{up.gents}}</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>एकूण</b></label>
+                    </div>
+                    <div class="col-md-1">
+                      <label class="form-group form-row">: {{up.total}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row"><b>शैक्षणिक पात्रता</b></label>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-group form-row">: {{up.education}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row"><b>योजनेचे नाव / मागणी</b></label>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-group form-row">: {{up.yojna}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row"><b>सामूहिक/वैयक्तिक लाभाची योजना</b></label>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-group form-row">: {{up.samu_vayaktik}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row"><b>दारिद्रय रेषेखालील कार्ड क्रमांक</b></label>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-group form-row">: {{up.daridrya_cardno}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3 text-left">
+                      <label class="form-group form-row"><b>अर्जदाराचे वार्षिक उत्पन्न</b></label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row">: {{up.income}}</label>
+                    </div>
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row"><b>उत्पन्नाचे साधन : शेती / व्यवसाय</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.income_src}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5 text-left">
+                      <label class="form-group form-row"><b>स्वत:च्या मालकीची जागा आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-7">
+                      <label class="form-group form-row">: {{up.jaga}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="text-left"><b>अर्जदार खालीलपैकी आहे काय?</b></h6><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2 "><b>अल्प भूधारक</b></div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row">: {{up.alpa_bhudharak}}</label>
+                    </div>
+                    <div class="col-md-2"><b>भूमीहीन</b></div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row">: {{up.bhumihin}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    {% if up.alpa_bhudharak == "होय" %}
+                    <div class="col-md-2">
+                        <label class="form-group form-row "><b>प्रमाणपत्र :</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.alpa_cf}}"  target="blank">  प्रमाणपत्र पहा </a></label>
+                    </div>
+                    {% endif %}
+                    {% if up.bhumihin == "होय" %}
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right "><b>प्रमाणपत्र :</b></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                      style="width:150px!important;color:#fff" href="/media/{{up.bhumihin_cf}}"  target="blank"> प्रमाणपत्र पहा </a></label>
+                  </div>
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2"><b>विधवा </b></div>
+                    <div class="col-md-4 form-group text-left">
+                      <label class="form-group form-row">: {{up.vidhva}}</label>
+                    </div>
+                    <div class="col-md-2"><b>विधूर</b> </div>
+                    <div class="col-md-4 form-group text-left">
+                      <label class="form-group form-row">: {{up.vidhur}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon" >
+                  <div class="row">
+                    {% if up.vidhva == "होय" %}
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>प्रमाणपत्र :</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.vidhva_cf}}"  target="blank"> प्रमाणपत्र पहा </a></label>
+                    </div>
+                    {% endif %}
+                    {% if up.vidhur == "होय" %}
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right"><b>प्रमाणपत्र :</b></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                      style="width:150px!important;color:#fff" href="/media/{{up.vidhur_cf}}"  target="blank">  प्रमाणपत्र पहा </a></label>
+                  </div>
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2"><b>घटस्फोटित </b></div>
+                    <div class="col-md-4 form-group text-left">
+                      <label class="form-group form-row">: {{up.ghatsphotit}}</label>
+                    </div>
+                    <div class="col-md-2 text-left"><b>भूकंपग्रस्त</b></div>
+                    <div class="col-md-4 form-group text-left">
+                      <label class="form-group form-row">: {{up.bhukampgrast}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    {% if up.ghatsphotit == "होय" %}
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>प्रमाणपत्र :</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.ghatsphotit_cf}}"  target="blank">  प्रमाणपत्र पहा </a></label>
+                    </div>
+                    {% endif %}
+                    {% if up.bhukampgrast == "होय" %}
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>प्रमाणपत्र :</b></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                      style="width:150px!important;color:#fff" href="/media/{{up.bhukamp_cf}}"  target="blank">  प्रमाणपत्र पहा </a></label>
+                  </div>
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2"><b>अपंग</b></div>
+                    <div class="col-md-3 form-group text-left">
+                      <label class="form-group form-row">: {{up.apang}}</label>
+                    </div>
+                    <div class="col-md-3"><b>धरणग्रस्त/प्रकल्पग्रस्त</b></div>
+                    <div class="col-md-4 form-group text-left">
+                      <label class="form-group form-row">: {{up.dharangrast}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="form-group">
+                <div class="input-icon" >
+                  <div class="row">
+                    {% if up.apang == "होय" %}
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>प्रमाणपत्र :</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.apang_cf}}"  target="blank"> प्रमाणपत्र पहा </a></label>
+                    </div>
+                    {% endif %}
+                    {% if up.dharangrast == "होय" %}
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right"><b>प्रमाणपत्र :</b></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                      style="width:150px!important;color:#fff" href="/media/{{up.dharangrast_cf}}"  target="blank">  प्रमाणपत्र पहा </a></label>
+                  </div>
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3 text-left"><b>माजी सैनिक/ पाल्य  </b></div>
+                    <div class="col-md-8 form-group text-left">
+                      <label class="form-group form-row">: {{up.majhi_sainik}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.majhi_sainik == "होय" %}
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right"><b>प्रमाणपत्र :</b></label>
+                    </div>
+                    <div class="col-md-5">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.sainik_cf}}"  target="blank">  प्रमाणपत्र पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              <br>
+              <h6 class="text-left">(<b>टिप:&emsp; यापैकी लागू असेल तेथे होय करावे व अर्जासोबत प्रमाणपत्र जोडावे.)</b></h6>
+              <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left"><b>प्रकल्प कार्यालयामार्फत अथवा इतर विभागामार्फत यापूर्वी सदर योजनेचा लाभ घेतला आहे काय?</b></div>
+                    <div class="col-md-2 form-group text-left">
+                      <label class="form-group form-row">: {{up.labh}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.labh == "होय" %}
+              <div class="form-group" >
+                <div style="height:180px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क.</th>
+                          <th>योजनेचे नाव</th>
+                          <th>वर्ष </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td><b>१)</b></td>
+                          <td><label class="form-group form-row"> {{up.yojna1}}</label></td>
+                          <td><label class="form-group form-row"> {{up.year1}}</label></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td><b>२)</b></td>
+                          <td><label class="form-group form-row"> {{up.yojna2}}</label></td>
+                          <td><label class="form-group form-row"> {{up.year2}}</label></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              {% endif %}
+              <br>
+
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;<b>
+                वरीलप्रमाणे देण्यात आलेली  माहिती खरी आहे, तपासणी दरम्यान माहिती खोटी आढळून आल्यास, 
+                मी स्वत: कायदेशीर कारवाईस  जबाबदार राहील.</b>
+              </p><br>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;<b>
+                अर्ज स्वीकारणे अथवा नाकारणे याचा पुर्ण अधिकार प्रकल्प अधिकारी यांना राहील. 
+                यासाठी माझी कोणतीही हरकत राहणार नाही.</b>
+              </p>
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>दिनांक</b></label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row">: {{up.dinank}}</label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"><b>स्थळ </b></label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row">: {{up.place}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>फोटो:</b></label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.photo}}"  target="blank"> फोटो पहा </a></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right"><b>अर्जदाराची सही:</b></label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:150px!important;color:#fff" href="/media/{{up.sign}}"  target="blank"> सही पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>      <br>
+       
+  </div>
+  </div>
+  </div>

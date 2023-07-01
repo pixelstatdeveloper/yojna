@@ -1,0 +1,255 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:tsp_cyc' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>महिला व बाल कल्याण विभाग, जिल्हा परिषद, नागपूर</h5> 
+           <h6>इयत्ता ५ ते १० मध्ये शिकणाऱ्या व २ कि.मी पेक्षा जास्त अंतरावरून 
+            जाणे येणे करणाऱ्या मुलींना सायकल पुरवठा योजने अंतर्गत लाभ मिळण्याकरिता करावयाचा अर्ज </h6>
+           <h5>अर्ज नमुना</h5>
+            </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदार मुलीचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="sam_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="संपूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="mukkam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मुक्काम" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="post" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पोस्ट" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="taluka" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="ता." />
+                  </div>
+                </div>
+              </div>
+            </div>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group text-left">अनुसूचित जाती / जनजाती या संवर्गातील आहात काय? :
+                            <label><input type="radio" name="jatii" value="0" required> होय </label>
+                            <label><input type="radio" name="jatii" value="1"> नाही </label>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="जात" />
+                        </div>
+                        <div class="col-md-3">
+                          <input type="text" name="potjat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="पोटजात" />
+                        </div>
+                        <div class="col-md-2">
+                          <label class="form-group form-row">जातीचा दाखला</label>
+                          </div>
+                          <div class="col-md-4">
+                            <input type="file" name="dakhla" class="form-control" required />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class=" text-left" style="font-weight: 500;"><b>मागील वर्षी (सन <span><input type="text" name="san"/></span> 
+                      वर्षात) शाळेत शिकत होती त्या शाळेचे नाव व संपूर्ण पत्ता  </b></h6>
+                    </br>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <input type="text" name="iyatta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="इयत्ता" />
+                          </div>
+                          <div class="col-md-8">
+                            <input type="text" name="sch_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="शाळेचे नाव" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="sch_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="शाळेचा पत्ता"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class=" text-left" style="font-weight: 500;"><b>मागील वर्षी पास झालेला गुणानुक्रमांक व गुणांची टक्केवारी</h6>
+                    </br>
+                      <div class="form-group" >
+                        <div class="input-icon">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <input type="text" name="gun" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="वर्गातून गुणक्रमांक" />
+                            </div>
+                            <div class="col-md-4">
+                              <input type="text" name="mulinmadhun" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="मुलींमधून" />
+                            </div>
+                            <div class="col-md-4">
+                              <input type="text" name="takke" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="गुणांची टक्केवारी" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h6 class=" text-left" style="font-weight: 500;"><b>चालु वर्षी (सन <span><input type="text" name="san1"/></span> 
+                        वर्षात) ज्या शाळेत शिकत आहे त्या शाळेचे पूर्ण पत्तासह नाव व इयत्ता  </b></h6>
+                      </br>
+                      <div class="form-group" >
+                        <div class="input-icon">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <input type="text" name="iyatta1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="इयत्ता" />
+                            </div>
+                            <div class="col-md-8">
+                              <input type="text" name="sch_name1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="शाळेचे नाव" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group" >
+                        <div class="input-icon">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <textarea type="text" name="sch_patta1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="शाळेचा पत्ता"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h6 class=" text-left" style="font-weight: 500;"><b>ज्या गावावरून जाणे - येणे करते (वास्तव्याचे नाव) त्या गावापासून शाळेचे ठिकाण किती
+                        अंतरावर आहे.</h6>
+                      </br>
+                      <div class="form-group" >
+                        <div class="input-icon">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <input type="text" name="gav_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="गावाचे नाव" />
+                            </div>
+                            <div class="col-md-4">
+                              <input type="text" name="antar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="शाळेपासून अंतर (कि.मी.)" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group" >
+                        <div class="input-icon">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input type="text" name="buisness" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="वडिलांचा व्यवसाय" />
+                            </div>
+                            <div class="col-md-2">
+                              <label class="form-group form-row">उत्पन्नाचे प्रमाणपत्र</label>
+                              </div>
+                              <div class="col-md-4">
+                                <input type="file" name="dakhla1" class="form-control" required />
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <h6 class=" text-left" style="font-weight: 500;">सन <span><input type="text" name="san2"/></span> 
+                        वर्षासाठी वडील / पालकाचे एकूण वार्षिक उत्त्पन्न <span><input type="text" name="utpanna"/></span> </h6>
+                      </br>
+                    <h6 class=" text-justify" style="font-weight: 500;">वरील संपूर्ण माहिती सत्य असून यातील कोणतीही माहिती खोटी असल्याचे अथवा 
+                      आढळून आल्यास मला मंजूर झालेली सायकल परत करण्यास मी बांधील राहील. तसेच माझे नाव शाळेतून खारीज करण्यात येईल याची मला पूर्ण 
+                      जाणीव आहे. तसेच मला या विभागाकडून अथवा कोणत्याही विभागाकडून कोणत्याही योजने अंतर्गत यापूर्वी सायकल प्राप्त झालेली नाही. याबाबत हमी 
+                      देण्यात येत आहे. </h6>
+                    </br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="sthal" class="form-control" placeholder="स्थळ " />
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">दिनांक :</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="date" name="form_date" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मुलीचे पूर्ण नाव व पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">सही :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="signature" class="form-control"  />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">फोटो :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

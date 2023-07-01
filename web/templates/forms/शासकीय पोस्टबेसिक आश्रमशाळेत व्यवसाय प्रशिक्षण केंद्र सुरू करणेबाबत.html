@@ -1,0 +1,194 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:postbasic' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h5 style="margin-bottom: 5px;"><b>शासकीय माध्यमिक व उच्च माध्यमिक आश्रमशाळा, कवडस ता. हिंगणा जि. नागपूर येथे 
+                    तंत्र व्यवसाय प्रशिक्षण केंद्रात चालविले जाणारे व्यवसाय अभ्यासक्रम प्रशिक्षणाचा </b>
+                </h5>
+                <h5 style="margin-bottom: 5px;"><b>अर्जाचा नमुना</b></h5>
+            </div>
+            <br/>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; मा. मुख्याध्यापक, </h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; शासकीय माध्यमिक व उच्च माध्यमिक आश्रमशाळा,कवडस,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; ता. हिंगणा &emsp;  जि. नागपूर</h6>
+              <br>
+
+              <h6 class="text-center"><b>विषय :-</b> केंद्रिय पुरस्कृत योजनेअंतर्गत सन 2019-20 या वर्षांत तंत्र व्यवसाय प्रशिक्षण 
+                केंद्रात 4 महिने  कालावधीचे व्यवसाय प्रशिक्षण मिळणेबाबत. </h6><br>
+
+              <p class="text-left">महोदय ,</p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                मी आपले कार्यालयामार्फत चालविण्यात येणाऱ्या तंत्र व्यवसाय प्रशिक्षण केंद्रात रोजगार व स्वयंरोजगाराभिमुख 
+                4 महिने कालावधीचे व्यवसाय प्रशिक्षण घेण्यास इच्छुक असुन माझी वैयक्तिक माहिती खालील प्रमाणे आहे.
+              </p><br>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="प्रशिक्षणार्थ्यांचे संपूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="कायमचा / पत्रव्यवहाराचा पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जात" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">जन्मतारीख: </label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="birthdate" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जाचे तारखेपर्यंतचे वय" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शैक्षणिक पात्रता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="कुटुंबाचे वार्षिक उत्पन्न" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 40px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">यापुर्वी कोणताही लाभ घेतलेला आहे किंवा नाही ?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="labh_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="labh_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">नौकरीसाठी नाव नोंदविलेले आहे काय?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="nokri_yn" id="chkYes2" onclick="ShowHideDiv2()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="nokri_yn" id="chkNo2" onclick="ShowHideDiv2()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport2" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="nondni_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="असल्यास नोंदणी क्रमांक नमुद करावा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="abhyaskram" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="कोणते प्रशिक्षण घ्यावयाचे आहे, त्या अभ्यासक्रमाचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <p class="text-left" style="font-weight: 500; word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                मी प्रमाणित करतो / करते की, वर दिलेली माहिती व कागदपत्रे खरी आहे आणि ती चुकीची आढळल्यास दिलेली प्रशिक्षणाची संपूर्ण मदत माझ्याकडून वसुली केली जाईल, याची मला जाणीव आहे.
+              </p><br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" required /> 
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">ठिकाण:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="thikan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="ठिकाण"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">लाभार्थ्याची  स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+  <script type="text/javascript">
+    function ShowHideDiv2() {
+        var chkYes2 = document.getElementById("chkYes2");
+        var dvPassport2 = document.getElementById("dvPassport2");
+        dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+    }
+  </script>

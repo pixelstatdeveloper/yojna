@@ -1,0 +1,595 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:pradhan_pmmsy' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <h5 class=" text-center" style="font-weight: 500;">PMMSY (Model Application format for Beneficiary Oriented activities)</h5>
+            <h5 class=" text-center" style="font-weight: 500;"> Application for Financial Assistance </h5>
+            <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> <b>General Information : </b></h6>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Name of EIA/Beneficiary" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <select name="benificiaries" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                       <option value="">Beneficiaries</option>
+                      <option value="Fishers">Fishers</option>
+                      <option value="Fish Farmers">Fish Farmers</option>
+                      <option value="FDC">FDC</option>
+                      <option value="SGH/JLGs">SGH/JLGs</option>
+                      <option value="FC/FD">FC/FD</option>
+                      <option value="FFPOs/Cs">FFPOs/Cs</option>
+                      <option value="SCs">SCs</option>
+                      <option value="STs">STs</option>
+                      <option value="Women">Women</option>
+                      <option value="UTs">UTs</option>
+                      <option value="SFDB">SFDB</option>
+                      <option value="Central Govt entities">Central Govt entities</option>
+                   </select>
+                  </div>
+                  <div class="col-md-6">
+                    <select name="category" class="form-control" required>
+                      <option value="">Category</option>
+                      <option value="General">General</option>
+                      <option value="SC">SC</option>
+                      <option value="Women">Women </option>
+                      <option value="State Govt ">State Govt </option>
+                      <option value="UT Govt ">UT Govt </option>
+                      <option value="ICAR">ICAR </option>
+                      <option value="SFDB">SFDB </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> Address for communication : </h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="door" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Door no. / Street" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="village" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Village" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="dis" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="District" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="state" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="State" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="pin" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Pin code" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> Project site particulars : </h6>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2 text-left">
+                      <label class="form-group form-row">Own :</label>                    
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="Yes" name="own"  id="chkYes" onclick="ShowHideDiv()" required>
+                      <label class="form-check-label " for="own">
+                        Yes
+                      </label>
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="No"  name="own"  id="chkNo" onclick="ShowHideDiv()" required>
+                      <label class="form-check-label" for="own">
+                        No
+                      </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12" id="dvPassport" style="display: none" >
+                   <input type="text" name="area" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="Area (In ha)" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2 text-left">
+                      <label class="form-group form-row">Lease :</label>                    
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="Yes" name="lease"  id="chkYes1" onclick="ShowHideDiv1()" required>
+                      <label class="form-check-label " for="lease">
+                        Yes
+                      </label>
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="No"  name="lease"  id="chkNo1" onclick="ShowHideDiv1()" required>
+                      <label class="form-check-label" for="lease">
+                        No
+                      </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12" id="dvPassport1" style="display: none" >
+                   <input type="text" name="period" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="Lease Period (No. of Years)" />
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="site_addr" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="Project Site Address"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="village1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Village/Mandal/Taluka" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="dis1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="District" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="state1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="State" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="pin1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Pin code" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> Contact Details : </h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="tel" name="land_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Land Number" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="tel" name="mobile" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Mobile Number" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="E-mail id" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> Number Units Proposed(Nos.) : </h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="total" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                     placeholder="Total" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="gen" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="Gen" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="sc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                     placeholder="SC" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="st" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="ST" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="women" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Women" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="govt" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="Govt" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> Unit Cost (in Rs.) : </h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="total1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                     placeholder="Total" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="gen1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="Gen" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="sc1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                     placeholder="SC" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="st1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="ST" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="women1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Gen" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="govt1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="Govt" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> No of Beneficiaries (Nos) : </h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="total2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                     placeholder="Total" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="gen2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="Gen" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="sc2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                     placeholder="SC" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="st2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="ST" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="women2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Gen" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="govt2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="Govt" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> <b>Project Details :</b></h6>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="pro_item" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Project Item" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5">
+                    <select name="type_pro" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                       <option value="">Type of Proposal</option>
+                      <option value="DPR">DPR</option>
+                      <option value="SCP">SCP</option>
+                   </select>
+                  </div>
+                  <div class="col-md-7">
+                    <input type="text" name="pre_inv" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="Pre-investment amount (if applicable) (Rs. In lakh)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-left">Sub Component :<br>
+              <label><input type="checkbox" name="subcompo[]" value="Enhancement of Production and Productivity" > Enhancement of Production and Productivity </label><br>
+              <label><input type="checkbox" name="subcompo[]" value="Infrastructure and Post-Harvest Management" > Infrastructure and Post-Harvest Management</label><br>
+              <label><input type="checkbox" name="subcompo[]" value="Fisheries Management and Regulatory Framework"> Fisheries Management and Regulatory Framework </label><br>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="activity" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Activity" />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5 text-left">
+                      <label class="form-group form-row">Whether Trained / Or Willing to Train :</label>                    
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="Yes" name="trained" required>
+                      <label class="form-check-label " for="trained">
+                        Yes
+                      </label>
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="No"  name="trained" required>
+                      <label class="form-check-label" for="trained">
+                        No
+                      </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4 text-left">
+                      <label class="form-group form-row">Experienced in relevant field :</label>                    
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="Yes" name="experienced" required>
+                      <label class="form-check-label " for="experienced">
+                        Yes
+                      </label>
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="No"  name="experienced" required>
+                      <label class="form-check-label" for="experienced">
+                        No
+                      </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="capacity" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Capacity: (Tanks/tones/cycles/rafts/fingerlings)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> Components :</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> (a) Capital Cost</h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="capital_details" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Details" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="nounits" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="No. of Units" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="unitcost" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Unit Cost (Rs.)" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="tocost" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="Total Cost (Rs.)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;">b) Operational Cost</h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="operation_details" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Details" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="nounits1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="No. of Units" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="nounits1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Unit Cost (Rs.)" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="tocost1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="Total Cost (Rs.)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;">c) Total</h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="total_details" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="Details" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="nounits2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="No. of Units" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="unitcost2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Unit Cost (Rs.)" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="tocost2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="Total Cost (Rs.)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="state_contri" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="State Contribution(In Rs.)" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="beni_contri" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Beneficiary Contribution(In Rs.)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="banking_assi" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Banking Assistance (In Rs.)" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="parti_bank" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="Particulars of Bank" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> <b>Declaration by the Beneficiary :</b></h6>
+            <br/>
+            <h6 class=" text-justify" style="font-weight: 500;">This is to certify that, I/We <span><input type="text" name="name1"/></span> 
+              son/daughter of  <span><input type="text" name="name2"/></span> 
+              hereby declare that the information furnished above is true to my knowledge and belief and all
+              relevant documents are enclosed. </h6>
+              <br/>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="Name of Beneficiary" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                     <div class="col-md-2">
+                      <label class="form-group form-row">Signature :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sig" class="form-control" required />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">Photo :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+         <br/>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+      function ShowHideDiv() {
+          var chkYes = document.getElementById("chkYes");
+          var dvPassport = document.getElementById("dvPassport");
+          dvPassport.style.display = chkYes.checked ? "block" : "none";
+      }
+  </script>
+  
+  <script type="text/javascript">
+      function ShowHideDiv1() {
+          var chkYes1 = document.getElementById("chkYes1");
+          var dvPassport1 = document.getElementById("dvPassport1");
+          dvPassport1.style.display = chkYes1.checked ? "block" : "none";
+      }
+  </script>

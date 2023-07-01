@@ -1,0 +1,286 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Registration{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<style>
+    .passkey {
+        position: absolute;
+        right: .8em;
+        z-index: 6;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 25px!important; }
+</style>
+{% endblock %}
+{% block pre_load_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{% endblock %}
+{% block body %}
+
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय
+                        योजना</a></li>
+                <li class="breadcrumb-item active" aria-current="page">नोंदणी</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-4 my-lg-5">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
+            <img src="{% static 'web/images/bany_logo.png' %}" class="img-responsive" alt="Logo" />
+            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold" style="color:#3F42A1;font-size:35px;"> डॉ.
+                बाबासाहेब आंबेडकर न्याय योजना ऑनलाइन आवेदन </h2><br />
+            <form method="POST" action="{% url 'web:update_profile' %}" enctype="multipart/form-data"
+                onsubmit="return validate_ph()">
+                {% csrf_token %}
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>नाव :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input" required value="{{request.user.name}}" required contenteditable="True" />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+               <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>दुरध्वनी क्रमांक :</b></label>
+                        </div>
+                        <div class="col-md-9 row">
+                             <input class="form-control rounded-0 py-3 font-13 sign-register-input" id="mobile_number" placeholder="Mobile Number" type="tel" name="mobile_number" value="{{request.user.mobile_number}}" contenteditable="True" />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                 <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>ई-मेल आयडी :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="email" class="form-control rounded-0 py-3 font-13 sign-register-input" required value="{{request.user.email}}" required contenteditable="True" />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>आधार कार्ड नंबर :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="adhaar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        value="{{request.user.adhaar_no}}" required contenteditable="True" />
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>लिंग :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                             <select name="gender"  class="py-3 font-13" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                         color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;" id=""  placeholder="Adhar Card Number" >
+                            <option value="">{{request.user.Gender}}</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>जात :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                             <select name="caste" class="py-3 font-13" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                         color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;" id=""  placeholder="Adhar Card Number" >
+                             <option value="">{{request.user.caste}}</option>
+                            <option value="Open">Open</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="SBC">SBC</option>
+                            <option value="VJNT">VJNT</option>
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+             
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                  <div class="input-icon">
+                      <div class="row">
+                          <div class="col-6">
+                              आपण बीपीएल धारक आहात का ? 
+                          </div>
+                          <div class="col-3">
+                              <input class="form-check-input" id="chkYes" type="radio" name="bpl" value="होय">
+                              <label class="form-check-label" for="bpl">
+                                  होय
+                              </label>
+                          </div>
+                          <div class="col-3">
+                              <input class="form-check-input"  id="chkNo" type="radio"  name="bpl" value="नाही">
+                              <label class="form-check-label" for="bpl">
+                                  नाही
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label class="form-group form-row"><b>कार्ड नंबर :</b></label>
+                      </div>
+                      <div class="col-md-9">
+                      <input type="text" name="bpl_dharak" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      value="{{request.user.bpl_dharak}}" contenteditable="True" />
+                    </div>
+                  </div>
+              </div>
+              </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>संपूर्ण पत्ता :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <textarea type="text" name="address"
+                        class="form-control rounded-0 py-3 font-13 sign-register-input" required
+                        contenteditable="True" >{{request.user.address}}</textarea>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>देश :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <select name="country" class="countries py-3 font-13 order-alpha form-control presel-IN" id="countryId"
+                        style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                            <option value="">{{request.user.country}}</option>
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+               <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>राज्य :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                             <select name="state" class="states py-3 font-13 order-alpha form-control" id="stateId"
+                        style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                            <option value="">{{request.user.state}}</option>
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>शहर :</b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <select name="city" class="cities py-3 font-13 order-alpha form-control" id="cityId"
+                        style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                            <option value="">{{request.user.city}}</option>
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                 <div class="form-group" style= "font-family: 'Arya', sans-serif!important;" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>फोटो :</b></label>
+                        </div>
+                        <div class="col-md-9" >
+                             <input class="scheme_registration_media_file col-12" type="file" accept="image/*" name="profile_pic" id="file" style="border:1px solid #d3d8de;padding:10px;font-family: 'Arya', sans-serif!important;"  value="{{request.user.profile_pic}}" required contenteditable="True" />
+                        </div>
+                        <label for="profile pic" class="rounded-0 sign-register-input form-label " style="font-size:13px;color:#990000;text-align: right;margin-bottom:20px;font-family: 'Arya', sans-serif!important;"><i>(Note: Upload file should be.pdf, .jpg, .jpeg and file size should be less than 200KB)</i></label>
+                      </div>
+                    </div>
+                </div>
+            
+                <button type="submit"
+                    class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="margin-bottom:20px;color:#fff;font-size: 20px; font-family: 'Arya', sans-serif!important;">Update Profile</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+{% block post_load_js %}
+<script>
+    const phoneInputField = document.getElementById("mobile_number");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+
+    });
+    const number = phoneInput.getNumber();
+    function validate_ph() {
+        const number = phoneInput.getNumber();
+        phoneInputField.value = number;
+    }
+</script>
+<script>
+  var uploadfield = document.getElementById("file");
+  uploadfield.onchange = function() {
+    if (this.files[0].size > 200*1024) {
+      alert("File too Big, please select a file less than 200KB");
+      this.value = "";
+    }
+  }
+</script>
+{% endblock%}

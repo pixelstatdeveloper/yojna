@@ -1,0 +1,530 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          
+               <div class="form-header text-center">
+                <h5> महाराष्ट्र शासन </h5>
+                <h5>अपंग कल्याण आयुक्तालय, म.रा.पुणे</h5>
+               
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center">
+                        <h5 ><b> अपंगासाठी स्वयंरोजागारासाठी बीज भांडवल अर्ज </b></h5>
+                    </div>
+                  </div>
+                </div>
+              <br/>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अर्जदाराचे पुर्ण नाव</b></label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अर्जदाराचा पत्ता</b></label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.address}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>पत्र व्यवहाराचा पत्ता</b></label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.patra_address}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>वय</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.age}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>जन्म तारीख</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.birthdate}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <label class="form-group form-row"><b>आपल्या कुटुंबाची दारिद्रय रेषेत नाव आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-7">
+                      <label class="form-group form-row">: {{ up.daridrya_yn }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>असल्यास दारिद्रय रेषा नोंदनी क्रमांक</b></label>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-group form-row">: {{up.daridrya_num}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अपंगत्वाचा प्रकार</b></label>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-group form-row">: {{up.apang_type}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अपंगत्वाचे स्वरुप</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.apang_swarup}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अपंगत्वाचे प्रमाणपत्र:</b></label>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:150px!important;color:#fff"  href="/media/{{up.apang_certificate}}" target="blank"> फोटो पहा </a></label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>वरील रकाना च्या पृष्ठयार्थ योग्य दाखला जोडला आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.certificate_yn }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>कुटुंबातील मिळवत्या व्यक्तीचा व्यवसाय</b></label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-group form-row">: {{up.vyavsay}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>व अंदाजे वार्षिक उत्पन्न</b></label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-group form-row">: {{up.income}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;"><b> अर्जदारास ओळखणाऱ्या दोन प्रतिष्ठीत व्यक्तींची नावे व त्यांचे पद :- </b>
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row float-right">१)</label>
+                    </div>
+                    <div class="col-md-11">
+                        <label class="form-group form-row"> {{up.olakh1}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row float-right">२)</label>
+                    </div>
+                    <div class="col-md-11">
+                        <label class="form-group form-row"> {{up.olakh2}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <label class="form-group form-row"><b>या अर्जासोबत अर्जदाराचे स्वत:चे पासपोर्ट आकाराचे फोटो जोडले आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row">: {{ up.photo_yn }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>अर्जदाराची शैक्षणिक पात्रता</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.education }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 text-left">
+                        <label class="form-group form-row"><b>शालेय शिक्षण शाळेचे नाव व पत्ता व त्या शाळेत झालेले शिक्षण</b></label>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row">: {{ up.shaley_edu }}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 text-left">
+                        <label class="form-group form-row"><b>तांत्रिक अथवा व्यावसायीक शिक्षण संस्थेचे नाव मिळविलेल्या पदव्या अथवा पदविका</b></label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-group form-row text-left">: {{ up.technical_edu }}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>इतर शैक्षणिक पात्रता</b></label>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row">: {{ up.other_edu }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>नौकरी विषयक अनुभव</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.naukri_exp }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row"><b>अर्जदाराचा स्वतंत्र उद्योग/व्यापाराचा अनुभव असल्यास तपशिल</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.business_exp }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>सामाजिक अथवा सार्वजनिक कार्याचा अनुभव</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.samaj_exp }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>राशन कार्ड आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.ration_yn }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>अर्जदाराचे व्यवसाय कारखान्याचे नाव</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.arja_vyavsay }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>अर्जदार करु इच्छीणाऱ्या उद्योग/व्यवसायाचे स्वरुप</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.vyavsay_swarup }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>व्यवसाय उद्योगाची घटना</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.vyavsay_ghatna }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>संस्था मालकचे भागीदाराचे नाव व कायम पत्ता</b></label>
+                    </div>
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row">: {{ up.malak_bhagidar }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>प्रस्तावीत उद्योग/व्यवसायास निवडण्याचे कारण</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.vyavsay_reason }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>प्रस्तावित उद्योग/ व्यसायास लागणारे भांंडवल</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.bhandval }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>कायम स्वरुपाचे भांडवल</b></label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{ up.kayam_bhandval }}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>खेळते भांडवल</b></label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{ up.khelte_bhandval }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row"><b>प्रस्तावित उद्योग/व्यवसायावरील खर्च भागविण्यात आलेल्या योजनेची तरतुद</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.yojna_tartud }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>सदर उद्योग/व्यवसाय सध्या गुंतवलेले भांडवल (तपशिलासह)</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.guntavlele_bhandval }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>सदर उद्योग / व्यवसायचा प्रकल्प तयार केला आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.prakalp_yn }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row"><b>समाज कल्याण खात्याकडुन अपेक्षित मदत बँकेने मंजुर केलेल्या कर्ज प्रकल्प रक्कमेच्या 20 टक्के</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.samajkalyan_khate }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row"><b>अर्जदाराचा सदर उद्योग व्यवसायासाठी सध्या बाजारात असलेल्या स्पर्धा व त्याचा तपशील</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.spardha }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row"><b>तयार होणाऱ्या मालाच्या विक्रीची व्यवस्था</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.mal_vikri }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row"><b>अर्जदारास सदर उद्योग / व्यवसाय उभारण्यास इतर उपलब्ध मदत</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.other_help }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row"><b>अर्जदारास उद्योग / व्यवसायाच्या मदतीसाठी इतर ठिकाणी अर्ज केला असल्यास त्याचा तपशिल</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{ up.other_arza }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-left" style="word-spacing: 2px;"><b>
+                &emsp;&emsp;&emsp;&emsp; मी प्रतिज्ञापुर्वक लिहुन देतो की या अर्जात दिलेली माहिती माझ्या माहितीनुसार खरी आहे. 
+                माझ्या कुटुंबातील एकुण वार्षिक उत्पन्न रु. 1,00,000/- पेक्षा कमी आहे. माझ्या कुटुंबातील 
+                एकही व्यक्ती सरकारी/निमसरकारी नौकरीत नाही तसेच माझ्या कुटुंबातील एकही व्यक्तीने यापुर्वी 
+                समाज कल्याण विभागाकडुन कोणत्याही योजनेचा आर्थिक लाभ घेतलेला नाही. तसेच मी कोणत्याही 
+                संस्थेचा आर्थिक थकबाकीदार नाही. मला मिळणाऱ्या कर्जाचा वापर मी याच कारणासाठी करीन याचा
+                दुरुपयोग झाल्यास संपुर्ण रक्कम मी व्याजासहीत परत करीन.</b>
+              </p>
+              <p class="text-left" style="word-spacing: 2px;">
+                &emsp;&emsp;&emsp;&emsp;<b> वरील माहिती खोटी आढळल्यास सामाजिक न्याय विभागाच्या नियमाप्रमाणे कायदेशीर कार्यवाहीस मी पात्र राहील.</b>
+              </p>
+              <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>दिनांक</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{ up.dinank }}</label> 
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"><b>स्थळ</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{ up.place }}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>फोटो:</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:150px!important;color:#fff"  href="/media/{{up.photo}}" target="blank"> फोटो पहा </a></label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row"><b>अर्जदाराची सही अथवा आंगठा:</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:150px!important;color:#fff"  href="/media/{{up.signature}}" target="blank"> सही पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+   
+</div>
+</div>
+</div>
+  

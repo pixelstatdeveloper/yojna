@@ -1,0 +1,94 @@
+{% extends 'web/layout1.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} 
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+{% endblock %}
+{% block body %}
+
+<div class="container">
+  <div class="row">
+          <!--<div class="col-md-4"> -->
+          <!--  <div class=" input-group" style="margin-bottom: 100px;">-->
+          <!--    <input type="search" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="Search" aria-label="Search"-->
+          <!--      aria-describedby="search-addon" />-->
+          <!--  </div>-->
+          <!--</div>-->
+          <!--<div class="col-md-2"> -->
+          <!--  <div class=" input-group" style="margin-bottom: 100px;">-->
+          <!--    <button type="button" class="btn fables-second-background-color yojana_mainbotton" style="font-family: 'Arya', sans-serif!important;padding: 8px 10px !important;margin:0px!important;">Search</button>-->
+          <!--  </div>-->
+          <!--</div>-->
+          <div class="col-md-12"> 
+            <button type="button" class="btn fables-second-background-color yojana_mainbotton" id="export_button"  style="float:right; font-family: 'Arya', sans-serif!important;;margin:0px!important;">Download</button>
+          </div>
+       </div>
+</div>
+<br/>
+<br/>
+<div class="container">
+   
+    <table class="table table-bordered table-striped table-hover main_bany_text" id="employee_data">
+        <thead >
+          <tr class="text-center" style="font-size:16px;">
+            <th scope="col">Sr.No</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">No. of Schemes</th>
+            <th scope="col">No. of Applicants</th>
+            <th scope="col">Pending</th>
+            <th scope="col">In Progress</th>
+            <th scope="col">Verified</th>
+            <th scope="col">Rejected</th>
+            <th scope="col">Approved</th>
+            <th scope="col">Labharthi</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        {% for department in context %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{% url 'web:master_stats' department.id %}">{{department.name}}</a></td>
+            <td>{{department.schemes}}</td>
+            <td>{{department.applicants}}</td>
+            <td>{{department.pending}}</td>
+            <td>{{department.progress}}</td>
+            <td>{{department.verified}}</td>
+            <td>{{department.rejected}}</td>
+            <td>{{department.approved}}</td>
+            <td>{{department.labarthi}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+  </div>
+<br>
+<br>
+<br>
+ {%endblock%}
+
+{%block post_load_js %}
+<script>
+  function html_table_to_excel(type)
+ {
+     var data = document.getElementById('employee_data');
+
+     var file = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+
+     XLSX.write(file, { bookType: type, bookSST: true, type: 'base64' });
+
+     XLSX.writeFile(file, 'Department_details.' + type);
+ }
+
+ const export_button = document.getElementById('export_button');
+
+ export_button.addEventListener('click', () =>  {
+     html_table_to_excel('xlsx');
+ });  
+</script>
+
+{%endblock%}

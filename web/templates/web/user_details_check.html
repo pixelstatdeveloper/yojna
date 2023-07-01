@@ -1,0 +1,450 @@
+﻿{% extends 'web/layout1.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row" style="font-size:20px;">
+               
+                <style>
+                    .main_profile{font-family: 'Arya', sans-serif!important;font-size:16px;font-weight:600;}
+                    .main_profile_sub{background-color:#f1f1f1;padding:30px 0;}
+                    .main_profile_sub img{width:200px;height:200px;border-radius:100%;border:5px solid #e8e4e4;}
+                    .main_profile_sub1{padding-top:30px;}
+                     .main_profile_sub ul{padding-left:0px;}
+                    .main_profile_sub ul li{background-color:#fff;margin:10px 15px;padding:10px;}
+                </style>
+                 <div class="col-md-12">
+                    <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                        style="color:#3F42A1;font-size:35px;">अर्जदाराची माहिती </h2><br />
+                </div>
+                 <div class="col-md-3 main_profile">
+                   
+                    <div class="main_profile_sub">
+                        <center><img src="
+                        {% if user_data.profile_pic %}
+                            /media/{{ user_data.profile_pic}}
+                        {%else%}
+                        https://pixabay.com/images/download/avatar-1577909_640.png
+                        {% endif %}
+                            " class="img-responsive" alt="Profile_User" srcset="" /></center>
+                        <div class="main_profile_sub1">
+                            <ul>
+                                <li><i class="bi bi-person"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                    </svg> {{ user_data.name }} </li>
+                                <li><i class="bi bi-gender-ambiguous"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gender-ambiguous" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1H11.5zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z"/>
+                                    </svg> {{ user_data.Gender }}</li>
+                                <li><i class="bi bi-people"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                    </svg> {{ user_data.caste }}</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                    </svg> {{user_data.email}}</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg> {{user_data.mobile_number}}</li>
+                                <li><i class="fa fa-id-card" aria-hidden="true"></i>  {{user_data.adhaar_no}}</li>                              
+                            </ul>                            
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-md-9">
+                    <div class="main_profile_sub" style="padding:30px;">
+                        <div id="prefilled">
+                            <table class="table table-bordered main_bany_text">
+                                <tbody>
+                                   <tr>
+                                        <td><b style="font-size:16px;">विभागाचे नाव:</b></td>
+                                        <td class="fables-second-text-color mt-3 font-30 font-weight-bold main_bany_text" id="bany_heading"style="font-size: 20px;color:#b00505;"><b>{{ scheme.department.name }}</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b style="font-size:16px;">योजनेचे नाव:</b></td>
+                                        <td class="fables-second-text-color mt-3 font-30 font-weight-bold main_bany_text" id="bany_heading" style="font-size: 20px;color:#b00505;"><b>{{ scheme.name }}</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><br/>
+                    <div class="space"></div>
+                    <div class="main_profile_sub" id="application_form_wrapper" style="padding:30px;">
+                        <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold" id="bany_heading" style="color:#3F42A1; font-size: 35px;">
+                            योजनेचा अर्ज /Application Form </h2>
+                        <div class="main_bany_text">
+                            <tr>
+                                
+                                
+                                {% with 'applied/'|add:scheme.name|add:'.html' as form_template %}
+                                {% if form_template|template_exists %}
+                                {% include form_template %}
+                                
+                                {% else %}
+                                {%if scheme.url %}
+                                <td>
+                                    <h5>या योजनेचा अर्ज संबंधित विभागाच्या सांकेतिक स्थळावर उपलब्ध आहे. </h5>
+                                </td>
+                                <td><a href="{{scheme.url}}" target="_blank">{{scheme.url}}</a></td>
+
+                             <tr>
+                                <td>
+                                    <h5> ऑनलाईन अर्ज केलेल्या अर्जाचा Application ID</h5>
+                                </td>
+                                <td><input name="application_id" type="text" value="{{ External_ID.external_id }}" readonly></td>
+                            </tr>
+
+                            
+                            {%endif%}
+                            {% endif %}
+                            {% endwith %}
+                            
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="main_profile_sub" style="padding:30px;">
+                        <div id="prefilled">
+                            <table class="table table-bordered main_bany_text">
+                                <thead class="">
+                                    <tr>
+                                        <th scope="col">कागदपत्रांची नावे </th>
+                                        <th scope="col"> File</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for i in documents %}
+                                    <tr>
+                                         <td>{{i.category}}</td>
+                                        <td><a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"  style="width:150px!important;color:#fff"
+                                                href='{{request.scheme}}://{{request.get_host}}/media/{% firstof i.file_path i.arza %}' target="_blank">View
+                                                Document</a></td>
+                                      
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><br/>
+                    <div class="space"></div>
+                    <div class="main_profile_sub" style="padding:30px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form action="#" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    
+                                        <div class="col-12">
+                                            {% if request.user.role == 'Department clerk 1'%}
+                                            <div class="row">
+                                                
+                                                <div class="col-md-4">
+                                                    <button onclick="myFunction()" type="button" id='reject' class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                        style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Raise Query</button>
+                                                    <div class="form-group" style="padding:10px;font-family: 'Arya', sans-serif!important;margin-bottom:10px;">
+                                                        <div class="input-icon row">
+                                                            <textarea id="myDIV" type="text" name="query" style="display: none;"  placeholder="Enter query.."></textarea>
+                                                             <button type="submit" id="query_submit" class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" style="display: none; margin-top:10px;color:#fff">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="submit"  id='verify' class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                        style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Ok Verified</button>
+                                                </div>
+                                            </div>
+            
+                                           
+                                            {% elif request.user.role == 'Department clerk 2' %}
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                    <button onclick="myFunction2()" type="button" id='reject' class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                        style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Call Applicant</button>
+                                                    <div class="form-group" style="padding:10px;font-family: 'Arya', sans-serif!important;margin-bottom:10px;">
+                                                        <div class="input-icon row">
+                                                            <textarea id="call_applicant" type="text" name='mail' style="display: none;"  placeholder="Call Applicant"></textarea>
+                                                             <button type="submit" id='send'  class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" style="display: none; margin-top:10px;color:#fff">Send</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group" style="padding:10px;font-family: 'Arya', sans-serif!important;margin-bottom:10px;">
+                                                        <div class="input-icon row">   
+                                                             <label class="rounded-0 sign-register-input form-label " style="font-size:20px;color:#000;text-align: left;">Attached Cheque and Letter</label>
+                                                            <input type="file" id="cheque" name="cheque" class="scheme_registration_media_file col-9" style="font-size:20px;color:#000; font-family: 'Arya', sans-serif!important;" />
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" id="labharthi" class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                        style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Submit</button>
+                                                </div>
+                                            </div>
+                                            {% elif request.user.role == 'Master collector dpo' %}
+                                            {%comment%}
+                                            Master doesn't have editing rights
+                                            {%endcomment%}
+                                            {%else%}
+                                            
+                                            {%endif%}
+                                        </div>
+                                        {%if request.user.role == 'Department admin hod' %}
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <button type="submit"  id='approve' class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                    style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Approve</button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button onclick="myFunction4()" type="button" id='reject' class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                    style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Reject</button>
+                                                <div class="form-group" style="padding:10px;font-family: 'Arya', sans-serif!important;margin-bottom:10px;">
+                                                    <div class="input-icon row">
+                                                        <textarea id="rejected" type="text" name='rejected' style="display: none;"  placeholder="Enter the Reason"></textarea>
+                                                         <button type="submit" class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" id='submit_rejection' style="display: none; margin-top:10px;color:#fff">Submit Rejection</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-4">
+                                                 <button  onclick="myFunction5()" type="button" id='raise_button' class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                                    style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Raise Query</button>
+                                                 <div class="form-group" style="padding:10px;font-family: 'Arya', sans-serif!important;">
+                                                    <div class="input-icon row">
+                                                        <textarea id="myDIV" type="text" name='query' style="display: none;" placeholder="Enter query"></textarea>
+                                                         <button class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" type="submit" id='query_submit' style="display: none; margin-top:10px;color:#fff" >Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                          {%endif%}
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="container">
+    
+</div>
+<br /><br />
+
+<script>
+
+function myfunc1(e)
+{
+    
+    if (window.confirm("Do You want to reject this application?")) {
+    
+    } else 
+    {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    return false;
+    }
+}
+
+function myfunc2(e)
+{
+    
+    if (window.confirm("Do You want to approve this application?")) {
+    
+    } else 
+    {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    return false;
+    }
+}
+
+
+
+document.getElementById('submit_rejection').addEventListener('click',myfunc1);
+document.getElementById('approve').addEventListener('click',myfunc2);
+
+
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        var y= document.getElementById("verify");
+        
+        var z= document.getElementById('query_submit');
+        if (y.disabled==true){
+            y.disabled=false;
+        }
+        else{
+            y.disabled=true;
+        }
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            
+        } else {
+            
+            x.style.display = "none";
+        }
+        
+        if (z.style.display === "none") {
+           z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+
+        
+    }
+    function myFunction5() {
+        var x = document.getElementById("myDIV");
+        var z= document.getElementById('query_submit');
+        var yy= document.getElementById('reject');
+        var zz= document.getElementById('approve')
+
+        if (zz.disabled==true){
+            zz.disabled=false;
+        }
+        else{
+            zz.disabled=true;
+        }
+        if (yy.disabled==true){
+            yy.disabled=false;
+        }
+        else{
+            yy.disabled=true;
+        }
+        
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            
+        } else {
+            
+            x.style.display = "none";
+        }
+        
+        if (z.style.display === "none") {
+           z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+
+        
+    }
+    
+    function myFunction4() {
+        
+        var yy= document.getElementById('rejected');
+        var y= document.getElementById('submit_rejection');
+        var z= document.getElementById('approve');
+        var x= document.getElementById('raise_button');
+
+        if (z.disabled==true){
+            z.disabled=false;
+        }
+        else{
+            z.disabled=true;
+        }
+        if (x.disabled==true){
+            x.disabled=false;
+        }
+        else{
+            x.disabled=true;
+        }
+        
+        if (yy.style.display === "none") {
+            yy.style.display = "block";
+            
+        } else {
+           
+            yy.style.display = "none";
+        }
+        
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+
+        
+    }
+
+    function myFunction2() {
+        var xx = document.getElementById("call_applicant");
+        var yy = document.getElementById("labharthi");
+        var a= document.getElementById('send');
+        if (yy.disabled==true){
+            yy.disabled=false;
+        }
+        else{
+            yy.disabled=true;
+        }
+        if (xx.style.display === "none") {
+            xx.style.display = "block";
+        } else {
+            xx.style.display = "none";
+        }
+        
+        if (a.style.display === "none") {
+            a.style.display = "block";
+        } else {
+            a.style.display = "none";
+        }
+        var zz = document.getElementById("cheque");
+        var xxx = document.getElementById("labharthi1");
+        
+        
+       
+       
+        if (xxx.style.display === "block") {
+            xxx.style.display = "none";
+        } 
+        if (zz.style.display === "block") {
+            zz.style.display = "none";
+        } 
+        
+    }
+    function myFunction3() {
+        
+        var yy = document.getElementById("labharthi");
+        var zz = document.getElementById("cheque");
+        var xx = document.getElementById("labharthi1");
+        
+       
+        if (yy.style.display === "none") {
+            yy.style.display = "block";
+        } else {
+            yy.style.display = "none";
+        }
+        if (xx.style.display === "none") {
+            xx.style.display = "block";
+        } else {
+            xx.style.display = "none";
+        }
+        if (zz.style.display === "none") {
+            zz.style.display = "block";
+        } else {
+            zz.style.display = "none";
+        }
+    }
+ 
+    // document.addEventListener('contextmenu', event => event.preventDefault())
+</script>
+
+
+{% endblock %} {% block post_load_js %}
+<!-- <script>
+    $('.scheme_registration_media_select_options').change(function() {
+      $(this).closest('tr').find('.scheme_registration_media_file').prop("name",$('option:selected', this).data('key'));;
+    });
+</script> -->
+{% endblock%}

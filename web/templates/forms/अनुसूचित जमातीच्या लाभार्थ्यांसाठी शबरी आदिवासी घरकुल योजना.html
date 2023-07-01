@@ -1,0 +1,562 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:anu_shabri' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+               <div class="form-header text-center">
+                <h5> महाराष्ट्र शासन </h5>
+                <h5>आदिवासी विकास विभाग</h5>
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center">
+                        <h5><b>घरकुल योजनेचा लाभ मिळण्यासाठी अर्जाचा नमुना</b></h5>
+                    </div>
+                  </div>
+                </div>
+              <br/><br>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; प्रकल्प अधिकारी, </h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; एकात्मिक आदिवासी विकास प्रकल्प ,</h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; <span><input type="text" name="jilha" required placeholder="जिल्हा"></span></h6>
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्जदाराचे संपूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <textarea type="text" name="address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="संपूर्ण पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="जात  (आदिम जमाती)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row">जन्म दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="birthdate" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    <div class="col-md-3">
+                      <input type="number" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="वय" />
+                    </div>
+                    <div class="col-md-3">
+                      <select name="gender" class="form-control" required>
+                        <option value="">लिंग</option>
+                        <option value="Female">महिला</option>
+                        <option value="Male">पुरुष</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">वैवाहिक दर्जा:  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="married" id="chkYes1" onclick="ShowHideDiv1()" value="विवाहित" required> विवाहित </label>  &emsp;
+                        <label><input type="radio" name="married" id="chkNo1" onclick="ShowHideDiv1()" value="अविवाहित" required> अविवाहित</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport1" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row">विवाहित असल्यास, अपत्य संख्या:</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" name="son" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="मुले" /> 
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" name="daughter" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="मुली" /> 
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" name="total_child" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="एकूण" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">कुटुंबातील व्यक्तींची संख्या </label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" name="ladies" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           required placeholder="महिला" /> 
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" name="gents" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           required placeholder="पुरुष" /> 
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" name="total" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           required placeholder="एकूण" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शैक्षणिक पात्रता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="yojna" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="योजनेचे नाव / मागणी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="samu_vayaktik" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="सामूहिक/वैयक्तिक लाभाची योजना" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="daridrya_cardno" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="दारिद्रय रेषेखालील कार्ड क्रमांक " />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="number" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचे वार्षिक उत्पन्न (रु)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="income_src" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="उत्पन्नाचे साधन : शेती / व्यवसाय" />
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">स्वत:च्या मालकीची जागा आहे काय? &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="jaga"  value="होय " required> होय  </label>  &emsp;
+                        <label><input type="radio" name="jaga"  value="नाही " required> नाही </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="text-left">अर्जदार खालीलपैकी आहे काय?</h6><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2 ">अल्प भूधारक</div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="alpa_bhudharak" id="chkYes2" onclick="ShowHideDiv2()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="alpa_bhudharak" id="chkNo2" onclick="ShowHideDiv2()" value="नाही" required> नाही</label>
+                    </div>
+                    <div class="col-md-2 text-left">भूमीहीन</div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="bhumihin" id="chkYes3" onclick="ShowHideDiv3()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="bhumihin" id="chkNo3" onclick="ShowHideDiv3()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport2" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="alpa_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport3" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="bhumihin_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2 ">विधवा </div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="vidhva" id="chkYes4" onclick="ShowHideDiv4()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="vidhva" id="chkNo4" onclick="ShowHideDiv4()" value="नाही" required> नाही</label>
+                    </div>
+                    <div class="col-md-2 text-left">विधूर  </div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="vidhur" id="chkYes5" onclick="ShowHideDiv5()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="vidhur" id="chkNo5" onclick="ShowHideDiv5()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport4" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="vidhva_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport5" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="vidhur_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">घटस्फोटित </div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="ghatsphotit" id="chkYes6" onclick="ShowHideDiv6()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="ghatsphotit" id="chkNo6" onclick="ShowHideDiv6()" value="नाही" required> नाही</label>
+                    </div>
+                    <div class="col-md-2 text-left">भूकंपग्रस्त  </div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="bhukampgrast" id="chkYes7" onclick="ShowHideDiv7()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="bhukampgrast" id="chkNo7" onclick="ShowHideDiv7()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport6" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="ghatsphotit_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport7" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="bhukamp_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">अपंग</div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="apang" id="chkYes8" onclick="ShowHideDiv8()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="apang" id="chkNo8" onclick="ShowHideDiv8()" value="नाही" required> नाही</label>
+                    </div>
+                    <div class="col-md-2 text-left">धरणग्रस्त/प्रकल्पग्रस्त </div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="dharangrast" id="chkYes9" onclick="ShowHideDiv9()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="dharangrast" id="chkNo9" onclick="ShowHideDiv9()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport8" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="apang_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport9" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="dharangrast_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">माजी सैनिक/ पाल्य  </div>
+                    <div class="col-md-4 form-group text-left">
+                        <label><input type="radio" name="majhi_sainik" id="chkYes10" onclick="ShowHideDiv10()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="majhi_sainik" id="chkNo10" onclick="ShowHideDiv10()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport10" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">प्रमाणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="sainik_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <h6 class="text-left">(<b>टिप:</b>&emsp; यापैकी लागू असेल तेथे होय करावे व अर्जासोबत प्रमाणपत्र जोडावे.)</h6>
+            <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-9 text-left">प्रकल्प कार्यालयामार्फत अथवा इतर विभागामार्फत यापूर्वी सदर योजनेचा लाभ घेतला आहे काय?</div>
+                    <div class="col-md-3 form-group text-left">
+                        <label><input type="radio" name="labh" id="chkYes11" onclick="ShowHideDiv11()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="labh" id="chkNo11" onclick="ShowHideDiv11()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport11" style="display: none" >
+                <div style="height:180px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क.</th>
+                          <th>योजनेचे नाव</th>
+                          <th>वर्ष </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>१)</td>
+                          <td><input type="text" name="yojna1"/></td>
+                          <td><input type="number" name="year1"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>२)</td>
+                          <td><input type="text" name="yojna2"/></td>
+                          <td><input type="number" name="year2"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              <br>
+
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                वरीलप्रमाणे देण्यात आलेली  माहिती खरी आहे, तपासणी दरम्यान माहिती खोटी आढळून आल्यास, 
+                मी स्वत: कायदेशीर कारवाईस  जबाबदार राहील.
+              </p><br>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                अर्ज स्वीकारणे अथवा नाकारणे याचा पुर्ण अधिकार प्रकल्प अधिकारी यांना राहील. 
+                यासाठी माझी कोणतीही हरकत राहणार नाही.
+              </p>
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">स्थळ :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">अर्जदाराची सही:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>      <br>
+       
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+
+  <script type="text/javascript">
+    function ShowHideDiv1() {
+        var chkYes1 = document.getElementById("chkYes1");
+        var dvPassport1 = document.getElementById("dvPassport1");
+        dvPassport1.style.display = chkYes1.checked ? "block" : "none";
+    }
+  </script>
+
+<script type="text/javascript">
+  function ShowHideDiv2() {
+      var chkYes2 = document.getElementById("chkYes2");
+      var dvPassport2 = document.getElementById("dvPassport2");
+      dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv3() {
+      var chkYes3 = document.getElementById("chkYes3");
+      var dvPassport3 = document.getElementById("dvPassport3");
+      dvPassport3.style.display = chkYes3.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv4() {
+      var chkYes4 = document.getElementById("chkYes4");
+      var dvPassport4 = document.getElementById("dvPassport4");
+      dvPassport4.style.display = chkYes4.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv5() {
+      var chkYes5 = document.getElementById("chkYes5");
+      var dvPassport5 = document.getElementById("dvPassport5");
+      dvPassport5.style.display = chkYes5.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv6() {
+      var chkYes6 = document.getElementById("chkYes6");
+      var dvPassport6 = document.getElementById("dvPassport6");
+      dvPassport6.style.display = chkYes6.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv7() {
+      var chkYes7 = document.getElementById("chkYes7");
+      var dvPassport7 = document.getElementById("dvPassport7");
+      dvPassport7.style.display = chkYes7.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv8() {
+        var chkYes8 = document.getElementById("chkYes8");
+        var dvPassport8 = document.getElementById("dvPassport8");
+        dvPassport8.style.display = chkYes8.checked ? "block" : "none";
+    }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv9() {
+        var chkYes9 = document.getElementById("chkYes9");
+        var dvPassport9 = document.getElementById("dvPassport9");
+        dvPassport9.style.display = chkYes9.checked ? "block" : "none";
+    }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv10() {
+        var chkYes10 = document.getElementById("chkYes10");
+        var dvPassport10 = document.getElementById("dvPassport10");
+        dvPassport10.style.display = chkYes10.checked ? "block" : "none";
+    }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv11() {
+        var chkYes11 = document.getElementById("chkYes11");
+        var dvPassport11 = document.getElementById("dvPassport11");
+        dvPassport11.style.display = chkYes11.checked ? "block" : "none";
+    }
+</script>

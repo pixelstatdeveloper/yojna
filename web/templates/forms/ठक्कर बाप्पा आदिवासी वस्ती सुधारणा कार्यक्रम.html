@@ -1,0 +1,204 @@
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:thakkar' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+               <div class="form-header text-row">
+                    <h4> ठक्कर बाप्पा आदिवासी वस्ती सुधारणा योजना </h4> 
+               </div>
+              <br/>
+              <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500;"> मा. प्रकल्प अधिकारी,</h6>
+              <h6 class=" text-left" style="font-weight: 500;"> एकात्मिक आदिवासी विकास प्रकल्प, </h6>
+              <h6 class=" text-left" style="font-weight: 500;"> नागपूर.</h6>
+              <br/>
+              <h6 class=" text-left " style="font-weight: 500;"> सन <span><input type="text" name="san" required placeholder="वर्ष"/></span> साठी ठक्कर बाप्पा आदिवासी वस्ती सुधार योजने अंतर्गत प्रस्ताव तयार करून मंजुरीसाठी पाठवीत आहोत.</b></h6>
+              <br><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="gp_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="ग्रामपंचायतीचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="tbarea_name" class="form-control rounded-0 py-4 font-13 sign-register-input"
+                      required placeholder="ठक्कर बाप्पा मोहल्याचे नाव (स्पष्ट नमूद करावे)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="paripurn_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="संपूर्ण पत्ता / तालुका / जिल्हा"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="total_population" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" वस्तीची / गावाची / मोहल्याची एकूण लोकसंख्या "/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="anusuchit_population" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="त्यापैकी अनुसूचित जमातीची एकूण लोकसंख्या"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="living_castes" class="form-control rounded-0 py-4 font-13 sign-register-input"
+                      required placeholder=" गावात / वस्तीत / मोहल्यात कोणत्या जाती / जमाती चे लोक राहतात" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="prastav_bandhkam" class="form-control rounded-0 py-5 font-13 sign-register-input"
+                      required placeholder="ठक्कर बाप्पा वस्ती सुधार योजनेत घ्यावयाच्या प्रस्तावित बांधकामाचा स्पष्ट उल्लेख करावा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                <div class="input-icon">
+                    <div class="row">
+                        <div class="col-8">
+                          ठक्कर बाप्पा वस्ती सुधार योजनेसाठी यापूर्वी अनुदान मिळाले होते का?
+                        </div>
+                        <div class="col-2">
+                            <input class="form-check-input" id="chkYes" onclick="ShowHideDiv()" type="radio" name="bfor_anudan" value="होय" required>
+                            <label class="form-check-label" for="bfor_anudan">
+                                होय
+                            </label>
+                        </div>
+                        <div class="col-2">
+                            <input class="form-check-input" id="chkNo" onclick="ShowHideDiv()" type="radio"  name="bfor_anudan" value="नाही" required>
+                            <label class="form-check-label" for="bfor_anudan">
+                                नाही
+                            </label>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12" id="dvPassport" style="display: none">
+                      <input type="text" name="anudan_amount" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मिळाल्यास किती?  कोणत्या कामासाठी व केव्हा (वर्ष)?"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8 text-left">
+                        <label class="form-group form-row"> प्रस्तावित बांधकामास मंजुरी मिळाल्यास मंजूर अनुदानापेक्षा येणारा जास्तीचा खर्च करण्यास ग्रामपंचायत तयार असल्याबाबतचा ग्रा.पं. चा लेखी ठराव देण्यात यावा  </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="gp_xtranudan" class="form-control" required /> 
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8 text-left">
+                        <label class="form-group form-row"> मंजूर बांधकाम सहा महिन्यात पूर्ण करून घेणेबाबत ग्रा. पं. चा ठराव जोडावा </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="gp_sixmonth" class="form-control" required /> 
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8 text-left">
+                        <label class="form-group form-row"> बांधकामास लागणारी जागा ग्रामपंचायतीच्या मालकीची असल्याचा तलाठयाचा दाखला (७/१२) सोबत जोडावा </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="talathi_satbara" class="form-control" required /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8 text-left">
+                        <label class="form-group form-row"> ग्रामपंचायतच्या खाती असलेली शिल्लक रकमेचा लेखा तपशील जोडावा </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="gp_shilak" class="form-control" required /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="form-group" >
+               <div class="input-icon">
+                 <div class="row">
+                   <div class="col-md-1">
+                     <label class="form-group form-row"> सरपंच </label>
+                   </div>
+                   <div class="col-md-5">
+                     <input type="file" name="sarpanchsign" class="form-control" required />
+                   </div>
+                   <div class="col-md-1">
+                     <label class="form-group form-row"> सचिव </label>
+                   </div>
+                   <div class="col-md-5">
+                     <input type="file" name="sachivsign" class="form-control" required />
+                   </div>
+                 </div>
+               </div>
+             </div>
+<br>
+             <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+             </div>
+       
+  </form>
+  </div>
+  </div>
+  </div>
+  
+{% endblock %}
+<script type="text/javascript">
+  function ShowHideDiv() {
+      var chkYes = document.getElementById("chkYes");
+      var dvPassport = document.getElementById("dvPassport");
+      dvPassport.style.display = chkYes.checked ? "block" : "none";
+  }
+</script>
+

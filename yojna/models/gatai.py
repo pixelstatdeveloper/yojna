@@ -1,0 +1,93 @@
+from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+from yojna.models import UserModel,SchemeModel,SchemeRegistrationModel
+
+class gatai_kamgar(models.Model):
+    user=models.ForeignKey(UserModel, on_delete=models.CASCADE, null=True)
+    scheme=models.ForeignKey(SchemeModel, on_delete=models.CASCADE, null=True)
+    scheme_register=models.ForeignKey(SchemeRegistrationModel, on_delete=models.CASCADE, null=True)
+    name = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    fa_name = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    cu_address = models.TextField(default=None,null=True,blank=True)
+    pe_address = models.TextField(default=None,null=True,blank=True)
+    mobile_number = PhoneNumberField( blank=True)
+    stall_address = models.TextField(default=None,null=True,blank=True)
+    jaga_tapshil = models.FileField(upload_to='media/divyang_person_image',default=None,null=True,blank=True)
+    loksankhya = models.CharField(default=None,null=True,blank=True,max_length=100)
+    birth_date = models.DateField(default=None,null=True,blank=True)
+    age = models.IntegerField(default=None,null=True,blank=True)
+    birth_place = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    caste = models.CharField(default=None,null=True,blank=True,max_length=200)
+    pot_caste = models.CharField(default=None,null=True,blank=True,max_length=200)
+    education = models.CharField(default=None,null=True,blank=True,max_length=400)
+    business = models.CharField(default=None,null=True,blank=True,max_length=500)
+    ration_no = models.CharField(default=None,null=True,blank=True,max_length=200)
+    fa_business = models.CharField(default=None,null=True,blank=True,max_length=500)
+    income = models.BigIntegerField(default=None,null=True,blank=True)
+    photo = models.FileField(upload_to='media/divyang_person_image',default=None,null=True,blank=True)
+    signature = models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+    apply_date = models.DateField(default=None,null=True,blank=True)
+    name_1 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+
+    vykti_name = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age1 = models.IntegerField(default=None,null=True,blank=True)
+    nate = models.CharField(max_length=100,default=None,null=True,blank=True)
+    nokri = models.CharField(max_length=100,default=None,null=True,blank=True)
+    masik_utpanna = models.CharField(max_length=100,default=None,null=True,blank=True)
+    varshik_utpanna = models.CharField(max_length=100,default=None,null=True,blank=True)
+
+    vykti_name1 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age2 = models.IntegerField(default=None,null=True,blank=True)
+    nate1 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    nokri1 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    masik_utpanna1 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    varshik_utpanna1 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    
+    vykti_name2 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age3 = models.IntegerField(default=None,null=True,blank=True)
+    nate2 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    nokri2 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    masik_utpanna2 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    varshik_utpanna2 = models.CharField(max_length=100,default=None,null=True,blank=True)
+
+    
+    vykti_name3 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age4 = models.IntegerField(default=None,null=True,blank=True)
+    nate3 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    bank_name3 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    karj3 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki3 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    mahamandal3 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki_3 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    
+    vykti_name4 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age5 = models.IntegerField(default=None,null=True,blank=True)
+    nate4 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    bank_name4 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    karj4 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki4 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    mahamandal4 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki_4 = models.CharField(max_length=100,default=None,null=True,blank=True)
+
+    vykti_name5 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age6 = models.IntegerField(default=None,null=True,blank=True)
+    nate5 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    bank_name5 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    karj5 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki5 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    mahamandal5 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki_5 = models.CharField(max_length=100,default=None,null=True,blank=True)
+
+    vykti_name6 = models.CharField(max_length=1000,default=None,null=True,blank=True)
+    age7 = models.IntegerField(default=None,null=True,blank=True)
+    nate6 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    bank_name6 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    karj6 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki6 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    mahamandal6 = models.CharField(max_length=100,default=None,null=True,blank=True)
+    thakbaki_6 = models.CharField(max_length=100,default=None,null=True,blank=True)
+
+    class Meta:
+        db_table = "gatai_kamgar"
+    def __str__(self) -> str:
+        return str(self.name)

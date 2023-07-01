@@ -1,0 +1,2415 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:ekatmik' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-4">
+                      <input type="text" name="thikan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="ठिकाण" />
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row">दिनांक:</label>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="date" name="date" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; मा. जिल्हा उप - निबंधक, / मा. सहाय्यक निबंधक, </h6>
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; सहकारी संस्था, <span><input type="text" name="sanstha" /></span> </h6>
+            
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row float-right"><b>विषय:-</b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row">नियोजीत</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type="text" name="niyojit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">सहकारी संस्था मर्यादित,</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="maryadit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11 text-left">
+                        <p>ता. <span><input type="text" name="taluka" /></span> जि. 
+                            <span><input type="text" name="jilha"  /></span>
+                            चे नांव आरक्षीत करणे व  सहकारी बँकेत खाते उघडण्यास परवानगी मिळण्याबाबत.  </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-left"> महोदय ,</p>
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                मी आपणास कळवू इच्छितो की, सदर सहकारी संस्थेचा मुख्य प्रवर्तक म्हणून माझी दिनांक 
+                <span><input type="date" name="dinank" /></span> 
+                रोजी झालेल्या सभेत निवड करण्यात आली आहे. सोबत संस्था स्थापन करण्याच्या उद्धेशाने घेण्यात 
+                आलेल्या सभेचा वृत्तांत जोडलेला आहे. ह्या सभेत मला संस्था स्थापन करण्याच्या उद्देशाने नोंदणी प्रकरण 
+                तयार करण्याचे, आवश्यक ती लागणारी माहिती पुरविण्याचे व सह्या करण्याचे अधिकार देण्यात आलेले आहेत. 
+              </p>
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                सभेत संम्मत झालेल्या ठराव क्रमांक ३ नुसार व मला दिलेल्या अधिकारानुसार सदर नियोजीत 
+                संस्थेचे नांव आरक्षीत करण्याकरिता मी आवश्यक ती सर्व माहिती खालील प्रमाणे देत असून 
+                माझ्या माहितीप्रमाणे ही माहिती बरोबर व योग्य आहे. 
+              </p>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="sanstha_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="नियोजीत संस्थेचे नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <textarea type="text" name="sanstha_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="संस्थेचा नोंदणी करावयाचा पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="sabhasad" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="संस्थेत सहभागी झालेल्या सभासदांची संख्या" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 30px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left">अर्जदार प्रवर्तकांपैकी आहे काय ?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="pravart_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="pravart_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="sanstha_office" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="संस्थेचे दप्तर ज्या ठिकाणी राहणार आहे तो पत्ता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="pravartak" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="मुख्य प्रवर्तकाचे पूर्ण नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="pra_add" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="मुख्य प्रवर्तकाचे राहण्याचा पत्ता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="pra_mob" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="दूरध्वनी क्रमांक" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h6 class="text-left">वरील नांव आरक्षीत होत नसल्यास पसंतीची दूसरी तीन नांवे :-</h6><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="sanstha1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="१)" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                      <p>सहकारी संस्था मर्यादित,</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="city1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="sanstha2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="२)" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                      <p>सहकारी संस्था मर्यादित,</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="city2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="sanstha3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="३)" />
+                    </div>
+                    <div class="col-md-3 text-center">
+                      <p>सहकारी संस्था मर्यादित,</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="city3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                तरी आपणास विनंती आहे की, वरील संस्थेचे नांव शक्य तितक्या लवकर आरक्षीत करून संस्थेच्या नांवाने 
+                <span><input type="text" name="navane" /></span> 
+                जिल्हा मध्यवर्ती सहकारी बँक लि. <span><input type="text" name="limited" /></span> 
+                शाखा <span><input type="text" name="shakha" /></span> 
+                येथे खाते उघडण्यास परवानगी देण्यात यावी, ही विनंती.
+              </p>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row float-right">आपला विश्वासू</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="vishvasu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-9">
+                        <label class="form-group form-row float-right">मुख्य प्रवर्तक </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row float-right">नियोजीत</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="niyoj" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                        <label class="form-group form-row float-right">सहकारी संस्था मर्यादित,</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="marya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row">नियोजीत</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="niyoj1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">सहकारी संस्था मर्यादित,</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" name="marya1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           />
+                    </div>
+                    <div class="col-md-8">
+                        <p>ता. <span><input type="text" name="taluka1" /></span> जि. 
+                            <span><input type="text" name="jilha1" /></span> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row" style="margin-top: 8px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center" style="border-style: groove; padding-left: 25px; padding-right: 25px; padding-top: 7px; padding-bottom: 7px;">
+                    <h5 > सभा वृत्तांत  </h5>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row">नियोजीत</label>
+                    </div>
+                    <div class="col-md-11">
+                        <input type="text" name="niyojit1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">सहकारी संस्था मर्यादित,</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="maryadit1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-12 text-left">
+                        <p>स्थापना करण्याच्या दृष्टीने नागरीकांची सभा <span><input type="text" name="sabha" placeholder="" /></span> 
+                          दिनांक <span><input type="date" name="dinank1" placeholder="" /></span> रोजी सकाळी / दुपारी ठीक 
+                          <span><input type="time" name="time" placeholder="" /></span> वाजता  श्री 
+                          <span><input type="text" name="ghar" placeholder="" /></span> यांचे घरी आयोजित करण्यात आली.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h5><b>सदर सभेत खालील विषयावर चर्चा करण्यात आली व ठराव संम्मत करण्यात आले.</b></h5><br>
+
+              <h6 class="text-left"><b>विषय क्रमांक १ :- सभेचे कामकाज चालविण्यासाठी सभाध्यक्षची निवड करणे.</b></h6><br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>ठराव :</b></label>
+                    </div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>सहकार क्षेत्र हे समाजातील सर्व अंगाशी निगडीत असे एकमेव क्षेत्र आहे. आज महाराष्ट्राच्या सर्वांगीर्ण विकासामध्ये 
+                        पर्यायाने देशाच्या सर्वांगीण विकासामध्ये सहकाराचा फार मोठा मोलाचा वाटा आहे. हाच दृष्टिकोन 
+                        नजरेसमोर ठेवून 
+                        <span><input type="text" name="sahakar" size="60" /></span> 
+                        सहकारी संस्था स्थापन करावी म्हणून आजची सभा आयोजित करण्यात आली. ह्या सभेचे कामकाज 
+                        चालविण्यासाठी सभाध्यक्षाची निवड करण्यात यावी व सभाध्यक्षाकरिता नांव सुचविण्यात यावे असे सभेत श्री
+                        <span><input type="text" name="shree" size="40" /></span> 
+                        ह्यांनी सांगितले. यावर चर्चा करण्यात येवून सभाध्यक्षाकरिता श्री <span><input type="text" name="shree1" size="40" /></span> 
+                        ह्यांचे नाव श्री <span><input type="text" name="shree2" size="45" /></span> 
+                        यांनी सूचविले व त्यास श्री <span><input type="text" name="shree3" size="45" /></span> 
+                        ह्यांनी अनुमोदन दिले. सभाध्यक्षासाठी श्री <span><input type="text" name="shree4" size="45" /></span> 
+                        यांचे नांवाव्यतिरिक्त दुसरे कोणतेही नांव सभेसमोर चर्चेस आले नाही. त्यामुळे सभाध्यक्ष म्हणून श्री 
+                        <span><input type="text" name="shree5" size="35" /></span> 
+                        ह्यांची अविरोध निवड करण्यात आली आणि त्यांनी आजच्या सभेचे अध्यक्षस्थान स्विकारावे व सभेचे 
+                        कामकाज चालवावे अशी विनंती करण्यात आली. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सूचक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="suchak" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" name="anumodak" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h6 class="text-left"><b>विषय क्रमांक २ :- संस्थेचे नांव व कार्यक्षेत्र ठरविण्याबाबत.</b></h6>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>ठराव :</b></label>
+                    </div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत संस्थेचे नांव व कार्यक्षेत्र ठरविण्याबाबत सभेत सविस्तर चर्चा 
+                        करण्यात आली. त्यानुसार नियोजीत संस्थेचे नांव 
+                        <span><input type="text" name="sanstha_name1" size="60" /></span> 
+                        सहकारी संस्था मर्यादित <span><input type="text" name="marya3" size="40" /></span> 
+                        असे ठेवण्यात यावे तसेच संस्थेचे कार्यक्षेत्र <span><input type="text" name="shetra" size="40" /></span> 
+                        पुरते ठेवण्यात यावे, असे ठरले. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सूचक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="suchak2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" name="anumodak2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h6 class="text-left"><b>विषय क्रमांक ३ :- मुख्य प्रवर्तकाची निवड करणे व अधिकार देणे.</b></h6><br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>ठराव :</b></label>
+                    </div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत संस्था नोंदणी करण्याचे दृष्टीने मुख्य प्रवर्तकाची निवड करण्याबाबत नांव सुचविण्यात 
+                        यावे असे सभाध्यक्षांनी सभेत सांगितले. यावर साविस्तर चर्चा करण्यात येवून मुख्य प्रवर्तक म्हणून श्री 
+                        <span><input type="text" name="shree6" size="45" /></span> ह्यांचे नांव श्री
+                        <span><input type="text" name="shree7" size="45" /></span> 
+                        ह्यांनी सुचविले व त्यास श्री <span><input type="text" name="shree8" size="45" /></span> 
+                        ह्यांनी अनुमोदन दिले. मुख्य प्रवर्तकासाठी दुसरे कोणतेही नांव सभेसमोर चर्चेला आले नाही. त्यामुळे श्री 
+                        <span><input type="text" name="shree9" size="45" /></span> 
+                        ह्यांची मुख्य प्रवर्तक म्हणून निवड करण्यात आली. तसेच त्यांना मुख्य प्रवर्तक म्हणून 
+                        नियोजीत संस्थेची नोंदणी करणे, आवश्यक ते भाग - भांडवल व प्रवेश फी गोळा करणे, 
+                        संस्था नोंदणीचे प्रकरण व त्रैवार्षिक अहवाल तयार करणे, इत्यादींचे अधिकार देण्यात येत आहे. असे ठरले.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सूचक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="suchak3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" name="anumodak3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h6 class="text-left"><b>विषय क्रमांक ४ :- संस्थेचे अधिकृत भाग - भांडवल व प्रवेश फी ठरविणे.</b></h6><br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>ठराव :</b></label>
+                    </div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत संस्थेच्या भाग - भांडवलाची रक्कम ठरविण्याबाबत चर्चा करण्यात आली. 
+                        सर्वसामान्य नागरीकांना संस्थेचे सभासद होता यावे व संस्थेचे भाग - भांडवल मोठ्या 
+                        प्रमाणात जमा व्हावे म्हणून संस्थेचे अधिकृत भाग - भांडवल प्रतिभाग रु. 
+                        <span><input type="number" name="bhandwal" size="45" /></span> प्रमाणे
+                        <span><input type="text" name="bhag" /></span> भागाचे रु.
+                        <span><input type="number" name="bhag_rupay" size="20" /></span> 
+                        आणि प्रवेश फी म्हणून रु. <span><input type="number" name="pravesh_fee" size="20" /></span> 
+                        याप्रमाणे सदरील भागाची व प्रवेश फी ची रक्कम गोळा करण्याचे अधिकार संस्थेचे मुख्य प्रवर्तक श्री 
+                        <span><input type="text" name="mukhya" size="40" /></span> ह्यांना देण्यात येत 
+                        आहे, असे ठरले.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सूचक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="suchak4" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" name="anumodak4" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h6 class="text-left"><b>विषय क्रमांक ५ :- नियोजीत संस्थेचे नावाने सहकारी बँकेत खाते उघडणे. </b></h6><br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>ठराव :</b></label>
+                    </div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyojit2" size="77" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryadit2" size="62" /></span> 
+                        ता. <span><input type="text" name="taluka2" size="20" /></span> जि. 
+                        <span><input type="text" name="jilha2" size="20" /></span> चे नावाने 
+                        जिल्हा मध्यवर्ती सहकारी बँक लि. <span><input type="text" name="limited1" size="30" /></span>
+                        शाखा <span><input type="text" name="shakha1" size="20" /></span> येथे खाते उघडण्यात 
+                        यावे व सभासदांकडून मिळणारे भाग - भांडवल आणि प्रवेश फी ची रक्कम सदर 
+                        खात्यात जमा करण्यात यावी. सदर बँकेचे खात्यातून रक्कम काढण्याचे अधिकार 
+                        नियोजीत संस्थेचे मुख्य प्रवर्तक श्री <span><input type="text" name="hyana" size="40" /></span>
+                        ह्यांना देण्यात येत आहे, असे ठरले. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सूचक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="suchak5" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" name="anumodak5" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h6 class="text-left"><b>विषय क्रमांक ६ :- नियोजीत संस्थेचे नांव आरक्षीत न झाल्यास इतर तीन नावांचा विचार करणे. </b></h6><br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>ठराव :</b></label>
+                    </div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyojit3" size="77" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryadit3" size="62" /></span> 
+                        ता. <span><input type="text" name="taluka3" size="20" /></span> जि. 
+                        <span><input type="text" name="jilha3" size="20" /></span> हे नांव 
+                        आरक्षीत न झाल्यास खालील तीन नांवे संस्थेकरिता सुचविण्यात येत आहे. 
+                      </p>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyo1" size="28" placeholder="१)" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryad1" size="21" /></span> 
+                      </p><br>
+                      <p>नियोजीत <span><input type="text" name="niyo2" size="28" placeholder="२)" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryad2" size="21" /></span> 
+                      </p><br>
+                      <p>नियोजीत <span><input type="text" name="niyo3" size="28" placeholder="३)" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryad3" size="21" /></span> 
+                      </p><br>
+                      <p>नियोजीत संस्थेचे नांव आरक्षीत न झाल्यास वरील तीन नावांपैकी एका नावावर प्राधान्याने 
+                        विचार करण्यात यावा, असे ठरले.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सूचक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="suchak6" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" name="anumodak6" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h6 class="text-center"><b>विषय क्रमांक ७ :- नियोजीत संस्थेच्या कार्यालयाकरिता जागा भाड्याने घेणे /                        
+                नियोजित गृहनिर्माण संस्थेकरिता जागा खरेदी करणे. </b></h6><br>
+
+                <div class="form-group">
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <label class="form-group form-row"><b>ठराव :</b></label>
+                      </div>
+                      <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                        <p>नियोजीत संस्थेचे कामकाज चालू करण्यासाठी जागा भाड्याने घेण्याबाबत / नियोजीत 
+                          गृहनिर्माण सहकारी संस्थेकरिता जागा खरेदी करण्याबाबत चर्चा करण्यात आली आणि 
+                          ह्या चर्चेत असे ठरले की. श्री<span><input type="text" name="hyanchi" size="40" /></span> 
+                          ह्यांची जागा संस्थेचे कामकाज चालू करण्यासाठी भाड्याने घेण्यात यावी. / नियोजीत 
+                          गृहनिर्माण संस्थेकरिता जागा खरेदी करण्यात यावी. जागा भाड्याने घेणे, / जागा 
+                          खरेदी करणे, त्या बाबतचा करारनामा करणे इत्यादींचे अधिकार मुख्य प्रवर्तक श्री 
+                          <span><input type="text" name="hyana1" size="40" /></span> 
+                          ह्यांना देण्यात येत आहे, असे ठरले.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-3">
+                          <label class="form-group form-row float-right">सूचक श्री</label>
+                      </div>
+                      <div class="col-md-9">
+                          <input type="text" name="suchak7" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="text" name="anumodak7" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="" />
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                          <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <h6 class="text-left"><b>विषय क्रमांक ८ :- त्रैवार्षिक अहवाल तयार करणे. </b></h6><br>
+  
+                  <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label class="form-group form-row"><b>ठराव :</b></label>
+                        </div>
+                        <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                          <p>सदर संस्थेचा त्रैवार्षिक अहवाल तयार करण्यासाठी संस्था स्थापन  
+                            करणाऱ्या काही व्यक्तींनी सहकार खात्याचे अधिकारी ह्यांचेशी संपर्क 
+                            साधला व संस्थेबाबतची संपूर्ण माहिती मिळवून घेतली. त्या माहितीच्या       
+                            आधारे तीन वर्षाचा सविस्तर अहवाल तयार करण्यात आला व सदर 
+                            अहवाल सभेमध्ये वाचून दाखविण्यात आला. या अहवालावर सभेमध्ये      
+                            सविस्तर चर्चा करण्यात येवून सदर अहवालास मंजूरी देण्यात येत आहे,         
+                            असे ठरले.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-group form-row float-right">सूचक श्री</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="suchak8" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" name="anumodak8" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <h6 class="text-left"><b>विषय क्रमांक ९ :- आदर्श उपविधी स्विकारणे. </b></h6><br>
+  
+                  <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label class="form-group form-row"><b>ठराव :</b></label>
+                        </div>
+                        <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                          <p>महाराष्ट्र सहकारी संस्था अधिनियम १९६० व नियम १९६१ मधील महत्वाच्या तरतूदींची जाणीव 
+                            सर्वाना करून देण्यात आली. तसेच सहकार खात्याने जे नमूनेदार आदर्श उपविधी 
+                            तयार केले आहेत ते नमूनेदार आदर्श उपविधी सभेमध्ये वाचून दाखवण्यात आले. त्यावर 
+                            सविस्तर चर्चा करण्यात येवून असे ठरले की,
+                          </p>
+                          <p>नियोजीत <span><input type="text" name="niyojit9" size="77" /></span> 
+                            सहकारी संस्था मर्यादित, <span><input type="text" name="maryadit9" size="40" /></span> 
+                            करीता  हे नमूनेदार आदर्श उपविधी  स्विकारण्यात  यावे, असे ठरले. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-group form-row float-right">सूचक श्री</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="suchak9" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" name="anumodak9" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <h6 class="text-center"><b>विषय क्रमांक १० :-  नियोजीत संस्थेच्या नोंदणी प्रकरणावर 
+                    सह्या करण्याचे अधिकार मुख्य प्रवर्तकास देणे व त्यांना मदत करण्याकरिता 
+                    <span><input type="number" name="pravart"/></span> प्रवर्तकांची निवड करणे. </b></h6><br>
+  
+                  <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label class="form-group form-row"><b>ठराव :</b></label>
+                        </div>
+                        <div class="col-md-11 text-left" style="word-spacing: 3px;">
+                          <p>नियोजीत संस्थेची नोंदणी करण्यासाठी नोंदणी प्रकरण चार प्रतीत तयार करून ते 
+                            ताबडतोब संबंधित नोंदणी अधिकारी ह्यांचेकडे सादर करण्यात यावे यासाठी संस्थेच्या 
+                            वतीने उपविधीवर व इतर महत्वाचे कागदपत्रावर सह्या करण्याचे अधिकार मुख्य प्रवर्तकासह 
+                            इतर <span><input type="number" name="other" /></span> 
+                            प्रवर्तकांना देण्यात येत आहे. नियोजीत संस्थेची नोंदणी करण्याचे दृष्टीने व इतर कामकाजास 
+                            मदत करण्याचे दृष्टीने खालील प्रमाणे प्रवर्तक समिती निवडण्यात येत आहे, असे ठरले. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-group form-row float-right">सूचक श्री</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" name="suchak10" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                              placeholder="" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row float-right">अनुमोदक श्री</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" name="anumodak10" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-group form-row float-right">ठराव सर्वानुमते मंजूर </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+
+                  <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-10 text-left" style="word-spacing: 3px;">
+                          <p><span><input type="text" name="mpra" size="60" placeholder="१)" /></span> मुख्य प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra1" size="60" placeholder="२)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra2" size="60" placeholder="३)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra3" size="60" placeholder="४)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra4" size="60" placeholder="५)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra5" size="60" placeholder="६)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra6" size="60" placeholder="७)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra7" size="60" placeholder="८)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra8" size="60" placeholder="९)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra9" size="60" placeholder="१०)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra10" size="60" placeholder="११)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra11" size="60" placeholder="१२)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra12" size="60" placeholder="१३)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra13" size="60" placeholder="१४)" /></span> प्रवर्तक</p><br>
+                          <p><span><input type="text" name="pra14" size="60" placeholder="१५)" /></span> प्रवर्तक</p><br>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group text-center">मुख्य प्रवर्तक</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group text-center">सभाध्यक्ष</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="mukh_pra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="मुख्य प्रवर्तक" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="sabhadhyak" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="सभाध्यक्ष" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyojit10" size="77" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryadit10" size="50" /></span> 
+                        ता. <span><input type="text" name="taluka4" size="20" /></span> जि. 
+                        <span><input type="text" name="jilha4" size="20" /></span> च्या प्रवर्तक / सभासदांची यादी
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <div style="height:800px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>अनु क्र.</th>
+                      <th>संपूर्ण नाव</th>
+                      <th>व्यक्ती किंवा एक व्यक्तीभूत संस्था</th>
+                      <th>वय</th>
+                      <th>राष्ट्रीयत्व</th>
+                      <th>व्यवसाय</th>
+                      <th>पत्ता</th>
+                      <th colspan="4">दिलेली रक्कम</th>
+                      <th>अर्जावर सही करणाऱ्या पैकी इतर कोणताही इसम त्याच्या कुटुंबातील इसम आहे किंवा कसे</th>
+                      <th>संस्थेच्या प्रतिनिधींच्या बाबतीत त्या संस्थेच्या समितीचा सदस्य आहे किंवा कसे</th>
+                      <th>स्वाक्षरी</th>
+                    </tr>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>भागाची किंमत (A)</th>
+                      <th>प्रवेश फी (B)</th>
+                      <th>व्यवस्थापन फी (C)</th>
+                      <th>एकूण बेरीज (A+B+C)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>१)</td>
+                      <td><input type="text" name="mpra2" placeholder="मुख्य प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti1"/></td>
+                      <td><input type="number" name="age1"/></td>
+                      <td><input type="text" name="nation1"/></td>
+                      <td><input type="text" name="busi1"/></td>
+                      <td><input type="text" name="patta1"/></td>
+                      <td><input type="number" name="bhag_price1"/></td>
+                      <td><input type="number" name="pravesh_fee1"/></td>
+                      <td><input type="number" name="vyavas_fee1"/></td>
+                      <td><input type="number" name="ekun1"/></td>
+                      <td><input type="text" name="relate1"/></td>
+                      <td><input type="text" name="sadasya1"/></td>
+                      <td><input type="file" name="sign1"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२)</td>
+                      <td><input type="text" name="prav2" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti2"/></td>
+                      <td><input type="number" name="age2"/></td>
+                      <td><input type="text" name="nation2"/></td>
+                      <td><input type="text" name="busi2"/></td>
+                      <td><input type="text" name="patta2"/></td>
+                      <td><input type="number" name="bhag_price2"/></td>
+                      <td><input type="number" name="pravesh_fee2"/></td>
+                      <td><input type="number" name="vyavas_fee2"/></td>
+                      <td><input type="number" name="ekun2"/></td>
+                      <td><input type="text" name="relate2"/></td>
+                      <td><input type="text" name="sadasya2"/></td>
+                      <td><input type="file" name="sign2"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३)</td>
+                      <td><input type="text" name="prav3" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti3"/></td>
+                      <td><input type="number" name="age3"/></td>
+                      <td><input type="text" name="nation3"/></td>
+                      <td><input type="text" name="busi3"/></td>
+                      <td><input type="text" name="patta3"/></td>
+                      <td><input type="number" name="bhag_price3"/></td>
+                      <td><input type="number" name="pravesh_fee3"/></td>
+                      <td><input type="number" name="vyavas_fee3"/></td>
+                      <td><input type="number" name="ekun3"/></td>
+                      <td><input type="text" name="relate3"/></td>
+                      <td><input type="text" name="sadasya3"/></td>
+                      <td><input type="file" name="sign3"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>४)</td>
+                      <td><input type="text" name="prav4" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti4"/></td>
+                      <td><input type="number" name="age4"/></td>
+                      <td><input type="text" name="nation4"/></td>
+                      <td><input type="text" name="busi4"/></td>
+                      <td><input type="text" name="patta4"/></td>
+                      <td><input type="number" name="bhag_price4"/></td>
+                      <td><input type="number" name="pravesh_fee4"/></td>
+                      <td><input type="number" name="vyavas_fee4"/></td>
+                      <td><input type="number" name="ekun4"/></td>
+                      <td><input type="text" name="relate4"/></td>
+                      <td><input type="text" name="sadasya4"/></td>
+                      <td><input type="file" name="sign4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>५)</td>
+                      <td><input type="text" name="prav5" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti5"/></td>
+                      <td><input type="number" name="age5"/></td>
+                      <td><input type="text" name="nation5"/></td>
+                      <td><input type="text" name="busi5"/></td>
+                      <td><input type="text" name="patta5"/></td>
+                      <td><input type="number" name="bhag_price5"/></td>
+                      <td><input type="number" name="pravesh_fee5"/></td>
+                      <td><input type="number" name="vyavas_fee5"/></td>
+                      <td><input type="number" name="ekun5"/></td>
+                      <td><input type="text" name="relate5"/></td>
+                      <td><input type="text" name="sadasya5"/></td>
+                      <td><input type="file" name="sign5"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>६)</td>
+                      <td><input type="text" name="prav6" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti6"/></td>
+                      <td><input type="number" name="age6"/></td>
+                      <td><input type="text" name="nation6"/></td>
+                      <td><input type="text" name="busi6"/></td>
+                      <td><input type="text" name="patta6"/></td>
+                      <td><input type="number" name="bhag_price6"/></td>
+                      <td><input type="number" name="pravesh_fee6"/></td>
+                      <td><input type="number" name="vyavas_fee6"/></td>
+                      <td><input type="number" name="ekun6"/></td>
+                      <td><input type="text" name="relate6"/></td>
+                      <td><input type="text" name="sadasya6"/></td>
+                      <td><input type="file" name="sign6"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>७)</td>
+                      <td><input type="text" name="prav7" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti7"/></td>
+                      <td><input type="number" name="age7"/></td>
+                      <td><input type="text" name="nation7"/></td>
+                      <td><input type="text" name="busi7"/></td>
+                      <td><input type="text" name="patta7"/></td>
+                      <td><input type="number" name="bhag_price7"/></td>
+                      <td><input type="number" name="pravesh_fee7"/></td>
+                      <td><input type="number" name="vyavas_fee7"/></td>
+                      <td><input type="number" name="ekun7"/></td>
+                      <td><input type="text" name="relate7"/></td>
+                      <td><input type="text" name="sadasya7"/></td>
+                      <td><input type="file" name="sign7"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>८)</td>
+                      <td><input type="text" name="prav8" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti8"/></td>
+                      <td><input type="number" name="age8"/></td>
+                      <td><input type="text" name="nation8"/></td>
+                      <td><input type="text" name="busi8"/></td>
+                      <td><input type="text" name="patta8"/></td>
+                      <td><input type="number" name="bhag_price8"/></td>
+                      <td><input type="number" name="pravesh_fee8"/></td>
+                      <td><input type="number" name="vyavas_fee8"/></td>
+                      <td><input type="number" name="ekun8"/></td>
+                      <td><input type="text" name="relate8"/></td>
+                      <td><input type="text" name="sadasya8"/></td>
+                      <td><input type="file" name="sign8"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>९)</td>
+                      <td><input type="text" name="prav9" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti9"/></td>
+                      <td><input type="number" name="age9"/></td>
+                      <td><input type="text" name="nation9"/></td>
+                      <td><input type="text" name="busi9"/></td>
+                      <td><input type="text" name="patta9"/></td>
+                      <td><input type="number" name="bhag_price9"/></td>
+                      <td><input type="number" name="pravesh_fee9"/></td>
+                      <td><input type="number" name="vyavas_fee9"/></td>
+                      <td><input type="number" name="ekun9"/></td>
+                      <td><input type="text" name="relate9"/></td>
+                      <td><input type="text" name="sadasya9"/></td>
+                      <td><input type="file" name="sign9"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१०)</td>
+                      <td><input type="text" name="prav10" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti10"/></td>
+                      <td><input type="number" name="age10"/></td>
+                      <td><input type="text" name="nation10"/></td>
+                      <td><input type="text" name="busi10"/></td>
+                      <td><input type="text" name="patta10"/></td>
+                      <td><input type="number" name="bhag_price10"/></td>
+                      <td><input type="number" name="pravesh_fee10"/></td>
+                      <td><input type="number" name="vyavas_fee10"/></td>
+                      <td><input type="number" name="ekun10"/></td>
+                      <td><input type="text" name="relate10"/></td>
+                      <td><input type="text" name="sadasya10"/></td>
+                      <td><input type="file" name="sign10"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>११)</td>
+                      <td><input type="text" name="prav11" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti11"/></td>
+                      <td><input type="number" name="age11"/></td>
+                      <td><input type="text" name="nation11"/></td>
+                      <td><input type="text" name="busi11"/></td>
+                      <td><input type="text" name="patta11"/></td>
+                      <td><input type="number" name="bhag_price11"/></td>
+                      <td><input type="number" name="pravesh_fee11"/></td>
+                      <td><input type="number" name="vyavas_fee11"/></td>
+                      <td><input type="number" name="ekun11"/></td>
+                      <td><input type="text" name="relate11"/></td>
+                      <td><input type="text" name="sadasya11"/></td>
+                      <td><input type="file" name="sign11"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१२)</td>
+                      <td><input type="text" name="prav12" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti12"/></td>
+                      <td><input type="number" name="age12"/></td>
+                      <td><input type="text" name="nation12"/></td>
+                      <td><input type="text" name="busi12"/></td>
+                      <td><input type="text" name="patta12"/></td>
+                      <td><input type="number" name="bhag_price12"/></td>
+                      <td><input type="number" name="pravesh_fee12"/></td>
+                      <td><input type="number" name="vyavas_fee12"/></td>
+                      <td><input type="number" name="ekun12"/></td>
+                      <td><input type="text" name="relate12"/></td>
+                      <td><input type="text" name="sadasya12"/></td>
+                      <td><input type="file" name="sign12"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१३)</td>
+                      <td><input type="text" name="prav13" placeholder="प्रवर्तक"/></td>
+                      <td><input type="text" name="vyakti13"/></td>
+                      <td><input type="number" name="age13"/></td>
+                      <td><input type="text" name="nation13"/></td>
+                      <td><input type="text" name="busi13"/></td>
+                      <td><input type="text" name="patta13"/></td>
+                      <td><input type="number" name="bhag_price13"/></td>
+                      <td><input type="number" name="pravesh_fee13"/></td>
+                      <td><input type="number" name="vyavas_fee13"/></td>
+                      <td><input type="number" name="ekun13"/></td>
+                      <td><input type="text" name="relate13"/></td>
+                      <td><input type="text" name="sadasya13"/></td>
+                      <td><input type="file" name="sign13"/></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div><br>
+              <p class="text-left">मुख्य प्रवर्तक</p>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyojit11" size="85" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryadit11" size="72" /></span> 
+                        ता. <span><input type="text" name="taluka5" size="20" /></span> जि. 
+                        <span><input type="text" name="jilha5" size="20" /></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyojit12" size="77" /></span> 
+                        सहकारी संस्था मर्यादित, <span><input type="text" name="maryadit12" size="50" /></span> 
+                        स्थापन करण्याचे उद्देशाने आज <span><input type="text" name="aaj" size="20" /></span> दिनांक 
+                        <span><input type="date" name="din"/></span> रोजी सकाळी / दुपारी ठीक
+                        <span><input type="time" name="taim" /></span> वाजता श्री 
+                        <span><input type="text" name="shree10" size="40" /></span> यांचे घरी घेण्यात आलेल्या 
+                        सभेत उपस्थित असलेल्या सभासदांची यादी.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <div style="height:1700px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>क्र.</th>
+                      <th>सभासदाचे नांव</th>
+                      <th>सभासदाची सही</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>१</td>
+                      <td><input type="text" name="sabhasad1"/></td>
+                      <td><input type="file" name="sabh_sign1"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२</td>
+                      <td><input type="text" name="sabhasad2"/></td>
+                      <td><input type="file" name="sabh_sign2"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३</td>
+                      <td><input type="text" name="sabhasad3"/></td>
+                      <td><input type="file" name="sabh_sign3"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>४</td>
+                      <td><input type="text" name="sabhasad4"/></td>
+                      <td><input type="file" name="sabh_sign4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>५</td>
+                      <td><input type="text" name="sabhasad5"/></td>
+                      <td><input type="file" name="sabh_sign5"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>६</td>
+                      <td><input type="text" name="sabhasad6"/></td>
+                      <td><input type="file" name="sabh_sign6"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>७</td>
+                      <td><input type="text" name="sabhasad7"/></td>
+                      <td><input type="file" name="sabh_sign7"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>८</td>
+                      <td><input type="text" name="sabhasad8"/></td>
+                      <td><input type="file" name="sabh_sign8"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>९</td>
+                      <td><input type="text" name="sabhasad9"/></td>
+                      <td><input type="file" name="sabh_sign9"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१०</td>
+                      <td><input type="text" name="sabhasad10"/></td>
+                      <td><input type="file" name="sabh_sign10"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>११</td>
+                      <td><input type="text" name="sabhasad11"/></td>
+                      <td><input type="file" name="sabh_sign11"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१२</td>
+                      <td><input type="text" name="sabhasad12"/></td>
+                      <td><input type="file" name="sabh_sign12"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१३</td>
+                      <td><input type="text" name="sabhasad13"/></td>
+                      <td><input type="file" name="sabh_sign13"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१४</td>
+                      <td><input type="text" name="sabhasad14"/></td>
+                      <td><input type="file" name="sabh_sign14"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१५</td>
+                      <td><input type="text" name="sabhasad15"/></td>
+                      <td><input type="file" name="sabh_sign15"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१६</td>
+                      <td><input type="text" name="sabhasad16"/></td>
+                      <td><input type="file" name="sabh_sign16"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१७</td>
+                      <td><input type="text" name="sabhasad17"/></td>
+                      <td><input type="file" name="sabh_sign17"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१८</td>
+                      <td><input type="text" name="sabhasad18"/></td>
+                      <td><input type="file" name="sabh_sign18"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१९</td>
+                      <td><input type="text" name="sabhasad19"/></td>
+                      <td><input type="file" name="sabh_sign19"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२०</td>
+                      <td><input type="text" name="sabhasad20"/></td>
+                      <td><input type="file" name="sabh_sign20"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२१</td>
+                      <td><input type="text" name="sabhasad21"/></td>
+                      <td><input type="file" name="sabh_sign21"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२२</td>
+                      <td><input type="text" name="sabhasad22"/></td>
+                      <td><input type="file" name="sabh_sign22"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२३</td>
+                      <td><input type="text" name="sabhasad23"/></td>
+                      <td><input type="file" name="sabh_sign23"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२४</td>
+                      <td><input type="text" name="sabhasad24"/></td>
+                      <td><input type="file" name="sabh_sign24"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२५</td>
+                      <td><input type="text" name="sabhasad25"/></td>
+                      <td><input type="file" name="sabh_sign25"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२६</td>
+                      <td><input type="text" name="sabhasad26"/></td>
+                      <td><input type="file" name="sabh_sign26"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२७</td>
+                      <td><input type="text" name="sabhasad27"/></td>
+                      <td><input type="file" name="sabh_sign27"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२८</td>
+                      <td><input type="text" name="sabhasad28"/></td>
+                      <td><input type="file" name="sabh_sign28"/></td>
+                    </tr>
+                    <tr class="text-center">
+                    <td>२९</td>
+                      <td><input type="text" name="sabhasad29"/></td>
+                      <td><input type="file" name="sabh_sign29"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३०</td>
+                      <td><input type="text" name="sabhasad30"/></td>
+                      <td><input type="file" name="sabh_sign30"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३१</td>
+                      <td><input type="text" name="sabhasad31"/></td>
+                      <td><input type="file" name="sabh_sign31"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३२</td>
+                      <td><input type="text" name="sabhasad32"/></td>
+                      <td><input type="file" name="sabh_sign32"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३३</td>
+                      <td><input type="text" name="sabhasad33"/></td>
+                      <td><input type="file" name="sabh_sign33"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३४</td>
+                      <td><input type="text" name="sabhasad34"/></td>
+                      <td><input type="file" name="sabh_sign34"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३५</td>
+                      <td><input type="text" name="sabhasad35"/></td>
+                      <td><input type="file" name="sabh_sign35"/></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div><br>
+              <h5><b>संस्थेची योजना</b></h5><br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p>नियोजीत <span><input type="text" name="niyojit13" size="85" /></span> 
+                        सहकारी संस्था मर्या. <span><input type="text" name="maryadit13" size="75" /></span> ता.
+                        <span><input type="text" name="taluka6" size="20" /></span> जि.
+                        <span><input type="text" name="jilha6" size="20"/></span> ची अंदाजे तीन वर्षाची योजना पुढील प्रमाणे आहे. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <h6><b>संस्थेचे तीन वर्षाचे अंदाजपत्रक</b></h6><br>
+
+              <div style="height:700px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th colspan="4">जमा</th>
+                      <th colspan="4">खर्च</th>
+                    </tr>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th> तपशिल </th>
+                      <th>प्रथम वर्ष सन</th>
+                      <th>द्वितीय वर्ष सन</th>
+                      <th>तृतीय वर्ष सन</th>
+                      <th>तपशिल</th>
+                      <th>प्रथम वर्ष सन</th>
+                      <th>द्वितीय वर्ष सन</th>
+                      <th>तृतीय वर्ष सन</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>शेअर भांडवल </td>
+                      <td><input type="number" name="share1" /></td>
+                      <td><input type="number" name="share2"/></td>
+                      <td><input type="number" name="share3"/></td>
+                      <td>नोकर पगार </td>
+                      <td><input type="number" name="nokar1" /></td>
+                      <td><input type="number" name="nokar2" /></td>
+                      <td><input type="number" name="nokar3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>प्रवेश फी</td>
+                      <td><input type="number" name="fee1" /></td>
+                      <td><input type="number" name="fee2" /></td>
+                      <td><input type="number" name="fee3" /></td>
+                      <td>सादीलवार </td>
+                      <td><input type="number" name="sadilvar1" /></td>
+                      <td><input type="number" name="sadilvar2" /></td>
+                      <td><input type="number" name="sadilvar3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>सभासद ठेव </td>
+                      <td><input type="number" name="thev1" /></td>
+                      <td><input type="number" name="thev2" /></td>
+                      <td><input type="number" name="thev3" /></td>
+                      <td>किरकोळ</td>
+                      <td><input type="number" name="kirkol1" /></td>
+                      <td><input type="number" name="kirkol2" /></td>
+                      <td><input type="number" name="kirkol3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>बँक कर्ज </td>
+                      <td><input type="number" name="loan1" /></td>
+                      <td><input type="number" name="loan2" /></td>
+                      <td><input type="number" name="loan3" /></td>
+                      <td>ऑफिस भाडे</td>
+                      <td><input type="number" name="rent1" /></td>
+                      <td><input type="number" name="rent2" /></td>
+                      <td><input type="number" name="rent3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>सरळ व्याज</td>
+                      <td><input type="number" name="interest1" /></td>
+                      <td><input type="number" name="interest2" /></td>
+                      <td><input type="number" name="interest3" /></td>
+                      <td>बँक व्याज</td>
+                      <td><input type="number" name="bank1" /></td>
+                      <td><input type="number" name="bank2" /></td>
+                      <td><input type="number" name="bank3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>सभासद संख्या</td>
+                      <td><input type="number" name="sabha_sankhya1" /></td>
+                      <td><input type="number" name="sabha_sankhya2" /></td>
+                      <td><input type="number" name="sabha_sankhya3" /></td>
+                      <td>सभासद ठेव व्याज</td>
+                      <td><input type="number" name="vyaj1" /></td>
+                      <td><input type="number" name="vyaj2" /></td>
+                      <td><input type="number" name="vyaj3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>बँक शेअर्स</td>
+                      <td><input type="number" name="b_share1" /></td>
+                      <td><input type="number" name="b_share2" /></td>
+                      <td><input type="number" name="b_share3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>मेंबर कर्ज</td>
+                      <td><input type="number" name="member1" /></td>
+                      <td><input type="number" name="member2" /></td>
+                      <td><input type="number" name="member3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>मेंबर कर्ज</td>
+                      <td><input type="number" name="niwwal1" /></td>
+                      <td><input type="number" name="niwwal2" /></td>
+                      <td><input type="number" name="niwwal3" /></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>एकूण</td>
+                      <td><input type="number" name="tot1" /></td>
+                      <td><input type="number" name="tot2" /></td>
+                      <td><input type="number" name="tot3" /></td>
+                      <td></td>
+                      <td><input type="number" name="tota1" /></td>
+                      <td><input type="number" name="tota2" /></td>
+                      <td><input type="number" name="tota3" /></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div><br>
+              <h5><b>सदस्य होण्यासाठी करावयाचा अर्ज</b></h5><br>
+              <h6>( नियम १९ (I) )</h6><br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p>मे सभापती चेअरमन <span><input type="text" name="chairman" size="72" /></span> 
+                        सहकारी <span><input type="text" name="saha" size="68" /></span> संस्था मर्यादित
+                        <span><input type="text" name="maryadit14" size="55" /></span> ता.
+                        <span><input type="text" name="taluka7" size="20"/></span> जि. 
+                        <span><input type="text" name="jilha7" size="20"/></span> यांचेकडे 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <p class="text-left"> महोदय ,</p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                खाली सही करणार <span><input type="text" name="karnar" size="60"/></span> रा. 
+                <span><input type="text" name="rahnar" size="35"/></span> ता.
+                <span><input type="text" name="taluka8" size="20"/></span> जि. 
+                <span><input type="text" name="jilha8" size="20"/></span>  
+              </p><br><br><br>
+
+              <p class="text-left">आपल्या संस्थेच्या सभासद होण्याकरिता अर्ज करीत आहे. आमचे संबंधी / माझे माहितीचा तपशिल खालीलप्रमाणे :- </p><br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="purn_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="पुर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="purn_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="पूर्ण पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="dhanda" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="धंदा" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="vay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="अर्जाच्या तारखेच्या दिवशीचे वय" /> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="nationality" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="राष्ट्रीयत्व" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="varg" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="कोणत्या वर्गाचे सदस्याकरिता अर्ज करीत आहे (सरकारी, नाममात्र, सहानुभूती असलेला अगर सामान्य)" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="number" name="pra_rakkam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="या अर्जासोबत भरलेली प्रवेश फी ची रक्कम" /> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="number" name="bhag_rakkam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="भागाचे / खरेदीबद्दल या अर्जासोबत भरलेली रक्कम" /> 
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <p class="text-left">संस्थेच्या अर्जदाराच्या कुटूंबातील (महाराष्ट्र सरकारी कलम ६ मध्ये कुटूंब या केलेल्या    
+                शब्दांच्या अर्थानुसार)</p><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="esam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="हल्ली संस्थेत सदस्य असणाऱ्या इसंमांची नांवे" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="varas_nameadd" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="भागधारकाच्या वारसाचे पूर्ण नांव व पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="tapshil" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="मालक अगर कुळ या नात्याने धारण केलेल्या स्थावर जिंदगीचा तपशिल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="ichito" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="संस्थेकडून जास्तीत जास्त किती रक्कम कर्जाऊ घेण्याचे मी इच्छितो" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="thak_tapshil" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="दुसऱ्या सहकारी संस्थेच्या / संस्थाचा असल्यास त्याबद्दलचा व संस्थेचे किती कर्ज देणे थकले आहे. (तसे असल्यास) या माहितीचा तपशिल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="other_info" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="संस्थेच्या उपविधीमध्ये इतर लागणारी माहिती" /> 
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                मी प्रतिज्ञेवर असे जाहीर करतो की, आपल्या संस्थेचे उपविधी मी वाचले असून संस्थेशी 
+                होणाऱ्या माझ्या व्यवहारासंबंधी अशा सर्व बाबतीत त्या उपविधीनी मी बांधल्या जाण्यास 
+                या अर्जाने मी कबुली देत आहे. 
+              </p><br>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                मी प्रतिज्ञेवर आणखी  असे जाहिर करतो की , वर दिलेली माहिती माझे माहितीप्रमाणे खरी 
+                व बिनचुक अशी आहे. मी अशी हमी देतो की ,
+              </p><br>
+
+              <ol>
+                <li>
+                  <p class="text-left">
+                    मी धारण केलेली स्थावर जंगम जिंदगी माझे कुटूंबातील आपले संस्थेचे सदस्य इत्यादी   
+                      उपविधी अन्वये लागणारी माहिती पुरविल. 
+                  </p>
+                </li><br>
+                <li>
+                  <p class="text-left">
+                    आपल्या संस्था मला आदेश देईल तेंव्हा कोणतेही विज्ञानपत्र करार अगर दस्तावेज मी 
+                    करून देईल. 
+                  </p>
+                </li>
+              </ol><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="dinan" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">साक्षीदाराची सही:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="saksh_sign" class="form-control" />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">अर्जदाराची सही :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="arza_sign" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">विशेष सूचना :</label>
+                    </div>
+                    <div class="col-md-10 text-left">
+                      <ol>
+                        <li>
+                          अर्जदार हा एखादया संस्थेचा प्रतिनिधी असेल तर अर्जावर सही करणारा      
+                            इसम हा त्या संस्थेचा समितीचा सदस्य आहे काय  हे अर्जात नमूद केले 
+                            पाहिजे. या अर्जात त्या संस्थेतर्फे सही करणाऱ्यास त्याला अधिकृत                     
+                            करणाऱ्या त्या संस्था समितीचा ठरावाची प्रत अर्जसोबत जोडली पाहिजे. 
+                        </li>
+                        <li>
+                          अर्जदार हा एखादी एक व्यक्तिभुत संस्था (कार्पोरेटर बॉडी) असले तर एक  
+                            व्यक्तिभूत संस्थेतर्फे अर्जावर सही करणाऱ्या इसमाचा हुद्दा दर्शविला 
+                            पाहिजे. तसेच त्या संस्थेतर्फे या अर्जावर सही करणाऱ्या इसमास अधिकृत 
+                            करणाऱ्या  दस्तऐवजाची (संबंधाची कागदाची डाक्युमेन्टची) प्रत या 
+                            अर्जासोबत जोडली आहे. 
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">समितीचा ता.</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="tarikh" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <p>च्या सभेत ठराव क्र. <span><input type="text" name="tharav_no" size="26"/></span></p>
+                        प्रमाणे सदस्यत्व &emsp;<label><input type="radio" name="manjur" value="मंजूर " required> मंजूर </label>&emsp;
+                        <label><input type="radio" name="manjur" value="नामंजूर" required> नामंजूर </label> &emsp;
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <h5 class="text-right">सभापती</h5>  <br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p> <span><input type="text" name="saha1" size="20" /></span> 
+                        सरकारी <span><input type="text" name="sarkari" size="24" /></span> 
+                        संस्था मर्यादित <span><input type="text" name="maryadit15" size="16" /></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <h5><b>संस्थेची नोंदणी करण्याबाबत अर्ज </b></h5><br>
+              <h6>नियम ४ (१) पहा</h6><br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                        <label class="form-group form-row float-right">ठिकाण:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="thikan1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      placeholder="" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                        <label class="form-group form-row float-right">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dinank2" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-left"> प्रति ,</p>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"> </div>
+                    <div class="col-md-4 text-left">
+                      <ol>
+                        <li>
+                          उपनिबंधक सरकारी संस्था (शहर)
+                        </li>
+                        <li>
+                          सहाय्यक निबंधक सहकारी संस्था <span><input type="text" name="saha_sanstha" size="30" /></span>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-left"><b>विषय :- </b> संस्थेची नोंदणी करण्याबाबत अर्ज </p><br><br>
+
+              <p class="text-left"> महोदय ,</p>
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                आम्ही पुढील संस्थेची नोंदणी करण्यासंबंधीचा प्रस्ताव व त्या सोबत जोडलेल्या पुढील कागदपत्रासह सादर  करीत आहोत. 
+              </p>
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                आम्ही असेही घोषित करतो कि, या सोबत दिलेली माहिती व पुढील कागदपत्रातील माहिती ही आमच्या पूर्ण माहितीप्रमाणे खरी व बरोबर आहे. 
+              </p><br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="niyojit_sanstha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="नियोजित संस्थेचे नांव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="nond_add" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="संस्थेचा नोंदणी करावयाचा पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="marya_yn" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="जबाबदारी मर्यादित किंवा अमर्यादित आहे ?" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="karyashetra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="संस्थेचे कार्यक्षेत्र" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="uddishtha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="संस्थेचे उद्दिष्ठे" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="bhasha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="संस्थेचे कामकाज ज्या भाषेत राहील ती भाषा" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="andaz" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="संस्था नोंदणी पावेतो केल्या जाणाऱ्या खर्चाचा अंदाज" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="mp_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="मुख्य प्रवर्तकाचे पूर्ण नांव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="mp_add" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="मुख्य प्रवर्तकाचा पत्ता व राहण्याचे ठिकाण" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="hishob_lang" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="संस्थेची पुस्तके व हिशेब ज्या भाषेत ठेवण्यात येईल ती भाषा" /> 
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                आम्ही (दहा पेक्षा कमी नसतील इतक्या) अर्जदारांनी सह्या केलेल्या नियोजित उपविधिच्या चार प्रति पाठवित आहोत. 
+              </p><br>
+
+              <h6 class="text-right"><b>मुख्य प्रवर्तक</b></h6><br><br>
+
+              <p>आम्ही दहा पेक्षा कमी नसतील इतक्या अर्जदारांनी सह्या केलेल्या नियोजित उपविधीच्या चार प्रति पाठवीत आहोत.</p>
+              <div style="height:700px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>अनु क्र.</th>
+                      <th>संपूर्ण नाव</th>
+                      <th>व्यक्ती किंवा संस्थापित संस्था</th>
+                      <th>वय</th>
+                      <th>राष्ट्रीयत्व</th>
+                      <th>व्यवसाय</th>
+                      <th>राहण्याचे ठिकाण, गाव व तालुका</th>
+                      <th>अंशदानास दिलेली रक्कम व प्रवेश फी ची रक्कम शेअर / प्र. फी.</th> 
+                      <th>अर्जावर सही करणाऱ्या पैकी इतर कोणताही इसम त्याच्या कुटुंबातील इसम आहे किंवा कसे</th>
+                      <th>संस्थेच्या प्रतिनिधींच्या बाबतीत तो त्या संस्थेच्या समितीचा सदस्य आहे किंवा कसे</th>
+                      <th>सह्या किंवा नि. अंगठा</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>१)</td>
+                      <td><input type="text" name="name1"/></td>
+                      <td><input type="text" name="sansthapi1"/></td>
+                      <td><input type="number" name="vay1"/></td>
+                      <td><input type="text" name="rashtra1"/></td>
+                      <td><input type="text" name="business1"/></td>
+                      <td><input type="text" name="addres1"/></td>
+                      <td><input type="number" name="ansha_rakkam1"/></td>
+                      <td><input type="text" name="relative1"/></td>
+                      <td><input type="text" name="sam_sad1"/></td>
+                      <td><input type="file" name="sahi1"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२)</td>
+                      <td><input type="text" name="name2"/></td>
+                      <td><input type="text" name="sansthapi2"/></td>
+                      <td><input type="number" name="vay2"/></td>
+                      <td><input type="text" name="rashtra2"/></td>
+                      <td><input type="text" name="business2"/></td>
+                      <td><input type="text" name="addres2"/></td>
+                      <td><input type="number" name="ansha_rakkam2"/></td>
+                      <td><input type="text" name="relative2"/></td>
+                      <td><input type="text" name="sam_sad2"/></td>
+                      <td><input type="file" name="sahi2"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>३)</td>
+                      <td><input type="text" name="name3"/></td>
+                      <td><input type="text" name="sansthapi3"/></td>
+                      <td><input type="number" name="vay3"/></td>
+                      <td><input type="text" name="rashtra3"/></td>
+                      <td><input type="text" name="business3"/></td>
+                      <td><input type="text" name="addres3"/></td>
+                      <td><input type="number" name="ansha_rakkam3"/></td>
+                      <td><input type="text" name="relative3"/></td>
+                      <td><input type="text" name="sam_sad3"/></td>
+                      <td><input type="file" name="sahi3"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>४)</td>
+                      <td><input type="text" name="name4"/></td>
+                      <td><input type="text" name="sansthapi4"/></td>
+                      <td><input type="number" name="vay4"/></td>
+                      <td><input type="text" name="rashtra4"/></td>
+                      <td><input type="text" name="business4"/></td>
+                      <td><input type="text" name="addres4"/></td>
+                      <td><input type="number" name="ansha_rakkam4"/></td>
+                      <td><input type="text" name="relative4"/></td>
+                      <td><input type="text" name="sam_sad4"/></td>
+                      <td><input type="file" name="sahi4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>५)</td>
+                      <td><input type="text" name="name5"/></td>
+                      <td><input type="text" name="sansthapi5"/></td>
+                      <td><input type="number" name="vay5"/></td>
+                      <td><input type="text" name="rashtra5"/></td>
+                      <td><input type="text" name="business5"/></td>
+                      <td><input type="text" name="addres5"/></td>
+                      <td><input type="number" name="ansha_rakkam5"/></td>
+                      <td><input type="text" name="relative5"/></td>
+                      <td><input type="text" name="sam_sad5"/></td>
+                      <td><input type="file" name="sahi5"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>६)</td>
+                      <td><input type="text" name="name6"/></td>
+                      <td><input type="text" name="sansthapi6"/></td>
+                      <td><input type="number" name="vay6"/></td>
+                      <td><input type="text" name="rashtra6"/></td>
+                      <td><input type="text" name="business6"/></td>
+                      <td><input type="text" name="addres6"/></td>
+                      <td><input type="number" name="ansha_rakkam6"/></td>
+                      <td><input type="text" name="relative6"/></td>
+                      <td><input type="text" name="sam_sad6"/></td>
+                      <td><input type="file" name="sahi6"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>७)</td>
+                      <td><input type="text" name="name7"/></td>
+                      <td><input type="text" name="sansthapi7"/></td>
+                      <td><input type="number" name="vay7"/></td>
+                      <td><input type="text" name="rashtra7"/></td>
+                      <td><input type="text" name="business7"/></td>
+                      <td><input type="text" name="addres7"/></td>
+                      <td><input type="number" name="ansha_rakkam7"/></td>
+                      <td><input type="text" name="relative7"/></td>
+                      <td><input type="text" name="sam_sad7"/></td>
+                      <td><input type="file" name="sahi7"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>८)</td>
+                      <td><input type="text" name="name8"/></td>
+                      <td><input type="text" name="sansthapi8"/></td>
+                      <td><input type="number" name="vay8"/></td>
+                      <td><input type="text" name="rashtra8"/></td>
+                      <td><input type="text" name="business8"/></td>
+                      <td><input type="text" name="addres8"/></td>
+                      <td><input type="number" name="ansha_rakkam8"/></td>
+                      <td><input type="text" name="relative8"/></td>
+                      <td><input type="text" name="sam_sad8"/></td>
+                      <td><input type="file" name="sahi8"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>९)</td>
+                      <td><input type="text" name="name9"/></td>
+                      <td><input type="text" name="sansthapi9"/></td>
+                      <td><input type="number" name="vay9"/></td>
+                      <td><input type="text" name="rashtra9"/></td>
+                      <td><input type="text" name="business9"/></td>
+                      <td><input type="text" name="addres9"/></td>
+                      <td><input type="number" name="ansha_rakkam9"/></td>
+                      <td><input type="text" name="relative9"/></td>
+                      <td><input type="text" name="sam_sad9"/></td>
+                      <td><input type="file" name="sahi9"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१०)</td>
+                      <td><input type="text" name="name10"/></td>
+                      <td><input type="text" name="sansthapi10"/></td>
+                      <td><input type="number" name="vay10"/></td>
+                      <td><input type="text" name="rashtra10"/></td>
+                      <td><input type="text" name="business10"/></td>
+                      <td><input type="text" name="addres10"/></td>
+                      <td><input type="number" name="ansha_rakkam10"/></td>
+                      <td><input type="text" name="relative10"/></td>
+                      <td><input type="text" name="sam_sad10"/></td>
+                      <td><input type="file" name="sahi10"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>११)</td>
+                      <td><input type="text" name="name11"/></td>
+                      <td><input type="text" name="sansthapi11"/></td>
+                      <td><input type="number" name="vay11"/></td>
+                      <td><input type="text" name="rashtra11"/></td>
+                      <td><input type="text" name="business11"/></td>
+                      <td><input type="text" name="addres11"/></td>
+                      <td><input type="number" name="ansha_rakkam11"/></td>
+                      <td><input type="text" name="relative11"/></td>
+                      <td><input type="text" name="sam_sad11"/></td>
+                      <td><input type="file" name="sahi11"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१२)</td>
+                      <td><input type="text" name="name12"/></td>
+                      <td><input type="text" name="sansthapi12"/></td>
+                      <td><input type="number" name="vay12"/></td>
+                      <td><input type="text" name="rashtra12"/></td>
+                      <td><input type="text" name="business12"/></td>
+                      <td><input type="text" name="addres12"/></td>
+                      <td><input type="number" name="ansha_rakkam12"/></td>
+                      <td><input type="text" name="relative12"/></td>
+                      <td><input type="text" name="sam_sad12"/></td>
+                      <td><input type="file" name="sahi12"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१३)</td>
+                      <td><input type="text" name="name13"/></td>
+                      <td><input type="text" name="sansthapi13"/></td>
+                      <td><input type="number" name="vay13"/></td>
+                      <td><input type="text" name="rashtra13"/></td>
+                      <td><input type="text" name="business13"/></td>
+                      <td><input type="text" name="addres13"/></td>
+                      <td><input type="number" name="ansha_rakkam13"/></td>
+                      <td><input type="text" name="relative13"/></td>
+                      <td><input type="text" name="sam_sad13"/></td>
+                      <td><input type="file" name="sahi13"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१4)</td>
+                      <td><input type="text" name="name14"/></td>
+                      <td><input type="text" name="sansthapi14"/></td>
+                      <td><input type="number" name="vay14"/></td>
+                      <td><input type="text" name="rashtra14"/></td>
+                      <td><input type="text" name="business14"/></td>
+                      <td><input type="text" name="addres14"/></td>
+                      <td><input type="number" name="ansha_rakkam14"/></td>
+                      <td><input type="text" name="relative14"/></td>
+                      <td><input type="text" name="sam_sad14"/></td>
+                      <td><input type="file" name="sahi14"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१५)</td>
+                      <td><input type="text" name="name15"/></td>
+                      <td><input type="text" name="sansthapi15"/></td>
+                      <td><input type="number" name="vay15"/></td>
+                      <td><input type="text" name="rashtra15"/></td>
+                      <td><input type="text" name="business15"/></td>
+                      <td><input type="text" name="addres15"/></td>
+                      <td><input type="number" name="ansha_rakkam15"/></td>
+                      <td><input type="text" name="relative15"/></td>
+                      <td><input type="text" name="sam_sad15"/></td>
+                      <td><input type="file" name="sahi15"/></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="patra_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="नोंदणी संबंधीचा किंवा इतर पत्रव्यवहाय त्याच्या पत्त्यावर करावयाचा त्या व्यक्तीचे नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="patra_add" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="व पत्ता" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <h6><b>प्रवर्तकाच्या सह्या</b></h6><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">१) मुख्य प्रवर्तक</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya1" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> २) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya2" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> ३) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya3" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> ४) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya4" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> ५) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya5" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> ६) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya6" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> ७) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya7" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> ८) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya8" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> ९) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya9" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> १०) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya10" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> ११) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya11" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> १२) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya12" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> १३) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya13" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"> १४) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya14" class="form-control" />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"> १५) </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sahya15" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left" style="word-spacing: 3px;">
+                      <p>मुख्य प्रवर्तक <span><input type="text" name="mukhya_pra" size="82" /></span> 
+                        नियोजित <span><input type="text" name="niyojit14" size="86" /></span> 
+                        सरकारी संस्था मर्यादित.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <p class="text-left">सहाय्यक निबंधकाच्या / उपनिबंधकाच्या/ सहनिबंधकाच्या   / अप्पर निबंधकच्या  / निबंधकच्या कार्यालयाकडे  कार्यालयात 
+                <span><input type="date" name="roji"/></span> रोजी रजिस्टर पोष्टाने पाठवले 
+                <span><input type="text" name="pratyaksh" size="40" /></span> 
+                त्यांनी प्रत्यक्ष नेवून दिले.
+              </p><br>
+
+              <h6 class="text-right"><b>मुख्य प्रवर्तक</b></h6><br><br>
+
+              <p class="text-left">सहाय्यक निबंधक / उपनिबंधक / सहनिबंधक / अप्पर निबंधक / निबंधक  
+                <span><input type="text" name="nibandhak" size="30" /></span> यांच्या कार्यालयात 
+                <span><input type="text" name="yana" size="30" /></span> यांना 
+                <span><input type="date" name="roji1" /></span> रोजी रजिस्टर पोष्टाने मिळाले. 
+                नोंदणी प्रस्तावाच्या नोंदवहीत अनुक्रमांक <span><input type="text" name="anukra" size="20" /></span>
+                येथे नोंद केली.
+              </p><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <label class="form-group form-row float-right">हा अर्ज स्वीकारणाऱ्याची सही:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="swikar_sahi" class="form-control"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>

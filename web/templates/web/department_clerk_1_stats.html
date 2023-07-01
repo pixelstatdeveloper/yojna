@@ -1,0 +1,130 @@
+{% extends 'web/layout1.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} 
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+{% endblock %}
+{% block body %}
+
+{%if request.user.role == 'Department admin hod'%}
+<div class="Top-menu clear">
+				
+  <ul class="menuDB topnav-right  ">
+      <li>
+          <a href="{% url 'web:depart_dashboard' %}" class="" style="color: black;">Dashboard</a>
+      </li>
+
+      <li>
+          <a href="{% url 'web:depart_1_stats' %}" class="" style="color: black;">Reports</a>
+      </li>  
+  </ul>
+</div>
+{%endif%}
+{%if request.user.role == 'Department clerk 1'%}
+<div class="Top-menu clear">		
+  <ul class="menuDB topnav-right  ">
+      <li>
+          <a href="{% url 'web:depart_dashboard' %}" class="" style="color: black;">Dashboard</a>
+      </li>
+      <li>
+          <a href="{% url 'web:depart_1_stats' %}" class="" style="color: black;">Reports</a>
+      </li> 
+  </ul>
+</div>
+{%endif%}
+<br>
+    <div class="container">
+       <!-- <div class="row">-->
+          <!--<div class="col-md-4"> -->
+          <!--  <div class=" input-group" style="margin-bottom: 100px;">-->
+          <!--    <input type="search" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="Search" aria-label="Search"-->
+          <!--      aria-describedby="search-addon" />-->
+          <!--  </div>-->
+          <!--</div>-->
+          <!--<div class="col-md-2"> -->
+          <!--  <div class=" input-group" style="margin-bottom: 100px;">-->
+          <!--    <button type="button" class="btn fables-second-background-color yojana_mainbotton" style="font-family: 'Arya', sans-serif!important;padding: 8px 10px !important;margin:0px!important;">Search</button>-->
+          <!--  </div>-->
+          <!--</div>-->
+       <!--   <div class="col-md-12"> -->
+       <!--     <button type="button" class="btn fables-second-background-color yojana_mainbotton" onclick="return toExcel()" style="float:right; font-family: 'Arya', sans-serif!important;;margin:0px!important;">Download</button>-->
+       <!--   </div>-->
+       <!--</div>-->
+      
+        <table class="table table-bordered table-striped table-hover main_bany_text" id="employee_data">
+            <thead >
+              <tr class="text-center" style="font-size:16px;">
+                <th scope="col">Sr.No</th>
+                <th scope="col">Scheme Name</th>
+                <th scope="col">No. of Applicants</th>
+                {%if request.user.role != 'Department clerk 2'%}
+                <th scope="col">Pending</th>
+                <th scope="col">In Progress</th>
+                <th scope="col">Approved</th>
+                <th scope="col">Verified</th>
+                <th scope="col">Rejected</th>
+                <th scope="col">Labharthi</th>
+                {%else%}
+                <th scope="col">Approved</th>
+                <th scope="col">Labharthi</th>
+                {%endif%}
+              </tr>
+            </thead>
+            <tbody>
+                {% for i in context%}
+              <tr>
+    
+                <th scope="row">{{i.sr_no}}</th>
+                <td><a href="{% url 'web:depart_1_scheme' i.scheme_id %}">{{i.scheme_name}}</a></td>
+                <td>{{i.schemes_user}}</td>
+                {%if request.user.role != 'Department clerk 2' %}
+                <td>{{i.schemes_pending}}</td>
+                <td>{{i.schemes_in_progress}}</td>
+                <td>{{i.schemes_approved}}</td>
+                <td>{{i.schemes_verified}}</td>
+                <td>{{i.schemes_rejected}}</td>
+                <td>{{i.schemes_labharthi}}</td>
+                {%else%}
+                <td>{{i.schemes_approved}}</td>
+                <td>{{i.schemes_labharthi}}</td>
+                {%endif%}
+              </tr>
+              {%endfor%}
+    
+            </tbody>
+          </table>
+          <div class="row">
+          <div class="col-md-12"> 
+            <button type="button" class="btn fables-second-background-color yojana_mainbotton" id="export_button" style="float:right; font-family: 'Arya', sans-serif!important;;margin:0px!important;">Download</button>
+          </div>
+       </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    {%endblock%}
+{%block post_load_js %}
+   <script>
+     function html_table_to_excel(type)
+    {
+        var data = document.getElementById('employee_data');
+
+        var file = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+
+        XLSX.write(file, { bookType: type, bookSST: true, type: 'base64' });
+
+        XLSX.writeFile(file, 'Schemes_details.' + type);
+    }
+
+    const export_button = document.getElementById('export_button');
+
+    export_button.addEventListener('click', () =>  {
+        html_table_to_excel('xlsx');
+    });  
+   </script>
+{% endblock %}
+

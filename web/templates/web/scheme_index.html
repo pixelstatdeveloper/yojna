@@ -1,0 +1,233 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय
+                        योजना</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Arya', sans-serif!important;">
+                    <!--                    {% if subdeps %}-->
+                    <!--                    {% for scheme in subdeps.scheme.all %}-->
+                    <!--                    {{ scheme.department.name }}-->
+                    <!--                    {% endfor %}-->
+                    <!--                    {% else %}-->
+                    <!--                    {{ schemes.department.name }}-->
+                    <!--                    {% endif %}-->
+                    <!--                        {% if subdeps %}-->
+                    <!--                        {% for subdep in subdeps %}-->
+                    <!--                        {% for scheme in subdep.scheme.all %}-->
+                    <!--                        {{ scheme.department.name }}-->
+                    <!--                        {% endfor %}-->
+                    <!--                        {% endfor %}-->
+                    <!--                        {% else %}-->
+                    <!--                        {% for scheme in schemes %}-->
+                    <!--                        {{ scheme.department.name }}-->
+                    <!--                        {% endfor %}-->
+                    <!--                        {% endif %}-->
+        {{department.name}}
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="my-4 my-md-5 overflow-hidden">
+        <div class="text-center mb-5 wow fadeInDown" data-wow-delay="1s">
+           
+                <!--                {% if subdeps %}-->
+                <!--                {% for subdep in subdeps %}-->
+                <!--                {% for scheme in subdep.scheme.all %}-->
+                <!--                {{ scheme.department.name }}-->
+                <!--                {% endfor %}-->
+                <!--                {% endfor %}-->
+                <!--                {% else %}-->
+                <!--                {% for scheme in schemes %}-->
+                <!--                {{ scheme.department.name }}-->
+                <!--                {% endfor %}-->
+                <!--                {% endif %}-->
+               
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="/media/{{department_media.file_path}}" class="img-responsive" style="max-width:350px; border:5px solid #d9d9d6;" />
+                         </div>
+                        <div class="col-md-8">
+                            <p style="text-align:justify;font-family: 'Arya', sans-serif!important;" class="my-3 font-20 gallery-title">{{department.description}}
+                            </p>
+                            {% if department.name == "दुग्ध विकास विभाग" %}
+                         <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                            या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 8422941511 / 9890614184 <br> ईमेल : ddonagpur@gmail.com </p>
+                        {%endif%}
+                        {% if department.name == "मत्स्यव्यवसाय विभाग" %}
+                        <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                            या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 7507722150 <br> ईमेल : acfnagpur@gmail.com </p>
+                       {%endif%}
+                       {% if department.name == "जिल्हा उद्योग केंद्र" %}
+                        <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                            या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 8275398487 / 7588429401 <br> ईमेल : didic.nagpur@maharashtra.gov.in </p>
+                       {%endif%}
+                       {% if department.name == "रेशीम विकास विभाग" %}
+                        <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                            या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 8087223950 / 9527070791 / 9860761846 <br> ईमेल : dsosilknag@gmail.com </p>
+                       {%endif%}
+                       {% if department.name == "कौशल्य विकास, रोजगार व उद्योजकता विभाग" %}
+                        <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                            या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 9158416599 / 9604597920 / 899964228 / 8830947957 <br> ईमेल : nagpurrojgar@gmail.com </p>
+                       {%endif%}
+                       {% if department.name == "ग्रंथालय विभाग" %}
+                        <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                            या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 9970903920 <br> ईमेल : dlonagpur.dol@maharashtra.gov.in  </p>
+                       {%endif%}
+                       {% if department.name == "अल्पसंख्याक विभाग" %}
+                       <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                           या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 7972116872 / 9049335750 <br> ईमेल : rdc_nagpur@rediffmail.com </p>
+                      {%endif%}
+                      {% if department.name == "महावितरण विभाग" %}
+                       <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                           या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 7875760103 / 7875028473 <br> ईमेल : se.nrc.nagpur@gmail.com / senagpuru@gmail.com </p>
+                      {%endif%}
+                      {% if department.name == "आदिवासी विभाग" %}
+                       <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                           या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 9922382955 / 9423110337 / 9822440426 / 8999368206 / 9579456744 <br> ईमेल : ponagpur@yahoo.co.in </p>
+                      {%endif%}
+                      {% if department.name == "नागपूर महानगरपालिका, नागपूर" %}
+                       <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                           या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 99236 94689 </p>
+                      {%endif%}
+                      {% if department.name == "महसुल विभाग" %}
+                      <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                          या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> मो. क्र. : +91 9421776074 / 9822242897 <br> ईमेल : tahsgycollngp@gmail.com </p>
+                     {%endif%}
+                     {% if department.name == "महिला व बालविकास विभाग" %}
+                     <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                         या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> <b>महिला व बालविकास</b> <br> मो. क्र. : +91 9175128960 <br> ईमेल : dw_nagpur@rediffmail.com
+                        <br><br> <b>महिला व बालकल्याण विभाग जिल्हा परिषद नागपूर</b> <br> मो. क्र. : +91 9423639253 / 9423639253 / 8983409032 </p>
+                    {%endif%}
+                    {% if department.name == "पशुसंवर्धन विभाग" %}
+                     <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                         या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> <b>जिल्हा पशुसंवर्धन अधिकारी जिल्हा परिषद नागपूर</b> <br> मो. क्र. : +91 9850101246 <br> ईमेल : dahozp.nagpur@gmail.com
+                        <br><br> <b>जिल्हा पशुसंवर्धन उपआयुक्त कार्यालय</b> <br> मो. क्र. : +91 9511679397 <br> ईमेल : nagpurddcah@gmail.com </p>
+                    {%endif%}
+                    {% if department.name == "कृषी विभाग" %}
+                     <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                         या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> <b>कृषी जिल्हा परिषद</b> <br> मो. क्र. : +91 9422443239 / 7758065066
+                        <br><br> <b>कृषी विभाग राज्य शासन</b> <br> मो. क्र. : +91 9404953429 / 8806021700 <br> ईमेल : dsaonagpur2020@gmail.com </p>
+                    {%endif%}
+                    {% if department.name == "समाजकल्याण विभाग" %}
+                     <p style="text-align:justify;font-family: 'Arya', sans-serif!important; color: #990000;" class="my-3 font-16 gallery-title">
+                         या योजनेची अधिक माहिती मिळवण्याकरिता अथवा काही त्रुटी असल्यास संपर्क साधावा. <br> <b>समाज कल्याण विभाग जिल्हा परिषद नागपूर</b> <br> मो. क्र. : +91 9049610234 / 8329888290 / 8830543459 / 9822275852
+                         <br> ईमेल : dswozpngp@gmail.com / swozpngp@gmail.com <br><br> <b>सहाय्यक आयुक्त समाजकल्याण विभाग दीक्षा भूमी नागपूर</b> <br> मो. क्र. : 0712-2221041<br> ईमेल : sdswo.nagpur@gmail.com </p>
+                    {%endif%}
+                         </div>
+                         
+                    </div>        
+                <!--{{DepartmentMediaModel.file_path}}-->
+           
+        </div>
+        <!--        <div class="col-md-6">-->
+        <!--            <label for="male">विभाग :</label>-->
+        <!--        </div>-->
+        <!--        <div class="col-md-6">-->
+        <!--            <label for="male">{{departments.name}}</label>-->
+        <!--        </div>-->
+
+        <div class="row">
+            <div class="col-12 col-md-12 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".2s">
+                {% if subdeps %}
+                {% for subdep in subdeps %}
+                 <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold" style="color:#3F42A1;font-size:30px;"> {{ subdep.name }} </h2><br />
+                 <p class="fables-third-text-color mt-3 light-font fables-header-slider-details" style="color:#990000;font-family: 'Arya', sans-serif!important;"><i>(Note: संबंधित योजनेला अर्ज करण्यासाठी "Apply बटण" वर क्लिक करा.)</i>
+            </p>
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                    <thead style="background-color:#3f42a1;color: white;">
+                        <tr class="text-center" style="font-size:16px;">
+                            <th scope="col" > अ.क्र. </th>
+                            <th scope="col">योजनेचे नाव</th>
+                            <th scope="col">माहिती</th>
+                            <th scope="col">अर्ज</th>
+                            <th scope="col">अर्ज करा</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for scheme in subdep.scheme.all %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ scheme.name }}</td>
+                            {% for media in scheme.scheme_media.all %}
+                            <td class="text-center">
+                                {% if media.category == 'information' %}
+                                <a href="{{ media.file_path.url }}" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="25px" height="25px" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+                                {% elif media.category == 'registration' %}
+                                <a href="{{ media.file_path.url }}" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="25px" height="25px" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+                                {% endif%}
+                            </td>
+                            {% empty %}
+                            <td>NA</td>
+                            <td>NA</td>
+                            {% endfor %}
+                            {% if scheme.name in registered %}
+                            <td class="text-center"><button class="btn btn-secondary" style="width:70px!important;" disabled>Applied</a></td>
+                            {%else%}
+                            <td class="text-center"><a href="{% url 'web:scheme_registration' scheme.id %}" class="btn btn-primary" style="width:70px!important;">Apply</a></td>
+                            {%endif%}</tr>
+                        {% endfor %}
+                    </tbody>
+                </table><br />
+                {% endfor %}
+
+                {% else %}
+                <p class="fables-third-text-color mt-3 light-font fables-header-slider-details" style="color:#990000;font-family: 'Arya', sans-serif!important;"><i>(Note: संबंधित योजनेला अर्ज करण्यासाठी "Apply बटण" वर क्लिक करा.)</i>
+            </p>
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                    <thead style="background-color:#3f42a1;color: white;">
+                        <tr class="text-center" style="font-size:16px;">
+                            <th  scope="col"> अ.क्र.</th>
+                            <th scope="col">योजनेचे नाव</th>
+                            <th scope="col">माहिती</th>
+                            <th scope="col">अर्ज</th>
+                            <th scope="col">अर्ज करा</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for scheme in schemes %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ scheme.name }}</td>
+                            {% for media in scheme.scheme_media.all %}
+                            <td class="text-center">
+                                {% if media.category == 'information' %}
+                                <a href="{{ media.file_path.url }}" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="25px" height="25px" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+                                {% elif media.category == 'registration' %}
+                                <a href="{{ media.file_path.url }}" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="25px" height="25px" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+                                {% endif%}
+                            </td>
+                            {% endfor %}
+                           
+                            {% if scheme.name in registered %}
+                            <td class="text-center"><button class="btn btn-secondary" style="width:70px!important;" disabled>Applied</a></td>
+                            {%else%}
+                            <td class="text-center"><a href="{% url 'web:scheme_registration' scheme.id %}" class="btn btn-primary" style="width:70px!important;">Apply</a></td>
+                            {%endif%}
+
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block post_load_js %} {% endblock%}

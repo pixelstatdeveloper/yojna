@@ -1,0 +1,57 @@
+from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+from yojna.models import UserModel,SchemeModel,SchemeRegistrationModel
+
+class shaskiy_ashramshala(models.Model):
+    gav = models.CharField(max_length=30,default=None,null=True,blank=True)
+    tal = models.CharField(max_length=25,default=None,null=True,blank=True)
+    jil = models.CharField(max_length=20,default=None,null=True,blank=True)
+    name = models.CharField(max_length=60,default=None,null=True,blank=True)
+    satra = models.CharField(max_length=20,default=None,null=True,blank=True)
+    eyatta = models.CharField(max_length=20,default=None,null=True,blank=True)
+    dina = models.DateField(default=None,null=True,blank=True)
+    thik = models.CharField(max_length=30,default=None,null=True,blank=True)
+    swakshari = models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+    nav = models.CharField(max_length=60,default=None,null=True,blank=True)
+    saral_no = models.CharField(max_length=20,default=None,null=True,blank=True)
+    purn_nav = models.CharField(max_length=80,default=None,null=True,blank=True)
+    father_name = models.CharField(max_length=80,default=None,null=True,blank=True)
+    mother_name = models.CharField(max_length=80,default=None,null=True,blank=True)
+    jababi_vyakti = models.CharField(max_length=80,default=None,null=True,blank=True)
+    mukam = models.CharField(max_length=40,default=None,null=True,blank=True)
+    post = models.CharField(max_length=25,default=None,null=True,blank=True)
+    taluka = models.CharField(max_length=20,default=None,null=True,blank=True)
+    dist = models.CharField(max_length=20,default=None,null=True,blank=True)
+    patta = models.CharField(max_length=180,default=None,null=True,blank=True)
+    birthdate = models.DateField(default=None,null=True,blank=True)
+    birth_akshar = models.CharField(max_length=40,default=None,null=True,blank=True)
+    birthplace = models.CharField(max_length=40,default=None,null=True,blank=True)
+    dharm = models.CharField(max_length=30,default=None,null=True,blank=True)
+    jat = models.CharField(max_length=40,default=None,null=True,blank=True)
+    last_std = models.CharField(max_length=25,default=None,null=True,blank=True)
+    year = models.CharField(max_length=9,default=None,null=True,blank=True)
+    takke = models.CharField(max_length=20,default=None,null=True,blank=True)
+    acc_no = models.BigIntegerField(null=True, blank=True, default=None)
+    bank_name = models.CharField(max_length=60,null=True, blank=True, default=None)
+    branch = models.CharField(max_length=30,null=True, blank=True, default=None)
+    ifsc = models.CharField(max_length=30,null=True, blank=True, default=None)
+    adhar_no = models.BigIntegerField(null=True, blank=True, default=None)
+    adhar_name = models.CharField(max_length=70,default=None,null=True,blank=True)
+    link_yn = models.CharField(max_length=4,default=None,null=True,blank=True)
+    brosis_name1 = models.CharField(max_length=60,default=None,null=True,blank=True)
+    std1 = models.CharField(max_length=25,default=None,null=True,blank=True)
+    nate1 = models.CharField(max_length=30,default=None,null=True,blank=True)
+    brosis_name2 = models.CharField(max_length=60,default=None,null=True,blank=True)
+    std2 = models.CharField(max_length=25,default=None,null=True,blank=True)
+    nate2 = models.CharField(max_length=30,default=None,null=True,blank=True)
+    dinank = models.DateField(default=None,null=True,blank=True)
+    sign = models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+
+    user=models.ForeignKey(UserModel, on_delete=models.CASCADE, null=True)
+    scheme=models.ForeignKey(SchemeModel, on_delete=models.CASCADE, null=True)
+    scheme_register=models.ForeignKey(SchemeRegistrationModel, on_delete=models.CASCADE, null=True)
+
+    class Meta:
+        db_table = "shaskiy_ashramshala"
+    def __str__(self) -> str:
+        return str(self.nav)

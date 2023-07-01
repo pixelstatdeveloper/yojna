@@ -1,0 +1,56 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Scheme{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">मुख्यपृष्ठ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">विभाग</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="my-4 my-md-5 overflow-hidden">
+        <div class="text-center mb-5 wow fadeInDown" data-wow-delay="1s">
+            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold text-center"> आमच्या योजना </h2>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 mb-4 mb-md-0 wow fadeInDown" data-wow-delay=".2s">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">अनु. क्रमांक</th>
+                            <th scope="col">योजनेचे नाव</th>
+                            <th scope="col">योजनेची माहिती</th>
+                            <th scope="col">योजनेचा अर्ज</th>
+                            <th scope="col">अर्ज करा</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for getdata in upload_details %}
+                        <tr>
+                            <td>{{getdata.id}}</td>
+                            <td>{{getdata.name}}</td>
+                            <td><a href="{{getdata.form.url}}" download class="font-16 semi-font fables-second-text-color underline fables-main-hover-color ml-2">{{getdata.form}}</a></td>
+                            <td><a href="{{getdata.info.url}}" download class="font-16 semi-font fables-second-text-color underline fables-main-hover-color ml-2">{{getdata.info}}</a></td>
+                            <td>Apply Online Or Offline Scheme <a href="loginpage" class="font-16 semi-font fables-second-text-color underline fables-main-hover-color ml-2">Click Here</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block post_load_js %} {% endblock%}

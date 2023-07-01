@@ -1,0 +1,364 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+
+               <div class="form-header text-center">
+                <h6 style="margin-bottom: 5px;"><b> महाराष्ट्र शासन </b></h6>
+                <h5 style="margin-bottom: 15px;"><b>आदिवासी विकास विभाग</b></h5>
+                <h5 style="margin-bottom: 5px;"><b>भूमिहीन दारिद्र्य रेषेखालील आदिवासींचे सबळीकरण व स्वाभिमान योजना - योजनेचा</b></h5>
+                <h5 style="margin-bottom: 12px;"><b>लाभ देण्यासाठी विहित नमुन्यातील अर्ज</b></h5>
+                <h6><b>(शा. नि. क्र. भुवायो २००३ / प्र. क्र. १४२ / का.९ दिनांक २४/२/२००४)</b></h6>
+               </div>
+
+              <br/>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; प्रकल्प अधिकारी </h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; एकात्मिक आदिवासी विकास प्रकल्प</h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; <span><label><b>{{up.jilha}}</b></label></span></h6>
+              <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>अर्जदाराचे संपूर्ण नाव</b></label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{up.name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>पती-पत्नीचे संपूर्ण नाव</b></label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{up.huswife_name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>पूर्ण पत्ता</b></label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{up.address}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="form-group form-row"><b>अनुसूचित जमातीचा उल्लेख</b></label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{up.anu_jamat}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>अ) आदिम जमाती (कातकरी,कोलाम व माडिया)</b></label>
+                    </div>
+                    <div class="col-md-6">
+                          <label class="form-group form-row">: {{up.adim_jamat}}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>ब) परितक्त्या स्त्रिया</b></label>
+                    </div>
+                    <div class="col-md-6">
+                          <label class="form-group form-row">: {{up.striya}}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>क) विधवा स्त्रिया</b></label>
+                    </div>
+                    <div class="col-md-6">
+                          <label class="form-group form-row">: {{up.vidhwa}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>दि.१/१/२००० रोजी भूमिहीन शेतमजूर आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-6">
+                          <label class="form-group form-row">: {{up.bhumihin_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>दारिद्रय रेषेखालील आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-6">
+                          <label class="form-group form-row">: {{up.daridrya_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.daridrya_yn == "होय" %}
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>असल्यास, कार्ड नं.</b></label>
+                    </div>
+                    <div class="col-md-4">
+                          <label class="form-group form-row">: {{up.daridrya_no}}</label>
+                    </div>
+                    <div class="col-md-4 float-right"><label><b>किंवा</b></label></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row "><b>स्थानिक तलाठी/ग्रामसेवक यांचा दाखला जोडावा</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.talathi_cf}}" target="blank">दाखला पहा</a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>अर्जदाराचे अर्ज देतांना वय</b></label>
+                    </div>
+                    <div class="col-md-4">
+                          <label class="form-group form-row">: {{up.age}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                        <label class="form-group form-row "><b>लाभधारकास कृषी व पदुम विभाग, आदिवासी विकास विभाग यांच्याकडून बैलजोडी, सुधारित बी- बियाणे,विहिर,विद्युतपंप/तेलपंप ,पाईप पुरवठा केला आहे काय?</b></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row">: {{up.labhdharak_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.labhdharak_yn == "होय" %}
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row "><b>याचा तपशिल</b></label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.tapshil}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                        <label class="form-group form-row "><b>भूमिहीन शेतमजुरांना महसूल व वनविभागाने गायरान व अतिरिक्त जमीनीचे वाटप केले आहे काय ?</b></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row">: {{up.jamin_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                      <label class="form-group form-row "><b>जमिनीच्या अतिक्रमणाबाबतची प्रकरणे़ अतिक्रमण अधिनियमांतर्गत महसूल अधिकाऱ्याकडे प्रलंबित आहेत काय?</b></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row">: {{up.atikraman_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-9 text-left">
+                      <label class="form-group form-row "><b>उपलब्ध करुन घ्यावयाच्या जमिनीकरिता ५० टक्के बिनव्याजी कर्ज व ५० टक्के रक्कम अनुदान       
+                        स्वरुपांत प्राप्त जमिन अन्य कोणत्याही व्यक्तीला विक्री व्दारे अथवा कोणत्याही कारणास्तव हस्तांतरित         
+                         करता येणार नाही. याबाबतचे प्रतिज्ञापत्र सादर केले आहे.</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.pratidnyapatra}}" target="blank">प्रतिज्ञापत्र पहा</a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-9 text-left">
+                      <label class="form-group form-row "><b>मला लाभ मंजुर झाल्यास देण्यात येणारे कर्ज हे बिनव्याजी व १०वर्ष मुदतीकरिता असुन कर्जफेडीची     
+                        सुरुवात कर्ज मंजुरीनंतर २ वर्षानंतर सुरु करण्यात येईल याबाबतचे लेखी हमीपत्र दिले आहे.</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.hamipatra}}" target="blank">हमीपत्र पहा</a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5 text-left">
+                        <label class="form-group form-row "><b>प्राप्त करुन दिलेली जमिन लाभार्थी कशाप्रकारे मशागत करणार आहे</b></label>
+                    </div>
+                    <div class="col-md-7 text-left">
+                        <label class="form-group form-row">: {{up.mashagat}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-9 text-left">
+                        <label class="form-group form-row "><b>शेती व्दारे मिळणाऱ्या उत्पन्नाचा तपशिल वेळोवेळी प्रकल्प कार्यालयास कळविण्यात येईल</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.income_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                 <div class="row">
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row "><b>पाण्याचे स्त्रोत</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.water_src}}</label>
+                    </div>
+                 </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                      <label class="form-group form-row "><b>प्रकल्प कार्यालयामार्फत अथवा इतर विभागामार्फत यापुर्वी सदर योजनेचा अथवा इतर योजनेचा लाभ घेतला आहे काय ?</b></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row">: {{up.yojnalabh_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.yojnalabh_yn == "होय" %}
+              <div class="form-group">
+                <div style="height:180px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th><b>अ.क.</b></th>
+                          <th><b>योजनेचे नाव</b></th>
+                          <th><b>वर्ष</b></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td><b>१)</b></td>
+                          <td><label class="form-group form-row"> {{up.yojna1}}</label></td>
+                          <td><label class="form-group form-row"> {{up.year1}}</label></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td><b>२)</b></td>
+                          <td><label class="form-group form-row"> {{up.yojna2}}</label></td>
+                          <td><label class="form-group form-row"> {{up.year2}}</label></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              {% endif %}
+
+              <p class="text-left" style="word-spacing: 5px; margin-bottom: 15px;"> &emsp;&emsp;&emsp;&emsp;
+                <b>वर नमुद अर्जात देण्यात आलेली माहिती खरी आहे, तपासणी दरम्यान माहिती खोटी आढळून    
+                आल्यास, मी स्वत: कायदेशीर कार्यवाहीस पात्र राहीन.</b>
+              </p>
+              <p class="text-left" style="word-spacing: 5px; margin-bottom: 15px;"> &emsp;&emsp;&emsp;&emsp;
+                <b>अर्ज स्विकारणे अथवा नाकारणे याचा पुर्ण अधिकार प्रकल्प अधिकारी यांना राहील. यासाठी माझी 
+                कोणतीही हरकत राहणार नाही.</b>
+              </p>
+              <p class="text-left" style="word-spacing: 5px;"> &emsp;&emsp;&emsp;&emsp;
+                <b>तरी उपरोक्त बाबींचा विचार करुन मला योजनेचा लाभ मिळावा ही विनंती.</b>
+              </p><br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>दिनांक</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.dinank}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>स्थळ</b></label>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-group form-row">: {{up.place}}</label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row "><b>फोटो:</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.photo}}" target="blank">फोटो पहा</a></label>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row"><b>अर्जदाराची सही:</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.sign}}" target="blank">सही पहा</a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  </div>
+  </div>
+  </div>

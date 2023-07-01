@@ -1,0 +1,208 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:kisancard' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h5 style="margin-bottom: 5px;"><b>Application for AH&D KCC.</b></h5>
+            </div>
+            <br/>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row">Date :</label>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="date" name="date" class="form-control rounded-0 py-3 font-13 sign-register-input" required /> 
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="text-left" style="margin-bottom: 10px;"><b>Farmer Details</b></h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="Enter Name" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="father" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="Enter Father Name" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <select name="gender" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">Select Gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          <option value="Other">Other</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 35px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <select name="caste" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">Caste Category</option>
+                          <option value="Open">Open</option>
+                          <option value="OBC">OBC</option>
+                          <option value="SC">SC</option>
+                          <option value="ST">ST</option>
+                          <option value="SBC">SBC</option>
+                          <option value="VJNT">VJNT</option>
+                          <option value="NT">NT</option>
+                          <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="tel" name="mobile" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="Enter Mobile Number" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <select name="uid_oreid" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">Select Aadhar No./ EID No. / Other</option>
+                          <option value="Aadhar No.">Aadhar No.</option>
+                          <option value="EID No.">EID No.</option>
+                          <option value="UID No.">UID No.</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" name="adhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="Enter Adhar/EID/UID No." />
+                    </div>   
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <select name="id_proof" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">Select Other ID Proof</option>
+                          <option value="Voter ID Card">Voter ID Card</option>
+                          <option value="Indian passport">Indian passport</option>
+                          <option value="PAN Card">PAN Card</option>
+                          <option value="Driving license">Driving license</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="id_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="Enter Other ID Proof No." />
+                    </div>   
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h6 class="text-left" style="margin-bottom: 10px;"><b>Residential Address</b></h6>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="text" name="state" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="State" />
+                    </div> 
+                    <div class="col-md-4">
+                        <input type="text" name="dist" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="District" />
+                    </div>     
+                    <div class="col-md-4">
+                        <input type="text" name="subdist" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="Sub District" />
+                    </div>               
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="village" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="Residential Village / Town" />
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" name="address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="Address" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h6 class="text-left" style="margin-bottom: 10px;"><b>Branch Details</b></h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="Enter Bank IFSC" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="state_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="State Name" />
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="dist_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="District Name" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="bank" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="Bank Name" />
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="Branch  Name" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>

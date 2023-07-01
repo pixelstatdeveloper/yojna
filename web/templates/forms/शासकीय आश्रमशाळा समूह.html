@@ -1,0 +1,320 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:ashramsamuh' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h4 style="margin-bottom: 5px;"><b>महाराष्ट्र शासन</b></h4>
+                <h5 style="margin-bottom: 5px;">आदिवासी विकास विभाग </h5>
+                <h5 style="margin-bottom: 5px;">एकात्मिक आदिवासी विकास प्रकल्प कार्यालय</h5>
+                <h6 style="margin-bottom: 5px;">शासकीय माध्यमिक व उच्च माध्यमि क आश्रम शाळा &emsp;<span><input type="text" name="gav" required /></span>&emsp;</h6>
+                <h6><span><input type="text" name="tal" required placeholder="ता."/></span>&emsp;<span><input type="text" name="jil" required placeholder="जि"/></span></h6><br>
+                <h6><b>विद्यार्थी प्रवेश अर्ज</b></h6>
+            </div>
+            <br/>
+
+              <p class="text-left">महोदय ,</p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                मी माझा  पाल्य कु / कुमारी <span><input type="text" name="name" required /></span> याला / हिला आपल्या आश्रम शाळेत 
+                सत्र <span><input type="text" name="satra"  /></span> करिता इयत्ता <span><input type="text" name="eyatta"  /></span> प्रवेश घेण्यासाठी अर्ज सादर करीत आहे.
+              </p><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dina" class="form-control rounded-0 py-3 font-13 sign-register-input" required /> 
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">ठिकाण:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="thik" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="ठिकाण"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <label class="form-group form-row float-right">लाभार्थ्याची  स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="swakshari" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-7">
+                      <input type="text" name="nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h6><b>विद्यार्थ्यांची संपूर्ण माहिती</b></h6><br>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="text" name="saral_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="सरल प्रणाली नुसार क्रमांक" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="purn_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="father_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वडिलाचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="mother_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आईचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="jababi_vyakti" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="वडील कायदेशीर पालक नसल्यास जबाबदार व्यक्तीचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <h6 class="text-left" style="margin-bottom: 10px;">कायमचा पत्ता</h6>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <input type="text" name="mukam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="मु." />
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" name="post" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पो." />
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" name="taluka" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="ता." />
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" name="dist" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जि." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="संपर्कासाठी पत्ता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row">जन्मतारीख (अंकांमध्ये): </label>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="date" name="birthdate" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="birth_akshar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जन्मतारीख (अक्षरी)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="birthplace" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जन्म स्थळ" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="dharm" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="धर्म" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जात" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <h6 class="text-left" style="margin-bottom: 10px;">मागील उत्तीर्ण केलेली</h6>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="text" name="last_std" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="इयत्ता" />
+                    </div>
+                    <div class="col-md-4">
+                      <input type="number" name="year" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वर्ष" />
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="takke" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="टक्केवारी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="text-left" style="margin-bottom: 10px;">बँक खात्याची तपशील (XEROX जोडावी)</h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँकेचे नाव" /> 
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शाखा" /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="number" name="acc_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="खाते क्रमांक" /> 
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="IFSC क्र." /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="adhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आधार क्रमांक" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="adhar_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आधार कार्डाप्रमाणे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 40px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">आधार कार्ड बँक खात्याशी सलग्न केला आहे काय ?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="link_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="link_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="text-left" style="margin-bottom: 10px;">या शाळेत असणारे विद्यार्थ्याचे भाऊ बहीण:</h6>
+              <div style="height:160px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>भाऊ बहिणीचे नाव</th>
+                      <th>इयत्ता</th>
+                      <th>नाते </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td><input type="text" name="brosis_name1"/></td>
+                      <td><input type="text" name="std1"/></td>
+                      <td><input type="text" name="nate1"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td><input type="text" name="brosis_name2"/></td>
+                      <td><input type="text" name="std2"/></td>
+                      <td><input type="text" name="nate2"/></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" required /> 
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">विद्यार्थ्याची / पालकाची स्वाक्षरी :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+  

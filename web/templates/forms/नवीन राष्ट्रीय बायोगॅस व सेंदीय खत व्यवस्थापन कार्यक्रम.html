@@ -1,0 +1,291 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:navin_biogas' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>जिल्हा परिषद, नागपूर पंचायत समिती <span><input type="text" name="samiti"/></span> सन 2021- 22</h5> 
+           <h6>बायोगॅस बांधकाम करावयाच्या व्यक्तीने करावयाचा अर्ज</h6>
+            </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">खात्यावर असलेली एकूण जमीन</h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="jirayat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अ) जिरायत" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="bagayat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="ब) बागायत" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="ekun" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="एकूण" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">जनावरे </h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="mothi" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मोठी" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="lahan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="लहान" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="jan_ekun" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="एकूण" />
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8 text-left">
+                          <label class="form-group form-row">संयंत्र बांधकाम शेतात / घराजवळ करण्यासाठी स्वतःची जागा आहे काय?</label>                    
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="होय" name="sanyantra" required>
+                          <label class="form-check-label " for="sanyantra">
+                              होय
+                          </label>
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="नाही"  name="sanyantra" required>
+                          <label class="form-check-label" for="sanyantra">
+                              नाही
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                        <label class="form-group form-row">संयंत्रास संडास जोडणार आहे काय?</label>                    
+                    </div>
+                    <div class="col-2">
+                        <input class="form-check-input float-right" id="chkYes" onclick="ShowHideDiv()" type="radio" name="sandas" value="होय" required>
+                        <label class="form-check-label" for="sandas">
+                            होय
+                        </label>
+                    </div>
+                    <div class="col-2 ">
+                        <input class="form-check-input"  id="chkNo" onclick="ShowHideDiv()" type="radio"  name="sandas" value="नाही" required>
+                        <label class="form-check-label" for="sandas">
+                            नाही
+                        </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12" id="dvPassport" style="display: none">
+                  <input type="text" name="sandas_sankhya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    placeholder="होत असल्यास संडासचा उपयोग करणाऱ्यांची संख्या"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <h6 class="text-left">घरातील व्यक्तीची संख्या </h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="vyakti_lahan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="लहान" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="vyakti_mothi" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मोठी" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="vyakti_ekun" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="एकूण" />
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8 text-left">
+                          <label class="form-group form-row">गॅस स्वयंपाक / प्रकाश यासाठी आवश्यकता आहे : </label>                    
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="होय" name="gas_sway" required>
+                          <label class="form-check-label " for="gas_sway">
+                              होय
+                          </label>
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="नाही"  name="gas_sway" required>
+                          <label class="form-check-label" for="gas_sway">
+                              नाही
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="rakkam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="सध्या वापरासाठी लागणारी लाकडे, गोवरी यासाठी एका वर्षासाठी लागणारी रक्कम"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8 text-left">
+                          <label class="form-group form-row">लाभार्थी अ.जा. / अ.ज / अल्प / अत्यल्प / भूमीहीन / शेतमजुर आहे काय? </label>                    
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="होय" name="shetmajur" required>
+                          <label class="form-check-label " for="shetmajur">
+                              होय
+                          </label>
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="नाही"  name="shetmajur" required>
+                          <label class="form-check-label" for="shetmajur">
+                              नाही
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="ghanmiter" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="लाभार्थी संयंत्र कोणता व किती घनमिटर बांधायचा आहे "/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="prakar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="प्रकार"/>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="akar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="आकार"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">अर्जदाराची सही :</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="signature" class="form-control"  />
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="name1" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="नाव"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="patta1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="height:190px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>अ. क्र.</th>
+                      <th>अर्जदाराचे नाव</th>
+                      <th>क्रमांक 2 प्रमाणे खात्यावर असलेली जमतीन हे / आर.</th>
+                      <th>जनावरांची संख्या</th>
+                      <th>शिफारस करण्यासाठी आलेल्या संयंत्राचा प्रकार व आकार</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>1.</td>
+                      <td><input type="text" name="arj_name1"/></td>
+                      <td><input type="text" name="he_aar"/></td>
+                      <td><input type="text" name="sankhya"/></td>
+                      <td><input type="text" name="pra_akar"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>2.</td>
+                      <td><input type="text" name="arj_name2"/></td>
+                      <td><input type="text" name="he_aar2"/></td>
+                      <td><input type="text" name="sankhya2"/></td>
+                      <td><input type="text" name="pra_akar2"/></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    function ShowHideDiv() {
+        var chkYes = document.getElementById("chkYes");
+        var dvPassport = document.getElementById("dvPassport");
+        dvPassport.style.display = chkYes.checked ? "block" : "none";
+    }
+</script>

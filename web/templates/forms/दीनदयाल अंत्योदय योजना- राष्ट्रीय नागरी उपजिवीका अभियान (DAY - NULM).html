@@ -1,0 +1,276 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <h4>कौशल्य विकास प्रशिक्षणासाठी इच्छुक लाभार्थ्यांकरिता</h4>
+        <h5>अर्जाचा नमुना </h5>
+        <br>
+          <form id="application_form" action="{% url 'web:dindayal_ant' scheme.id %}" enctype="multipart/form-data" method="POST" style= "font-family: 'Arya', sans-serif!important;">
+            {% csrf_token %}
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="second_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="आडनाव " />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="umedwar_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="स्वतःचे नाव " /> 
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="fa_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="वडिलांचे/ पतीचे नाव  " /> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="paripurn_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="संपूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-3">
+                  <label class="form-group form-row">जन्मतारीख</label>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="adhaar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="आधार कार्ड क्र." />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="भ्रमणध्वनी क्रमांक  " /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="ई-मेल आयडी" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <select name="pravarg" class="py-3 font-13 form-control" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                       <option value="">प्रवर्ग</option>
+                      <option value="Open">Open</option>
+                      <option value="OBC">OBC</option>
+                      <option value="SC">SC</option>
+                      <option value="ST">ST</option>
+                      <option value="SBC">SBC</option>
+                      <option value="VJNT">VJNT</option>
+                      <option value="NT">NT</option>
+                      <option value="Other">Other</option>
+                   </select>
+                  </div>
+                  <div class="col-md-6">
+                    <select name="gender" class="form-control" required>
+                      <option value="">लिंग</option>
+                      <option value="Female">महिला</option>
+                      <option value="Male">पुरुष</option>
+                      <option value="Other">इतर </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="dharma" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="धर्म " /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                 placeholder="जात  " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शिक्षण " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="shakha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शाखा  " />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6 text-left">
+                      <label class="form-group form-row">अर्जदार महाराष्ट्राचा रहिवासी आहे का ?</label>                    
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="होय" name="rahivasi" required>
+                      <label class="form-check-label " for="rahivasi">
+                          होय
+                      </label>
+                  </div>
+                  <div class="col-md-2">
+                      <input class="form-check-input" type="radio" value="नाही"  name="rahivasi" required>
+                      <label class="form-check-label" for="rahivasi">
+                          नाही
+                      </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <h6 class=" text-left" style="font-weight: 500;"> कोणत्या क्षेत्रात प्रशिक्षण घ्यावयाचे आहे? </h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="prashikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="1)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="prashikshan1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="2)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="prashikshan2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="3)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+                <h6 class=" text-left" style="font-weight: 500;"> कोणत्या कोर्सेसकरीता प्रशिक्षण घ्यावयाचे आहे?</h6>
+           <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="course_prashikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="1)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="course_prashikshan1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="2)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="course_prashikshan2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="3)" />
+                  </div>
+                   <h6 style="color:red; text-align: justify;padding-top: 10px;">क्षेत्रनिहाय कोर्सबाबतची यादी सोबत संलग्न करण्यात येत आहे तरी पुढे दिलेल्या
+                  <a href="media/ssc.pdf" target="blank" style="font-family: 'Arya', sans-serif!important;" class=""> एस. एस. सी. कोर्स</a> यादीतील कोणतेही तीन कोर्स वर दिलेल्या रकान्यात नमूद करावे. 
+                  व तुमच्या माहितीसाठी पुढे दिलेल्या  <a href="media/tc.pdf" target="_blank" style="font-family: 'Arya', sans-serif!important;" class="">नागपूर जिल्हा टी. पी. टी. सी.</a> यादीतून जवळचे सेंटर पाहू शकता.</h6>
+                  
+                </div>
+              </div>
+            </div>
+                 
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+              <div class="input-icon">
+                  <div class="row">
+                      <div class="col-8">
+                        या पूर्वी कुठले कौशल्य विकासाबाबतचे प्रशिक्षण घेतले आहे का?
+                      </div>
+                      <div class="col-2">
+                          <input class="form-check-input" type="radio" value="होय" name="kau_prashikshan" id="chkYes" onclick="ShowHideDiv()" required>
+                          <label class="form-check-label" for="bpl">
+                            होय
+                          </label>
+                      </div>
+                      <div class="col-2">
+                          <input class="form-check-input" type="radio" value="नाही" name="kau_prashikshan" id="chkNo" onclick="ShowHideDiv()" required>
+                          <label class="form-check-label" for="bpl">
+                            नाही
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12" id="dvPassport" style="display: none" >
+                    <input type="text" name="vikas_prashikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder= "कौशल्य विकासाबाबतचे प्रशिक्षण घेतले असल्यास नमूद करावे "> 
+                </div>
+              </div>
+            </div>
+          </div>
+            <br>
+            
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                   <p style="text-align:justify; color:red;"> पात्रता : <br>१) वय मर्यादा १५ ते ४५ वर्ष <br>२) शैक्षणिक पात्रता - अभ्यास क्रमानुसार शैक्षणिक अर्हता धारण केलेली असणे आवश्यक </p>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="row form-group p-0">
+              <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+      function ShowHideDiv() {
+          var chkYes = document.getElementById("chkYes");
+          var dvPassport = document.getElementById("dvPassport");
+          dvPassport.style.display = chkYes.checked ? "block" : "none";
+      }
+  </script>
+ 
+
+ 

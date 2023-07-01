@@ -1,0 +1,353 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <br/>
+        <h4>गटई कामगारांच्या स्टॉल करीता अर्ज</h4>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>अर्जदाराचे नाव</b></label>
+                  </div>
+                  <div class="col-md-10">
+                    <label class="form-group form-row">: {{up.name}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="form-group form-row"><b>वडिलांचे संपूर्ण नाव /पतीचे नाव (महिलांसाठी)</b></label>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-group form-row">: {{up.fa_name}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>कायमचा पत्ता</b></label>
+                  </div>
+                  <div class="col-md-10">
+                    <label class="form-group form-row">: {{up.pe_address}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>सध्याचा पत्ता</b></label>
+                  </div>
+                  <div class="col-md-10">
+                    <label class="form-group form-row">: {{up.cu_address}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row text-left"><b>स्टॉल ज्या जागेत मागत आहे त्या जागेचा पत्ता</b></label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-group form-row">: {{up.stall_address}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>मो.क्र.</b> </label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row">: {{up.mobile_number}}</label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row"><b>गावांची/शहराची लोकसंख्या </b></label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">: {{up.loksankhya}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-9">
+                    <label class="form-group form-row text-left"><b>अर्जदार ज्या जागेत स्टॉल मागत आहे त्या जागेचा तपशिल.(सदर जागा ग्रामपंचायत/नगरपालिका/छाविणी क्षेत्र (कॅन्टॉन्मेट बोडी) महानगरपालिका यांनी भाडयाने/कराराने/खरेदीने दिली किंवा स्वमालकीची आहे. याचा तपशिल द्यावा.)</b></label>
+                  </div>
+                  <div class="col-md-3">
+                     <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                      style="width:150px!important;color:#fff"  href="/media/{{up.jaga_tapshil}}" target="blank"> पहा </a></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>जन्मतारीख</b> </label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row">: {{up.birth_date}}</label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>जन्मस्थळ</b></label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row">: {{up.birth_place}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>वय</b> </label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row">: {{up.age}}</label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>जात</b></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row">: {{up.caste}}</label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>पोटजात</b></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row">: {{up.pot_caste}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="form-group form-row"><b>रेशन कार्ड क्रमांक</b> </label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">: {{up.ration_no}}</label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row"><b>कुटुंबातील मिळवत्या व्यक्तीचे वार्षिक उत्पन्न </b></label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">: {{up.income}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h6 style="text-align: center;color: red;"><b>(तहसिलदाराने निर्गमित केलेले उत्पन्नाचे प्रमाणपत्र)</b></h6>
+            </div>
+            <br/>
+            <div style="overflow:auto;">
+            <table class="table table-bordered table-striped table-hover main_bany_text">
+              <thead>
+                <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क्र.</th>
+                          <th>व्यक्तीचे नांव</th>
+                          <th>वय</th>
+                          <th>नाते</th>
+                          <th>व्यवसाय/नोकरी</th>
+                          <th>मासिक उत्पन्न रु.</th>
+                          <th>वार्षिक उत्पन्न रु</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <td>1</td>
+                  <td>{{up.vykti_name}}</td>
+                  <td>{{up.age1}}</td>
+                  <td>{{up.nate}}</td>
+                  <td>{{up.nokri}}</td>
+                  <td>{{up.masik_utpanna}}</td>
+                  <td>{{up.varshik_utpanna}}</td>
+                </tr>
+                <tr class="text-center">
+                  <td>2</td>
+                  <td>{{up.vykti_name1}}</td>
+                  <td>{{up.age2}}</td>
+                  <td>{{up.nate1}}</td>
+                  <td>{{up.nokri1}}</td>
+                  <td>{{up.masik_utpanna1}}</td>
+                  <td>{{up.varshik_utpanna1}}</td>
+                </tr>
+                <tr class="text-center">
+                  <td>3</td>
+                  <td>{{up.vykti_name2}}</td>
+                  <td>{{up.age3}}</td>
+                  <td>{{up.nate2}}</td>
+                  <td>{{up.nokri2}}</td>
+                  <td>{{up.masik_utpanna2}}</td>
+                  <td>{{up.varshik_utpanna2}}</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div>
+              <br/>
+              <h6 style="text-align: center;color: red;"><b>बँक अथवा इतर महामंडळाकडून कर्ज किंवा अनुदान घेतले असल्यास तपशिल</b></h6>
+            </div>
+            <br/>
+            <div style="overflow:auto;">
+            <table class="table table-bordered table-striped table-hover main_bany_text">
+              <thead>
+                <tr class="text-center" style="font-size:14px;">
+                  <th>अ.क्र.</th>
+                  <th>व्यक्तीचे नांव</th>
+                  <th>वय</th>
+                  <th>नाते</th>
+                  <th>बँकेचे नाव व शाखा</th>
+                  <th>बँकेचे कर्ज</th>
+                  <th>थकबाकी</th>
+                  <th>महामंडळाचे कर्ज</th>
+                  <th>थकबाकी</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <td>1</td>
+                  <td>{{up.vykti_name3}}</td>
+                  <td>{{up.age4}}</td>
+                  <td>{{up.nate3}}</td>
+                  <td>{{up.bank_name3}}</td>
+                  <td>{{up.karj3}}</td>
+                  <td>{{up.thakbaki3}}</td>
+                  <td>{{up.mahamandal3}}</td>
+                  <td>{{up.thakbaki_3}}</td>
+                </tr>
+                <tr class="text-center">
+                  <td>2</td>
+                  <td>{{up.vykti_name4}}</td>
+                  <td>{{up.age5}}</td>
+                  <td>{{up.nate4}}</td>
+                  <td>{{up.bank_name4}}</td>
+                  <td>{{up.karj4}}</td>
+                  <td>{{up.thakbaki4}}</td>
+                  <td>{{up.mahamandal4}}</td>
+                  <td>{{up.thakbaki_4}}</td>
+                </tr>
+                <tr class="text-center">
+                  <td>3</td>
+                  <td>{{up.vykti_name5}}</td>
+                  <td>{{up.age6}}</td>
+                  <td>{{up.nate5}}</td>
+                  <td>{{up.bank_name5}}</td>
+                  <td>{{up.karj5}}</td>
+                  <td>{{up.thakbaki5}}</td>
+                  <td>{{up.mahamandal5}}</td>
+                  <td>{{up.thakbaki_5}}</td>
+                </tr>
+                <tr class="text-center">
+                  <td>3</td>
+                  <td>{{up.vykti_name6}}</td>
+                  <td>{{up.age7}}</td>
+                  <td>{{up.nate6}}</td>
+                  <td>{{up.bank_name6}}</td>
+                  <td>{{up.karj6}}</td>
+                  <td>{{up.thakbaki6}}</td>
+                  <td>{{up.mahamandal6}}</td>
+                  <td>{{up.thakbaki_6}}</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>शिक्षण</b> </label>
+                  </div>
+                  <div class="col-md-10">
+                    <label class="form-group form-row">: {{up.education}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row"><b>अर्जदाराचा व्यवसाय </b></label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-group form-row">: {{up.business}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-7">
+                    <label class="form-group form-row"><b>अर्जदाराच्या वडिलांचा व्यवसाय /पतीचा व्यवसाय (महिलांबाबत) </b></label>
+                  </div>
+                  <div class="col-md-5">
+                    <label class="form-group form-row">: {{up.fa_business}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>फोटो</b> </label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                      style="width:150px!important;color:#fff"  href="/media/{{up.photo}}" target="blank"> फोटो पहा </a></label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"><b>अर्जदाराची सही</b>  </label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="width:150px!important;color:#fff"  href="/media/{{up.signature}}" target="blank"> सही पहा </a></label>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-2">
+                  <label class="form-group form-row"><b>दिनांक</b> </label>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-group form-row">: {{up.apply_date}}</label>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-group form-row"><b>अर्जदाराचे नांव</b></label>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-group form-row">: {{up.name_1}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+              
+         
+          </div>        
+</div>
+</div>

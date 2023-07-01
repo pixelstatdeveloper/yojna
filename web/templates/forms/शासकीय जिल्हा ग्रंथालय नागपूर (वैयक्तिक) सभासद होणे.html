@@ -1,0 +1,186 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:vai_sabha' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+          <div class="form-header text-center row">
+            <h7> वैयक्तिक सभासद अर्ज <br/>जिल्हा ग्रंथालय अधिकारी कार्यालय,नागपूर</h7>
+          </div>
+          <h6 class=" text-right" style="font-weight: 500;"> अर्ज किंमत रुपये १०/-</h6>
+          <br/>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="shri" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="श्री / श्रीमती"/>
+                </div>
+                <div class="col-md-3">
+                  <label class="form-group form-row">अर्ज दिल्याचा दिनांक</label>
+                </div>
+                <div class="col-md-3">
+                  <input type="date" name="form_date" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <div class="form-header text-center row">
+            <h7> वैयक्तिक सभासद अर्ज <br/><b> जिल्हा ग्रंथालय अधिकारी कार्यालय,</b> <br/> पटवर्धन मैदानजवळ,  धंतोली नागपुर ४४००१२ <br/>
+              दूरध्वनी क्रमांक २४२०१९४
+             </h7>
+          </div>
+          <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> जिल्हा ग्रंथपाल </h6>
+            <h6 class=" text-left" style="font-weight: 500;"> जिल्हा ग्रंथालय अधिकारी कार्यालय,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> नागपूर ४४००१२</h6>
+          </br>
+            <h6 class=" text-left" style="font-weight: 500;">महोदय ,</h6>
+            <h6 class=" text-justify" style="font-weight: 500;"> मी, आपल्या शासकीय जिल्हा ग्रंथालयाचा  सभासद होऊ इच्छितो / इच्छिते. 
+              मी आपणास आवश्‍यक असलेली माझ्यासंबंधीची पूर्ण माहिती खाली देत आहे. मी ग्रंथालयीन नियमांचे पूर्णपणे पालन करीन. खालील माहितीत बद्दल 
+              झाल्यास अगर माझा पत्ता बदलल्यास, असा बदल आपल्या कार्यालयास ताबडतोब कळविन. यासोबत अनामत रक्कम रु ५००/- व प्रवेश शुल्क रु १००/- 
+              (द्विवार्षिक) जमा करीत आहे. ग्रंथालयातील सर्व नियम मी वाचले असून मला ते मान्य आहेत. </h6>
+              <h6 class=" text-right" style="font-weight: 500;">आपला,</h6>
+            </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-1">
+                    <label class="form-group form-row">नाव:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="name3" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">अर्ज जमा करण्याच दिनांक  :</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="date" name="form_date1" class="form-control" required />
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-1">
+                    <label class="form-group form-row">फोटो:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="photo" class="form-control" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">अर्जदाराची स्वाक्षरी :</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="singh" class="form-control" required />
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"><b> वेळ: सकाळी १०.३० ते सायंकाळी ५.३०   </b> </h6>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="संपूर्ण नाव (आडनाव प्रथम)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="कायमचा पूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">जन्मतारीख:</label>
+                  </div>
+                  <div class="col-md-5">
+                    <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                  </div>
+                  <div class="col-md-5">
+                    <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="मोबाईल क्रमांक"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" ई-मेल " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" सध्याचा रहिवासी पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="business" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="व्यवसाय / नोकरी" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नोकरी करत असल्यास कार्यालयाचे पूर्ण नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नोकरी करत असल्यास कार्यालयाचा पूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="tel" name="mobile_number1" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="मोबाईल क्रमांक"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+                
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

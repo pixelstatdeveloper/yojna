@@ -1,0 +1,117 @@
+{% extends 'web/layout2.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Login{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<link rel="stylesheet" type="text/css" href="{% static 'web/bootstrap/css/style.css' %}">
+
+<style>
+    .passkey {
+        position: absolute;
+        right: .8em;
+        z-index: 6;
+        top: 25%;
+       
+        transform: translateY(-50%);
+    }
+    .iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 0px!important;
+    width:40px; }
+</style>
+{% endblock %}
+{% block pre_load_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{% endblock %}
+{% block body %}
+
+<div class="container">
+    <!--<br>-->
+    <!--<h2 class="breadcrumb-item active" aria-current="page">{{role}}</h2>-->
+    <!--<br>--><div class="col-12 text-center">
+    <center style="margin-top: 40px;"><img src="{% static 'web/images/bany_logo.png' %}" class="img-responsive" alt="Logo" /> </center>
+    <main>
+            <style>
+                .circle:after{
+                        width: 0px; 
+                        height: 0px; 
+                        content: "";
+                        border: 0px solid #DFDFDF;
+                }
+            </style>
+            <div class="circle circle-lime"></div>
+            <form method="POST" action="{% url 'web:sign_dpo' %}?next={{request.GET.next}}" onsubmit="return validate_ph()">
+                 {% csrf_token %}
+                <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold" style="color:#3F42A1;font-size:28px;"> Department Admin Login</h2><br />
+                <div>
+                <input type="text" id="mobile_number" placeholder="Mobile Number" type="tel"
+                name="mobile_number" style= "font-family: 'Arya', sans-serif!important;" autofocus required />
+                </div>
+                <div>
+                <input type="password" name="password" id="password" placeholder="Password" style= "font-family: 'Arya', sans-serif!important;" required>
+                <p class="forgot-text"><a href="#">Forgot your password?</a></p>
+                </div>
+                <!-- <div class="keep-logged-in">
+                <input type="checkbox" value="Go!"></input>
+                <label>Keep me logged in.</label>
+                </div> -->
+                <input type="submit" value="Sign in"></input>
+            </form>
+            <div class="circle circle-aqua"></div>
+       
+    </main> 
+ </div>
+</div>
+
+<h4>
+    <pre><center style="color: Tomato">{{ message }}</center></pre>
+</h4>
+
+{% endblock %}
+{% block post_load_js %}
+<script>
+    const phoneInputField = document.getElementById("mobile_number");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry:"in",
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+
+    });
+    const number = phoneInput.getNumber();
+    function validate_ph() {
+        const number = phoneInput.getNumber();
+        phoneInputField.value = number;
+    }
+    window.addEventListener('DOMContentLoaded', function () {
+
+        function pass_manager() {
+            if (this.classList.contains('fa-eye-slash')) {
+                // Currently password is visible
+                this.classList.remove('fa-eye-slash')
+                this.classList.add('fa-eye')
+                this.previousElementSibling.setAttribute('type', 'text')
+                return;
+            }
+            this.classList.add('fa-eye-slash')
+            this.classList.remove('fa-eye')
+            this.previousElementSibling.setAttribute('type', 'password')
+            return;
+        }
+        document.querySelectorAll('.passkey').forEach(but => {
+            but.addEventListener('click', pass_manager);
+            but.dispatchEvent(new Event('click'))
+        })
+    })
+    
+
+</script>
+{% endblock%}

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:arthasahayy' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> मा .सहाय्यक आयुक्त मत्स्यव्यवसाय </h6>
+            <h6 class=" text-left" style="font-weight: 500;"> नागपूर</h6>
+          </br>
+            <h6 class=" text-left" style="font-weight: 500;"><b>विषय - नायलॉन सुत / जाळी , होडी करीता सन <span><input type="text" name="san" required placeholder="सन"/></span> करीता अनुदान मंजूर करणेबाबत.</b></h6>
+            </br>
+            <h6 class=" text-left" style="font-weight: 500;"> महोदय,</h6>
+            <h6 class=" text-justify" style="font-weight: 500;">वरील विषआन्वये विनंती करण्यात येते की, आमच्या संस्थेकडे <span><input type="text" name="talav"/></span> 
+              तलाव मासेमारी करीता ठेक्याने आहे. सदर तलावामध्ये संस्थेचे सभासद मासेमारी करून उदरनिर्वाह करीत आहेत. आमच्या संस्थेचे एकूण  <span><input type="text" name="ekun"/></span> 
+              सभासद असून त्यापैकी  <span><input type="text" name="sabhasad"/></span> सभासद क्रियाशिल आहे. सदर
+              सभासदांना मासेमारी करण्याकरीता जाळे व होडी ची आवश्यकता आहे. तरी सदर सभासदांना सोबतच्या यादी नुसार
+              अनुदान मंजूर करण्याकरीता प्रस्ताव सादर करण्यात येत आहे.</h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row">संस्थेचा सही व शिक्का :</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="file" name="sahi" class="form-control"  />
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            <br/>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

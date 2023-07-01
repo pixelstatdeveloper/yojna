@@ -1,0 +1,637 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:dharmik_alpp' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5> महाराष्ट्र शासन, अल्पसंख्याक विकास विभाग </h5>
+           <h6>अल्पसंख्याक खाजगी शाळा,कनिष्ठ महाविद्यालय व अपंग शाळांमध्ये पायाभूत सुविधा</h6>
+           <h6>पुरवण्यासाठी अनुदान योजना अर्जाचा नमुना</h6>
+            </div>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sch_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शाळेचे पूर्ण नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="पत्रव्यवहाराचा पूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="दूरध्वनी क्र." />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="ई-मेल" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="code" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शाळेचा DIES Code / औ. प्र. सं चा Institute code / अपंग शाळाचा Licence code " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sch_sanstha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शाळा चालविणाऱ्या संस्थेचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="sanstha_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="शाळा चालविणाऱ्या संस्थेचा पूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="tel" name="mobile_number1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="दूरध्वनी क्र." />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="pracharya_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मुख्याध्यापका / प्राचार्याचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-9">
+                    <input type="text" name="acc_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शाळा/कानिष्ठ महाविद्यालय/अपंग शाळा/औद्योगिक प्रशिक्षण संस्था यांचा राष्ट्रीय बँकेतील बँक खाते क्र." />
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="IFSC कोड" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="nondani_kr1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="संस्थेच्या नोंदणीचा क्रमांक व संबंधीत अधिनियम" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="nondani_kr2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="सहकारी संस्था नांदणी कायदा, १८६० अंतर्गत" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="nondani_kr3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="सार्वजनिक न्यास नोंदणी अधिनियम, १९५० अंतर्गत" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="nondani_kr4" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="वक्फ अधिनियम, १९९५ अंतर्गत" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="nondani_kr5" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="इतर कोणत्याही कायद्यातर्गत" />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row">शिक्षण विभागाच्या मान्यतेची तारीख व तपशील </label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="date" name="tarikh" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="form-group text-left"><b> शाळेमध्ये मंजूर आणि चालू इयत्ता / तुकड्या</b></h6>
+            <div style="height:200px;overflow:auto;">
+              <table class="table table-bordered table-striped table-hover main_bany_text">
+                <thead>
+                  <tr class="text-center" style="font-size:14px;">
+                    <th>इयत्तेचे स्वरूप</th>
+                    <th>इयत्ता</th>
+                    <th>तुकड्या</th>
+                    <th>विद्यार्थी संख्या</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center">
+                    <td>मंजूर</td>
+                    <td><input type="text" name="manjur1"/></td>
+                    <td><input type="text" name="manjur2"/></td>
+                    <td><input type="text" name="manjur3"/></td>
+                  </tr>
+                  <tr class="text-center">
+                    <td>चालू</td>
+                    <td><input type="text" name="chalu1"/></td>
+                    <td><input type="text" name="chalu2"/></td>
+                    <td><input type="text" name="chalu3"/></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          <div class="form-group p-0 text-left">शाळा / कनिष्ठ महाविद्यालय / अपंग शाळा कोणता अभ्यासक्रम शिकविते ? <br>
+            <label><input type="checkbox" name="abhyaskram[]" value="एस. एस. सी." > एस. एस. सी. </label>
+            <label><input type="checkbox" name="abhyaskram[]" value="सी. बी. एस. ई." > सी. बी. एस. ई</label><br>
+            <label><input type="checkbox" name="abhyaskram[]" value="आय. सी. एस. ई."> आय. सी. एस. ई.</label>
+            <label><input type="checkbox" name="abhyaskram[]" value="इतर" > इतर</label><br>
+          </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <select name="madhyam" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                      <option value="">माध्यम</option>
+                      <option value="मराठी">मराठी</option>
+                      <option value="उर्दू">उर्दू</option>
+                      <option value="इंग्रजी">इंग्रजी</option>
+                      <option value="हिंदी">हिंदी</option>
+                      <option value="हिंदी">इतर</option>
+                   </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sankhya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="शाळा / कनिष्ठ महाविद्यालय / अपंग शाळा / औद्योगिक प्रशिक्षण संस्थामधील शिक्षक / शिक्षकांची विषयनिहाय व अर्हतानिहाय संख्या"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="form-group text-left"><b>शाळा / कनिष्ठ महाविद्यालय / अपंग शाळा / औद्योगिक प्रशिक्षण संस्था मधील सोयी सुविधा :</b></h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="imaratimdhe" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder=" शाळा / कनिष्ठ महाविद्यालय / अपंग शाळा / औद्योगिक प्रशिक्षण संस्था संस्थेच्या मालकीच्या इमारतीमध्ये चालविली जाते की भाड्याच्या इमारतीमध्ये?"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="aavashyak_bandh" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder=" आवश्यक बांधकाम (प्रयोजन व आवश्यक क्षेत्रफळ)"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="form-group text-left"><b>शाळा / कनिष्ठ महाविद्यालय / अपंग शाळेमध्ये / औद्योगिक प्रशिक्षण संस्थांमधील उपलब्ध स्वच्छतागृहाची माहिती :</b></h6>
+            <div style="height:190px;overflow:auto;">
+            <table class="table table-bordered table-striped table-hover main_bany_text">
+              <thead>
+                <tr class="text-center" style="font-size:14px;">
+                  <th>स्वच्छतागृह</th>
+                  <th>संख्या</th>
+                  <th>क्षेत्रफळ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center">
+                  <td>महिला</td>
+                  <td><input type="text" name="mahila1"/></td>
+                  <td><input type="text" name="mahila2"/></td>
+                </tr>
+                <tr class="text-center">
+                  <td>पुरुष</td>
+                  <td><input type="text" name="purush1"/></td>
+                  <td><input type="text" name="purush2"/></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </br>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="text" name="pani" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="शाळा / कनिष्ठ महाविद्यालय / अपंग शाळामधील / औद्योगिक प्रशिक्षण संस्थांमधील पिण्याच्या पाण्याच्या सुविधांचा तपशील" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 class="form-group text-left"><b>मागणीच्या रकमेचा तपशील</b></h6>
+          <div style="height:2000px;overflow:auto;">
+          <table class="table table-bordered table-striped table-hover main_bany_text">
+            <thead>
+              <tr class="text-center" style="font-size:14px;">
+                <th>अ.क्र.</th>
+                <th>निर्माण करावयाच्या सुविधा</th>
+                <th>संख्या</th>
+                <th>दुरुस्तीची / बांधकामांची / खरेदीची किंमत प्रति नग</th>
+                <th>आवश्यक रक्कम रुपये</th>
+                <th>शेरा</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
+                <td>१</td>
+                <td>२</td>
+                <td>३</td>
+                <td>४</td>
+                <td>५</td>
+                <td>६</td>
+              </tr>
+              <tr class="text-center">
+                <td>१</td>
+                <td>शाळा/कनिष्ठ महाविद्यालय/अपंग शाळेच्या/औद्योगिक प्रशिक्षण संस्थांमधील इमारतीची दुरुस्ती नूतनीकरण</td>
+                <td><input type="text" name="nutanikaran1"/></td>
+                <td><input type="text" name="nutanikaran2"/></td>
+                <td><input type="text" name="nutanikaran3"/></td>
+                <td><input type="text" name="nutanikaran4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>अ) शाळा खोल्यांची डागडुजी/दुरुस्ती</td>
+                <td><input type="text" name="dagduji1"/></td>
+                <td><input type="text" name="dagduji2"/></td>
+                <td><input type="text" name="dagduji3"/></td>
+                <td><input type="text" name="dagduji4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>ब) छत दुरुस्ती</td>
+                <td><input type="text" name="chhat1"/></td>
+                <td><input type="text" name="chhat2"/></td>
+                <td><input type="text" name="chhat3"/></td>
+                <td><input type="text" name="chhat4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>क) शाळा खोल्या मधले फरशी बसवणे</td>
+                <td><input type="text" name="farshi1"/></td>
+                <td><input type="text" name="farshi2"/></td>
+                <td><input type="text" name="farshi3"/></td>
+                <td><input type="text" name="farshi4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>२</td>
+                <td>पिण्याच्या पाण्याची सुविधा (कुलर / फिल्टर सह)</td>
+                <td><input type="text" name="kooler1"/></td>
+                <td><input type="text" name="kooler2"/></td>
+                <td><input type="text" name="kooler3"/></td>
+                <td><input type="text" name="kooler4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>३</td>
+                <td>ग्रंथालयासाठी</td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>अ) शैक्षणिक साहित्य/किट्स खरेदी</td>
+                <td><input type="text" name="kits1"/></td>
+                <td><input type="text" name="kits2"/></td>
+                <td><input type="text" name="kits3"/></td>
+                <td><input type="text" name="kits4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>ब) बुक बँक/क्रिमिक पुस्तके खरेदी</td>
+                <td><input type="text" name="pustke_khredi1"/></td>
+                <td><input type="text" name="pustke_khredi2"/></td>
+                <td><input type="text" name="pustke_khredi3"/></td>
+                <td><input type="text" name="pustke_khredi4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>क) इतर पुस्तके खरेदी</td>
+                <td><input type="text" name="itar_khredi1"/></td>
+                <td><input type="text" name="itar_khredi2"/></td>
+                <td><input type="text" name="itar_khredi3"/></td>
+                <td><input type="text" name="itar_khredi4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>४</td>
+                <td>प्रयोगशाळा उभारणे/अद्यायावत करणे (सविस्तर तपशील द्यावा)</td>
+                <td><input type="text" name="prayogshala1"/></td>
+                <td><input type="text" name="prayogshala2"/></td>
+                <td><input type="text" name="prayogshala3"/></td>
+                <td><input type="text" name="prayogshala4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>५</td>
+                <td>संगणक कक्ष</td>
+                <td><input type="text" name="sanganak1"/></td>
+                <td><input type="text" name="sanganak2"/></td>
+                <td><input type="text" name="sanganak3"/></td>
+                <td><input type="text" name="sanganak4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>अ) संगणक संख्या</td>
+                <td><input type="text" name="sankhya1"/></td>
+                <td><input type="text" name="sankhya2"/></td>
+                <td><input type="text" name="sankhya3"/></td>
+                <td><input type="text" name="sankhya4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>ब) प्रिंटर्स</td>
+                <td><input type="text" name="printers1"/></td>
+                <td><input type="text" name="printers2"/></td>
+                <td><input type="text" name="printers3"/></td>
+                <td><input type="text" name="printers4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>क) सॉफ्टवेअर्स</td>
+                <td><input type="text" name="software1"/></td>
+                <td><input type="text" name="software2"/></td>
+                <td><input type="text" name="software3"/></td>
+                <td><input type="text" name="software4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>ड) इतर साहित्य</td>
+                <td><input type="text" name="itar_sahity1"/></td>
+                <td><input type="text" name="itar_sahity2"/></td>
+                <td><input type="text" name="itar_sahity3"/></td>
+                <td><input type="text" name="itar_sahity4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>६</td>
+                <td>स्वच्छतागृहे</td>
+                <td><input type="text" name="swachhtagruhe1"/></td>
+                <td><input type="text" name="swachhtagruhe2"/></td>
+                <td><input type="text" name="swachhtagruhe3"/></td>
+                <td><input type="text" name="swachhtagruhe4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>अ) स्वच्छता गृहांची दुरुस्ती</td>
+                <td><input type="text" name="durusti1"/></td>
+                <td><input type="text" name="durusti2"/></td>
+                <td><input type="text" name="durusti3"/></td>
+                <td><input type="text" name="durusti4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>ब) नवीन स्वच्छतागृहे बांधणे</td>
+                <td><input type="text" name="new_swachhtagruhe1"/></td>
+                <td><input type="text" name="new_swachhtagruhe2"/></td>
+                <td><input type="text" name="new_swachhtagruhe3"/></td>
+                <td><input type="text" name="new_swachhtagruhe4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>७</td>
+                <td>विद्यार्थ्यांसाठीचे फर्निचर</td>
+                <td><input type="text" name="furniture1"/></td>
+                <td><input type="text" name="furniture2"/></td>
+                <td><input type="text" name="furniture3"/></td>
+                <td><input type="text" name="furniture4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>अ) बेंचेस/डेक्स/टेबल नवीन खरेदी</td>
+                <td><input type="text" name="benches1"/></td>
+                <td><input type="text" name="benches2"/></td>
+                <td><input type="text" name="benches3"/></td>
+                <td><input type="text" name="benches4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>८</td>
+                <td>इनव्हर्टरची सुविधा निर्माण करणे (मुंबई शहर व उपनगरे वगळून)</td>
+                <td><input type="text" name="inverter1"/></td>
+                <td><input type="text" name="inverter2"/></td>
+                <td><input type="text" name="inverter3"/></td>
+                <td><input type="text" name="inverter4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>९</td>
+                <td>झेरॉक्स मशीन (माध्यमिक शाळा व महाविद्यालयांसाठी)</td>
+                <td><input type="text" name="xerox1"/></td>
+                <td><input type="text" name="xerox2"/></td>
+                <td><input type="text" name="xerox3"/></td>
+                <td><input type="text" name="xerox4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>१०</td>
+                <td>अध्यापनाची साधने (Teaching Material) एल.सी.डी. प्रोजेक्टर, अध्यापनासाठी लागणारे विविध सॉफ्टवेअर, इत्यादी</td>
+                <td><input type="text" name="material1"/></td>
+                <td><input type="text" name="material2"/></td>
+                <td><input type="text" name="material3"/></td>
+                <td><input type="text" name="material4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>११</td>
+                <td>ई- लर्निंग सुविधा निर्माण करणे /लॅग्वेज लॅब (हायस्कूल व कनिष्ठ महाविद्यालये)</td>
+                <td><input type="text" name="elearning1"/></td>
+                <td><input type="text" name="elearning2"/></td>
+                <td><input type="text" name="elearning3"/></td>
+                <td><input type="text" name="elearning4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td>१२</td>
+                <td>संगणक हार्डवेअर/सॉफ्टवेअर</td>
+                <td><input type="text" name="hardware1"/></td>
+                <td><input type="text" name="hardware2"/></td>
+                <td><input type="text" name="hardware3"/></td>
+                <td><input type="text" name="hardware4"/></td>
+              </tr>
+              <tr class="text-center">
+                <td></td>
+                <td>एकूण</td>
+                <td><input type="text" name="ekun1"/></td>
+                <td><input type="text" name="ekun2"/></td>
+                <td><input type="text" name="ekun3"/></td>
+                <td><input type="text" name="ekun4"/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </br>
+      <div class="form-group" >
+        <div class="input-icon">
+          <div class="row">
+            <div class="col-md-12">
+              <input type="text" name="ekun_rakkam1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+              required placeholder="मागणी केलेली एकूण रक्कम रु." />
+            </div>
+          </div>
+        </div>
+      </div>
+         <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8 text-left">
+                          <label class="form-group form-row">या योजनेअंतर्गत पूर्वी अनुदान घेतले आहे काय? तपशील द्यावा</label>                    
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="होय" name="anudan" required>
+                          <label class="form-check-label " for="anudan">
+                              होय
+                          </label>
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="नाही"  name="anudan" required>
+                          <label class="form-check-label" for="anudan">
+                              नाही
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      <div style="height:190px;overflow:auto;">
+        <table class="table table-bordered table-striped table-hover main_bany_text">
+          <thead>
+            <tr class="text-center" style="font-size:14px;">
+              <th>अ.क्र.</th>
+              <th>आर्थिक वर्ष</th>
+              <th>रक्कम</th>
+              <th>प्रयोजन</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center">
+              <td>१</td>
+              <td><input type="text" name="arthik_vrsh1"/></td>
+              <td><input type="text" name="rakkam1"/></td>
+              <td><input type="text" name="prayojan1"/></td>
+            </tr>
+            <tr class="text-center">
+              <td>२</td>
+              <td><input type="text" name="arthik_vrsh2"/></td>
+              <td><input type="text" name="rakkam2"/></td>
+              <td><input type="text" name="prayojan2"/></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+         <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-10 text-left">
+                          <label class="form-group form-row">योजनेंतर्गत लाभ मिळालेल्या प्रयोजनासाठीच निधीचा वापर केला असल्याबद्दलचे प्रमाणपत्र आणि उपयोगिता प्रमाणपत्र जोडले आहे काय ?</label>                    
+                      </div>
+                      <div class="col-md-1">
+                          <input class="form-check-input" type="radio" value="होय" name="nidhi" required>
+                          <label class="form-check-label " for="nidhi">
+                              होय
+                          </label>
+                      </div>
+                      <div class="col-md-1">
+                          <input class="form-check-input" type="radio" value="नाही"  name="nidhi" required>
+                          <label class="form-check-label" for="nidhi">
+                              नाही
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+    <h6 class="form-group text-left">मी / आम्ही श्री. / श्रीमती <span><input type="text" name="mi"/></span> व श्री. / श्रीमती <span><input type="text" name="pramanit"/></span>
+      असे प्रमाणित करतो की , आमच्या <span><input type="text" name="sansthedvara"/></span> संस्थेद्वारा संचलित <span><input type="text" name="sanchalit"/></span> या 
+      शाळा/कनिष्ठ महाविद्यालय/अपंग शाळा/औद्योगिक प्रशिक्षण संस्थासाठी अनुदान मागणी संदर्भात उपरोक्त दिलेल्या सर्व माहितीची पडताळणी केली असून सर्व माहिती सत्य बरोबर आहे.</h6>
+    </br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">सही :</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="signature" class="form-control" required />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="name" class="form-control" required placeholder="नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="hudda" class="form-control" required placeholder="हुद्दा - मुख्याध्यापक / प्राचार्य सचिव / अध्यक्ष" />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row"> शिक्का :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="shikka" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row text-left"> संसंस्थेच्या अध्यक्षांचे गट शिक्षण अधिकारी/शिक्षण निरीक्षक/उपशिक्षणाधिकारी यांनी साक्षांकित केलेले छायाचित्र  :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo1" class="form-control" required />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row text-left"> संस्थेच्या सचिवांचे गट शिक्षण अधिकारी/शिक्षण निरीक्षक/उपशिक्षणाधिकारी यांनी साक्षांकित केलेले छायाचित्र :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo2" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           </form>
+</div>
+</div>
+</div>

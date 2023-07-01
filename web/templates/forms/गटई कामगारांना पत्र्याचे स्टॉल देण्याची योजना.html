@@ -1,0 +1,322 @@
+{% block pre_load_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:gatai_kam' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+          <h4>गटई कामगारांच्या स्टॉल करीता अर्ज</h4>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="fa_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="वडिलांचे संपूर्ण नाव /पतीचे नाव (महिलांसाठी)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+              <div class="input-icon">
+                  <textarea name="pe_address" id="contact" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="कायमचा पत्ता "></textarea>
+                  <input type="checkbox" id="check"> Same as above Address
+              <textarea name="cu_address" type="text" id="permanent" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="सध्याचा पत्ता "></textarea>
+              </div>
+          </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="stall_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="स्टॉल ज्या जागेत मागत आहे त्या जागेचा पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="मो.क्र." /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="loksankhya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="गावांची/शहराची लोकसंख्या" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                    <div class="col-md-8">
+                    <label class="form-group form-row text-left">अर्जदार ज्या जागेत स्टॉल मागत आहे त्या जागेचा तपशिल.(सदर जागा ग्रामपंचायत/नगरपालिका/छाविणी क्षेत्र (कॅन्टॉन्मेट बोडी) महानगरपालिका यांनी भाडयाने/कराराने/खरेदीने दिली किंवा स्वमालकीची आहे. याचा तपशिल द्यावा.)</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="jaga_tapshil" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">जन्मतारीख</label>
+                  </div>
+                  <div class="col-md-5">
+                    <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input"/> 
+                  </div>
+                  <div class="col-md-5">
+                    <input type="text" name="birth_place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जन्मस्थळ " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="number" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="वय"/> 
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="caste" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जात" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="text" name="pot_caste" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पोटजात" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="ration_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="रेशन कार्ड क्रमांक " /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="कुटुंबातील मिळवत्या व्यक्तीचे वार्षिक उत्पन्न " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h7>( तहसिलदाराने निर्गमित केलेले उत्पन्नाचे प्रमाणपत्र)</h7>
+            <div style="height:250px;overflow:auto;">
+              <table class="table table-bordered table-striped table-hover main_bany_text">
+                <thead>
+                  <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क्र.</th>
+                          <th>व्यक्तीचे नांव</th>
+                          <th>वय</th>
+                          <th>नाते</th>
+                          <th>व्यवसाय/नोकरी</th>
+                          <th>मासिक उत्पन्न रु.</th>
+                          <th>वार्षिक उत्पन्न रु</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>1.</td>
+                          <td><input type="text" name="vykti_name"/></td>
+                          <td><input type="number" name="age1"/></td>
+                          <td><input type="text" name="nate"/></td>
+                          <td><input type="text" name="nokri"/></td>
+                          <td><input type="text" name="masik_utpanna"/></td>
+                          <td><input type="text" name="varshik_utpanna"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>2.</td>
+                          <td><input type="text" name="vykti_name1"/></td>
+                          <td><input type="number" name="age2"/></td>
+                          <td><input type="text" name="nate1"/></td>
+                          <td><input type="text" name="nokri1"/></td>
+                          <td><input type="text" name="masik_utpanna1"/></td>
+                          <td><input type="text" name="varshik_utpanna1"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>3.</td>
+                          <td><input type="text" name="vykti_name2"/></td>
+                          <td><input type="number" name="age3"/></td>
+                          <td><input type="text" name="nate2"/></td>
+                          <td><input type="text" name="nokri2"/></td>
+                          <td><input type="text" name="masik_utpanna2"/></td>
+                          <td><input type="text" name="varshik_utpanna2"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <br/>
+                  <h7>बँक अथवा इतर महामंडळाकडून कर्ज किंवा अनुदान घेतले असल्यास तपशिल</h7>
+                  <div style="height:300px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                                <th>अ.क्र.</th>
+                                <th>व्यक्तीचे नांव</th>
+                                <th>वय</th>
+                                <th>नाते</th>
+                                <th>बँकेचे नाव व शाखा</th>
+                                <th>बँकेचे कर्ज</th>
+                                <th>थकबाकी</th>
+                                <th>महामंडळाचे कर्ज</th>
+                                <th>थकबाकी</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="text-center">
+                                <td>1.</td>
+                                <td><input type="text" name="vykti_name3"/></td>
+                                <td><input type="number" name="age4"/></td>
+                                <td><input type="text" name="nate3"/></td>
+                                <td><input type="text" name="bank_name3"/></td>
+                                <td><input type="text" name="karj3"/></td>
+                                <td><input type="text" name="thakbaki3"/></td>
+                                <td><input type="text" name="mahamandal3"/></td>
+                                <td><input type="text" name="thakbaki_3"/></td>
+                              </tr>
+                              <tr class="text-center">
+                                <td>2.</td>
+                                <td><input type="text" name="vykti_name4"/></td>
+                                <td><input type="number" name="age5"/></td>
+                                <td><input type="text" name="nate4"/></td>
+                                <td><input type="text" name="bank_name4"/></td>
+                                <td><input type="text" name="karj4"/></td>
+                                <td><input type="text" name="thakbaki4"/></td>
+                                <td><input type="text" name="mahamandal4"/></td>
+                                <td><input type="text" name="thakbaki_4"/></td>
+                              </tr>
+                              <tr class="text-center">
+                                <td>3.</td>
+                                <td><input type="text" name="vykti_name5"/></td>
+                                <td><input type="number" name="age6"/></td>
+                                <td><input type="text" name="nate5"/></td>
+                                <td><input type="text" name="bank_name5"/></td>
+                                <td><input type="text" name="karj5"/></td>
+                                <td><input type="text" name="thakbaki5"/></td>
+                                <td><input type="text" name="mahamandal5"/></td>
+                                <td><input type="text" name="thakbaki_5"/></td>
+                              </tr>
+                              <tr class="text-center">
+                                <td>4.</td>
+                                <td><input type="text" name="vykti_name6"/></td>
+                                <td><input type="number" name="age7"/></td>
+                                <td><input type="text" name="nate6"/></td>
+                                <td><input type="text" name="bank_name6"/></td>
+                                <td><input type="text" name="karj6"/></td>
+                                <td><input type="text" name="thakbaki6"/></td>
+                                <td><input type="text" name="mahamandal6"/></td>
+                                <td><input type="text" name="thakbaki_6"/></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शिक्षण" /> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="business" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचा व्यवसाय" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="fa_business" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="अर्जदाराच्या वडिलांचा व्यवसाय /पतीचा व्यवसाय (महिलांबाबत)"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+                   
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">फोटो :</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="photo" class="form-control" required />
+                  </div>
+                   <div class="col-md-2">
+                    <label class="form-group form-row">अर्जदाराची सही:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="signature" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">दिनांक :</label>
+                  </div>
+                  <div class="col-md-5">
+                    <input type="date" name="apply_date" class="form-control" required />
+                  </div>
+                  <div class="col-md-5">
+                    <input type="text" name="name_1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचे नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row form-group p-0">
+              <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+            </div>
+         
+</form>
+</div>
+</div>
+</div>
+
+{% endblock %}
+{%block post_load_js %}
+<script language="JavaScript">
+    $(document).ready(function(e) {
+           $('#check').click(function() {
+    
+        var c=$('#contact').val();
+    
+        $("#permanent").val(c);
+    });
+    });
+    
+   
+    </script>
+{% endblock %}

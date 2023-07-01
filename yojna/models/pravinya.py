@@ -1,0 +1,57 @@
+from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+from yojna.models import SchemeModel,SchemeRegistrationModel,UserModel
+
+class pravinya_rajya(models.Model):
+    name= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    jilha_name= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    san= models.CharField(max_length=100,null=True, blank=True, default=None)
+    adhi1_date = models.DateField(default=None,null=True,blank=True)
+    adhi2_date = models.DateField(default=None,null=True,blank=True)
+    adhi1 =  models.CharField(max_length=100, null=True, blank=True)
+    adhi2 =  models.CharField(max_length=100, null=True, blank=True)
+    mobile_number = PhoneNumberField( blank=True)
+    paripurn_patta = models.CharField(max_length=1000, null=True, blank=True)
+    sambandhit = models.CharField(max_length=1000, null=True, blank=True)
+    upvidhi = models.CharField(max_length=1000, null=True, blank=True)
+    padadhi_info= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    gruhpal_info= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    sanstha_prakar= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    sanstha_swarup= models.CharField(max_length=100,null=True, blank=True, default=None)
+    manya_sanstha= models.CharField(max_length=100,null=True, blank=True, default=None)
+    pratyaksha= models.CharField(max_length=100,null=True, blank=True, default=None)
+    lekha_pari= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    varshik_aha= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    shreni= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    upkram= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    swatantra_lekha= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    sambandhit_sanstha= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    vidy_sarva= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    sansthemarfat= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    pari_name1= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    pari_name2= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    pari_name3= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    from1= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    from2= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    from3= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    pari_date1 = models.DateField(default=None,null=True,blank=True)
+    pari_date2 = models.DateField(default=None,null=True,blank=True)
+    pari_date3 = models.DateField(default=None,null=True,blank=True)
+    sadar_sansthes= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    sansthevirudha= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    sansthemdhe= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    vishbadha= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    dakhla= models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+    sansth_niyantran= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    anubhav= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    shera= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    name2= models.CharField(max_length=1000,null=True, blank=True, default=None)
+    signature = models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+    user=models.ForeignKey(UserModel, on_delete=models.CASCADE, null=True)
+    scheme=models.ForeignKey(SchemeModel, on_delete=models.CASCADE, null=True)
+    scheme_register=models.ForeignKey(SchemeRegistrationModel, on_delete=models.CASCADE, null=True)
+
+    class Meta:
+        db_table = "pravinya_rajya"
+        
+

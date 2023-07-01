@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row" style="font-size:20px;">
+                <div class="col-md-3">
+                    <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                        style="color:#3F42A1;font-size:35px;"> प्रोफाइल </h2><br />
+                </div>
+                <div class="col-md-9"><br />
+                    <a href="{% url 'web:applied_schemes' %}" type="submit" name="yojn" style="" class="btn fables-second-background-color yojana_mainbotton
+                    "> अर्ज केलेल्या योजना</a>
+                    <a href="{% url 'web:view_documents' %}" type="submit" name="yojn" class="btn fables-second-background-color yojana_mainbotton
+                                        ">View Document</a>
+                </div>
+                <div class="col-md-3">
+                    <label for="male">Name :</label>
+                </div>
+                <div class="col-md-9">
+                    <label for="male">{{ user_data.name }}</label>
+                </div>
+                <div class="col-md-3">
+                    <label for="male">Email :</label>
+                </div>
+                <div class="col-md-9">
+                    <label for="male">{{user_data.email}}</label>
+                </div>
+                <div class="col-md-3">
+                    <label for="male">Contact :</label>
+                </div>
+                <div class="col-md-9">
+                    <label for="male">{{user_data.mobile_number}}</label>
+                </div>
+                <div class="col-md-3">
+                    <label for="male">Adhaar No :</label>
+                </div>
+                <div class="col-md-9">
+                    <label for="adhaar">{{user_data.adhaar_no}}</label>
+                </div>
+                <div class="col-md-3">
+                    <label for="male">Profile Picture :</label>
+                </div>
+                <div class="col-md-9">
+                    <img src="
+                    {% if user_data.profile_pic %}
+                        media/{{ user_data.profile_pic}}
+                    {%else%}
+                    https://pixabay.com/images/download/avatar-1577909_640.png
+                    {% endif %}" style="height: 100px; width: 100px;"></img>
+
+                </div>
+            </div>
+            <a href="{% url 'web:update_profile' %}"
+                class="btn fables-second-background-color yojana_mainbotton">EDIT</a>
+            <br /><br /><br /><br />
+
+        </div>
+    </div>
+</div>

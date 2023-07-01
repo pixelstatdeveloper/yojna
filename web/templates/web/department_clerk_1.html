@@ -1,0 +1,219 @@
+{% extends 'web/layout1.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %}
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"-->
+<!--    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+ 
+{% endblock %}
+{% block pre_load_js %}
+ <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+ <!--   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+ <!--   crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"-->
+  <!--  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"-->
+  <!--  crossorigin="anonymous"></script>-->
+  
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+  <title>Document</title>
+  <script>
+    $(function () {
+      $("#search").autocomplete({
+        source: "{% url 'web:search_data' scheme %}"
+      });
+    });
+  </script>
+{% endblock %}
+{% block body %}
+  {% for message in messages %}
+
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible fade show text-center" role="alert" >
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}
+  <div class="container" >
+    
+    <div class="row">
+        <div class="col-md-1" style= "font-family: 'Arya', sans-serif!important;"> 
+                Filter By:
+        </div>
+        <div class="col-md-2"> 
+             <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                <div class="input-icon">
+                    <select name="caste" class="py-3 font-13" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                 color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;" id="caste_filter"  placeholder="Adhar Card Number" >
+                        <option value="...">Caste</option>
+                        <option value="...">All</option>
+                        <option value="Open">Open</option>
+                        <option value="OBC">OBC</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="SBC">SBC</option>
+                        <option value="VJNT">VJNT</option>
+                        <option value="NT">NT</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+         <div class="col-md-2"> 
+             <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                <div class="input-icon">
+                    <select name="status" class="py-3 font-13" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                 color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;" id="status_filter"  placeholder="Adhar Card Number" >
+                        <option value="...">Status</option>
+                        <option value="...">All</option>
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Verified">Verified</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Labarthi">Labarthi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7"> 
+            <form action="{% url 'web:search_data' scheme %}" method="GET" style="margin-bottom: 20px;">
+            {% csrf_token %}
+                <div class="row">
+                     <div class="col-md-10">  
+                        <div class="input-group" >
+                            <input type="search" id="search" name="search_app" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
+                        </div> 
+                    </div>      
+                    <div class="col-md-2">  
+                        <div class="input-group">
+                            <button type="submit" class="btn fables-second-background-color yojana_mainbotton" style="font-family: 'Arya', sans-serif!important;padding: 3px 10px !important;margin:0px!important;">Search</button>
+                        </div> 
+                    </div>  
+                </div>
+             </form>
+          </div>
+    </div>   
+
+    <table class="table table-bordered table-striped table-hover main_bany_text" id="employee_data">
+      <thead>
+        <tr class="text-center" style="font-size:16px;">
+          <th scope="col">Sr.No</th>
+          <th scope="col">Date</th>
+          <th scope="col">Application ID</th>
+      
+          <th scope="col">Name of Applicant</th>
+	  <th scope="col">caste</th>
+          <th scope="col">Scheme Name</th>
+          <th scope="col">Status</th>
+          {%if request.user.role == 'Department admin hod' or request.user.role == 'Department clerk 1' %}
+          <th scope="col">Clerk 1 Query</th>
+          {%endif%}
+          {%if request.user.role == 'Department clerk 1' %}
+          <th scope="col">HOD Query</th>
+          
+          {%endif%}
+          
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in context %}
+        <tr>
+          <th scope="row">{{i.sr_no}}</th>
+          <td>{{i.created_at}}</td>
+          <td>{{i.application_id}}</td>
+          
+          
+          <td><a href="{% url 'web:user_verify' i.pk i.scheme_id %}">{{i.applicant_name}}</a></td>
+          <td>{{i.caste}}</td>
+          <td>{{i.scheme_name}}</td>
+          <td>{{i.status}}</td>
+          {%if request.user.role == 'Department admin hod' or request.user.role == 'Department clerk 1' %}
+          <td>{{i.raised_query}}</td>
+          {% endif %}
+          {%if request.user.role == 'Department clerk 1' %}
+          <td>{{i.hod_query}}</td>
+          
+          {%endif%}
+        </tr>
+        {%endfor%}
+
+      </tbody>
+    </table>
+    <div class="row">
+          <div class="col-md-12"> 
+            <button type="button" class="btn fables-second-background-color yojana_mainbotton"  id="export_button" style="float:right; font-family: 'Arya', sans-serif!important;;margin:0px!important;">Download</button>
+          </div>
+          
+    </div>
+  </div>
+
+<br/>
+{% endblock %}
+{% block post_load_js %}
+<script>
+    const data = document.querySelector('table')
+    const change_button = document.getElementById('caste_filter')
+    const change_status = document.getElementById('status_filter')
+    change_button.addEventListener('change', _ => {
+      const $1 = change_button
+      Array.from(data.rows).slice(1).forEach(row => {
+        console.log(row.cells[4].innerText, $1.value)
+        if($1.value === '...') {
+          row.removeAttribute('hidden');
+          return
+        }
+        if(row.cells[4].innerText !== $1.value ) {
+          row.setAttribute('hidden', '')
+        }
+        else{
+          row.removeAttribute('hidden')
+        }
+      })
+    })
+    
+    change_status.addEventListener('change', _ => {
+      const $1 = change_status
+      Array.from(data.rows).slice(1).forEach(row => {
+        console.log(row.cells[6].innerText, $1.value)
+        if($1.value === '...') {
+          row.removeAttribute('hidden');
+          return
+        }
+        if(row.cells[6].innerText !== $1.value ) {
+          row.setAttribute('hidden', '')
+        }
+        else{
+          row.removeAttribute('hidden')
+        }
+      })
+    })
+
+    function html_table_to_excel(type)
+    {
+        var data = document.getElementById('employee_data');
+
+        var file = XLSX.utils.table_to_book(data, {sheet: "sheet1"});
+
+        XLSX.write(file, { bookType: type, bookSST: true, type: 'base64' });
+
+        XLSX.writeFile(file, 'Applications.' + type);
+    }
+
+    const export_button = document.getElementById('export_button');
+
+    export_button.addEventListener('click', () =>  {
+        html_table_to_excel('xlsx');
+    });
+  </script>
+
+{% endblock%}

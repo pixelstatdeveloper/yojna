@@ -1,0 +1,389 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:divya_divyanganu' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h4><b> कार्यालय - जिल्हा समाज कल्याण अधिकारी, जिल्हा परिषद नागपूर </b></h4>
+                <h5> जिल्हा परिषद नवीन प्रशासकीय इमारत, तळमजला, रवि भवन जवळ </h5>
+                <h5>हायकोर्ट रोड, सिविल लाईन, नागपूर.</h5><br>
+                <h5><b><u> लाभार्थी  नोंदणी फॉर्म </u></b></h5> 
+               
+               <div class="row" style="margin-top: 8px; margin-bottom: 25px; ">
+                  <div class="col-md-1"></div>
+                     <div class="col-md-10 text-center">
+                        <h5 > दिव्यांग - दिव्यांग व्यक्तींना विवाहासाठी प्रोत्साहनापर अनुदान देणे  </h5>
+                     </div>
+                  </div>
+               </div>
+            <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row">दिव्यांग व्यक्तीचे संपूर्ण नाव:</label>
+                    </div>
+                    <div class="col-md-8">
+                      <input type="text" name="husband_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="पती" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                      <input type="text" name="wife_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="पत्नी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>पती</b></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">जन्मदिनांक:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="husband_birth" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                    </div>
+                    <div class="col-md-3">
+                      <input type="number" name="husband_age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="वय" />
+                    </div>
+                    <div class="col-md-3">
+                        <select name="husband_gender" class="form-control" required>
+                          <option value="">लिंग</option>
+                          <option value="महिला">महिला</option>
+                          <option value="पुरुष">पुरुष</option>
+                          <option value="अतिरिक्त">अतिरिक्त</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>पत्नी</b></label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">जन्मदिनांक:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="wife_birth" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                    </div>
+                    <div class="col-md-3">
+                      <input type="number" name="wife_age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="वय" />
+                    </div>
+                    <div class="col-md-3">
+                        <select name="wife_gender" class="form-control" required>
+                          <option value="">लिंग</option>
+                          <option value="महिला">महिला</option>
+                          <option value="पुरुष">पुरुष</option>
+                          <option value="अतिरिक्त">अतिरिक्त</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">जात/प्रवर्ग</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">पती:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="husband_caste" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                            color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">जातीचा प्रवर्ग</option>
+                          <option value="Open">Open</option>
+                          <option value="OBC">OBC</option>
+                          <option value="SC">SC</option>
+                          <option value="ST">ST</option>
+                          <option value="SBC">SBC</option>
+                          <option value="VJNT">VJNT</option>
+                          <option value="NT">NT</option>
+                          <option value="Other">Other</option>
+                       </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">पत्नी:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="wife_caste" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                            color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">जातीचा प्रवर्ग</option>
+                          <option value="Open">Open</option>
+                          <option value="OBC">OBC</option>
+                          <option value="SC">SC</option>
+                          <option value="ST">ST</option>
+                          <option value="SBC">SBC</option>
+                          <option value="VJNT">VJNT</option>
+                          <option value="NT">NT</option>
+                          <option value="Other">Other</option>
+                       </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">शिक्षण:</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="husband_edu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पती" />
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="wife_edu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पत्नी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="कुटुंबाचे वार्षीक उत्पन्न" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">विवाह दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="vivah_date" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">दिव्यांगत्वचा प्रकार:</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="husdivyang_type" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पती" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" name="hus_percent" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="टक्केवारी " />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="wifedivyang_type" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पत्नी" />
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" name="wife_percent" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="टक्केवारी " />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">दिव्यांगत्व प्रमाणपत्र क्रं.:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="hus_certificateno" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पती" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">दिनांक:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="huscertificate_date" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4">
+                        <input type="text" name="wife_certificateno" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पत्नी" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">दिनांक:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="wifecertificate_date" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">व्यवसाय व रोजगार:</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" name="hus_vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पती" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        <input type="text" name="wife_vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पत्नी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">आधार कार्ड क्र. :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="number" name="husadhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पती" />
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" name="wifeadhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पत्नी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="hus_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="राहण्याचा संपूर्ण पत्ता (पतीचा):- नगर/वार्ड क्रं./प्लॉट नं."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="wifemaher_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="पत्नीचा माहेरचा पत्ता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">संपर्क क्र. :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="tel" name="mobile_no1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="१)"/>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="tel" name="mobile_no2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="२)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="yojna_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="आवश्यक सेवा सुविधा करिता योजनेचे नाव लिहा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 5px; margin-top: 30px;">
+                या पुर्वी या योजनेचा तसेच वैयक्तिक लाभाच्या योजनेचा लाभ मिळाला आहे का? &ensp;&ensp;&ensp;&ensp;
+                <label>
+                  <input type="radio" name="benefit" value="होय" required > होय
+                </label>&ensp;
+                <label>
+                  <input type="radio" name="benefit" value="नाही" required > नाही
+                </label>
+              </div>
+              <br>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">पतीचे फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="hus_photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row">दिव्यांग पतीची सही/अंगठा:</label>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="file" name="hus_sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">पत्नीचे फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="wife_photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row">दिव्यांग पत्नीची सही/अंगठा:</label>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="file" name="wife_sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+
+
+  </form>
+  </div>
+  </div>
+  </div>
+  

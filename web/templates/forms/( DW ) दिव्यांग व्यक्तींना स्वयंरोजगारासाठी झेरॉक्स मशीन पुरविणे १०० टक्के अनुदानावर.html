@@ -1,0 +1,233 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:divyangxerox' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+               <div class="form-header text-center">
+                <h4><b> कार्यालय - जिल्हा समाज कल्याण अधिकारी, जिल्हा परिषद नागपूर </b></h4>
+                <h5> जिल्हा परिषद नवीन प्रशासकीय इमारत, तळमजला, रवि भवन जवळ </h5>
+                <h5>हायकोर्ट रोड, सिविल लाईन, नागपूर</h5>
+                <h5 style="margin-top: 12px;"><b><u> लाभार्थी  नोंदणी फॉर्म </u></b></h5>
+                <div class="row" style="margin-top: 15px;">
+                  <div class="col-md-3"></div>
+                    <div class="col-md-6 text-center">
+                        <h5> झेरॉक्स मशिनचा अर्ज  </h5>
+                    </div>
+                  </div>
+                </div>
+              <br/>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="sampurna_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="दिव्यांग व्यक्तीचे संपूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">जन्मदिनांक </label>
+                       </div>
+                      <div class="col-md-3">
+                        <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                      </div>
+                    <div class="col-md-3">
+                      <input type="text" name="birthdate_age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder= "वय" />
+                    </div>
+                    <div class="col-md-4">
+                      <select name="gender" class="form-control" required>
+                        <option value="">लिंग</option>
+                        <option value="महिला">महिला</option>
+                        <option value="पुरुष">पुरुष</option>
+                        <option value="अतिरिक्त">अतिरिक्त</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="shikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="शिक्षण" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <select name="caste" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                      color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                         <option value="">जात / प्रवर्ग</option>
+                        <option value="Open">Open</option>
+                        <option value="OBC">OBC</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="SBC">SBC</option>
+                        <option value="VJNT">VJNT</option>
+                        <option value="NT">NT</option>
+                        <option value="Other">Other</option>
+                     </select>
+                    </div>
+                    <div class="col-md-6">
+                      <select name="married" class="form-control" required>
+                        <option value="">विवाहित / अविवाहित</option>
+                        <option value="अविवाहित">अविवाहित</option>
+                        <option value="विवाहित">विवाहित</option>
+                       </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="कुटुंबाचे वार्षिक उत्पन्न" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-form row w-100"></div>
+      
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="text" name="handicap_type" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="दिव्यांगत्वचा प्रकार" />
+                      </div>
+                      <div class="col-md-6">
+                        <input type="number" name="percent" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="टक्केवारी" /> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="text" name="certificate_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="दिव्यांगत्व प्रमाणपत्र क्र." />
+                      </div>
+                      <div class="col-md-2">
+                      <label class="form-group form-row float-right">दिनांक </label>
+                       </div>
+                      <div class="col-md-4">
+                        <input type="date" name="form_date" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <input type="text" name="vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="व्यवसाय व रोजगार" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="number" name="adhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="आधार कार्ड क्र." />
+                      </div>
+                      <div class="col-md-6">
+                        <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="संपर्क क्र.(मो. नंबर)" /> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <textarea type="text" name="address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="राहण्याचा संपूर्ण पत्ता"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" style="margin-top: 30px; margin-bottom: 25px;">
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <label class="form-group form-row">आवश्यक सेवा सुविधा आणि साहित्य व साधने </label>
+                      </div>
+                      <div class="col-md-7">
+                          <textarea type="text" name="seva" class="form-control rounded-0 py-3 font-13 sign-register-input" rows="1"
+                      required ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8 text-left">
+                          <label class="form-group form-row">यापूर्वी वैयक्तिक लाभाच्या योजनेचा लाभ मिळाला आहे का?</label>                    
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="होय" name="previous_benefit" required>
+                          <label class="form-check-label " for="previous_benefit">
+                              होय
+                          </label>
+                      </div>
+                      <div class="col-md-2">
+                          <input class="form-check-input" type="radio" value="नाही"  name="previous_benefit" required>
+                          <label class="form-check-label" for="previous_benefit">
+                              नाही
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+             <div class="form-group">
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <label class="form-group form-row">फोटो:</label>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="file" name="photo" class="form-control" required />
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-group form-row">दिव्यांग व्यक्तीची सही/अंगठा:</label>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="file" name="sign" class="form-control" required />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+      
+        
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+  

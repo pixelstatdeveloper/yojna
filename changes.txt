@@ -1,0 +1,4 @@
+1 => yojna/models/document_link.py  (model field changed)
+2 => .gitignore (db.sqlite3 removed from gitignore)
+3 => web/views/view.py (context[registration_media] changed)
+4 => yojna\web\templates\web\scheme_registration.html (dropdowns removed and labels added)

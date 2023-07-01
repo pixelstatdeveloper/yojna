@@ -1,0 +1,55 @@
+from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
+from yojna.models import UserModel,SchemeModel,SchemeRegistrationModel
+
+class antarjatiy_vivah(models.Model):
+    arjadar_name = models.CharField(max_length=80,default=None,null=True,blank=True)
+    address = models.CharField(default=None,null=True,blank=True,max_length=180)
+    dinank = models.DateField(default=None,null=True,blank=True)
+    mob_no1 = PhoneNumberField(blank=True)
+    mob_no2 = PhoneNumberField(blank=True)
+    vivah_date = models.DateField(default=None,null=True,blank=True)
+    var_name = models.CharField(max_length=80,default=None,null=True,blank=True)
+    var_dharma = models.CharField(max_length=100,default=None,null=True,blank=True)
+    var_caste = models.CharField(max_length=10,default=None,null=True,blank=True)
+    var_edu = models.CharField(default=None,null=True,blank=True,max_length=90)
+    var_vyavsay = models.CharField(default=None,null=True,blank=True,max_length=70)
+    var_karyalay = models.CharField(default=None,null=True,blank=True,max_length=70)
+    var_address = models.CharField(default=None,null=True,blank=True,max_length=180)
+    var_adharno = models.BigIntegerField(default=None,null=True,blank=True)
+    vadhu_name = models.CharField(max_length=80,default=None,null=True,blank=True)
+    vadhu_dharma = models.CharField(max_length=100,default=None,null=True,blank=True)
+    vadhu_caste = models.CharField(max_length=10,default=None,null=True,blank=True)
+    vadhu_edu = models.CharField(default=None,null=True,blank=True,max_length=90)
+    vadhu_vyavsay = models.CharField(default=None,null=True,blank=True,max_length=70)
+    vadhu_karyalay = models.CharField(default=None,null=True,blank=True,max_length=70)
+    vadhu_address = models.CharField(default=None,null=True,blank=True,max_length=180)
+    vadhu_jilha = models.CharField(default=None,null=True,blank=True,max_length=15)
+    vadhu_adharno = models.BigIntegerField(default=None,null=True,blank=True)
+    vivah_date1 = models.DateField(default=None,null=True,blank=True)
+    vivah_place = models.CharField(default=None,null=True,blank=True,max_length=30)
+    vivah_type = models.CharField(default=None,null=True,blank=True,max_length=6)
+    var_firstvivah = models.CharField(default=None,null=True,blank=True,max_length=4)
+    vadhu_firstvivah = models.CharField(default=None,null=True,blank=True,max_length=4)
+    var_vidur = models.CharField(default=None,null=True,blank=True,max_length=4)
+    vadhu_vidhva = models.CharField(default=None,null=True,blank=True,max_length=4)
+    bfor_yojna = models.CharField(default=None,null=True,blank=True,max_length=4)
+    anya_zp = models.CharField(default=None,null=True,blank=True,max_length=4)
+    satkar = models.CharField(default=None,null=True,blank=True,max_length=4)
+    where = models.CharField(default=None,null=True,blank=True,max_length=50)
+    when = models.CharField(default=None,null=True,blank=True,max_length=40)
+    bankname = models.CharField(default=None,null=True,blank=True,max_length=50)
+    branch = models.CharField(default=None,null=True,blank=True,max_length=30)
+    account_no = models.BigIntegerField(default=None,null=True,blank=True)
+    ifsc_no = models.CharField(default=None,null=True,blank=True,max_length=25)
+    var_sign = models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+    vadhu_sign = models.FileField(upload_to='media/divyang_person_sign',default=None,null=True,blank=True)
+
+    user=models.ForeignKey(UserModel, on_delete=models.CASCADE, null=True)
+    scheme=models.ForeignKey(SchemeModel, on_delete=models.CASCADE, null=True)
+    scheme_register=models.ForeignKey(SchemeRegistrationModel, on_delete=models.CASCADE, null=True)
+    
+    class Meta:
+        db_table = "antarjatiy_vivah"
+    def __str__(self) -> str:
+        return str(self.arjadar_name)

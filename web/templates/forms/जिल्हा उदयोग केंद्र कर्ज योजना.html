@@ -1,0 +1,611 @@
+{% block pre_load_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <h3> जिल्हा उदयोग केंद्र - नागपूर </h3>
+        <h5><b>जिल्हा उदयोग केंद्र कर्ज योजना</b></h5>
+        <h5>(नियम ५ पहा)</h5>
+        <br>
+          <form id="application_form" action="{% url 'web:jilhaudyog' scheme.id %}" enctype="multipart/form-data" method="POST" style= "font-family: 'Arya', sans-serif!important;">
+            {% csrf_token %}
+            <h6 class=" text-left ">सिग्मा कक्ष</h6> <br>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <p class=" text-left " style="font-weight: 500;">
+                             प्रकरण क्रमांक  <span><input type="text" name="prakaran_no" required placeholder="प्रकरण क्रमांक"/></span> 
+                             दिनांक <span><input type="date" name="pra_date" required placeholder="दिनांक"/></span> 
+                             मी/आम्ही <span><input type="text" name="name" required placeholder=" नाव"/></span>
+                             याद्वारे महाराष्ट्राच्या उद्योग धंद्यांना राज्याकडून अर्थ सहाय देण्याबाबतचे अधिनियम १९६० अन्वये
+                             <span><input type="text" name="money_char" required placeholder="अक्षरी"/></span>
+                             आकडयात रुपये <span><input type="text" name="money_num" required placeholder="आकडे"/></span>
+                             कर्ज मिळवण्यासाठी अर्ज करीत आहे / आहोत आणि पुढील तपशील सादर करीत आहे / आहोत. 
+                        </p>
+                    </div>
+                  </div>
+                </div>
+            </div><br>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <input type="text" name="candname" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="अर्जदाराचे नाव"/>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="number" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="दूरध्वनी / मोबाईल क्र." />
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea  type="text" name="candaddress" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      placeholder="अर्जदाराचा पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="varg_jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="वर्गीकृत जाती / जमातीपैक असल्यास" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <textarea name="compor_pedhi" class="form-control rounded-0 py-3 font-13 sign-register-input"  placeholder="अर्जदाराची कंपनी किंवा पेढी असेल तर तिची रचना म्हणजे (संपूर्ण मालकी, संयुक्त हिंदू कुटुंब, भागीदारी किंवा मर्यादीत कंपनी आहे किंवा कसे)"></textarea>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="business_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="ज्या उद्योग धंद्याच्या बाबतीत कर्ज मिळण्यासाठी अर्ज करण्यात आला त्या उद्योग धंद्याचे स्वरूप" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="work" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="त्यात तयार करण्यात येणारा माल किंवा त्यात कोणते काम चालते ते" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea name="ownerpartner_nameinvest" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="अर्जदाराची भांडवलाच्या स्वरूपातील संपत्ती अर्जदार कंपनी किंवा पेढी असेल तर, मालकांचे नांव भागीदारांची नांवे व त्याने / त्यांनी अनुक्रमे गुंतविलेल्या भांडवलाच्या रकमा"></textarea>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea name="sanchalak_name" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="अर्जदार मर्यादीत कंपनी असेल तर / तिच्या संचालकांची नांवे आणि तिचे अधिकृत व विक्रीस काढलेले भांडवल"></textarea>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                      <label class="form-group form-row"><b>कर्जाचा उद्देश</b></label>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <label class="form-group form-row"><b>रुपये</b></label>
+                </div>
+                </div>
+              </div>
+          </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row">इमारत, गोदाम, वखारी वगैरे बांधण्यासाठी:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="construction" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="रुपये" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row">जमीन खरेदी करण्यासाठी:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="land" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="रुपये" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row">यंत्रसामुग्री, संयंत्र आणि उपकरणे वगैरे खरेदी करण्यासाठी:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="machines" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="रुपये" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row">चालू भांडवलाकरीता:</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="work_expenditure" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="रुपये" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                      <label class="form-group form-row">एकूण रुपये:</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="total" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      placeholder="रुपये" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12 text-left">
+                  <h6>ज्यासाठी अर्ज करण्यात आला त्या कर्जाकरीता देऊ केलेले तारण, अर्जदाराच्या मालकीची पुढील संपत्ती गहाण ठेऊन प्रथमतः कर्ज सुरक्षित करण्यात येईल.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="text" name="sthayi_vid" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      placeholder="स्थायी संपत्ती - विद्यमान - किंमत रुपये" />
+              </div>
+              </div>
+            </div>
+          </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="Azamin" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="जमीन : तिचे क्षेत्रफळ, भूमापन क्रमांक व हिस्सा क्रमांक आणि ती जेथे असेल त्या गावाचे, तालुक्याचे व जिल्ह्याचे नावं"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="Aemarat" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="इमारत : ज्या जमिनीवर ती इमारत असेल त्या जमीनीच्या भूमापन क्रमांक व हिस्सा क्रमांक (अंदाजे घसारा खर्च / रुपये)"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="Amachine" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="संयंत्र  व यंत्रसामुग्री : यंत्रसामुग्री व प्रत्येक  यंत्राची खरेदीची तारीख आणि तिची  मूळ किंमत यांचा तपशील असलेली वेगळी यादी सोबत जोडावी (अंदाजे घसारा खर्च रुपये)"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-2">
+                  <label class="form-group form-row">एकूण रुपये:</label>
+              </div>
+              <div class="col-md-10">
+                <input type="text" name="Atotal_amount" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="रुपये" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12 text-left">
+                <h6>ज्यासाठी अर्ज केला आहे त्या कर्जातून संपादन करण्याचे योजिलेली व तारण म्हणून देऊ केलेली स्थायी संपत्ती.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="Bzamin" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="जमीन: ( पूर्ण मालकींची असलेली / पट्याने धारण केलेली) अशा जमीनींची अंदाजे/ किंमत ,तिचे क्षेत्रफळ ,भूमापन क्रमांक व हिस्सा क्रमांक आणि ती जेथे असेल त्या गावांचे ,तालूक्याचे व जिल्ह्याचे नांव नमुद करावे )"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input name="Bemarat" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="इमारत: ( बांधण्याचे किंवा संपादन करण्याचे योजिलेल्या इमारतीचा अंदाजे खर्च नमूद करावा )"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="Bmachine" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="संयंत्र व यंत्रसामुग्री : ( संपादन करावयाच्या जादा  यंत्रसामुग्रीची अंदाजे किंमत नमूद करावी व प्रत्येक यंत्राचा तपशील कोठून संपादन करावयाचे यांची वेगळी यादी जोडावी )"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-2">
+                  <label class="form-group form-row">एकूण रुपये:</label>
+              </div>
+              <div class="col-md-10">
+                <input type="text" name="Btotal_amount" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="रुपये" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-8 text-left">
+                  <label class="form-group form-row"> ज्या उद्योग धंद्यासाठी कर्ज मिळविण्याकरीता अर्ज केला आहे. त्या उद्योग धंद्याच्या वाढीच्या किंवा विकासाच्या नियोजित योजनेचा संपूर्ण तपशील ( अर्जदाराने सही केलेल्या वेगळ्या पत्रकात देणे )  </label>
+              </div>
+              <div class="col-md-4">
+                <input type="file" name="business_info" class="form-control" required /> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="paratfed" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="कर्जाची परतफेड करण्याची मबदत व पद्धती (वार्षिक/अर्धवार्षिक )" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="insurance" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                   placeholder="अर्जदाराच्या विद्यमान संपत्तीचा विमा उतरविण्यात आला आहे किंवा कसे आणि त्याप्रमाणे विमा उतरविला असल्यास तो कोणत्या कंपनीकडे उतरविला ते"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="bankname" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="अर्जदाराने निवड केलेल्या बँक शाखेचे नांव" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="isloan" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                   placeholder="अर्जदाराने कोणत्याही बँकेचे पैसे ठेवले असल्यास त्या बँकेचे नांव आणि त्याचे खाते व त्या बँकेच्या एखाद्या शाखेत असेल तर त्या शाखेचा पत्ता"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <textarea name="employees" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                   placeholder="अर्जदाराने ठेवलेल्या कामाच्या पाळ्यांची आणि कामावर लावलेल्या कामगारांची संख्या ( कार्यालयाचा कर्मचारी वर्ग व कारकून वर्ग वगळण्यात यावा ) . पाळ्यांची संख्या ( मागील वर्षातील सतत केलेल्या कामाच्या प्रत्येक पाळ्यातली कामगारांची सरासरी संख्या)"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input name="technician" class="form-control rounded-0 py-3 font-13 sign-register-input" cols="60" rows="1"
+                   placeholder="देखरेक ठेवणाऱ्या तंत्रज्ञाची नांवे व त्यांची पात्रता द्यावी"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="govenrnment_loan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="अर्जदाराने इतर कोणत्याही शासकीय खात्याकडे कर्जाकरीता अर्ज केला आहे किंवा कसे ?" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="sambhavya_profit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="संभाव्य नफ्याची अंदाजे रक्कम" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12 text-left">
+                <h6>पुढील तक्त्यात औद्योगिक योजना पूर्ण झाल्यानंतरच्या एक वर्षात सर्वसाधारणपणे झालेल्या कामाचा समावेश असावा - रुपये</h6>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="total_income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="अ) विक्रीचे एकूण उत्पन्न रु" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" name="khrch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="ब) खर्च रु" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="mal_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="१) कच्च्या मालांचा व साठ्यांचा खर्च" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="majuri_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="२) दिलेली मंजूरी" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="rent_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="३) कारखान्यांच्या जागेचे भाडे" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="light_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="४) विजेचा खर्च इत्यादी" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="kirkol_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="५) किरकोळ" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="total_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="एकूण रुपये" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="profit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="क) विक्रीच्या उत्पन्नावरील एकूण नफा (अ-ब)" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="prashaskiy_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="ड)-१) प्रशासकीय खर्च व विक्रीचा खर्च" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="ownerpartner_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="२) मालकांने किंवा भागीदारांनी व्यक्तिशः घेतलेले परिश्रमिक" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="intrest_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="३) कर्जाऊ घेतलेल्या रकमेवरील व्याज" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="tax_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="४) कर आकारणी" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="total_poit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="एकूण रुपये" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="onlyprofit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="निव्वळ नफा (क-ड)" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="moneywith_u" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  placeholder="कर्जाच्या समाप्तीकरणासाठी उपलब्ध असलेली रोख रक्कम" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <h6 class=" text-justify" style="font-weight: 500;"> मी / आम्ही असे जाहीर करतो की, वर दिलेला तपशील, महाराष्ट्र शासनाकडून कर्ज मिळविण्याच्या हेतूने 
+          सादर आहे आणि ते माझ्या / आमच्या पूर्ण माहितीप्रमाणे व समजूतीप्रमाणे खरा व बिनचूक आहे आणि त्यातील 
+          कोणतीही महत्वाची गोष्ट लपविण्यात किंवा राखून  ठेवण्यात आलेली नाही.  </h6><br><br>
+
+          
+
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-2">
+                    <label class="form-group form-row">दिनांक:</label>
+                </div>
+                <div class="col-md-4">
+                  <input type="date" name="date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required /> 
+                </div>
+                <div class="col-md-2">
+                  <label class="form-group form-row float-right">अर्जदाराची सही:</label>
+                </div>
+                <div class="col-md-4">
+                  <input type="file" name="sign" class="form-control" required /> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-6 text-left">
+                  <label class="form-group form-row"> राजपत्रीत अधिकारी किंवा साक्षांकीत करण्याचे अधिकारी असणाऱ्या व्यक्ती यांनी साक्षांकित केलेला फोटो </label>
+                </div>
+                <div class="col-md-6">
+                  <input type="file" name="photo" class="form-control" required/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <b> टीप :</b>
+            </div>
+            <div class="col-md-11">
+              <h6 class="text-justify" style="font-weight: 500;"> वरील तपशील अर्जाच्या प्राथमिक छाननीसाठी आहे. त्यावर आणखी विचार
+                करतांना शासन मुद्यांसंबंधी अधिक माहिती लागेल व त्या मुद्यांसंबंधी योग्य वेळी माहिती मागविण्यात येईल.</h6>
+            </div>
+          </div>
+          <br><br>
+
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12">
+                    <p class=" text-left " style="font-weight: 500;">
+                      कंपनीवर एखाद्या  इसमाची संपूर्ण मालकी असेल तर, त्याबाबतीत अर्जावर त्या मालकाने स्वतः सही केली पाहीजे 
+                      <span><input type="text" name="kutumb" required/></span>
+                       हिंदू कुटुंबाच्या बाबतीत कुटूंबातील मुख्य इसम आणि इतर प्रत्येक प्रौढ पुरूषे यांची नांवे व 
+                      या अर्जात बसत असल्या पाहिजेत. पेढीच्या बाबतीत भागीदारीसंबंधीच्या लेखान्वये तसे करण्यास सक्षम व 
+                      अधिकृत चिटणीसाने <span><input type="text" name="chitnis" required/></span> चालकाने सही केली पाहिजे . 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <br><br>
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+</form>
+</div>
+</div>
+</div>
+            
+            
+{% endblock %}
+ 
+ 

@@ -1,0 +1,189 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:jamin_patrika' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>कृषि विभाग </h5> 
+              <h5>महाराष्ट्र शासन</h5> 
+           <h6>(मातीच्या नमुन्याचे सोबत खालील माहिती पाठवावी)</h6>
+           <h6>नमुना चिठ्ठी</h6>
+            </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="text" name="namuna" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नमुना क्रमांक" />
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">नमुना घेतल्याची तारीख :</label>
+                  </div>
+                  <div class="col-md-5">
+                    <input type="date" name="namuna_tarikh" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-8">
+                    <input type="text" name="shetkari_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शेतकऱ्यांचे संपूर्ण नाव" />
+                  </div>
+                  <div class="col-md-4">
+                    <input type="number" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मोबाईल नंबर" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">मृद नमुना तपासणी प्रकार :</h6>
+          </br>
+            <div class="form-group p-0 text-left">
+              <label><input type="checkbox" name="mrud_namuna[]" value="सर्वसाधारण"> सर्वसाधारण  </label>
+              <label><input type="checkbox" name="mrud_namuna[]" value="सूक्ष्म मूलद्रव्य"> सूक्ष्म मूलद्रव्य </label>
+              <label><input type="checkbox" name="mrud_namuna[]" value="विशेष"> विशेष  </label><br>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="gav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="गाव" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="post" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पोस्ट" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="taluka" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="तालुका" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="jilha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जिल्हा" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sarve" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="सर्वे नंबर किंवा ठिकाण" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">जमिनीचा उतारा :</h6>
+          </br>
+            <div class="form-group p-0 text-left">
+              <label><input type="checkbox" name="jamin_utara[]" value="जास्त"> जास्त  </label>
+              <label><input type="checkbox" name="jamin_utara[]" value="मध्यम"> मध्यम </label>
+              <label><input type="checkbox" name="jamin_utara[]" value="सपाट"> सपाट  </label><br>
+            </div>
+            <h6 class="text-left">पाण्याचा निचरा :</h6>
+          </br>
+            <div class="form-group p-0 text-left">
+              <label><input type="checkbox" name="panyacha[]" value="चांगला"> चांगला  </label>
+              <label><input type="checkbox" name="panyacha[]" value="मध्यम"> मध्यम </label>
+              <label><input type="checkbox" name="panyacha[]" value="कमी "> कमी  </label><br>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="lakshne" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="काही विशेष लक्षणे" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">जमीनीची खोली :</h6>
+          </br>
+            <div class="form-group p-0 text-left">
+              <label><input type="checkbox" name="jamin_kholi[]" value="उथळ"> उथळ  </label>
+              <label><input type="checkbox" name="jamin_kholi[]" value="मध्यम"> मध्यम </label>
+              <label><input type="checkbox" name="jamin_kholi[]" value="खोल"> खोल </label><br>
+            </div>
+            <h6 class="text-left">पुढील पीक (जात) :</h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="pik1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="१)" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="pik2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="२)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="korad" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="ओलीत /कोरडवाहू" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="kshetra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नमुना घेतलेल्या जमिनीचे प्रतिनिधीक क्षेत्र" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="hangam_pik" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मागील हंगामात घेतलेले पीक" />
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row">नमुना घेण्याची सही / हुद्दा :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="signature" class="form-control" />
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="name1" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="नाव"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

@@ -1,0 +1,237 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:eklavyaschool' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h5 style="margin-bottom: 5px;"><b>आदिवासी विकास आयुक्तालय महाराष्ट्र राज्य नाशिक.</b></h5>
+                <h5 style="margin-bottom: 5px;"><b>महाराष्ट्र ट्रायबल पब्लिक स्कुल सोसायटी (रजि. ) नाशिक संचलित </b></h5>
+                <h5 style="margin-bottom: 5px;"><b>एकलव्य रेसिडेंशियल पब्लिक स्कुल खैरी परसोडा ता. रामटेक, जि . नागपूर </b></h5>
+                <h5 style="margin-bottom: 5px;"><b>प्रवेश अर्ज</b></h5>
+                <h5 style="margin-bottom: 5px;"><b>( सन २०२० ते २०२१ )</b></h5>
+            </div>
+            <br/>
+
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; मा . प्र. प्राचार्य, </h6>
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; एकलव्य रेसिडेंशियल पब्लिक स्कुल, </h6>
+            <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; खैरी परसोडा ता. रामटेक जि . नागपूर </h6>
+            
+            <br>
+
+              <p class="text-center"><b>विषय :-</b> एकलव्य रेसिडेंशियल पब्लिक स्कुल मध्ये इ &emsp;<span><input type="number" name="std1" placeholder="इयत्ता" required /></span>&emsp;  वीत प्रवेश मिळणे बाबत. </p>
+              
+              <p class="text-left">मा. महोदय ,</p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                माझ्या पाल्याची आपल्या शाळेत इयत्ता &emsp;<span><input type="number" name="std2" placeholder="इयत्ता" required /></span>&emsp; वीत प्रवेशासाठी निवड झालेली आहे. तरी त्याला / तिला प्रवेश 
+                मिळण्यास विनंती आहे त्याच्या / तिच्या संबंधीची माहिती खालील प्रमाणे आहे.
+              </p><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="मुलाचे / मुलीचे संपुर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="birth_place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जन्म स्थळ" />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">जन्म तारीख:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="jamat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जमातीचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 35px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left">महाराष्ट्र राज्याचे रहिवासी आहेत काय ?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="rahivasi_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="rahivasi_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="nate" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदारशी नाते" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="father_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वडिलांचे संपुर्ण नाव" />
+                    </div><br><br>
+                    <div class="col-md-12">
+                      <input type="text" name="father_add" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पत्ता" />
+                    </div><br><br>
+                    <div class="col-md-12">
+                      <input type="tel" name="mobile_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="फोन नंबर" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="mother_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आईचे संपुर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आई -वडिलांचे /पालकाचे मागील वर्षाचे ( २०१९ - २०२० चे ) सर्व मार्गानी  मिळणारे एकुण उत्पन्न रुपये" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वडिलांचा / पालकांचा व्यवसाय" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="school" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="या पुर्वी शिकत असलेली शाळा" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="marks" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="मागील वर्षी परीक्षेत मिळालेले शेकडा गुण" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-left">
+                तो / ती २०१९-२०२० मध्ये इयत्ता &emsp;<span><input type="number" name="std3" placeholder="इयत्ता" required /></span>&emsp;
+                <label><input type="radio" name="paas" value="पास" required> पास </label>
+                <label><input type="radio" name="paas" value="नापास" required> नापास </label> &emsp;
+                झाला / झाली आहे.
+              </p><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="members" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="कुटुंबातील व्यक्तीची संख्या" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँकेचे नाव" /> 
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शाखा" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="number" name="acc_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँक खाते क्रमांक" /> 
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँक IFSC code" /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="adhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यार्थ्याचा आधार क्रमांक" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="text-left" style="word-spacing: 3px;">शाळेचे नियम व अटी मला मान्य असुन ते माझ्यावर बंधनकारक आहेत . माझ्या माहिती प्रमाणे वरील माहीती 
+                अगदी बरोबर आहे. मी असे लिहुन देतो / देते की , मला माझ्या पाल्याला सी .बी .एस.ई अभ्यासक्रम 
+                असलेल्या या एकलव्य शाळेत शिकविण्याची इच्छा असुन मी स्वखुषीने पाल्याचा प्रवेश घेत आहे. 
+                माझ्या पाल्याच्या वर्तणुकीत  कुठलेही गैरवर्तन आढळल्या त्यास मी पूर्णपणे  जबाबदार राहीन. </p>
+              
+                <br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row">पालकांची स्वाक्षरी किंवा पालकांचा डाव्या हाताचा अंगठा :</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="daridrya_cf" class="form-control"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>

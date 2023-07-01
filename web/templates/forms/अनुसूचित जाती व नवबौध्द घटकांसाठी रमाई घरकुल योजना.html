@@ -1,0 +1,246 @@
+{% block pre_load_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:ramai_gharkul' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h3> अनुसुचित जातीच्या व्यक्तींना वैयक्तिक घरकुलासाठी अर्ज </h3>    </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sampurna_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="fa_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="वडिलांचे संपूर्ण नाव /पतीचे नाव (महिलांसाठी)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+              <div class="input-icon">
+                  <textarea name="pe_address" id="contact" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="कायमचा पत्ता "></textarea>
+                  <input type="checkbox" id="check"> Same as above Address
+              <textarea name="cu_address" type="text" id="permanent" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="सध्याचा पत्ता "></textarea>
+              </div>
+          </div>
+            <!--<div class="form-group" >-->
+            <!--  <div class="input-icon">-->
+            <!--    <div class="row">-->
+            <!--      <div class="col-md-12">-->
+            <!--        <textarea type="text" name="pe_address" class="form-control rounded-0 py-3 font-13 sign-register-input"-->
+            <!--       placeholder="कायमचा पत्ता "></textarea>-->
+            <!--      </div>-->
+            <!--    </div>-->
+            <!--  </div>-->
+            <!--</div>-->
+            <!--<div class="form-group" >-->
+            <!--  <div class="input-icon">-->
+            <!--    <div class="row">-->
+            <!--      <div class="col-md-12">-->
+            <!--        <textarea type="text" name="cu_address" class="form-control rounded-0 py-3 font-13 sign-register-input"-->
+            <!--       placeholder="सध्याचा पत्ता "></textarea>-->
+            <!--      </div>-->
+            <!--    </div>-->
+            <!--  </div>-->
+            <!--</div>-->
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="ghar_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="अर्जदारास  घरकुल बांधावयाचे आहे जागेचा पत्ता  "></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="kshetrafal" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="घरकुल बांधावयाचा जागेचा तपशिल क्षेत्रफळ  इ." />
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-3">
+                  <label class="form-group form-row">जन्मतारीख</label>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="date" name="janma_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="वय" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="birth_place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जन्मस्थळ " />
+                  </div>
+                  <div class="col-md-6">
+                    <select name="caste" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                       <option value="">जात व पोटजात </option>
+                      <option value="Open">Open</option>
+                      <option value="OBC">OBC</option>
+                      <option value="SC">SC</option>
+                      <option value="ST">ST</option>
+                      <option value="SBC">SBC</option>
+                      <option value="VJNT">VJNT</option>
+                      <option value="NT">NT</option>
+                      <option value="Other">Other</option>
+                   </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="shikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शिक्षण" /> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder=" अर्जदाराचा व्यवसाय" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="fa_business" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="अर्जदाराच्या वडिलांचा व्यवसाय /पतीचा व्यवसाय (महिलांबाबत)"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="ration_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="रेशन कार्ड क्र. " /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="yearly_income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="कुटुंबातील मिळवत्या व्यक्तीचे वार्षिक उत्पन्न " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12" style="text-align:left">
+                      <h5>प्राधान्य क्षेत्रातील क्षेत्र</h5> <br>आवश्यक तिथे <i class="fas fa-check"></i > करावे <br>
+                      <label><input type="checkbox" name="pradhanya[]" value="जातीय दंगलीमध्ये घराचे नुकसान (आगीमुळे व इतर तोडफोड) झालेली व्यक्ती" > जातीय दंगलीमध्ये घराचे नुकसान (आगीमुळे व इतर तोडफोड) झालेली व्यक्ती </label><br>
+                      <label><input type="checkbox" name="pradhanya[]" value="ऍट्रॉसिटी ऍक्ट नुसार पीडित झालेल्या अनुसूचित जातीच्या पात्र व्यक्ती" > ऍट्रॉसिटी ऍक्ट नुसार पीडित झालेल्या अनुसूचित जातीच्या पात्र व्यक्ती</label><br>
+                      <label><input type="checkbox" name="pradhanya[]" value="पूरग्रस्त क्षेत्र"> पूरग्रस्त क्षेत्र </label><br>
+                      <label><input type="checkbox" name="pradhanya[]" value="विधवा महिला " > विधवा महिला  </label><br>
+                      <label><input type="checkbox" name="pradhanya[]" value="इतर" > इतर </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12" style="text-align:left">
+                      <h5>प्रतिज्ञापत्र</h5> 
+                      <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> मी प्रतिज्ञेवर 
+असे लिहून देतो की, वरील सर्व माहिती सत्य आहे. माझ्या मालकीचे अन्यत्र कोठेही पक्के घर नाही. शासकीय अनुदानातून माझ्या जागेवर बांधण्यात आलेले घराचा मी स्वतः वापर करेन, इतरांना भाड्याने देणार नाही सदर घर मी इतरांना हस्तांतरित अथवा विकणार नाही, असे घडल्यास शासन सदर घर परत घेऊ शकेल व त्यास माझी संमती आहे.              </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-2">
+                    <label class="form-group form-row">फोटो:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="photo" class="form-control" required />
+                  </div>
+                   <div class="col-md-2">
+                    <label class="form-group form-row">अर्जदाराची सही:</label>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="file" name="sign" class="form-control" required />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                   <input type="date" name="apply_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="दिनांक " />
+                  </div>
+                  <div class="col-md-6">
+                     <input type="text" name="name_1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                required placeholder="अर्जदाराचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          <div class="row form-group p-0">
+            <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+          </div>
+    </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+{%block post_load_js %}
+<script language="JavaScript">
+    $(document).ready(function(e) {
+           $('#check').click(function() {
+    
+        var c=$('#contact').val();
+    
+        $("#permanent").val(c);
+    });
+    });
+    
+   
+    </script>
+{% endblock %}

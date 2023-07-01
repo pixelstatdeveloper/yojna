@@ -1,0 +1,299 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:lokshahir_anna' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>साहित्यरत्न लोकशाहिर अण्णाभाऊ साठे पुरस्कार</h5>
+           <h6>अर्जाचा नमुना (व्यक्तींसाठी) </h6>
+            </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="jilha_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जिल्ह्याचे नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="व्यक्तिचे संपूर्ण नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="paripurn_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="व्यक्तीचा पत्ता (संपूर्ण पत्रव्यवहाराचा पत्ता)"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row">जन्मतारीख (जन्मतारखेचा पुरावा जोडण्यात यावा)</label>
+                  </div>
+                    <div class="col-md-3">
+                      <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required /> 
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="purava" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="भ्रमणध्वनी क्रमांक  " /> 
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="वय" />
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h6 style="text-align: left;">जात (जात प्रमाणपत्राचा तपशील द्यावा)</h6>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जात  " />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="pramanpatra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="प्रमाणपत्र क्र." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="hudda" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जात प्रमाणपत्र देणाऱ्या अधिकारी यांचा हुद्दा " />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="thikan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="ठिकाण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="शिक्षण (अंतिम शैक्षणिक अर्हतता नमूद करावी.)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="business" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="नोकरी / व्यवसाय" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="patni_hyat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="पत्नी ह्यात असल्यास नाव व वय" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="samajik" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="सामाजिक सेवेचा काळ" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="arj_pur" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्ज ज्या पुरस्कारासाठी केला आहे, त्या पुरस्काराचे नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="anujati" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अनु.जाती/जमाती/भटक्या विमुक्त जाती/मनोदुर्बल/अपंग/कुष्ठरोगी इ. कार्यक्षेत्रात महत्वाचे कार्य." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vyakti_sahitya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="व्यक्तीचे साहित्य, कला, अंधश्रध्दा, शैक्षणिक क्षेत्रातील योगदान." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="jya_sanstha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="ज्या संस्थांशी संबंध आला त्यांची नावे" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="samkaly_kshetra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="समाज कल्याण क्षेत्रात वैशिष्ट्यपूर्ण कामाचा तपशिल" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <label class="form-group form-row">कार्यकर्त्यांचे चारित्र्य बाबत प्रमाणपत्र (पोलीस  विभागाचा दाखला):</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="karyakartya" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="yapurvi_bahu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="यापूर्वी बहुमान मिळाला आहे काय, (कोणत्या क्षेत्रात)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="karkarta_sadhya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="कार्यकर्ता सध्या शासकिय/अशासकिय पदावर नियुक्त आहे काय, (असल्यास पदाचे नांव)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vidhanmandal" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="विधानमंडळ जिल्हा परिषद/स्कुल बोर्ड यांचे सदस्यत्व आहे का, असल्यास नावाचा उल्लेख करावा." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h7>व्यक्ती कार्यकर्ता यांनी त्यांचे समाज सेवेच्या कालावधीत केलेल्या कामाचा तपशिल (कागदोपत्री पुरावे, कात्रणे, फोटोग्राफ, लेख, पुरस्काराचे फोटोग्राफ, प्रशस्तीपत्रे इत्यादी.)</h7>
+              </div>
+              <br/>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="text" name="vyakti_karyakarta" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="vyakti_karyakarta1" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="shifaras" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="शिफारस करणाऱ्या व्यक्तिचे नांव व पद" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="itar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="इतर काही माहिती असल्यास" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class=" text-center" style="font-weight: 500; color:red; "> टिप : प्रत्येक पुरस्कारासाठी स्वतंत्र अर्ज करावा. एका वर्षात एकाच पुरस्कारासाठी विचार केला जाईल.</h6>
+              <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">दिनांक :</label>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="date" name="form_date" class="form-control" required />
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">अर्जदाराची सही:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+
+      
+            
+</form>
+</div>
+</div>
+</div>

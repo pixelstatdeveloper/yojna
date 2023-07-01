@@ -1,0 +1,142 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %}
+<style>
+    tr.hidden {
+        display: none;
+    }
+
+    tbody {
+        counter-reset: serial;
+    }
+
+    tbody>tr>td:first-child {
+        display: flex;
+        justify-content: center;
+    }
+
+    tbody>tr:not(.hidden)>td:first-child::before {
+        counter-increment: serial;
+        content: counter(serial)
+    }
+</style>
+{% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय
+                        योजना</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Arya', sans-serif!important;">अर्ज केलेल्या योजना</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                        style="color:#3F42A1;font-size:30px;"> अर्ज केलेल्या योजना </h2><br />
+                </div>
+                <div class="col-md-6"><br />
+                    <a href="{% url 'web:profile' %}" type="submit" name="yojn" class="btn fables-second-background-color yojana_mainbotton
+                    "> प्रोफाइल</a>
+                    <!--<a href="{% url 'web:view_documents' %}" type="submit" name="yojn" class="btn fables-second-background-color yojana_mainbotton-->
+                    <!--                    ">  अर्ज केलेली कागदपत्रे  </a>-->
+                    
+                </div>
+                <div class="col-md-12">
+                    <!--<select id="filter">-->
+                    <!--    <option value="Pending">Pending</option>-->
+                    <!--    <option value="Approved">Approved</option>-->
+                    <!--    <option value="Rejected">Rejected</option>-->
+                    <!--</select>-->
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                        <thead class="text-center" style="font-size:16px;">
+                            <tr>
+
+                               <th scope="col" style="width:100px;">अ.क्र.</th>
+                                <th scope="col">विभागाचे नाव </th>
+                                <th scope="col">योजनेचे नाव</th>
+                                <th scope="col">स्थिती</th>
+                                <th scope="col" style="color:#990000;">त्रुटी </th>
+                                <th scope="col">कृति </th>
+                                <th scope="col">अर्ज क्रमांक</th>
+                               
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% for scheme in request.user.user_registrations.all %}
+
+                            <tr class="{{scheme.status}}">
+                                <td></td>
+                                <td>{{scheme.scheme.department}}</td>
+                                <td>{{scheme.scheme}}</td>
+                                <td>{{scheme.status}}</td>
+                                <td style="color:#990000;">
+                                    {% if scheme.raised_query %}
+                                    {{scheme.raised_query}}
+                                    {% else %}
+                                    NA
+                                    {% endif %}
+                                </td>
+                                {% if scheme.status == 'In Progress' %}
+                                
+                                <td><a href="#">Edit</a></td>
+                                {% else %}
+                                <td>None</td>
+                                {% endif %}
+                                <td>{{scheme.application_id}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /> <br />
+</div>
+
+
+
+
+
+{% endblock %}
+{% block post_load_js %}
+<script>
+    (function () {
+        function hide(element) {
+            element.classList.add('hidden')
+        }
+        function show(element) {
+            element.classList.remove('hidden')
+        }
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const $$ = document.querySelectorAll.bind(document)
+            const filter = document.querySelector('#filter')
+            filter.addEventListener('change', function () {
+                Promise.all(Array.from($$(`tr.${this.value}`)).map(show))
+                Promise.all(Array.from($$(`tr[class]:not(.${this.value})`)).map(hide))
+            })
+            filter.dispatchEvent(new Event('change'))
+        })
+    })()
+    
+
+</script>
+{% endblock %}

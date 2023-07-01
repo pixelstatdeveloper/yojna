@@ -1,0 +1,286 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Registration{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<style>
+    .passkey {
+        position: absolute;
+        right: .8em;
+        z-index: 6;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 25px!important; }
+</style>
+{% endblock %}
+{% block pre_load_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{% endblock %}
+{% block body %}
+
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय
+                        योजना</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Arya', sans-serif!important;">नोंदणी</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-4 my-lg-5">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
+            <img src="{% static 'web/images/bany_logo.png' %}" class="img-responsive" alt="Logo" />
+            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold" style="color:#3F42A1;font-size:35px;"> डॉ.
+                बाबासाहेब आंबेडकर न्याय योजना ऑनलाइन आवेदन </h2><br />
+            <form method="POST" action="{% url 'web:register' %}" enctype="multipart/form-data"
+                onsubmit="return validate_ph()">
+                {% csrf_token %}
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="नाव " />
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon row">
+                        <input class="form-control rounded-0 py-3 font-13 sign-register-input" id="mobile_number" placeholder="दुरध्वनी क्रमांक " type="tel"
+                            name="mobile_number" required  />
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <input type="text" name="email" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="ई-मेल आयडी " />
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <input type="text" name="adhaar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="आधार कार्ड नंबर "  required />
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                         <select name="gender" class="py-3 font-13" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                         color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;" id=""  placeholder="Adhar Card Number" >
+                            <option value="">लिंग</option>
+                            <option value="पुरुष">पुरुष</option>
+                            <option value="महिला">महिला</option>
+                            <option value="इतर">इतर</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <select name="caste" class="py-3 font-13" style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                         color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;" id=""  placeholder="Adhar Card Number" >
+                             <option value="">जात</option>
+                            <option value="Open">Open</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="SBC">SBC</option>
+                            <option value="VJNT">VJNT</option>
+                            <option value="NT">NT</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <div class="row">
+                            <div class="col-6">
+                                आपण बीपीएल धारक आहात का ? 
+                            </div>
+                            <div class="col-3">
+                                <input class="form-check-input" id="chkYes" onclick="ShowHideDiv()" type="radio" name="bpl" value="होय">
+                                <label class="form-check-label" for="bpl">
+                                    होय
+                                </label>
+                            </div>
+                            <div class="col-3">
+                                <input class="form-check-input"  id="chkNo" onclick="ShowHideDiv()" type="radio"  name="bpl" value="नाही">
+                                <label class="form-check-label" for="bpl">
+                                    नाही
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yes selectt form-group" id="dvPassport"  style= "font-family: 'Arya', sans-serif!important; display: none">
+                    <div class="input-icon">
+                        <input type="text" name="bpl_data" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="कार्ड नंबर" />
+                    </div>
+                </div>
+            <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <textarea type="text" name="address"
+                        class="form-control rounded-0 py-3 font-13 sign-register-input" required
+                        placeholder="संपूर्ण पत्ता "></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <select name="country" class="countries py-3 font-13 order-alpha form-control presel-IN" id="countryId"
+                        style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                            <option value="">देश निवडा </option>
+                            <option value="भारत">भारत</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <select name="state" class="states py-3 font-13 order-alpha form-control" id="stateId"
+                        style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                            <option value="">राज्य निवडा </option>
+                            <option value="महाराष्ट्र">महाराष्ट्र</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <select name="city" class="cities py-3 font-13 order-alpha form-control" id="cityId"
+                        style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                            <option value="">शहर निवडा </option>
+                            <option value="नागपूर">नागपूर</option>
+                        </select>
+                    </div>
+                </div>
+                 <div class="form-group" style="border:1px solid #d3d8de;padding:10px;font-family: 'Arya', sans-serif!important;margin:0px">
+                    <div class="input-icon row">
+                        <label for="profile pic" class="rounded-0 sign-register-input col-3 form-label " style="font-size:16px;color:#c5c4c4;text-align: left;">अपलोड फोटो </label>
+                        <input class="scheme_registration_media_file col-9" type="file" name="profile_pic" id="file" required />
+                    </div>
+                </div>
+                <label for="profile pic" class="rounded-0 sign-register-input form-label " style="font-size:13px;color:#990000;text-align: left;margin-bottom:20px;font-family: 'Arya', sans-serif!important;"><i>(Note: Upload file should be.pdf, .jpg, .jpeg and file size should be less than 200KB)</i></label>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <input type="password" name="password"
+                            class="form-control rounded-0 py-3 font-13 sign-register-input" required
+                            placeholder="पासवर्ड " />
+                        <span class="passkey fa fa-eye"></span>
+                    </div>
+                </div>
+                <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                    <div class="input-icon">
+                        <input type="password" name="confirm_password"
+                            class="form-control rounded-0 py-3 font-13 sign-register-input" required
+                            placeholder="कन्फर्म पासवर्ड " />
+                        <span class="passkey fa fa-eye"></span>
+                    </div>
+                </div>
+                <p style= "font-family: 'Arya', sans-serif!important;"><input type="checkbox" data-toggle="modal" data-target="#staticBackdrop" required> I agree Terms & Condition</p>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel" style="font-family: 'Arya', sans-serif!important;">Terms and condition</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="font-family: 'Arya', sans-serif!important; text-align: left;">
+                              
+                                कृपया माहिती अचूक भरा, अन्यथा तुमचा अर्ज नाकारला जाईल आणि तुम्ही योजनेचा लाभ घेऊ शकणार नाही.
+                           
+                            </div>
+                            <div class="modal-footer">
+                                <button style="background-color:Green; font-family: 'Arya', sans-serif!important; border-color:blue; color:white" type="button" class="btn btn-secondary" data-dismiss="modal">I Agree</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+               
+                <button type="submit"
+                    class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="margin-bottom:20px;color:#fff;font-size: 20px; font-family: 'Arya', sans-serif!important;">नोंदणी करा </button>
+            </form>
+        </div>
+        <center>
+            <p style= "font-family: 'Arya', sans-serif!important;">Already have an account? <a href="{% url 'web:sign_in' %}"class="font-16 semi-font fables-second-text-color underline fables-main-hover-color ml-2">Login</a>
+            </p>
+
+        </center>
+    </div>
+
+</div>
+
+{% endblock %}
+{% block post_load_js %}
+<!--<script src="//geodata.solutions/includes/countrystatecity.js" async></script>-->
+<script>
+    const phoneInputField = document.getElementById("mobile_number");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry:"in",
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+
+    });
+    const number = phoneInput.getNumber();
+    function validate_ph() {
+        const number = phoneInput.getNumber();
+        phoneInputField.value = number;
+    }
+    
+
+    // Password show/hide
+    function pass_manager() {
+        if (this.classList.contains('fa-eye-slash')) {
+            // Currently password is visible
+            this.classList.remove('fa-eye-slash')
+            this.classList.add('fa-eye')
+            this.previousElementSibling.setAttribute('type', 'text')
+            return;
+        }
+        this.classList.add('fa-eye-slash')
+        this.classList.remove('fa-eye')
+        this.previousElementSibling.setAttribute('type', 'password')
+        return;
+    }
+    document.querySelectorAll('.passkey').forEach(but => {
+        but.addEventListener('click', pass_manager);
+        but.dispatchEvent(new Event('click'))
+    })
+
+</script>
+<script type="text/javascript">
+    function ShowHideDiv() {
+        var chkYes = document.getElementById("chkYes");
+        var dvPassport = document.getElementById("dvPassport");
+        dvPassport.style.display = chkYes.checked ? "block" : "none";
+    }
+</script>
+<script>
+    var uploadfield = document.getElementById("file");
+    uploadfield.onchange = function() {
+      if (this.files[0].size > 200*1024) {
+        alert("File too Big, please select a file less than 200KB");
+        this.value = "";
+      }
+    }
+  </script>
+{% endblock%}

@@ -1,0 +1,399 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:pravinya_pur' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>डॉ. बाबासाहेब आंबेडकर सामाजिक न्याय प्राविण्य राज्यस्तरीय / विभाग स्तरीय  पुरस्कार </h5>
+           <h6>अर्जाचा नमुना</h6>
+            </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="jilha_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जिल्हा" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="san" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="सन" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="संस्थेचे पूर्ण नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="paripurn_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="संपूर्ण पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-3">
+                    <label class="form-group form-row">संपर्क साधन</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="भ्रमणध्वनी क्रमांक  " />  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="form-group form-row">संस्था नोंदणी अधिनियम- 1860 क्र.</label>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="text" name="adhi1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required /> 
+                      </div>
+                      <div class="col-md-4">
+                        <input type="date" name="adhi1_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required /> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label class="form-group form-row">संस्था नोंदणी अधिनियम- 1950 क्र.</label>
+                        </div>
+                        <div class="col-md-4">
+                          <input type="text" name="adhi2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required /> 
+                        </div>
+                        <div class="col-md-4">
+                          <input type="date" name="adhi2_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required /> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row">संबंधीत संस्थेचे कार्यक्षेत्र</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="text" name="sambandhit" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="upvidhi" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="उपविधी (Byelaws)प्रमाणे संस्थेची उद्दिष्टे"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="padadhi_info" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संस्थेच्या संदर्भात संस्थेच्या कार्यकारी मंडळातील पदाधिकाऱ्यांचे नाव व पत्ता दूरधवनी क्र / भ्रमणध्वनी इत्यादी सविस्तर माहिती . "></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="gruhpal_info" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="शासकीय संस्थेच्या संदर्भात गृहपाल / अधिक्षक यांची माहिती"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="sanstha_prakar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संस्थेचा प्रकार"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label class="form-group form-row">संस्थेचे स्वरूप*</label>
+                            </div>
+                          <div class="col-md-10">
+                            <select name="sanstha_swarup" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                            color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                              <option value="">संस्थेचे स्वरूप</option>
+                              <option value="शासकीय वसतीगृहे">शासकीय वसतीगृहे</option>
+                              <option value="अनुसूचित जाती व विमुक्त जाती भटक्या जाती , आश्रम शाळा ">अनुसूचित जाती व विमुक्त जाती भटक्या जाती , आश्रम शाळा </option>
+                              <option value="अनुदानित वसतिगृहे">अनुदानित वसतिगृहे </option>
+                              <option value="शासकीय अपंग शाळा, अनुदानित अपंग संस्था">शासकीय अपंग शाळा, अनुदानित अपंग संस्था</option>
+                           </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label class="form-group form-row">प्रवेशीतांबाबत माहिती</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" name="manya_sanstha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="मान्य संस्था" />
+                          </div>
+                          <div class="col-md-4">
+                            <input type="text" name="pratyaksha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="प्रत्यक्ष प्रवेशित संख्या" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="lekha_pari" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संस्थेचा मागील 5 वर्षाचा लेखा परिक्षण अहवाल"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="varshik_aha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संस्थेचा मागील 5 वर्षाचा वार्षिक अहवाल"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="shreni" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="मागील 5 वर्षाचे तपासणीमध्ये प्राप्त झालेली श्रेणी"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="upkram" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संस्थेमार्फत सुरु असलेल्या विविध उपक्रमांची माहिती"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="swatantra_lekha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="स्वतंत्र लेखा परिक्षण होत असल्यास, तीन वर्षाचा अहवाल"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="sambandhit_sanstha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संबंधीत संस्था केव्हापासून सुरु आहे, (अनुदानित/ विनाअनुदानित तत्त्वावर)"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="vidy_sarva" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="विद्यार्थ्यांच्या सर्वांगीण विकासासाठी तसेच त्यांच्या कलागुणांना वाव देण्यासाठी संस्थेमार्फत घेण्यात येणाऱ्या विविध उपक्रमांचा तपशील"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <textarea type="text" name="sansthemarfat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="संस्थे मार्फत देण्यात येणाऱ्या सोयी सुविधा उदा. ग्रंथालय, वाचनालय, खेळाचे साहित्य, व्यायामशाळा. इ. साहित्य"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <h7>संस्थेने उत्कृष्ट कार्य केल्याबद्दल त्यांना शासना मार्फत किंवा विभिन्न संस्थेमार्फत सत्कार अथवा पारितोषिक मिळाले असल्यास त्याचा तपशील</h7>
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क्र.</th>
+                          <th>पारितोषिकाचे नांव</th>
+                          <th>कोणामार्फत देण्यात आला (संस्था / विभाग)</th>
+                          <th>वर्ष दिनांक</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>1.</td>
+                          <td><input type="text" name="pari_name1"/></td>
+                          <td><input type="text" name="from1"/></td>
+                          <td><input type="date" name="pari_date1"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>2.</td>
+                          <td><input type="text" name="pari_name2"/></td>
+                          <td><input type="text" name="from2"/></td>
+                          <td><input type="date" name="pari_date2"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>3.</td>
+                          <td><input type="text" name="pari_name3"/></td>
+                          <td><input type="text" name="from3"/></td>
+                          <td><input type="date" name="pari_date3"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="sadar_sansthes" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="सदर संस्थेचे पुरस्कार मिळणे साठी नामनिर्देशन कोणी केलेले आहे ?" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="sansthevirudha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="संस्थेविरुद्ध मागील 5 वर्षात दंडात्मक कारवाई झाली असल्यास माहिती (तपशील नमूद करावा)" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="sansthemdhe" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="संस्थेमध्ये वित्तीय अनियमिततेबाबत प्रकरणे घडली असल्यास त्याचा तपशील नोंदवावा" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="vishbadha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="संस्थेमध्ये मागील 5 वर्षात विषबाधा अपघाती मृत्यू अनैतिक घटना  असल्यास तपशील नोंदवावा" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <label class="form-group form-row">संस्थेविरुध्द फौजदारी गुन्हा दाखल झाला नसल्याचा जिल्हा पोलीस अधिक्षकाचा दाखला</label>
+                          </div>
+                          <div class="col-md-4">
+                            <input type="file" name="dakhla" class="form-control" required />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="sansth_niyantran" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="संस्थेचे नियंत्रण अधिकारी सहाय्यक आयुक्त / जिल्हा समाज कल्याण अधिकारी, जिल्हा परिषद यांचे अभिप्राय" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="anubhav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="संस्थेचा सार्वजनिक क्षेत्रातील एकूण अनुभव" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="shera" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="शेरा" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>                
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="name2" class="form-control" required placeholder="संस्थेचे अध्यक्ष गृहपाल  मुख्याध्यापक  यांचे नाव"/>
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">स्वाक्षरी :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h7 style="color: red;">टीप :- 1) * या ठिकाणी मागासवर्गीय मुलामुलींसाठी शासकीय वसतिगृहे 2) मागासवर्गीय मुलामुलींची अनुदानित वसतिगृहे 3) शासकीय अपंग कल्याण संस्था / अनुदानित अपंग कल्याण संस्था, 4) विजभज आश्रमशाळा / अनुसूचित जाती आश्रम शाळा. इ. चे नाव नमूद करावे.
+              </h7>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

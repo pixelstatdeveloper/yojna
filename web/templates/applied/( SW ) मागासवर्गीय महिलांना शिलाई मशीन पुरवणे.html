@@ -1,0 +1,284 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+               <div class="form-header text-center">
+                <h4><b> समाज कल्याण विभाग </b></h4>
+                <h5><b>जिल्हा परिषद नागपूर </b></h5>
+                <h5 style="margin-top: 15px;">२० टक्के जिल्हा परिषद सेस फंड अंतर्गत मागासवर्गीय महिलांना शिलाई मशीन पुरविणे या योजनेअंतर्गत शिवणयंत्र मंजुरीकरिता अर्जाचा नमुना  </h5>
+               </div>
+                <br/><br>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अर्जदाराचे पूर्ण नाव</b></label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अर्जदाराचा संपूर्ण पत्ता</b></label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.address}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>पंचायत समिती प्रभाग</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.panchayat_prabhag}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>जिल्हा परिषद प्रभाग</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.zp_prabhag}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>ज्या योजनेचा लाभ पाहिजे आहे त्या योजनेचे नाव</b></label>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-group form-row">: {{up.yojna_name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अर्जदाराची जात</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.jat}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>जातीचा प्रवर्ग</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.caste}}</label>
+                    </div>
+                </div>
+              </div>
+            </div>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>अर्जदाराची जन्म तारीख</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.birthdate}}</label> 
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>शैक्षणिक पात्रता</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.education}}</label> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>सन</b> </label>                    
+                    </div>
+                    <div class="col-2">
+                      <label class="form-group form-row"> {{up.san}}</label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row"><b>मधील पालकाचे / स्वत:चे उत्पन्न</b> </label>                    
+                    </div>
+                    <div class="col-5">
+                      <label class="form-group form-row"> {{up.income}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+              <div class="form-group" style="margin-bottom: 1px; margin-top: 20px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदार कुटूंब दारिद्रय रेषेखाली आहे काय?</b></label>                    
+                    </div>
+                    <div class="col-2">
+                        <label class="form-group form-row">: {{up.daridray}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>असल्यास दारिद्रय रेषेखालील कुटूंब क्रमांक</b></label>                    
+                    </div>
+                    <div class="col-7">
+                        <label class="form-group form-row">: {{up.kutumb_no}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदाराकडे / वडीलाकडे शेती आहे काय?</b></label>                    
+                    </div>
+                    <div class="col-7">
+                        <label class="form-group form-row">: {{up.sheti}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class="text-left" style="font-weight: 500;"><b>असल्यास</b></h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>तालुका</b></label>                    
+                    </div>
+                    <div class="col-2">
+                        <label class="form-group form-row">: {{up.taluka}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>गाव</b></label>                    
+                    </div>
+                    <div class="col-2">
+                        <label class="form-group form-row">: {{up.gav}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>शेतीचे क्षेत्रफळ</b></label>                    
+                    </div>
+                    <div class="col-2">
+                        <label class="form-group form-row">: {{up.shetrafal}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदाराचा आधार कार्ड क्रमांक</b></label>                    
+                    </div>
+                    <div class="col-3">
+                        <label class="form-group form-row">: {{up.adhar_no}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदाराचे राष्ट्रीयकृत बॅकेचे नाव व खाते क्रमांक</b></label>                    
+                    </div>
+                    <div class="col-7">
+                        <label class="form-group form-row">: {{up.bank}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h6 class="text-left" style="text-indent: 60px; word-spacing: 3px;" ><b> मी या योजनेअंतर्गत मागील पाच वर्षामध्ये समाज कल्याण विभागाकडून तसेच इतर कोणत्याही
+                विभागाकडून लाभ घेतलेला नाही. वरील माहिती सत्य आहे ती खोटी आढळून आल्यास प्राप्त रक्कम
+                वसुलीस मी पात्र राहणार आहे.
+                </b></h6><br><br>
+
+                <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <label class="form-group form-row"><b>ठिकाण</b></label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-group form-row">: {{up.thikan}}</label>
+                        </div>
+                        <div class="col-md-2">
+                          <label class="form-group form-row float-right"><b>दिनांक</b></label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-group form-row">: {{up.dinank}}</label>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+        
+             <div class="form-group" style="margin-bottom: 1px;">
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label class="form-group form-row"><b>फोटो:</b></label>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:150px!important;color:#fff"  href="/media/{{up.photo}}" target="blank"> पहा </a></label>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-group form-row float-right"><b>अर्जदाराची स्वाक्षरी:</b></label>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:150px!important;color:#fff"  href="/media/{{up.signature}}" target="blank"> पहा </a></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <label class="form-group form-row"><b>पूर्ण नाव</b></label>
+                        </div>
+                        <div class="col-md-10">
+                            <label class="form-group form-row">{{up.purn_nav}}</label>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <label class="form-group form-row"><b>पत्ता</b></label>
+                        </div>
+                        <div class="col-md-10">
+                            <label class="form-group form-row"> {{up.patta}}</label>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+
+
+
+                
+  
+  </div>
+  </div>
+  </div>
+  

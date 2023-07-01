@@ -1,0 +1,448 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:magas_mul' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>वसतिगृह कार्यालयात प्रवेशासाठी करावयाचा अर्जाचा नमूना</h5>
+           <h6>महाराष्ट्र शासन सामाजिक न्याय विभाग महाराष्ट्र राज्य</h6>
+           <h6 style="color: red;"> वसतिगृह प्रवेश अर्जाचा नमुना नविन प्रवेशार्थी
+            अनु. जाती / जमाती विमुक्त जाती भटक्या जमाती / आर्थिकदृष्टया मागास / विशेष मागास / अपंग / अनाथसाठी आवेदन पत्र भरण्यापुर्वी 
+            काळजीपुर्वक वाचून भरावे</h6>
+            </div>
+            <br/>
+            <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> गृहप्रमुख / गृहपाल,</h6>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6 class=" text-left" style="font-weight: 500;">मुलांचे / मुलींचे शासकीय वसतिगृह </h6>
+                  </div>
+                  <div class="col-md-5">
+                    <input type="text" name="jilha_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जिल्हा" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> महोदय,</h6>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-1">
+                    <h6 class=" text-left" style="font-weight: 500;">मी</h6>
+                  </div>
+                  <div class="col-md-11">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"> आपल्या वसतिगृहात प्रवेश मिळवु इच्छितो / इच्छिते. आवदेन पत्रात नमुद केलेली माहिती 
+              मी पुर्ण भरलेली असून, माझी माहिती खरी आहे. मला वसतिगृहात प्रवेश मिळाल्यास मी सर्व नियमांचे पालन करील. सदर माहिती चुकीची असल्यास 
+              माझा प्रवेश होणार नाही याची मला जाणीव आहे.</h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">विद्यार्थ्याचे नांव :</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="name2" class="form-control" required />
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">विद्यार्थ्याचे स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचे पुर्ण नांव - प्रथम आडनाव लिहावे" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="moth_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="आईचे नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="fa_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="वडिलांचे पुर्ण नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sthanik_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचा स्थानिक पालकाचे नांव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="paripurn_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="अर्जदाराचा स्थानिक पालकाचे पत्रव्यवहाराचा पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                    <div class="col-md-12">
+                      <input type="tel" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="अर्जदाराचा स्थानिक पालकाचे भ्रमणध्वनी क्रमांक  " />  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="kayam_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचा कायमचा पत्ता पिनकोड सह"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row">जन्मतारीख</label>
+                      </div>
+                      <div class="col-md-3">
+                        <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required /> 
+                      </div>
+                    <div class="col-md-6">
+                      <input type="text" name="birth_place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जन्म स्थळ" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                      <div class="col-md-12">
+                        <input type="tel" name="mobile_number1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="अर्जदाराचा / वडील / आई / पालकाचा दुरध्वनी / भ्रमनध्वनी क्रमांक" />  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <input type="text" name="adhaar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्जदाराचा आधार क्रमांक" />
+                        </div>
+                      <div class="col-md-6">
+                        <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="इमेल पत्ता" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                        <div class="col-md-6">
+                          <input type="text" name="pan1_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्जदाराचा पॅन क्रमांक" />
+                        </div>
+                      <div class="col-md-6">
+                        <input type="text" name="pan2_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="पालकाचा पॅन क्रमांक" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h7>अर्जदाराचा स्वत:चे आधार लिंक असलेले बँक खाते क्रमांक व बँकेचे नांव आयएफसी कोडसह</h7>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input type="text" name="bank_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="बँक खाते क्रमांक " />
+                      </div>
+                      <div class="col-md-4">
+                        <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="बँकेचे नांव" /> 
+                      </div>
+                      <div class="col-md-4">
+                        <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="आयएफसी कोड" /> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label class="form-group form-row">अर्जदार कोणत्या प्रवर्गाचा आहे तो नमुद करावा.जात प्रमाणपत्राची प्रत जोडावी</label>
+                        </div>
+                      <div class="col-md-4">
+                        <select name="pravarg" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">प्रवर्ग</option>
+                          <option value="अनु. जाती">अनु. जाती</option>
+                          <option value="जमाती विमुक्त जाती भटक्या जमाती">जमाती विमुक्त जाती भटक्या जमाती</option>
+                          <option value="आर्थिकदृष्टया मागास">आर्थिकदृष्टया मागास </option>
+                          <option value="विशेष मागास">विशेष मागास</option>
+                          <option value="अपंग">अपंग </option>
+                          <option value="अनाथ">अनाथ</option>
+                       </select>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="file" name="pravarg_file" class="form-control" required />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <textarea type="text" name="divyang" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदार दिव्यांग / अनाथ असल्यास येथे उल्लेख करावा व प्रमाणपत्र जोडावे (अपंगासाठी 40 टक्के अपंगत्व असणे आवश्यक आहे)"></textarea>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="file" name="divyang_file" class="form-control" required />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="text" name="iyatta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदारास कोणत्या इयत्तेत प्रवेश घ्यावयाचा आहे त्याचा अभ्यासक्रमाचा उल्लेख करावा" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="text" name="previous_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="यापुर्वी शासकीय वसतिगृहात राहत असल्यास वसतिगृहाचे नांव लिहिने आवश्यक" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <textarea type="text" name="previous_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="यापुर्वी शासकीय वसतिगृहात राहत असल्यास वसतिगृहाचे पत्ता लिहिने आवश्यक"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <textarea type="text" name="aajar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदारास पुर्वी काही आजार असल्यास उल्लेख करावा व वैद्यकीय प्रमाणपत्र जोडावे"></textarea>
+                      </div>
+                      <div class="col-md-4">
+                        <input type="file" name="aajar_file" class="form-control" required />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group p-0">अर्जदारावर कोणत्या प्रकारचा गुन्हा नोंद आहे काय ?:
+                  <label><input type="radio" name="gun" value="0" required> होय</label>
+                  <label><input type="radio" name="gun" value="1"> नाही</label>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="text" name="shasakiy_seva" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचे पालक शासकीय सेवेत किंवा खाजगी सेवेत असल्यास कार्यालयाचे नांव पत्ता" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" >
+                  <div class="input-icon">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input type="text" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराच्या पालकाचे वार्षिक उत्पन्न सक्षम प्राधिकारी / तहसिलदार यांचे" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h7>अर्जदाराचे मागील तीन वर्षाची शैक्षणिक माहिती भरावी</h7>
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क्र.</th>
+                          <th>शैक्षणिक वर्ष</th>
+                          <th>इयत्ता</th>
+                          <th>गुणांची टक्केवारी</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>1.</td>
+                          <td><input type="text" name="varsh1"/></td>
+                          <td><input type="text" name="iyatta1"/></td>
+                          <td><input type="text" name="takka1"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>2.</td>
+                          <td><input type="text" name="varsh2"/></td>
+                          <td><input type="text" name="iyatta2"/></td>
+                          <td><input type="text" name="takka2"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>3.</td>
+                          <td><input type="text" name="varsh3"/></td>
+                          <td><input type="text" name="iyatta3"/></td>
+                          <td><input type="text" name="takka3"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="form-header text-center row">
+                    <h7>पुर्वी शिक्षण घेत असलेल्या महाविद्यालयाचे शिफारस नमुना</h7>
+                    </div>
+                    <br/>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="maha_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="महाविद्यालयाचे नांव" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="abhyaskram" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="महाविद्यालयामध्ये कोणत्या अभ्यासक्रमासाठी प्रवेश घेतला" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="pas_varsh" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="पास झाल्याचे वर्ष" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group" >
+                      <div class="input-icon">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <input type="text" name="charitrya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                             placeholder="अर्जदाराचे चारित्रय व बुध्दीमताबाबत अभिप्राय" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-header text-center row">
+                      <h7><b>पालकांनी द्यावयाचे प्रमाणपत्राचा नमुना</b></h7>
+                      <h7>प्रमाणित करण्यात येते की माझ्या पाल्यास वसतिगृह प्रवेश मिळाल्यास, त्यास मिळणारे सर्व साहित्य व्यवस्थीत 
+                        सांभाळण्याची जबाबदारी माझ्या पाल्याची राहील. सामानाची मोडतोड किंवा हरवल्यास त्याची भरपाई मी करेन व माझ्या 
+                        पाल्याचे नियमबाहय वर्तन आढळल्यास त्यास वसतिगृहातून नोटीस न देता काढल्यास माझी काही हरकत राहणार नाही.</h7>
+                      </div>
+                      <br/>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="sakshi_name" class="form-control" required placeholder="साक्षीदाराचे नांव" />
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">साक्षीदाराचे स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sakshi_signature" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="palak_name" class="form-control" required placeholder="पालकाचे नांव" />
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">पालकाचे स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="palak_signature" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="vidya_name" class="form-control" required placeholder="विद्यार्थ्याचे नांव" />
+                    </div>
+                     <div class="col-md-2">
+                      <label class="form-group form-row">विद्यार्थ्याचे स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="vidya_signature" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           </form>
+</div>
+</div>
+</div>

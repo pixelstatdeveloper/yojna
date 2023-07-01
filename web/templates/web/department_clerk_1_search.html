@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <title>Document</title>
+  <script>
+    $(function () {
+      $("#searchh").autocomplete({
+        source: "{% url 'web:search_data' scheme %}"
+      });
+    });
+  </script>
+</head>
+<body>
+{% for message in messages %}
+
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible fade show text-center" role="alert" >
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}
+  <div class="container" >
+     <div class="row">
+          <div class="col-md-4">
+               <form action="{% url 'web:search_data' scheme %}" method="GET">
+                    {% csrf_token %} 
+            <div class=" input-group" style="margin-bottom: 100px;">
+              <input type="search" id="searchh" name="search_app" class="form-control rounded-0 py-3 font-13 sign-register-input" placeholder="Search" aria-label="Search"
+                aria-describedby="search-addon" />
+            </div>
+          
+          <div class="col-md-2"> 
+            <div class=" input-group" style="margin-bottom: 100px;">
+              <button type="submit" class="btn fables-second-background-color yojana_mainbotton" style="font-family: 'Arya', sans-serif!important;padding: 8px 10px !important;margin:0px!important;">Search</button>
+            </div>
+          </div>
+          </form>
+          </div>
+          <div class="col-md-6"> 
+            <button type="button" class="btn fables-second-background-color yojana_mainbotton" onclick="return toExcel()" style="float:right; font-family: 'Arya', sans-serif!important;;margin:0px!important;">Download</button>
+          </div>
+       </div>
+  
+
+    <table class="table table-bordered table-striped table-hover main_bany_text" id="tblStocks">
+      <thead>
+        <tr class="text-center" style="font-size:16px;">
+          <th scope="col">Sr.No</th>
+          <th scope="col">Date</th>
+          <th scope="col">Application ID</th>
+      
+          <th scope="col">Name of Applicant</th>
+          <th scope="col">Scheme Name</th>
+          <th scope="col">Status</th>
+          {%if request.user.role == 'Department admin hod' or request.user.role == 'Department clerk 1' %}
+          <th scope="col">Clerk 1 Query</th>
+          {%endif%}
+          {%if request.user.role == 'Department clerk 1' %}
+          <th scope="col">HOD Query</th>
+          
+          {%endif%}
+          
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in context %}
+        <tr>
+          <th scope="row">{{i.sr_no}}</th>
+          <td>{{i.created_at}}</td>
+          <td>{{i.application_id}}</td>
+          
+          
+          <td><a href="{% url 'web:user_verify' i.pk i.scheme_id %}">{{i.applicant_name}}</a></td>
+          
+          <td>{{i.scheme_name}}</td>
+          <td>{{i.status}}</td>
+          {%if request.user.role == 'Department admin hod' or request.user.role == 'Department clerk 1' %}
+          <td>{{i.raised_query}}</td>
+          {% endif %}
+          {%if request.user.role == 'Department clerk 1' %}
+          <td>{{i.hod_query}}</td>
+          
+          {%endif%}
+        </tr>
+        {%endfor%}
+
+      </tbody>
+    </table>
+  </div>
+<br>
+<br>
+<br>
+</body>
+<script>
+
+    window.doc_name = 'Applicants.xlsx'
+    
+  
+</script>
+  {%include 'web/includes/to-excel.html' %}
+
+</html>
+

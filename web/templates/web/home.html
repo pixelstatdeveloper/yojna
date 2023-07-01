@@ -1,0 +1,87 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Home{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+<style>
+    .scrolldata{background-color:#081563!important;padding:5px;}
+    .scrolldata p{color:#fff;margin-bottom:0px;}
+</style>
+<div class="scrolldata">
+    <marquee behavior="scroll" class="justify-content-center" direction="left" style="font-family: 'Arya', sans-serif!important;letter-spacing:1px" >
+        <p> <b>"या सुविधांचा लाभ नागपूर विभागाकरीता मर्यादित राहील याची नोंद घ्यावी"  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            "या सुविधांचा लाभ नागपूर विभागाकरीता मर्यादित राहील याची नोंद घ्यावी"
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            "या सुविधांचा लाभ नागपूर विभागाकरीता मर्यादित राहील याची नोंद घ्यावी"
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            "या सुविधांचा लाभ नागपूर विभागाकरीता मर्यादित राहील याची नोंद घ्यावी"  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            "या सुविधांचा लाभ नागपूर विभागाकरीता मर्यादित राहील याची नोंद घ्यावी"
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            "या सुविधांचा लाभ नागपूर विभागाकरीता मर्यादित राहील याची नोंद घ्यावी"</b></p>
+    </marquee>
+</div>
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+<!--                <li class="breadcrumb-item"><a href="https://www.mahabany.com/v1/" class="fables-second-text-color">मुख्य पृष्ठ</a></li>-->
+                <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Arya', sans-serif!important;">शासकीय योजना</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container" ><br/>
+    <div class="owl-carousel owl-theme default-carousel dots-0 wow fadeInUpBig" data-wow-duration="2s">
+        <div class="col-md-12 bany_banner_text">
+            <h1 class="white-color bold-font"> " डॉ. बाबासाहेब आंबेडकर न्याय योजना "  </h1>
+            <p class="fables-third-text-color mt-3 light-font fables-header-slider-details">
+                सामान्य जनतेला डोळ्यासमोर ठेऊन हि  योजना आखली गेली आहे. जनतेला खऱ्या अर्थाने न्याय मिळावा. 'जनतेसाठी हे शासन सुशासन ठरावे' हे एकमेव उद्दिष्टे डोळ्यासमोर ठेवून या योजनेची अंमलबजावणी होणार आहे.
+            </p>
+             <p class="fables-third-text-color mt-3 light-font fables-header-slider-details text-center" style="color:#990000;font-family: 'Arya', sans-serif!important;"><i>(Note: संबंधित विभागातील योजना पाहण्यासाठी "योजना बटण" वर क्लिक करा.)</i>
+            </p>
+        </div>
+    </div>
+    <br/>
+    
+    <div class="row mt-4 my-md-5">
+        {% for department in departments %}
+            <div class="col-12 col-sm-4 mb-4 mb-lg-5" >
+               <div class="main_service_bany">
+                    <div class="image-container zoomOut-effect" style="border-radius:10px;">
+                        {% for media in department.department_media.all %}                        <img src="{{ media.file_path.url }}" alt="" class="w-100">
+                        {% endfor %}
+                    </div>
+                     <a href="{% url 'web:scheme_index' department.id %}" type="submit" name="yojna" class="btn fables-second-background-color white-color-hover fables-main-hover-background-color yojana_mainbotton
+                    "> योजना </a><br/>
+                    <h2 class="my-3" style="padding:0 25px;"><a href="#" class="fables-main-text-color fables-second-hover-color font-26 gallery-title"> {{ department.name }}</a></h2>
+                    <p class="fables-fifth-text-color font-14">
+                        {{ department.description }}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+{% block post_load_js %} {% endblock%}

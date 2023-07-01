@@ -1,0 +1,426 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:divya_avya' scheme.id %}" method="POST" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h4 style="margin-bottom: 10px;"> <b>परिशिष्ट- अ </b></h4>
+                <h5><b> आंतरजातीय विवाहाच्या धर्तीवर अपंग व अव्यंग व्यक्तींच्या विवाहास प्रोत्साहन</b></h5>
+                <h5><b>देण्याच्या योजनेतंर्गत अर्थसहाय्य मिळण्यासाठी करावयाचा अर्जाचा नमुना</b></h5>
+            </div>
+                <br><br>
+            
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7"></div>
+                    <div class="col-md-5">
+                      <input type="text" name="arjadar_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचे नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7"></div>
+                    <div class="col-md-5">
+                        <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            required placeholder="पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7"></div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; मा. समाजकल्याण अधिकारी,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; जिल्हा परिषद,</h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; <span><input type="text" name="jilha" required placeholder="जिल्हा"></span></h6>
+              <br><br>
+
+              <div class="text-left">
+                <h6 style="font-weight: 500;"><b> विषय :- </b>अपंग व अव्यंग व्यक्तीच्या विवाहास प्रोत्साहनपर आर्थिक सहाय्य मिळणेबाबत </h6>
+              </div><br>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 14px;"> महोदय,</h6>
+              <h6 class=" text-left " style="font-weight: 500; word-spacing: 2px;">&emsp;&emsp;&emsp; आम्ही दिनांक <span><input type="date" name="vivah_dinank" required/></span>
+                  रोजी अपंग-अव्यंग योजनेतंर्गत  विवाह केलेला आहे. त्यासंबंधीची आवश्यक माहिती या अर्जाव्दारे सादर करीत आहे.
+                  कृपया मला अपंग-अव्यंग विवाहितांस देण्यात येणाऱ्या प्रोत्साहनपर योजनेतून  अर्थसहाय्य मंजूर व्हावे, ही विनंती.
+              </h6><br>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"><b> वराची माहिती-</b></h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="var_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वराचे संपूर्ण नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="var_apangpraman" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अपंगत्वाचे प्रमाण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="var_shikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शिक्षण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="var_vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="व्यवसाय/उद्योग" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="var_karyalay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="कार्यालयाचे नाव / हुद्दा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="var_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="मूळ राहण्याचे ठिकाण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"><b> वधूची माहिती-</b></h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="vadhu_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वधूचे संपूर्ण नांव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="vadhu_apangpraman" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अपंगत्वाचे प्रमाण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="vadhu_shikshan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शिक्षण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="vadhu_vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="व्यवसाय/उद्योग" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="vadhu_karyalay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="कार्यालयाचे नाव / हुद्दा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="vadhu_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="मूळ राहण्याचे ठिकाण" />
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"><b>इतर माहिती-</b> </h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row">विवाहाचा दिनांक :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="vivah_date" class="form-control rounded-0 py-3 font-13 sign-register-input" required />
+                    </div>
+                    <div class="col-md-5">
+                        <input type="text" name="vivah_place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="विवाह स्थळ" />
+                      </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;" required>विवाह पध्दती:  &emsp;&emsp;&emsp;
+                <label><input type="radio" name="vivah_type" value="वैदिक" required> वैदिक</label> &emsp;
+                <label><input type="radio" name="vivah_type" value="नोंदणी " required> नोंदणी </label>
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 1px; margin-top: 20px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row">प्रथम विवाह आहे काय?</label>                    
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right"><b> वर </b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <input class="form-check-input" type="radio" name="var_pratham" value="होय" required>
+                        <label class="form-check-label">
+                            होय
+                        </label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                        <input class="form-check-input" type="radio"  name="var_pratham" value="नाही" required>
+                        <label class="form-check-label">
+                            नाही
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right"><b> वधू </b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <input class="form-check-input" type="radio" name="vadhu_pratham" value="होय" required>
+                        <label class="form-check-label">
+                            होय
+                        </label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                        <input class="form-check-input" type="radio"  name="vadhu_pratham" value="नाही" required>
+                        <label class="form-check-label">
+                            नाही
+                        </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1px; margin-top: 20px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row">लग्नापूर्वी विदुर/विधवा होते काय ?</label>                    
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right"><b> वर </b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <input class="form-check-input" type="radio" name="var_vidur" value="होय" required>
+                        <label class="form-check-label">
+                            होय
+                        </label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                        <input class="form-check-input" type="radio"  name="var_vidur" value="नाही" required>
+                        <label class="form-check-label">
+                            नाही
+                        </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right"><b> वधू </b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <input class="form-check-input" type="radio" name="vadhu_vidhva" value="होय" required>
+                        <label class="form-check-label">
+                            होय
+                        </label>
+                    </div>
+                    <div class="col-md-1 text-left">
+                        <input class="form-check-input" type="radio"  name="vadhu_vidhva" value="नाही" required>
+                        <label class="form-check-label">
+                            नाही
+                        </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group p-0 text-left" style="margin-bottom: 5px; margin-top: 20px;">
+                यापूर्वी सदर योजनेखाली अर्थसहाय्य मागणी केली आहे काय ? &ensp;&ensp;&ensp;&ensp;
+                <label>
+                  <input type="radio" name="bfor_yojna" value="होय" required > होय
+                </label>&emsp;
+                <label>
+                  <input type="radio" name="bfor_yojna" value="नाही" required > नाही
+                </label>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 5px; margin-top: 20px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अन्य जिल्हा परिषदेकडे अर्ज केला आहे काय ?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="anya_zp" id="chkYes2" onclick="ShowHideDiv2()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="anya_zp" id="chkNo2" onclick="ShowHideDiv2()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+              <div class="form-group" id="dvPassport2" style="display: none">
+                <div class="input-icon">
+                  <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> असल्यास </h6>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="zp_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="जिल्हा परिषदेचे नाव " />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">अर्ज दिनांक</label>                    
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="zp_dinank" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row">जिल्हा परिषदेकडे अर्ज केला असल्यास दिनांक :</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="date" name="zp_arzadinank" class="form-control rounded-0 py-3 font-13 sign-register-input" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 5px; margin-top: 20px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">यापूर्वी सदर योजनेखाली सत्कार झाला आहे काय ?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="satkar" id="chkYes3" onclick="ShowHideDiv3()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="satkar" id="chkNo3" onclick="ShowHideDiv3()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>                            
+              <div class="form-group" id="dvPassport3" style="display: none" >
+                <div class="input-icon">
+                  <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> होय असल्यास </h6>
+                  <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" name="where" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="कोठे " />
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="when" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="व केव्हा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">सही (वर):</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="var_sign" class="form-control" required />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">सही (वधू):</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="vadhu_sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h6 class="text-left" style="font-weight: 500; word-spacing: 2px;"><b>
+                वरील सर्व माहिती आमच्या माहितीप्रमाणे सत्य व अचूक आहे त्यामध्येकाही चूक
+               आढळून आल्यास आपणाकडून होणाऱ्या परिणामास मी जबाबदार राहीन.</b></h6><br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+
+
+  </form>
+  </div>
+  </div>
+  </div>
+  
+
+  <script type="text/javascript">
+    function ShowHideDiv2() {
+        var chkYes2 = document.getElementById("chkYes2");
+        var dvPassport2 = document.getElementById("dvPassport2");
+        dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+    }
+  </script>
+  
+  <script type="text/javascript">
+    function ShowHideDiv3() {
+        var chkYes3 = document.getElementById("chkYes3");
+        var dvPassport3 = document.getElementById("dvPassport3");
+        dvPassport3.style.display = chkYes3.checked ? "block" : "none";
+    }
+  </script>

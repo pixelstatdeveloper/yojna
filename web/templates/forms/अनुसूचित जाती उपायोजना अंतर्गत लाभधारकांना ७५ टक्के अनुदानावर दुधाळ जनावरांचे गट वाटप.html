@@ -1,0 +1,369 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:anu_dudhjanvar' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h4 style="margin-bottom: 10px;"><b>अनुसूचीत जाती / अनुसुचित जमाती सन २०२० - २०२१</b></h4>
+                <h6 style="margin-bottom: 5px;"><b>दुधाळ संकरीत गायी / म्हशी गट वाटप योजना लाभार्थीने करावयाच्या अर्जाचा नमुना</b></h6>
+            </div>
+ 
+              <br/><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्जदाराचे नाव ( श्री. / श्रीमती. / कु. )"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row ">( फोटो ओळखपत्राची सत्यप्रत जोडावी ) :</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="file" name="photo_id" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon" >
+                    <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row">पत्रव्यवहाराचा पत्ता:</label>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" name="mukampost" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="गावाचे नाव ( मु. पो. )" /> 
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="taluka" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="तालुका" /> 
+                    </div>
+                    <div class="col-md-2 text-center" style="padding-left: 30px;">
+                      <label class="form-group form-row">जि. नागपुर </label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" name="pincode" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="पिनकोड" /> 
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="tel" name="mobile_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder=" भ्रमणध्वनी / दुरध्वनी क्रमांक " />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row">अर्जदाराचे वय: </label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="number" name="age_year" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पुर्ण वर्षामध्ये" />
+                    </div>
+                    <div class="col-md-6">
+                        <select name="gender" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                            color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                          <option value="">लिंग</option>
+                          <option value="स्त्री ">स्त्री </option>
+                          <option value="पुरुष">पुरुष</option>
+                          <option value="अतिरिक्त">अतिरिक्त</option>
+                       </select>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदार दारिद्रय रेषेखालील आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="daridrya_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="daridrya_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदाराच्या मालकीची स्वतःची शेतजमीन आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="shetjamin_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="shetjamin_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                        <label class="form-group form-row">अर्जदाराकडे सध्या उपलब्ध असलेल्या पशुधनाचा तपशिल :</label>
+                    </div>
+                </div>
+                <div style="height:290px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th>अ क्र.</th>
+                          <th>तपशिल </th>
+                          <th>संख्या </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>१)</td>
+                          <td>संकरीत गायी</td>
+                          <td><input type="number" name="sankarit_gayi"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>२)</td>
+                          <td>गावठी गायी</td>
+                          <td><input type="number" name="gavthi_gayi"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>३)</td>
+                          <td>शेतीकाम/ ओढकामाचे बैल</td>
+                          <td><input type="number" name="sheti_bail"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td> ४)</td>
+                          <td>मुऱ्हा / मेहसाना / सुरती म्हशी </td>
+                          <td><input type="number" name="murha_mhais"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदाराकडे गोठा उपलब्द आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="gotha_yn" id="chkYes3" onclick="ShowHideDiv3()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="gotha_yn" id="chkNo3" onclick="ShowHideDiv3()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport3" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-12">
+                        <input type="number" name="kiti_janavar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="असल्यास किती जनावरांसाठी" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदाराने दुग्धोत्पादन / पशुपालने विषयक प्रशिक्षण घेतले आहे काय? &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="dughdautpadan_yn" id="chkYes2" onclick="ShowHideDiv2()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="dughdautpadan_yn" id="chkNo2" onclick="ShowHideDiv2()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport2" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row">असल्यास प्रमाणपत्राची छायांकीत प्रत जोडावी: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="file" name="dughdautpadan_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदार अनु. जाती / आदीवासी प्रवर्गातील आहे का? &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="anuadi_yn" id="chkYes1" onclick="ShowHideDiv1()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="anuadi_yn" id="chkNo1" onclick="ShowHideDiv1()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport1" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row">असल्यास जातीच्या दाखल्याची प्रत जोडावी: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="file" name="anuadi_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदार बचत गटाचा सदस्य आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="bachatgat_yn" id="chkYes4" onclick="ShowHideDiv4()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="bachatgat_yn" id="chkNo4" onclick="ShowHideDiv4()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport4" style="display: none" >
+                <div class="input-icon" >
+                  <h6 class="text-left" style="margin-bottom: 10px;">असल्यास</h6>
+                  <div class="row">
+                    <div class="col-md-5">
+                        <input type="text" name="bachatgat_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="बचत गटाचे नाव" />
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" name="bachatgat_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="बचत गट पत्ता" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="bachatgat_shetra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                            placeholder="बचत गट ज्या क्षेत्रात काम  करीत आहेत त्याचा उल्लेख करावा" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">अर्जदार सुशिक्षित बेरोजगार आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="berozgar_yn" id="chkYes5" onclick="ShowHideDiv5()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="berozgar_yn" id="chkNo5" onclick="ShowHideDiv5()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport5" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row">असल्यास सेवायोजन कार्यालयाच्या नोंदणीपत्राची प्रत जोडावी : </label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="file" name="sevayojna_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-left" style="word-spacing: 3px;">
+                या योजनेअंतर्गत माझे प्रकरण मंजुर झाल्यास त्या दिनांकापासुन एक महिन्याच्या कालावधीत 
+                लाभार्थी हिश्याची रक्कम मी स्वतः उभी करण्यांस हमी देत आहे / बँकेकडुन कर्ज मंजुर करून   
+                घेण्याची जबाबदारी माझेवर राहील. माझा हिश्याची रक्कम मी उभारल्याशिवाय मला मिळणार नाही 
+                याची मला जाणीव आहे.
+              </p>
+              
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="कर्जसाठी बँकेचे नाव"/>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="bank_branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="शाखा"/>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                प्रमाणित करतो / करते की वर नमुद केलेली माहिती पुर्णपणे सत्य आहे . या माहितीमध्ये कोणतीही 
+                असत्यता आढळल्यास त्यांची संपुर्ण जबाबदारी माझ्यावर राहील व त्यामुळे मी उक्त योजनेचा लाभ 
+                मिळण्यास अपात्र ठरते  अथवा मला योजनेखाली मंजुर करण्यांत आलेल्या लाभाची वसुली माझेकडुन 
+                करण्यांत येईल याची मला जाणीव आहे व त्याची माझी पुर्ण संमती आहे.
+              </p>
+              <br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1 text-left">
+                        <label class="form-group form-row ">फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row float-right">अर्जदाराची स्वाक्षरी:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+       
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+
+  <script type="text/javascript">
+    function ShowHideDiv1() {
+        var chkYes1 = document.getElementById("chkYes1");
+        var dvPassport1 = document.getElementById("dvPassport1");
+        dvPassport1.style.display = chkYes1.checked ? "block" : "none";
+    }
+  </script>
+
+<script type="text/javascript">
+  function ShowHideDiv2() {
+      var chkYes2 = document.getElementById("chkYes2");
+      var dvPassport2 = document.getElementById("dvPassport2");
+      dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv3() {
+        var chkYes3 = document.getElementById("chkYes3");
+        var dvPassport3 = document.getElementById("dvPassport3");
+        dvPassport3.style.display = chkYes3.checked ? "block" : "none";
+    }
+  </script>
+
+<script type="text/javascript">
+    function ShowHideDiv4() {
+        var chkYes4 = document.getElementById("chkYes4");
+        var dvPassport4 = document.getElementById("dvPassport4");
+        dvPassport4.style.display = chkYes4.checked ? "block" : "none";
+    }
+</script>
+
+<script type="text/javascript">
+    function ShowHideDiv5() {
+        var chkYes5 = document.getElementById("chkYes5");
+        var dvPassport5 = document.getElementById("dvPassport5");
+        dvPassport5.style.display = chkYes5.checked ? "block" : "none";
+    }
+</script>

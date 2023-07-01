@@ -1,0 +1,200 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:balsango' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>  बालसंगोपन योजनेच्या लाभार्थी अर्ज नमुना</h5> 
+           <h6> महिला व बाल विकास विभाग महाराष्ट्र राज्य</h6>
+            </div>
+            <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="बालकाचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5">
+                    <input type="text" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="सध्याचे वय"/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row">जन्मतारीख</label>
+                    </div>
+                  <div class="col-md-5">
+                    <input type="date" name="birth_date" class="form-control rounded-0 py-3 font-13 sign-register-input"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="बालकाची शैक्षणीक स्थिती" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="palak_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="नैसर्गीक पालकाचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="नैसर्गीक पालकाचा पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="palak_name1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पर्यायी संगोपन कर्त्या पालकाचे नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea type="text" name="patta1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="पर्यायी संगोपन कर्त्या पालकाचा पत्ता"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="nate" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="पालकाचे बालकाशी नाते"/>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                    placeholder="पालनकर्त्या पालकाचा उत्पन्न"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="buisness" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="पालनकर्त्या पालकाचा व्यवसाय"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"><b>कुंटुबांतील व्यक्तीची माहिती</b></h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group text-left">आई हयात आहे काय? :
+                      <label><input type="radio" name="aa" value="0" required> होय </label>
+                      <label><input type="radio" name="aa" value="1"> नाही </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group text-left">वडील हयात आहे काय? :
+                    <label><input type="radio" name="va" value="0" required> होय </label>
+                    <label><input type="radio" name="va" value="1"> नाही </label>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group p-0 text-left">
+              <label><input type="checkbox" name="mahiti[]" value="अनाथ"> अनाथ  </label>
+              <label><input type="checkbox" name="mahiti[]" value="आई / वडील बंदी"> आई / वडील बंदी </label>
+              <label><input type="checkbox" name="mahiti[]" value="इतर"> इतर </label><br>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sthiti" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                  required placeholder="पालकाची सामाजिक स्थिती"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class=" text-left" style="font-weight: 500;"><b>कुटुंबात राहात असलेल्या एकूण व्यक्तीची संख्या</b></h6>
+          </br>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="text" name="bhau" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                required placeholder="भाऊ (वय)"/>
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="bahin" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="बहीण (वय)"/>
+                </div>
+                <div class="col-md-4">
+                  <input type="text" name="aaji" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="आजी / आजोबा"/>
+                </div>
+              </div>
+            </div>
+          </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="name1" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="संपूर्ण नाव"/>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">सही :</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="signature" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="patta2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="संपूर्ण पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

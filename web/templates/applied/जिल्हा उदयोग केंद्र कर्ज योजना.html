@@ -1,0 +1,661 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <h3> जिल्हा उदयोग केंद्र - नागपूर </h3>
+        <h5><b>जिल्हा उदयोग केंद्र कर्ज योजना</b></h5>
+        <h5>(नियम ५ पहा)</h5>
+        <br>
+        <h6 class=" text-left ">सिग्मा कक्ष</h6> <br>
+        
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <p class=" text-left " style="font-weight: 500;">
+                             प्रकरण क्रमांक <b>{{up.prakaran_no}}</b> 
+                             दिनांक  <b>{{up.pra_date}}</b> 
+                             मी/आम्ही  <b>{{up.name}}</b>
+                             याद्वारे महाराष्ट्राच्या उद्योग धंद्यांना राज्याकडून अर्थ सहाय देण्याबाबतचे अधिनियम १९६० अन्वये
+                              <b>{{up.money_char}}</b>
+                             आकडयात रुपये <b>{{up.money_num}}</b>
+                             कर्ज मिळवण्यासाठी अर्ज करीत आहे / आहोत आणि पुढील तपशील सादर करीत आहे / आहोत. 
+                        </p>
+                    </div>
+                  </div>
+                </div>
+            </div><br>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>अर्जदाराचे नाव</b></label>
+                    </div>
+                    <div class="col-md-10">
+                      <label class="form-group form-row">: {{up.candname}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>अर्जदाराचा पत्ता</b></label>
+                    </div>
+                    <div class="col-md-10">
+                      <label class="form-group form-row">: {{up.candaddress}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>दूरध्वनी / मोबाईल क्र.</b></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">: {{up.mobile_number}}</label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row"><b>वर्गीकृत जाती / जमातीपैक असल्यास </b></label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-group form-row">: {{up.varg_jat}}</label>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>अर्जदाराची कंपनी किंवा पेढी असेल तर तिची रचना म्हणजे (संपूर्ण मालकी, संयुक्त हिंदू कुटुंब, भागीदारी किंवा मर्यादीत कंपनी आहे किंवा कसे)</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.compor_pedhi}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>ज्या उद्योग धंद्याच्या बाबतीत कर्ज मिळण्यासाठी अर्ज करण्यात आला त्या उद्योग धंद्याचे स्वरूप</b> </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.business_name}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>त्यात तयार करण्यात येणारा माल किंवा त्यात कोणते काम चालते ते</b> </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.work}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>अर्जदाराची भांडवलाच्या स्वरूपातील संपत्ती अर्जदार कंपनी किंवा पेढी असेल तर, मालकांचे नांव भागीदारांची नांवे व त्याने / त्यांनी अनुक्रमे गुंतविलेल्या भांडवलाच्या रकमा </b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.ownerpartner_nameinvest}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>अर्जदार मर्यादीत कंपनी असेल तर / तिच्या संचालकांची नांवे आणि तिचे अधिकृत व विक्रीस काढलेले भांडवल </b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.sanchalak_name}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                      <label class="form-group form-row"><b>कर्जाचा उद्देश</b></label>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <label class="form-group form-row"><b>रुपये</b></label>
+                </div>
+                </div>
+              </div>
+          </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>इमारत, गोदाम, वखारी वगैरे बांधण्यासाठी </b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.construction}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>जमीन खरेदी करण्यासाठी</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.land}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>यंत्रसामुग्री, संयंत्र आणि उपकरणे वगैरे खरेदी करण्यासाठी</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.machines}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                        <label class="form-group form-row"><b>चालू भांडवलाकरीता</b></label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-group form-row">: {{up.work_expenditure}}</label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                      <label class="form-group form-row"><b>एकूण रुपये</b></label>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-group form-row">: {{up.total}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12 text-left">
+                  <h6>ज्यासाठी अर्ज करण्यात आला त्या कर्जाकरीता देऊ केलेले तारण, अर्जदाराच्या मालकीची पुढील संपत्ती गहाण ठेऊन प्रथमतः कर्ज सुरक्षित करण्यात येईल.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-6">
+                    <label class="form-group form-row"><b>स्थायी संपत्ती - विद्यमान - किंमत रुपये</b></label>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-group form-row">: {{up.sthayi_vid}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>जमीन : तिचे क्षेत्रफळ, भूमापन क्रमांक व हिस्सा क्रमांक आणि ती जेथे असेल त्या गावाचे, तालुक्याचे व जिल्ह्याचे नावं </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Azamin}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>इमारत : ज्या जमिनीवर ती इमारत असेल त्या जमीनीच्या भूमापन क्रमांक व हिस्सा क्रमांक (अंदाजे घसारा खर्च / रुपये)</b> </label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Aemarat}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>संयंत्र  व यंत्रसामुग्री : यंत्रसामुग्री व प्रत्येक  यंत्राची खरेदीची तारीख आणि तिची  मूळ किंमत यांचा तपशील असलेली वेगळी यादी सोबत जोडावी (अंदाजे घसारा खर्च रुपये) </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Amachine}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                  <label class="form-group form-row"><b>एकूण रुपये</b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Atotal_amount}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12 text-left">
+                <h6>ज्यासाठी अर्ज केला आहे त्या कर्जातून संपादन करण्याचे योजिलेली व तारण म्हणून देऊ केलेली स्थायी  संपत्ती.</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>जमीन: ( पूर्ण मालकींची असलेली / पट्याने धारण केलेली) अशा जमीनींची अंदाजे/ किंमत ,तिचे क्षेत्रफळ ,भूमापन क्रमांक व हिस्सा क्रमांक आणि ती जेथे असेल त्या गावांचे ,तालूक्याचे व जिल्ह्याचे नांव नमुद करावे )</b> </label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Bzamin}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>इमारत: ( बांधण्याचे किंवा संपादन करण्याचे योजिलेल्या इमारतीचा अंदाजे खर्च नमूद करावा )</b> </label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Bemarat}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>संयंत्र व यंत्रसामुग्री : ( संपादन करावयाच्या जादा  यंत्रसामुग्रीची अंदाजे किंमत नमूद करावी व प्रत्येक यंत्राचा तपशील कोठून संपादन करावयाचे यांची वेगळी यादी जोडावी ) </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Bmachine}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6">
+                  <label class="form-group form-row"><b>एकूण रुपये </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.Btotal_amount}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-10 text-left">
+                  <label class="form-group form-row"><b>ज्या उद्योग धंद्यासाठी कर्ज मिळविण्याकरीता अर्ज केला आहे. त्या उद्योग धंद्याच्या वाढीच्या किंवा विकासाच्या नियोजित योजनेचा संपूर्ण तपशील ( अर्जदाराने सही केलेल्या वेगळ्या पत्रकात देणे )  </b> </label>
+              </div>
+              <div class="col-md-2">
+                <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                  style="width:100px!important;color:#fff"  href="/media/{{up.business_info}}" target="blank"> पहा </a></label> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>कर्जाची परतफेड करण्याची मबदत व पद्धती (वार्षिक/अर्धवार्षिक ) </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.paratfed}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>अर्जदाराच्या विद्यमान संपत्तीचा विमा उतरविण्यात आला आहे किंवा कसे आणि त्याप्रमाणे विमा उतरविला असल्यास तो कोणत्या कंपनीकडे उतरविला ते </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.insurance}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row "><b>अर्जदाराने निवड केलेल्या बँक शाखेचे नांव </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.bankname}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row"><b>अर्जदाराने कोणत्याही बँकेचे पैसे ठेवले असल्यास त्या बँकेचे नांव आणि त्याचे खाते व त्या बँकेच्या एखाद्या शाखेत असेल तर त्या शाखेचा पत्ता </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.isloan}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row "><b>अर्जदाराने ठेवलेल्या कामाच्या पाळ्यांची आणि कामावर लावलेल्या कामगारांची संख्या ( कार्यालयाचा कर्मचारी वर्ग व कारकून वर्ग वगळण्यात यावा ) . पाळ्यांची संख्या ( मागील वर्षातील सतत केलेल्या कामाच्या प्रत्येक पाळ्यातली कामगारांची सरासरी संख्या)</b> </label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.employees}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row "><b>देखरेक ठेवणाऱ्या तंत्रज्ञाची नांवे व त्यांची पात्रता द्यावी </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.technician}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row "><b>अर्जदाराने इतर कोणत्याही शासकीय खात्याकडे कर्जाकरीता अर्ज केला आहे किंवा कसे ?</b> </label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.govenrnment_loan}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                  <label class="form-group form-row "><b>संभाव्य नफ्याची अंदाजे रक्कम </b></label>
+              </div>
+              <div class="col-md-6">
+                <label class="form-group form-row">: {{up.sambhavya_profit}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-12 text-left">
+                <h6>पुढील तक्त्यात औद्योगिक योजना पूर्ण झाल्यानंतरच्या एक वर्षात सर्वसाधारणपणे झालेल्या कामाचा समावेश असावा - रुपये</h6>
+              </div>
+            </div>
+          </div>
+        </div><br>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row "><b>अ) विक्रीचे एकूण उत्पन्न रु</b> </label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.total_income}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row "><b>ब) खर्च रु</b> </label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.khrch}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row "><b>१) कच्च्या मालांचा व साठ्यांचा खर्च</b> </label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.mal_exp}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row "><b>२) दिलेली मंजूरी </b></label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.majuri_exp}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row "><b>३) कारखान्यांच्या जागेचे भाडे</b> </label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.rent_exp}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row "><b>४) विजेचा खर्च इत्यादी</b> </label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.light_exp}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row "><b>५) किरकोळ </b></label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.kirkol_exp}}</label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row"><b>एकूण रुपये</b></label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.total_exp}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row"><b>क) विक्रीच्या उत्पन्नावरील एकूण नफा (अ-ब) </b></label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.profit}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row"><b>ड)-१) प्रशासकीय खर्च व विक्रीचा खर्च </b></label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.prashaskiy_exp}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row"><b>२) मालकांने किंवा भागीदारांनी व्यक्तिशः घेतलेले परिश्रमिक</b> </label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.ownerpartner_exp}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row"><b>३) कर्जाऊ घेतलेल्या रकमेवरील व्याज </b></label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.intrest_exp}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row"><b>४) कर आकारणी</b> </label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.tax_exp}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row"><b>एकूण रुपये</b> </label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.total_poit}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" >
+          <div class="input-icon">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                  <label class="form-group form-row"><b>निव्वळ नफा (क-ड)</b> </label>
+              </div>
+              <div class="col-md-3">
+                <label class="form-group form-row">: {{up.onlyprofit}}</label>
+              </div>
+              <div class="col-md-3 text-left">
+                <label class="form-group form-row"><b>कर्जाच्या समाप्तीकरणासाठी उपलब्ध असलेली रोख रक्कम</b> </label>
+            </div>
+            <div class="col-md-3">
+              <label class="form-group form-row">: {{up.moneywith_u}}</label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <h6 class=" text-justify" style="font-weight: 500;"> मी / आम्ही असे जाहीर करतो की, वर दिलेला तपशील, महाराष्ट्र शासनाकडून कर्ज मिळविण्याच्या हेतूने 
+          सादर आहे आणि ते माझ्या / आमच्या पूर्ण माहितीप्रमाणे व समजूतीप्रमाणे खरा व बिनचूक आहे आणि त्यातील 
+          कोणतीही महत्वाची गोष्ट लपविण्यात किंवा राखून  ठेवण्यात आलेली नाही.  </h6><br><br>
+
+          
+
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-2">
+                    <label class="form-group form-row"><b>दिनांक</b></label>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-group form-row">: {{up.date}}</label>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-group form-row float-right"><b>अर्जदाराची सही</b></label>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="width:100px!important;color:#fff"  href="/media/{{up.sign}}" target="blank"> पहा </a></label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-10 text-left">
+                  <label class="form-group form-row"><b> राजपत्रीत अधिकारी किंवा साक्षांकीत करण्याचे अधिकारी असणाऱ्या व्यक्ती यांनी साक्षांकित केलेला फोटो</b> </label>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="width:100px!important;color:#fff"  href="/media/{{up.photo}}" target="blank"> पहा </a></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1">
+              <b> टीप :</b>
+            </div>
+            <div class="col-md-11">
+              <h6 class="text-left" style="font-weight: 500;"> वरील तपशील अर्जाच्या प्राथमिक छाननीसाठी आहे. त्यावर आणखी विचार
+                करतांना शासन मुद्यांसंबंधी अधिक माहिती लागेल व त्या मुद्यांसंबंधी योग्य वेळी माहिती मागविण्यात येईल.</h6>
+            </div>
+          </div>
+          <br><br>
+
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12">
+                    <p class=" text-left " style="font-weight: 500;">
+                      कंपनीवर एखाद्या  इसमाची संपूर्ण मालकी असेल तर, त्याबाबतीत अर्जावर त्या मालकाने स्वतः सही केली पाहीजे 
+                      <b>{{up.kutumb}}</b>
+                       हिंदू कुटुंबाच्या बाबतीत कुटूंबातील मुख्य इसम आणि इतर प्रत्येक प्रौढ पुरूषे यांची नांवे व 
+                      या अर्जात बसत असल्या पाहिजेत. पेढीच्या बाबतीत भागीदारीसंबंधीच्या लेखान्वये तसे करण्यास सक्षम व 
+                      अधिकृत चिटणीसाने <b>{{up.chitnis}}</b> चालकाने सही केली पाहिजे . 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <br><br>
+</div>
+</div>
+</div>
+ 
+ 

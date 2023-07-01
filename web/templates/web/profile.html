@@ -1,0 +1,202 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} 
+{% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+                <li class="breadcrumb-item"><a href="{% url 'web:home' %}" class="fables-second-text-color">शासकीय
+                        योजना</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="font-family: 'Arya', sans-serif!important;">प्रोफाइल</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<style>
+     #prefilled {
+        display: flex;
+        align-items: center;
+        gap: .8em;
+    }
+    
+    #bany_heading{color: #3f42a1; font-size: 30px;margin-bottom:30px;}
+    .space{height:2px;margin:60px 0;border-bottom:3px dashed #c9c7c7;}
+</style>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row" style="font-size:20px;">
+               
+                <style>
+                    .main_profile{font-family: 'Arya', sans-serif!important;font-size:16px;font-weight:600;}
+                    .main_profile_sub{background-color:#f1f1f1;padding:30px 0;}
+                    .main_profile_sub img{width:200px;height:200px;border-radius:100%;border:5px solid #e8e4e4;}
+                    .main_profile_sub1{padding-top:30px;}
+                     .main_profile_sub ul{padding-left:0px;}
+                    .main_profile_sub ul li{background-color:#fff;margin:10px 15px;padding:10px;}
+                </style>
+                
+                <div class="col-md-3 main_profile">
+                    <div class="col-md-12">
+                        <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold"
+                            style="color:#3F42A1;font-size:35px;"> प्रोफाइल </h2><br />
+                    </div>
+                    <div class="main_profile_sub">
+                        <center>
+                            <img src="
+                    {% if request.user.profile_pic %}
+                        /media/{{ request.user.profile_pic}}
+                    {%else%}
+                    https://pixabay.com/images/download/avatar-1577909_640.png
+                    {% endif %}" class="img-responsive" alt="Profile_User" srcset="" />
+                            </center>
+                        <div class="main_profile_sub1">
+                            <ul>
+                                <li><i class="bi bi-person"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                    </svg> {{ request.user.name }}</li>
+                                <li><i class="bi bi-gender-ambiguous"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gender-ambiguous" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1H11.5zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z"/>
+                                    </svg> {{ request.user.Gender }}</li>
+                                <li><i class="bi bi-people"></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                                    </svg> {{ request.user.caste }}</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                    </svg> {{request.user.email}}</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    </svg> {{request.user.mobile_number}}</li>
+                                <li><i class="fa fa-id-card" aria-hidden="true"></i>  {{request.user.adhaar_no}}</li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>  {{request.user.address}}</li>
+                                <li><i class="fa fa-globe" aria-hidden="true"></i>  {{request.user.country}}</li>
+                                <li><i class="fa fa-globe" aria-hidden="true"></i>  {{request.user.state}}</li>
+                                <li><i class="fa fa-globe" aria-hidden="true"></i>  {{request.user.city}}</li>
+                                    <br />
+                                        <a href="{% url 'web:update_profile' %}"
+                                    class="btn fables-second-background-color yojana_mainbotton" style="font-family: 'Arya', sans-serif!important; font-size:14px;">EDIT</a>                               
+                            </ul>                            
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h2 class="fables-second-text-color mt-3 font-30 font-weight-bold"style="color:#3F42A1;font-size:35px;">My Documents</h2>
+                            <br />
+                        </div>
+                        <div class="col-md-3">
+                            <br />
+                            <a href="{% url 'web:applied_schemes' %}" type="submit" name="yojn" class="btn fables-second-background-color yojana_mainbotton
+                            "> अर्ज केलेल्या योजना</a>        
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-12 main_profile_sub">
+                        <div class="row">
+                             <div class="col-md-12">
+                                <form action="{% url 'web:profile'%}" method="POST" enctype="multipart/form-data" >
+                                    {% csrf_token %} 
+                                    <div class="row" style="padding:0 20px;">
+                                        <div class="col-md-4">
+                                            <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                                                <div class="input-icon">
+                                                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                                                        required placeholder="Enter Document Name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+                                                <div class="input-icon">
+                                                    <input type="file" name="file" id="file" class="form-control rounded-0 font-13 sign-register-input"
+                                                        required placeholder="Enter Document Name" />
+                                                </div>
+                                                <label for="profile pic" class="rounded-0 sign-register-input form-label " style="font-size:13px;color:#990000;text-align: left;margin-bottom:20px;font-family: 'Arya', sans-serif!important;"><i>(Note: Upload file should be.pdf, .jpg, .jpeg and file size should be less than 200KB)</i></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="submit"
+                                            class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                                            style="margin-bottom:20px;color:#fff; font-family: 'Arya', sans-serif!important;">Upload Document</button>
+                                        </div>
+                                    </div>
+                                </form>  
+                                <div class="row" style="padding:0 20px;">
+                                    {% for i in documents %}
+                                        <div class="col-md-3"style="padding:10px;">
+                                            <div class="" style="background-color: #fff;text-align:center;padding:10px;">
+                                                <a href="{request.scheme}://{request.get_host()}/media/{{i.document}}" target="blank" download>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color:#b80805;height:100px;padding:10px;" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+                                                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                                                        <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"/>
+                                                    </svg>
+                                                    <br />
+                                                    <h5 style="font-family: 'Arya', sans-serif!important; color: #000;"> {{i.document_name}}</h5>
+                                                </a>
+                                                </div>
+                                        </div>
+                                    {% endfor %}
+                                    <div class="clearfix"></div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            <br /><br /><br /><br />
+        </div>
+    </div>
+</div>
+</div>
+<br/>
+
+
+<!--<table class="table table-bordered">-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th scope="col">अनु. क्रमांक</th>-->
+<!--            <th scope="col">योजनेचे नाव</th>-->
+<!--            <th scope="col">Status</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+
+<!--    {% for scheme in request.user.user_registrations.all %}-->
+
+<!--    <tr>-->
+<!--        <td>{{forloop.counter}}</td>-->
+<!--        <td>{{scheme.scheme}}</td>-->
+<!--        <td>{{scheme.status}}</td>-->
+<!--    </tr>-->
+<!--    {% endfor %}-->
+<!--    </tbody>-->
+<!--</table>-->
+
+
+<script>
+    var uploadfield = document.getElementById("file");
+    uploadfield.onchange = function() {
+      if (this.files[0].size > 200*1024) {
+        alert("File too Big, please select a file less than 200KB");
+        this.value = "";
+      }
+    }
+  </script>
+{% endblock %}
+{% block post_load_js %} {% endblock %}

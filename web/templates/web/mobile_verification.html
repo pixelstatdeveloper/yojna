@@ -1,0 +1,41 @@
+{% extends 'web/layout.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Mobile Verification{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %} {% endblock %}
+{% block body %}
+
+
+<div class="fables-light-background-color">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="fables-breadcrumb breadcrumb px-0 py-3">
+            <li class="breadcrumb-item"><a href="#" class="fables-second-text-color">मुख्यपृष्ठ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Phone Verification</li>
+          </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+     <div class="row my-4 my-lg-5">
+          <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
+              <form method="POST" action="{% url 'web:home' %}">
+                 {% csrf_token %}
+                 <div class="form-group">
+                     <div class="input-icon">
+                         <span class="fables-iconemail fables-input-icon mt-2 font-13"></span>
+                         <input type="text" name="otp" class="form-control rounded-0 py-3 pl-5 font-13 sign-register-input" required placeholder="OTP"/>
+                     </div>
+                 </div>
+                  <button type="submit" class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font py-3">Verify</button>
+              </form>
+          </div>
+     </div>
+</div>
+
+{% endblock %}
+{% block post_load_js %} {% endblock%}

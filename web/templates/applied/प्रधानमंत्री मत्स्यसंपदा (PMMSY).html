@@ -1,0 +1,621 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <h5 class=" text-center" style="font-weight: 500;">PMMSY (Model Application format for Beneficiary Oriented activities)</h5>
+        <h5 class=" text-center" style="font-weight: 500;"> Application for Financial Assistance </h5>
+        <br/>
+        <h6 class=" text-left" style="font-weight: 500;"> <b style="color: red;">General Information : </b></h6>
+        <br/>
+        <div class="form-group">
+          <div class="input-icon">
+            <div class="row"> 
+              <div class="col-md-4">
+                <label class="form-group form-row"><b>Name of EIA/Beneficiary</b></label>
+              </div>
+              <div class="col-md-8">
+                <label class="form-group form-row">: {{up.name}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Beneficiaries</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.benificiaries}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Category</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.category}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> Address for communication : </h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Door no. / Street</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.door}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Village</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.village}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-1">
+          <label class="form-group form-row"><b>District</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.dis}}</label>
+        </div>
+        <div class="col-md-1">
+          <label class="form-group form-row"><b>State</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.state}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Pin code</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.pin}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> Project site particulars : </h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Own</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.own}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Area (In ha)</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.area}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Lease</b></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row">: {{up.lease}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Lease Period (No of Years)</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.period}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row"> 
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Project Site Address</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.site_addr}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Village/Mandal/Taluka</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.village1}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>District</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.dis1}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>State</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.state1}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Pin code</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.pin1}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> Contact Details : </h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Land Number</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.land_no}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Mobile Number</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.mobile}}</label>
+        </div>
+        <div class="col-md-1">
+          <label class="form-group form-row"><b>E-mail</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.email_id}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> Number Units Proposed(Nos.) : </h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Total</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.total}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Gen</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.gen}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>SC</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.sc}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>ST</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.st}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Women</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.women}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Govt</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.govt}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> Unit Cost (in Rs.) : </h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Total</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.total1}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Gen</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.gen1}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>SC</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.sc1}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>ST</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.st1}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Women</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.women1}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Govt</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.govt1}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> No of Beneficiaries (Nos) : </h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Total</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.total2}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Gen</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.gen2}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>SC</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.sc2}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>ST</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.st2}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Women</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.women2}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Govt</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.govt2}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <h6 class=" text-left" style="font-weight: 500;"> <b style="color: red;">Project Details :</b></h6>
+  <br/>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Project Item</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.pro_item}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Type of Proposal</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.type_pro}}</label>
+        </div>
+        <div class="col-md-6">
+          <label class="form-group form-row"><b>Pre-investment amount (if applicable) (Rs. In lakh)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.pre_inv}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Sub Component</b></label>
+        </div>
+        <div class="col-md-9">
+          <label class="form-group form-row">: {{up.subcompo}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Activity</b></label>
+        </div>
+        <div class="col-md-9">
+          <label class="form-group form-row">: {{up.activity}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-5">
+          <label class="form-group form-row"><b>Whether Trained / Or Willing to Train</b></label>
+        </div>
+        <div class="col-md-1">
+          <label class="form-group form-row">: {{up.trained}}</label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Experienced in relevant field</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.experienced}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-group form-row"><b>Capacity: (Tanks/tones/cycles/rafts/fingerlings)</b></label>
+        </div>
+        <div class="col-md-6">
+          <label class="form-group form-row">: {{up.capacity}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;"> Components :</h6>
+  <h6 class=" text-left" style="font-weight: 500;"> (a) Capital Cost</h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Details</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.capital_details}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>No. of Units</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.nounits}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Unit Cost (Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.unitcost}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Total Cost (Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.tocost}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;">b) Operational Cost</h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Details</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.operation_details}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>No. of Units</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.nounits1}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Unit Cost (Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.unitcost1}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Total Cost (Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.tocost1}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class=" text-left" style="font-weight: 500;">c) Total</h6>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Details</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.total_details}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>No. of Units</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.nounits2}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Unit Cost (Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.unitcost2}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>Total Cost (Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.tocost2}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>State Contribution(In Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.state_contri}}</label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Beneficiary Contribution(In Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.beni_contri}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Banking Assistance (In Rs.)</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.banking_assi}}</label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>Particulars of Bank</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.parti_bank}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> <b style="color: red;">Declaration by the Beneficiary :</b></h6>
+            <br/>
+            <h6 class=" text-justify" style="font-weight: 500;">This is to certify that, I/We <b>{{up.name1}}</b> 
+              son/daughter of  <b>{{up.name2}}</b>
+              hereby declare that the information furnished above is true to my knowledge and belief and all
+              relevant documents are enclosed. </h6>
+              <br/>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label class="form-group form-row"><b>Name of Beneficiary</b></label>
+                    </div>
+                    <div class="col-md-8">
+                      <label class="form-group form-row">: {{up.name3}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Signature</b>  </label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+          style="width:120px!important;color:#fff"  href="/media/{{up.sig}}" target="blank"> सही पहा </a></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>Photo</b>  </label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+          style="width:120px!important;color:#fff"  href="/media/{{up.photo}}" target="blank"> फोटो पहा </a></label>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+  
+  
+
+  

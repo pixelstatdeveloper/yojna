@@ -1,0 +1,315 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <form id="application_form" action="{% url 'web:ropvatika' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+          {% csrf_token %}
+            <div class="form-header text-center row">
+              <h5>अर्ज</h5>
+           <h6>राष्ट्रीय कृषि विकास योजनेअंतर्गत</h6>
+           <h6>पुण्यश्लोक अहिल्यादेवी होळकर रोपवाटिका योजना</h6>
+            </div>
+            <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> मा. तालुका कृषि अधिकारी, </br> <span><input type="text" name="jilha"/></span> </h6>
+            <br/>
+            <h6 class=" text-justify" style="font-weight: 500;">विषय:-  राष्ट्रीय कृषि विकास योजनेअंतर्गत पुण्यश्लोक अहिल्यादेवी होळकर रोपवाटिका 
+              योजनेअंतर्ग सन <span><input type="text" name="san"/></span> या वर्षात <span><input type="text" name="varshat"/></span> घटकाचा लाभ मिळण्याबाबत.  </h6>
+              <br/>
+              <h6 class=" text-left" style="font-weight: 500;"> महोदय, </h6>
+              <br/>
+              <h6 class=" text-justify" style="font-weight: 500;">राष्ट्रीय कृषि विकास योजनेअंतर्गत पुण्यश्लोक अहिल्यादेवी होळकर रोपवाटिका 
+                योजनेअंतर्गत सन <span><input type="text" name="san1"/></span> मध्ये <span><input type="text" name="madhe"/></span>
+                या रोपवाटिका उभारणीकरिता अर्थसहाय्य मिळण्यासाठी अर्ज सादर करीत आहे. त्याचा तपशील खालीलप्रमाणे असून अर्थसहाय्य मिळण्याबाबत विनंती आहे.  </h6>
+                <br/>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="लाभार्थ्यांचे पूर्ण नाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="gav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="गाव" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="taluka" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="तालुका" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="jilha2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जिल्हा" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="pin" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पिन कोड" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="mobile_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="मो. नंबर" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="ई.मेल" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" name="dhaar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="आधार नं." />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <select name="prakar" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                       <option value="">लाभार्थी प्रकार</option>
+                      <option value="महिला कृषि पदवीधारक">महिला कृषि पदवीधारक</option>
+                      <option value="महिला गट">महिला गट</option>
+                      <option value="महिला शेतकरी">महिला शेतकरी</option>
+                      <option value="भाजीपाला उत्पादक अल्प व अत्यल्प भूधारक शेतकरी">भाजीपाला उत्पादक अल्प व अत्यल्प भूधारक शेतकरी</option>
+                      <option value="भाजीपाला उत्पादक शेतकरी गट">भाजीपाला उत्पादक शेतकरी गट</option>
+                      <option value="इतर शेतकरी">इतर शेतकरी</option>
+                   </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <select name="vargvari" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                    color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                       <option value="">लाभार्थी वर्गवारी</option>
+                      <option value="अनुसूचित जाती">अनुसूचित जाती</option>
+                      <option value="अनुसूचित जमाती">अनुसूचित जमाती</option>
+                      <option value="सर्वसाधारण">सर्वसाधारण</option>
+                   </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">प्रकल्प स्थळाचा पत्ता</h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" name="sarve_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="सर्व्हे नं. (हिस्सा / पोटहिस्सासह)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="gav1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="गाव" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="taluka1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="तालुका" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="jilha1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="जिल्हा" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="pin1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="पिनकोड" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">लाभार्थ्याच्या बँक खात्याचा तपशील</h6>
+          </br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="बँकेचे नाव" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="shakha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="शाखा" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" name="acc_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="खाते नं." />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                    required placeholder="आयएफएससी (IFSC) कोड" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h6 class="text-left">अर्जासोबत जोडलेल्या कागद पत्राचा  तपशील (अर्जासोबत जोडलेल्या छायांकित प्रती साक्षांकित केलेल्या असाव्यात)</h6>
+          </br>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group text-left">७/१२ चा उतारा :
+                    <label><input type="radio" value="होय" name="doc1" required> होय </label>
+                    <label><input type="radio" value="नाही"  name="doc1"> नाही </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group text-left">८ अ  :
+                  <label><input type="radio" value="होय" name="doc2" required> होय </label>
+                  <label><input type="radio" value="नाही"  name="doc2"> नाही </label>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group text-left">स्थळदर्शक नकाशा :
+                    <label><input type="radio" value="होय" name="doc3" required> होय </label>
+                    <label><input type="radio" value="नाही"  name="doc3"> नाही </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group text-left">चतुःसीमा  :
+                  <label><input type="radio" value="होय" name="doc4" required> होय </label>
+                  <label><input type="radio" value="नाही"  name="doc4"> नाही </label>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="form-group text-left">बँक खाते पासबुक प्रथम पानाची छायांकित प्रत :
+                    <label><input type="radio" value="होय" name="doc5" required> होय </label>
+                    <label><input type="radio" value="नाही"  name="doc5" > नाही </label>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group text-left">आधार कार्डची छायांकित प्रत :
+                  <label><input type="radio" value="होय" name="doc6" required> होय </label>
+                  <label><input type="radio" value="नाही"  name="doc6" > नाही </label>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group text-left">संवर्ग प्रमाणपत्र (अ.जाती / अ.जमाती शेतकऱ्यांसाठी) :
+                    <label><input type="radio" value="होय" name="doc7" required> होय </label>
+                    <label><input type="radio" value="नाही"  name="doc7"> नाही </label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group text-left">हमी पत्र :
+                  <label><input type="radio" value="होय" name="doc8" required> होय </label>
+                  <label><input type="radio" value="नाही"  name="doc8"> नाही </label>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group" >
+            <div class="input-icon">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group text-left">कृषि पदवी बाबतचे कागदपत्रे, महिला शेतकरी गट  असल्यास त्याचे नोंदणी पत्र :
+                    <label><input type="radio" value="होय" name="doc9" required> होय </label>
+                    <label><input type="radio" value="नाही"  name="doc9"> नाही </label>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="thikan" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="ठिकाण"/>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">स्वाक्षरी :</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="signature" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <input type="text" name="name1" class="form-control rounded-0 py-3 font-13 sign-register-input" 
+                  placeholder="नाव"/>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row">दिनांक :</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="date" name="dinank" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </br>
+              <div class="row form-group p-0">
+                <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+              </div>
+           
+</form>
+</div>
+</div>
+</div>

@@ -1,0 +1,441 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:swayamrojgar' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+               <div class="form-header text-center">
+                <h4><b>  </b></h4>
+                <h5> महाराष्ट्र शासन </h5>
+                <h5>अपंग कल्याण आयुक्तालय, म.रा.पुणे</h5>
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center">
+                        <h5 ><b> अपंगासाठी स्वयंरोजागारासाठी बीज भांडवल अर्ज </b></h5>
+                    </div>
+                  </div>
+                </div>
+              <br/>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्जदाराचे पुर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अर्जदाराचा पत्ता" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="fa_husname" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="वडिलाचे/ पतीचे नाव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="patra_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="पत्र व्यवहाराचा पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="number" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="वय" /> 
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">जन्म तारीख :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="birthdate" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;" required>आपल्या कुटुंबाची दारिद्रय रेषेत नाव आहे काय? &emsp;&emsp;&emsp;
+                <label><input type="radio" name="daridrya_yn" id="chkYes2" onclick="ShowHideDiv2()" value="होय" required> होय </label> &emsp;
+                <label><input type="radio" name="daridrya_yn" id="chkNo2" onclick="ShowHideDiv2()" value="नाही" required> नाही</label>
+              </div>
+              <div class="form-group" id="dvPassport2" style="display: none">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="daridrya_num" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="असल्यास दारिद्रय रेषा नोंदनी क्रमांक" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="apang_type" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अपंगत्वाचा प्रकार" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="apang_swarup" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="अपंगत्वाचे स्वरुप" /> 
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row">अपंगत्वाचे प्रमाणपत्र:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="apang_certificate" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;" required>वरील रकाना च्या पृष्ठयार्थ योग्य दाखला जोडला आहे काय? &emsp;&emsp;&emsp;
+                <label><input type="radio" name="certificate_yn" value="होय" required> होय</label> &emsp;
+                <label><input type="radio" name="certificate_yn" value="नाही" required> नाही</label>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="text" name="vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="कुटुंबातील मिळवत्या व्यक्तीचा व्यवसाय" /> 
+                    </div>
+                    <div class="col-md-5">
+                        <input type="number" name="income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="अंदाजे वार्षिक उत्पन्न" /> 
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;" required>अर्जदारास ओळखणाऱ्या दोन प्रतिष्ठीत व्यक्तींची नावे व त्यांचे पद :-
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row float-right">१)</label>
+                    </div>
+                    <div class="col-md-11">
+                      <input type="text" name="olakh1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row float-right">२)</label>
+                    </div>
+                    <div class="col-md-11">
+                      <input type="text" name="olakh2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;">या अर्जासोबत अर्जदाराचे स्वत:चे पासपोर्ट आकाराचे फोटो जोडले आहे काय ?  &emsp;&emsp;&emsp;
+                <label><input type="radio" name="photo_yn" value="होय" required> होय</label> &emsp;
+                <label><input type="radio" name="photo_yn" value="नाही" required> नाही</label>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराची शैक्षणिक पात्रता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="shaley_edu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शालेय शिक्षण शाळेचे नाव व पत्ता व त्या शाळेत झालेले शिक्षण"></textarea>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="technical_edu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="तांत्रिक अथवा व्यावसायीक शिक्षण संस्थेचे नाव मिळविलेल्या पदव्या अथवा पदविका"></textarea>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="other_edu" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="इतर शैक्षणिक पात्रता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="naukri_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="नौकरी विषयक अनुभव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="business_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="अर्जदाराचा स्वतंत्र उद्योग/व्यापाराचा अनुभव असल्यास तपशिल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="samaj_exp" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="सामाजिक अथवा सार्वजनिक कार्याचा अनुभव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;" required>राशन कार्ड आहे काय? &emsp;&emsp;&emsp;
+                <label><input type="radio" name="ration_yn" value="होय" required> होय</label> &emsp;
+                <label><input type="radio" name="ration_yn" value="नाही" required> नाही</label>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="arja_vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="अर्जदाराचे व्यवसाय कारखान्याचे नाव " /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vyavsay_swarup" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       required placeholder="अर्जदार करु इच्छीणाऱ्या उद्योग/व्यवसायाचे स्वरुप" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vyavsay_ghatna" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       required placeholder="व्यवसाय उद्योगाची घटना ( स्वत:तची मालकी / भागीदारी / सहकारी संस्था )" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="malak_bhagidar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="संस्था मालकचे भागीदाराचे नाव व कायम पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vyavsay_reason" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       required placeholder="प्रस्तावीत उद्योग/व्यवसायास निवडण्याचे कारण" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="bhandval" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="प्रस्तावित उद्योग/ व्यसायास लागणारे भांंडवल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="kayam_bhandval" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अ) कायम स्वरुपाचे भांडवल" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="khelte_bhandval" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="ब) खेळते भांडवल" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="yojna_tartud" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="प्रस्तावित उद्योग/व्यवसायावरील खर्च भागविण्यात आलेल्या योजनेची तरतुद" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="guntavlele_bhandval" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="सदर उद्योग/व्यवसाय सध्या गुंतवलेले भांडवल (तपशिलासह)"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group p-0 text-left" style="margin-bottom: 20px;" required>सदर उद्योग / व्यवसायचा प्रकल्प तयार केला आहे काय? &emsp;&emsp;&emsp;
+                <label><input type="radio" name="prakalp_yn" value="होय" required> होय</label> &emsp;
+                <label><input type="radio" name="prakalp_yn" value="नाही" required> नाही</label>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="samajkalyan_khate" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="समाज कल्याण खात्याकडुन अपेक्षित मदत बँकेने मंजुर केलेल्या कर्ज प्रकल्प रक्कमेच्या 20 टक्के" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="spardha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचा सदर उद्योग व्यवसायासाठी सध्या बाजारात असलेल्या स्पर्धा व त्याचा तपशील"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="mal_vikri" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="तयार होणाऱ्या मालाच्या विक्रीची व्यवस्था" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="other_help" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदारास सदर उद्योग / व्यवसाय उभारण्यास इतर उपलब्ध मदत" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="other_arza" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदारास उद्योग / व्यवसायाच्या मदतीसाठी इतर ठिकाणी अर्ज केला असल्यास त्याचा तपशिल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-left" style="word-spacing: 2px;">
+                &emsp;&emsp;&emsp;&emsp; मी प्रतिज्ञापुर्वक लिहुन देतो की या अर्जात दिलेली माहिती माझ्या माहितीनुसार खरी आहे. 
+                माझ्या कुटुंबातील एकुण वार्षिक उत्पन्न रु. 1,00,000/- पेक्षा कमी आहे. माझ्या कुटुंबातील 
+                एकही व्यक्ती सरकारी/निमसरकारी नौकरीत नाही तसेच माझ्या कुटुंबातील एकही व्यक्तीने यापुर्वी 
+                समाज कल्याण विभागाकडुन कोणत्याही योजनेचा आर्थिक लाभ घेतलेला नाही. तसेच मी कोणत्याही 
+                संस्थेचा आर्थिक थकबाकीदार नाही. मला मिळणाऱ्या कर्जाचा वापर मी याच कारणासाठी करीन याचा
+                दुरुपयोग झाल्यास संपुर्ण रक्कम मी व्याजासहीत परत करीन.
+              </p>
+              <p class="text-left" style="word-spacing: 2px;">
+                &emsp;&emsp;&emsp;&emsp; वरील माहिती खोटी आढळल्यास सामाजिक न्याय विभागाच्या नियमाप्रमाणे कायदेशीर कार्यवाहीस मी पात्र राहील.
+              </p>
+              <br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    <div class="col-md-1">
+                      <label class="form-group form-row float-right">स्थळ:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row">फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row">अर्जदाराची सही अथवा अंगठा:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="signature" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>      
+        
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+    function ShowHideDiv2() {
+        var chkYes2 = document.getElementById("chkYes2");
+        var dvPassport2 = document.getElementById("dvPassport2");
+        dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+    }
+  </script>
+  

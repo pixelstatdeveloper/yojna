@@ -1,0 +1,381 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+
+            <div class="form-header text-center">
+                <h4 style="margin-bottom: 10px;"><b>अनुसूचीत जाती / अनुसुचित जमाती सन २०२० - २०२१</b></h4>
+                <h6 style="margin-bottom: 5px;"><b>दुधाळ संकरीत गायी / म्हशी गट वाटप योजना लाभार्थीने करावयाच्या अर्जाचा नमुना</b></h6>
+            </div>
+
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>अर्जदाराचे नाव ( श्री. / श्रीमती. / कु. )</b> </label>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-group form-row">: {{up.name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row "><b>( फोटो ओळखपत्राची सत्यप्रत जोडावी ) :</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:150px!important;color:#fff"  href="/media/{{up.photo_id}}" target="blank"> ओळखपत्र पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon" >
+                    <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-group form-row"><b>पत्रव्यवहाराचा पत्ता:-</b></label>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>गावाचे नाव ( मु. पो. )</b> </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.mukampost}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>तालुका</b> </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.taluka}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label class="form-group form-row "><b>जि. नागपुर</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>पिनकोड</b> </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row">: {{up.pincode}}</label>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>संपर्कासाठी अर्जदाराचा दुरध्वनी / भ्रमणध्वनी क्रमांक</b> </label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-group form-row">: {{up.mobile_no}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>अर्जदाराचे वय (पुर्ण वर्षामध्ये)</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.age_year}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right"><b>लिंग</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.gender}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदार दारिद्रय रेषेखालील आहे काय?</b> </label>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-group form-row">: {{up.daridrya_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>अर्जदाराच्या मालकीची स्वतःची शेतजमीन आहे का?</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.shetjamin_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                        <label class="form-group form-row"><b>अर्जदाराकडे सध्या उपलब्ध असलेल्या पशुधनाचा तपशिल :</b></label>
+                    </div>
+                </div>
+                <div style="height:290px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th><b>अ क्र.</b></th>
+                          <th><b>तपशिल </b></th>
+                          <th><b>संख्या </b></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td><b>१)</b></td>
+                          <td><b>संकरीत गायी</b></td>
+                          <td><label class="form-group form-row"> {{up.sankarit_gayi}}</label></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td><b>२)</b></td>
+                          <td><b>गावठी गायी</b></td>
+                          <td><label class="form-group form-row"> {{up.gavthi_gayi}}</label></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td><b>३)</b></td>
+                          <td><b>शेतीकाम/ ओढकामाचे बैल</b></td>
+                          <td><label class="form-group form-row"> {{up.sheti_bail}}</label></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td><b> ४)</b></td>
+                          <td><b>मुऱ्हा / मेहसाना / सुरती म्हशी </b></td>
+                          <td><label class="form-group form-row"> {{up.murha_mhais}}</label></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदाराकडे गोठा उपलब्द आहे का?</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.gotha_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.gotha_yn == "होय" %}
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row"><b>असल्यास किती जनावरांसाठी</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.kiti_janavar}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row"><b>अर्जदाराने दुग्धोत्पादन / पशुपालने विषयक प्रशिक्षण घेतले आहे काय?</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.dughdautpadan_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.dughdautpadan_yn == "होय" %}
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>असल्यास प्रमाणपत्राची छायांकीत प्रत जोडावी:</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.dughdautpadan_cf}}" target="blank">प्रमाणपत्र पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-group form-row"><b>अर्जदार अनु. जाती / आदीवासी प्रवर्गातील आहे का?</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.anuadi_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.anuadi_yn == "होय" %}
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>असल्यास जातीच्या दाखल्याची प्रत जोडावी:</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.anuadi_cf}}" target="blank">प्रमाणपत्र पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदार बचत गटाचा सदस्य आहे काय?</b> </label>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-group form-row">: {{up.bachatgat_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.bachatgat_yn == "होय" %}
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <h6 class="text-left" style="margin-bottom: 10px;"><b>असल्यास</b></h6>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>बचत गटाचे नाव</b> </label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.bachatgat_name}}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>बचत गट पत्ता</b> </label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.bachatgat_address}}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row"><b>बचत गट ज्या क्षेत्रात काम करीत आहेत त्याचा उल्लेख करावा</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.bachatgat_shetra}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>अर्जदार सुशिक्षित बेरोजगार आहे काय?</b> </label>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-group form-row">: {{up.berozgar_yn}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% if up.berozgar_yn == "होय" %}
+              <div class="form-group">
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-7">
+                        <label class="form-group form-row"><b>असल्यास सेवायोजन कार्यालयाच्या नोंदणीपत्राची प्रत जोडावी : </b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.sevayojna_cf}}" target="blank">नोंदणीपत्र पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+
+              <p class="text-left" style="word-spacing: 3px;">
+                <b>या योजनेअंतर्गत माझे प्रकरण मंजुर झाल्यास त्या दिनांकापासुन एक महिन्याच्या कालावधीत 
+                लाभार्थी हिश्याची रक्कम मी स्वतः उभी करण्यांस हमी देत आहे / बँकेकडुन कर्ज मंजुर करून   
+                घेण्याची जबाबदारी माझेवर राहील. माझा हिश्याची रक्कम मी उभारल्याशिवाय मला मिळणार नाही 
+                याची मला जाणीव आहे.</b>
+              </p>
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>कर्जसाठी बँकेचे नाव</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.bank_name}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>शाखा</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.bank_branch}}</label>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <b> प्रमाणित करतो / करते की वर नमुद केलेली माहिती पुर्णपणे सत्य आहे . या माहितीमध्ये कोणतीही 
+                असत्यता आढळल्यास त्यांची संपुर्ण जबाबदारी माझ्यावर राहील व त्यामुळे मी उक्त योजनेचा लाभ 
+                मिळण्यास अपात्र ठरते  अथवा मला योजनेखाली मंजुर करण्यांत आलेल्या लाभाची वसुली माझेकडुन 
+                करण्यांत येईल याची मला जाणीव आहे व त्याची माझी पुर्ण संमती आहे.</b>
+              </p>
+              <br>
+
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1 text-left">
+                        <label class="form-group form-row "><b>फोटो:</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.photo}}" target="blank">फोटो पहा </a></label>
+                    </div>
+                    <div class="col-md-5 text-left">
+                        <label class="form-group form-row float-right"><b>अर्जदाराची सही / अंगठा:</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                            style="width:100%!important;color:#fff"  href="/media/{{up.sign}}" target="blank">सही पहा</a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+  </div>
+  </div>
+  </div>
+
+

@@ -1,0 +1,521 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+
+            <div class="form-header text-center">
+                <h6 style="margin-bottom: 5px;"><b>सरस्वती बहुउद्देशिय समाज शिक्षण संस्था, कळमेश्वर       द्वारा संचालित ( र. नं. महा/ ३३६/ ९१ नाग. ) </b></h6>
+                <h5 style="margin-bottom: 5px;"><b>अनुदानीत आदिवासी प्राथ. व माध्य. आश्रमशाळा,</b></h5>
+                <h5 style="margin-bottom: 5px;"><b>खापरी, त. कळमेश्वर, जि. नागपूर. </b></h5>
+                <h6 style="margin-bottom: 5px;"><b>( महाराष्ट्र शासन आदिवासी विकास विभाग मान्यता प्राप्त ) </b></h6>
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-center">
+                        <h5 ><b>प्रवेश अर्ज</b></h5>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>विद्यार्थी / विद्यार्थिनीचे पूर्ण नाव ( प्रथम आडनाव  )</b> </label>
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-group form-row">: {{up.name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>वडीलांचे / पालकाचे नाव</b> </label>
+                    </div>
+                    <div class="col-md-5 text-left">
+                        <label class="form-group form-row">: {{up.father_palak}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>नाते</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.nate}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>वडीलांचे शिक्षण</b> </label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.father_edu}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>आईचे पूर्ण नाव</b> </label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.mother_name}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>आईचे शिक्षण</b> </label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.mom_edu}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>जात</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.jat}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>पोटजात</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.potjat}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>धर्म</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.dharma}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>लिंग</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.gender}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>राष्ट्रीयत्व</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.nationality}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row"><b>जन्मतारीख (अंकात)</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.birthdate}}</label>
+                    </div>
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row"><b>जन्मतारीख (अक्षरी)</b></label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.birth_letter}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>मुळचा पत्ता:</b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>मु.</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.mukam}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>पो.</b> </label>
+                    </div>
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row">: {{up.post}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>ता.</b> </label>
+                    </div>
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row">: {{up.taluka}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>जि.</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.jilha}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>फोन नं.</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.mobile}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>हल्लीचा पत्ता:</b></label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>मु.</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.mukam2}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>पो.</b> </label>
+                    </div>
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row">: {{up.post2}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>ता.</b> </label>
+                    </div>
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row">: {{up.taluka2}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>जि.</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.jilha2}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>फोन नं.</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.mobile2}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>मातृभाषा</b> </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.language}}</label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row"><b>कोणत्या वर्गात प्रवेश</b> </label>
+                  </div>
+                  <div class="col-md-4">
+                      <label class="form-group form-row">: {{up.std}}</label>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>प्रवेश घेण्याचे कारण</b> </label>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-group form-row">: {{up.reason}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5">
+                        <label class="form-group form-row"><b>कोणत्या वर्गाची परिक्षा पास केली तो वर्ग</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.passed}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>वर्ष</b> </label>
+                    </div>
+                    <div class="col-md-3 text-left">
+                        <label class="form-group form-row">: {{up.year}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>गुणांची टक्केवारी</b> </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.percent}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>श्रेणी</b> </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.grade}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>वडीलांचे वार्षिक उत्पन्न</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.income}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>धंदा</b> </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-group form-row">: {{up.business}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row"><b>कुटूंबातील व्यक्ती</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.kutumb}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>शिकणारी मुले</b> </label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row">: {{up.student}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                मी खालील सही करणार पालक अशी हमी देतो /  देते, की वरील माहिती व अगदी बरोबर आहे. 
+                मला व माझ्या पाल्याला शाळेने, वसतीगृहाने, संस्थेने व शासनाने घालुन दिलेले नियम मान्य आहेत. 
+                यांचे उल्लंघन माझ्या पाल्याकडून झाल्यास तसेच त्याला शाळेमधुन व वसतिगृहामधून मिळालेल्या वस्तुची योग्य 
+                निगा राखण्याची त्याची स्वतःची जबाबदारी असुन त्या गहाळ झाल्यास तो व मी स्वतः जबाबदार राहील. 
+                त्याची भरपाई माझ्या कडुन करण्यास माझी हरकत राहणार नाही.
+              </p>
+              <br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>दिनांक</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.date}}</label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"><b>ठिकाण</b></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row">: {{up.place}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>पासपोर्ट फोटो :</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                            style="width:100%!important;color:#fff" href="/media/{{up.photo}}"  target="blank"> फोटो पहा </a></label>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-group form-row float-right"><b>आवेदक स्वाक्षरी / पालक स्वाक्षरी :</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                            style="width:100%!important;color:#fff" href="/media/{{up.sign}}"  target="blank"> सही पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              
+              <h5 ><b><u>पालकाचा दाखला</u></b></h5>
+              <br>
+
+              <p class="text-left" style="word-spacing: 3px;">
+                मी पालक श्री / श्रीमती / गं.भ. <label><b> {{up.palak}}</b></label>
+                मु. <span><label><b> {{up.mukam3}}</b></label></span>
+                पो. <span><label><b> {{up.post3}}</b></label></span>
+                ता. <label><b> {{up.taluka3}}</b></label>
+                जि. <span><label><b> {{up.jilha3}}</b></label></span>
+                येथील रहिवासी आहे. माझी जन्मजात <label><b> {{up.janmjat}}</b></label>
+                ही आहे. मी माझ्या मुलास / मुलीस / पाल्यास नामे <span><label><b> {{up.palya}}</b></label></span>
+                वर्ग <span><label><b> {{up.std3}}</b></label></span>
+                मध्ये आपल्या शाळेत प्रवेश देऊ इच्छितो. माझ्या पाल्याने गैरवर्तणुक केल्यास किंवा शाळेतील 
+                नियम मोडून शिस्तभंग केल्यास योग्य त्या शासकीय व संस्थेने केलेल्या कार्यवाहीस तो पात्र ठरेल. 
+                त्याच्या कडून शाळेतील वसतीगृहातील कोणत्याही प्रकारच्या वस्तू हरविल्यास अथवा गाहाळ झाल्यास 
+                त्याची भरपाई माझ्या कडून योग्य भरपाई माझ्या कडून योग्य किंमतीने वसुल करण्याचा अधिकार 
+                शाळा प्रमुखास राहील. 
+              </p>
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <h6 class="text-left" style="margin-bottom: 15px;"><b>साक्षीदार</b></h6>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>१)</b> </label>
+                    </div>
+                    <div class="col-md-11">
+                      <label class="form-group form-row">: {{up.saksh1}}</label>
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>२)</b> </label>
+                    </div>
+                    <div class="col-md-11">
+                      <label class="form-group form-row">: {{up.saksh2}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row"><b>पालकाचे नाव</b> </label>
+                    </div>
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row">: {{up.palak_nav}}</label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="form-group form-row"><b>सही:</b></label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:100%!important;color:#fff" href="/media/{{up.palak_sahi}}"  target="blank"> सही पहा </a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              
+              <h5 ><b><u>नियमावली</u></b></h5>
+              <br>
+              <div class="text-left">
+                <ol>
+                <li> शाळेच्या नियमाचे पालन करणे विद्यार्थी व पालकांना बंधनकारक राहील.</li>
+                <li> सतत शाळेत गैरहजर राहील्यास शाळेतुन व वसतीगृहातुन कमी करण्यात येईल.</li>
+                <li> पोळा , दिवाळी, होळी याच सणाला सुट्टी मिळेल. वर्ग शिक्षक (अधिक्षक/मुख्याध्यापक) यांच्या परवानगीने सुट्टी मिळेल. </li>
+                <li> वरील सणाच्या सुट्ट्या संपल्यावर लगेच विद्यार्थ्याना शाळेत त्वरीत हजर होणे बंधनकारक राहील.</li>
+                <li> पालकांनी पाल्याला भेटायला आल्यास त्यांनी आपल्या मुलाला कार्यालयातच भेटावे.</li>
+                <li> विद्यार्थ्यांना प्रवेशपुर्ण चाचणी घेतल्यानंतर तो उत्तीर्ण झाल्यास प्रवेश देण्यात येईल.</li>
+                <li> विद्यार्थ्याला काही आजार असल्यास त्याची पुर्वसूचना कार्यालयाला द्यावी. </li>
+                <li> नमुद केलेल्या नातेवाईकाशिवाय इतर कोणालाही भेटण्याची परवानगी राहणार नाही.</li>
+                <li> विद्यार्थी व विद्यार्थीनीने गैरवर्तन केल्यास त्याचे नाव शाळेतून तात्काळ कमी करण्यात येईल.</li>
+                <li> विद्यार्थ्यांना शाळा व वसतीगृहाच्या परिसराच्या बाहेर परवानगी शिवाय जाता येणार नाही.</li>
+                <li> पालक आल्याशिवाय गावाला जाण्याची परवानगी मिळणार नाही.</li>
+              </div>
+
+              <p class="text-left" style="word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                वरील सर्व नियम मी वाचून व समजून घेतले आहे. व ते मला मान्य आहे. 
+                माझ्या किंवा माझ्या पाल्याकडून काही कसुर झाल्यास आम्ही कार्यवाहीत पात्र राहू. 
+              </p><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1">
+                      <label class="form-group form-row"><b>दिनांक:</b></label>
+                    </div>
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row">: {{up.dinank}}</label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right"><b>ठिकाण</b></label>
+                    </div>
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row">: {{up.thikan}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label class="form-group form-row"><b>विद्यार्थी स्वाक्षरी :</b></label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                        style="width:100%!important;color:#fff" href="/media/{{up.vidyarthi_swaksh}}"  target="blank"> स्वाक्षरी पहा </a></label>
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right"><b>पालक स्वाक्षरी :</b></label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font" 
+                      style="width:100%!important;color:#fff" href="/media/{{up.palak_swaksh}}"  target="blank"> स्वाक्षरी पहा </a></label>
+                  </div>
+                  </div>
+                </div>
+              </div>
+  </div>
+  </div>
+  </div>
+

@@ -1,0 +1,379 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:mgreshim' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            <div class="form-header text-center">
+                <h5 style="margin-bottom: 5px;"><b>महाराष्ट्र शासन</b></h5>
+                <h6 style="margin-bottom: 5px;"><b>जिल्हा रेशीम कार्यालय, <span><input type="text" name="jilha" required placeholder="जिल्हा"></span> </b></h6>
+                <h6 style="margin-bottom: 5px;"><b>महारेशीम अभियान- 2021 अंतर्गत रेशीम उद्योगाकरीता नाव नोंदणी नमुना फॉर्म.</b></h6>
+            </div>
+            <br/>
+            <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-9 text-left">
+                        <label class="form-group form-row float-right">दिनांक:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; मा. रेशीम विकास अधिकारी श्रेणी -1/2, </h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; जिल्हा रेशीम कार्यालय,</h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; <span><input type="text" name="jilha2" required placeholder="जिल्हा"></span></h6>
+              <br>
+              <h6 class="text-center"><b>विषय :-</b> महारेशीम अभियान -2021 अंतर्गत रेशीम उद्योग सुरू करण्याकरीता  नोंदणी करणे बाबत. </h6><br>
+              <p class="text-left">महोदय ,</p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                उपरोक्त विषयांस अनुसरून मी चालु वर्षी सन 2020-21 मध्ये रेशीम उद्योग करण्यासाठी इच्छुक 
+                असून महारेशीम अभीयान-2021 अंतर्गत तुती लागवड करण्यासाठी नाव नोंदणी करीत आहे, माझी 
+                वैयक्तीक माहिती खालील प्रमाणे आहे.
+              </p>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">योजना नाव:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <select name="yojna" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                        <option value="">योजना</option>
+                        <option value="मग्रारोहयो ">मग्रारोहयो</option>
+                        <option value="पोकरा">पोकरा</option>
+                        <option value="सिल्क समग्र">सिल्क समग्र</option>
+                        <option value="ईतर">ईतर</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <select name="gender" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                          color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                        <option value="">लिंग</option>
+                        <option value="स्त्री ">स्त्री </option>
+                        <option value="पुरुष">पुरुष</option>
+                        <option value="अतिरिक्त">अतिरिक्त</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="number" name="birthyear" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जन्म वर्ष" />
+                    </div>
+                    <div class="col-md-4">
+                      <select name="jat" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                          color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                        <option value="">जात</option>
+                        <option value="अनुसूचित जाती">अनुसूचित जाती </option>
+                        <option value="अनुसूचित जमाती">अनुसूचित जमाती</option>
+                        <option value="इतर">इतर</option>
+                      </select>
+                    </div>                   
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">पत्ता:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="mukam" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="मु. पो." /> 
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="taluka" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="तालुका" /> 
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" name="dist" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="जिल्हा" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="mobile_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="मोबाईल नं." />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="number" name="adhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आधार क्र." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="education" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शिक्षण" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-7">
+                      <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँकेचे नाव" />
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शाखा" />
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="number" name="acc_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="खाते क्रमांक" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="आय.  एफ.एस. सी. कोड  नंबर " />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                 <div class="row">
+                  <div class="col-md-6">
+                    <select name="land_type" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                      <option value="">जमिनीचा प्रकार </option>
+                      <option value="हलकी">हलकी</option>
+                      <option value="मध्यम ">मध्यम </option>
+                      <option value="भारी ">भारी </option>
+                   </select>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" name="gat_712" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                      required placeholder="7/12 गट क्रमांक" />
+                  </div>
+                 </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="ekun_shetra" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="8 अ वरील एकुण क्षेत्र (हे. आर.)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row" style="margin-bottom: 0px;">
+                    <div class="col-md-12 text-left">
+                        <label class="form-group form-row">घेत असलेली इतर पिके :-</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 text-left">
+                      <input type="text" name="pik1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="१)" />
+                    </div>
+                    <div class="col-md-3 text-left">
+                      <input type="text" name="pik2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="२)" />
+                    </div>
+                    <div class="col-md-3 text-left">
+                      <input type="text" name="pik3" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="३)" />
+                    </div>
+                    <div class="col-md-3 text-left">
+                      <input type="text" name="pik4" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="४)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="acre" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="तुती लागवड करावयाचे क्षेत्र (एकर)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                 <div class="row">
+                  <div class="col-md-6">
+                    <select name="sinchan_src" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                      <option value="">सिंचनाची व्यवस्था </option>
+                      <option value="विहीर">विहीर</option>
+                      <option value="बोअरवेल">बोअरवेल </option>
+                      <option value="कॅनॉल">कॅनॉल</option>
+                      <option value="ईतर">ईतर</option>
+                   </select>
+                  </div>
+                  <div class="col-md-6">
+                    <select name="sinchan_time" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                      <option value="">सिंचन कालावधी</option>
+                      <option value="बारमाही">बारमाही</option>
+                      <option value="हंगामी">हंगामी</option>
+                   </select>
+                  </div>
+                 </div>
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">विहीर / बोअरवेल करीता विज जोडणी आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="vijjodni_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="vijjodni_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">किटक संगोपन गृह व्यवस्था आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="kitak_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="kitak_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 10px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">मजुर उपलब्धता आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="majur_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="majur_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                 <div class="row">
+                  <div class="col-md-6">
+                    <select name="shetkari_varg" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                      <option value="">शेतकरी वर्गवारी</option>
+                      <option value="लहान">लहान</option>
+                      <option value="मध्यम">मध्यम </option>
+                      <option value="मोठा">मोठा</option>
+                   </select>
+                  </div>
+                 </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 40px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-7 form-group text-left">दारिद्रय रेषेखाली आहे का?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="daridrya_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="daridrya_yn" value="नाही" required> नाही</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="bpl_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="बी.पी.एल कार्ड नंबर" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">नोंदणी फी रु. 500 /- भरण्यास व मी स्वतः रोपवाटिका करण्यास तयार आहे का?  &emsp;&emsp;&emsp;
+                        <label><input type="radio" name="ropvatika_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="ropvatika_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-left" style="font-weight: 500; word-spacing: 3px;">
+                श्री <span><input type="text" name="nam" required /></span> पदनाम 
+                <span><input type="text" name="padnam" required/></span> कडुन मला रेशीम 
+                उद्योग योजनेची सर्व माहिती मिळालेली आहे. मी रेशीम उदयोग करण्यास समर्थ आहे व 15 सप्टेंबर 
+                पुर्वी तुती लागवड करून कार्यालयास नोंद  देण्याची जबाबदारी माझी राहील. तेव्हा मला रेशीम उदयोग 
+                करण्यास जिल्हा रेशीम कार्यालय,
+                <span><input type="text" name="karyalay" required/></span> यांनी मदत करावी. 
+                या उद्योगात काहि अपरिहार्य कारणास्तव माझेकडुन काही नुकसान झाल्यास त्या होणाऱ्या नुकसानीस मी 
+                स्वतः जबाबदार राहील.
+              </p>
+              <p class="text-left" style="font-weight: 500; word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                नोंदणी रक्कम भरले नंतर कोणत्याही कारणास्तव रक्कम मला परत मिळणार नाही याची मला कल्पना 
+                आहे, तसेच तुती बेने / तुती रोपे खरेदी करण्याची जबाबदारी माझी राहील. मी हा उदयोग सुरू करू 
+                इच्छित असून तुती लागवड केल्यानंतर या उद्योगाचे परिपुर्ण प्रशीक्षण घेण्याची जबाबदारी माझी राहील, 
+                तसेच योजने अथवा निधी अभावी मला अनुदान न मिळाल्यास माझी काही तक्रार राहणार नाही याची मला 
+                कल्पना आहे.
+              </p>
+              <p class="text-left" style="font-weight: 500; word-spacing: 3px;"> &emsp;&emsp;&emsp;&emsp;
+                तरी मला महारेशीम अभीयान -2021 अंतर्गत रेशीम उद्योग करण्यास नाव नोंदणी  करण्यास मान्यता दयावी हि विनंती.
+              </p>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 form-group">
+                      <label class="form-group form-row float-right">आपला विश्वासु</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-group form-row ">शेतकरी सही/अंगठा ठसा :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="shetkari_sign" class="form-control" required />
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="shetkari_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="शेतकरी नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+       
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+

@@ -1,0 +1,1289 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:rsmscholar' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+               <div class="form-header text-center">
+                <h4> -अर्जाचा नमुना- </h4>
+                <h5>अनुसूचित जातीच्या मुलामुलींना परदेशात विशेष अध्ययन करण्यासाठी राजर्षी </h5>
+                <h5>शाहू महाराज शिष्यवृत्ती योजना सन २०१९- २०२० साठी अर्ज</h5>
+               </div>
+                
+              <br/>
+              <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500;"><b>&emsp;&emsp; मा.आयुक्त, </b></h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; समाज कल्याण आयुक्तालय,</h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; महाराष्ट्र राज्य, ३, चर्च पथ, पुणे - ४११००१</h6>
+              <br>
+
+              <div class="text-center">
+                <h6 style="font-weight: 500;"><b> विषय :- </b>अनुसूचित जातीच्या मुलामुलींना परदेशात विशेष अध्ययन करण्यासाठी राजर्षी शाहू महाराज शिष्यवृत्ती योजनेसाठी अर्ज सादर करणेबाबत…( सन २०१९- २०२०) </h6>
+              </div><br>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;"> महोदय,</h6>
+              <h6 class=" text-left " style="font-weight: 500; word-spacing: 2px;">&emsp;&emsp;&emsp;
+                अनुसूचित जातीच्या मुलामुलींना परदेशात विशेष अध्ययन करण्यासाठी राजर्षी शाहू महाराज शिष्यवृत्ती 
+                योजना या योजनेअंतर्गत शिष्यवृत्ती मिळण्यासाठी मी माझी वैयक्तिक व कुटुंबाची माहिती या अर्जाद्वारे 
+                खालीलप्रमाणे सादर करीत असून मला सदर शिष्यवृत्ती मंजूर करण्यात यावी , अशी विनंती आहे.
+              </h6><br><br>
+
+              <h5 class="text-left" style="margin-bottom: 10px;">अर्जदाराची सर्वसाधारण माहिती:-</h5>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचे संपूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-5 text-left">
+                        <label class="form-group form-row">ज्या अभ्यासक्रमासाठी दावा करू इच्छितो त्या अभ्यासक्रमाचा प्रकार :</label>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="edu_type" class="form-control" required>
+                          <option value="">PG/PHD</option>
+                          <option value="PG">PG</option>
+                          <option value="PHD">PHD</option>
+                         </select>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <input type="text" name="edu_branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="शाखा" />
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4 text-left">
+                        <label class="form-group form-row">या पैकी लागु असेल ते नमुद करावे:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="other_edu" class="form-control" required>
+                          <option value="">अभ्यासक्रम</option>
+                          <option value="कला">कला</option>
+                          <option value="वाणिज्य">वाणिज्य</option>
+                          <option value="विज्ञान">विज्ञान</option>
+                          <option value="व्यवस्थापन">व्यवस्थापन</option>
+                          <option value="अभियांत्रिकी">अभियांत्रिकी</option>
+                          <option value="वैद्यकीय">वैद्यकीय</option>
+                          <option value="विधी">विधी</option>
+                         </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पत्र व्यवहाराचा पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="mob_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="भ्रमणध्वनी क्रमांक" /> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="jat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यार्थाची जात" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2 text-left">
+                        <label class="form-group form-row">जन्म तारीख </label>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">अंकामध्ये :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="date" name="birthdate_ank" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="birthdate_akshar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अक्षरी" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-4">
+                        <label class="form-group form-row">दि . १ मे, २०१९ रोजीचे वय :</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="वर्ष" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <input type="email" name="email_id" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="विद्यार्थांचा ई-मेल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <input type="number" name="adhar_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="विद्यार्थांचा आधार (AADHAR) क्रमांक / नोंदणी क्रमांक" /> 
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-group form-row float-right">सोबत प्रत जोडावी:</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="file" name="adhar_prat" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="pan_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          required placeholder="विद्यार्थांचा PAN क्रमांक" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;">
+                <div class="input-icon">
+                  <div class="row">
+                      <div class="col-md-12 form-group text-left">महाराष्ट्र राज्याचा रहिवासी आहे काय? &emsp;&emsp;&emsp;
+                        <label><input type="radio" name="mahavasi_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="mahavasi_yn" value="नाही" required> नाही</label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <h6 class=" text-left" style="font-weight: 500; word-spacing: 2px;">
+                शैक्षणिक स्थिती / पात्रता  माहिती-टिप CGPA / GPA Conversion प्रमाणपत्राचे आधारे टक्केवारी नमुद 
+                करणे व ते जोडलेले नसल्यास अपात्र ठरविण्यात येईल. 
+              </h6>
+             <div style="height:490px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>परीक्षेचे नांव</th>
+                      <th>उत्तीर्ण अभ्यासक्रमाचे नांव</th>
+                      <th>परीक्षा उत्तीर्ण झाल्याचे वर्ष</th>
+                      <th>उत्तीर्ण झालेल्या शैक्षणिक संस्थेचे नांव व विद्यापीठाचे नांव</th>
+                      <th>विद्यापीठाचे एकूण गुण</th>
+                      <th>प्राप्त केलेले गुण</th>
+                      <th>गुणांची टक्केवारी Grade / GPA etc असल्यास टक्केवारी दर्शविलेले प्रमाणपत्र जोडणे</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>SSC</td>
+                      <td><input type="text" name="ssc_abhyaskram"/></td>
+                      <td><input type="number" name="ssc_passyear"/></td>
+                      <td><input type="text" name="ssc_institute"/></td>
+                      <td><input type="number" name="ssc_totalmarks"/></td>
+                      <td><input type="number" name="ssc_obtainmarks"/></td>
+                      <td><input type="text" name="ssc_takke"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>HSC</td>
+                      <td><input type="text" name="hsc_abhyaskram"/></td>
+                      <td><input type="number" name="hsc_passyear"/></td>
+                      <td><input type="text" name="hsc_institute"/></td>
+                      <td><input type="number" name="hsc_totalmarks"/></td>
+                      <td><input type="number" name="hsc_obtainmarks"/></td>
+                      <td><input type="text" name="hsc_takke"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>पदवी</td>
+                      <td><input type="text" name="padvi_abhyaskram"/></td>
+                      <td><input type="number" name="padvi_passyear"/></td>
+                      <td><input type="text" name="padvi_institute"/></td>
+                      <td><input type="number" name="padvi_totalmarks"/></td>
+                      <td><input type="number" name="padvi_obtainmarks"/></td>
+                      <td><input type="text" name="padvi_takke"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>पदव्युत्तर / पदवी / पद पदव्युत्तर पदविका</td>
+                      <td><input type="text" name="padvika_abhyaskram"/></td>
+                      <td><input type="number" name="padvika_passyear"/></td>
+                      <td><input type="text" name="padvika_institute"/></td>
+                      <td><input type="number" name="padvika_totalmarks"/></td>
+                      <td><input type="number" name="padvika_obtainmarks"/></td>
+                      <td><input type="text" name="padvika_takke"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>GRE</td>
+                      <td><input type="text" name="gre_abhyaskram"/></td>
+                      <td><input type="number" name="gre_passyear"/></td>
+                      <td><input type="text" name="gre_institute"/></td>
+                      <td><input type="number" name="gre_totalmarks"/></td>
+                      <td><input type="number" name="gre_obtainmarks"/></td>
+                      <td><input type="text" name="gre_takke"/></td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>TOEFL / IELTS </td>
+                        <td><input type="text" name="toefl_abhyaskram"/></td>
+                        <td><input type="number" name="toefl_passyear"/></td>
+                        <td><input type="text" name="toefl_institute"/></td>
+                        <td><input type="number" name="toefl_totalmarks"/></td>
+                        <td><input type="number" name="toefl_obtainmarks"/></td>
+                        <td><input type="text" name="toefl_takke"/></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="विद्यार्थ्याचा व्यवसाय" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="naukri" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="नोकरी करीत असल्यास नोकरीचा तपशील" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="hudda" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="हुद्दा / पदनाम" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="vn_income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="अर्जदारास व्यवसाय / नोकरीमधून मिळणारे वार्षिक उत्पन्न" /> 
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-group form-row float-right">पुरावा जोडावा:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="file" name="inc_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;">
+                <div class="input-icon">
+                  <div class="row">
+                      <div class="col-md-12 form-group text-left">कार्यालयाचे ना हरकत प्रमाणपत्र जोडले आहे काय? &emsp;&emsp;&emsp;
+                        <label><input type="radio" name="noc_yn" value="होय" > होय </label>  &emsp;
+                        <label><input type="radio" name="noc_yn" value="नाही" > नाही</label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="karyalay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                       placeholder="विद्यार्थ्यांच्या कार्यालयाचा पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="office_number" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="विद्यार्थ्यांच्या कार्यालयाचा दूरध्वनी क्रमांक" /> 
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" name="office_email" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="विद्यार्थ्याच्या कार्यालयाचा ई-मेल" /> 
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">वैवाहिक स्थिती &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="married" id="chkYes1" onclick="ShowHideDiv1()" value="विवाहित" required> विवाहित </label>  &emsp;
+                        <label><input type="radio" name="married" id="chkNo1" onclick="ShowHideDiv1()" value="अविवाहित" required> अविवाहित</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport1" style="display: none" >
+                <div class="input-icon" >
+                  <h6 class="text-left" style="margin-bottom: 10px;">विवाहित असल्यास</h6>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="husband_wifename" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="पती किंवा पत्नीचे नाव" /> 
+                    </div>
+                  </div>
+                  <h6 class="text-left" style="margin-top: 10px; margin-bottom: 10px;">&emsp;&emsp;&emsp;&emsp; मुलांची नावे</h6>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="child1" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="१)" /> 
+                    </div>
+                  </div>
+                  <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="child2" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                           placeholder="2)" /> 
+                    </div>
+                  </div>
+                  <div class="row" style="margin-top: 10px;">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11 form-group" style="text-align: left;"> त्यांना सोबत घेवून जाणार का? &emsp;&emsp;
+                      <label><input type="radio" name="sobat_yn" value="होय" > होय </label>  
+                      <label><input type="radio" name="sobat_yn" value="नाही" > नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="text-left">विद्यार्थ्याच्या आधार संलग्न भारतातील बँक खात्याची माहिती :-</h6><br>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="acholder_nm" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="खातेदाराचे नाव" /> 
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-7">
+                      <input type="text" name="bank_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँकेचे नाव" /> 
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="branch" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="बँक शाखेचे नाव" /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                      <input type="number" name="acc_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="खाते क्रमांक" /> 
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text" name="ifsc" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="IFSC क्र." /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="micr" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="MICR क्र." /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="passport_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पासपोर्ट क्रमांक" /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">जारी दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="issue_date" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">वैधता दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="end_date" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="offerletter_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यापीठाचे ऑफर लेटर क्र." /> 
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">व दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="offerletter_date" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">ऑफर लेटर विनाअट / अटीसहीत (नमूद करावे) &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="at_vinaat" id="chkYes2" onclick="ShowHideDiv2()" value="अटीसहीत" required> अटीसहीत </label>  &emsp;
+                        <label><input type="radio" name="at_vinaat" id="chkNo2" onclick="ShowHideDiv2()" value="विनाअट" required> विनाअट</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport2" style="display: none" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12" >
+                      <input type="text" name="konti_at" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="ऑफर लेटर अटीसह  असल्यास कोणती अट आहे? ते नमूद करावे." /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="abyaskram" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="ऑफर लेटरमधील अभ्यासक्रम" /> 
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">यापुर्वी आपण राज्य किंवा केंद्र शासनाच्या परदेश शिष्यवृत्तीचा लाभ घेतला आहे काय? &emsp;&emsp;
+                        <label><input type="radio" name="labh_yn" id="chkYes3" onclick="ShowHideDiv3()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="labh_yn" id="chkNo3" onclick="ShowHideDiv3()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport3" style="display: none" >
+                <div class="input-icon">
+                  <h6 class="text-left">असल्यास</h6><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11" >
+                      <input type="text" name="year" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="वर्ष" /> 
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11" >
+                      <input type="text" name="sanstha" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="परदेशातील शैक्षणिक संस्थेचे नाव व देश" /> 
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11" >
+                      <input type="text" name="abhyaskram_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="अभ्यासक्रमाचे नाव" /> 
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11" >
+                      <input type="text" name="abhyaskram_validity" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="अभ्यासक्रमाचा कालावधी" /> 
+                    </div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11" >
+                      <input type="text" name="shishyavrutti" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="मिळालेली शिष्यवृत्तीची रक्कम" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h5 class="text-left" style="margin-bottom: 10px;">अर्जदाराच्या पालकांची सर्वसाधारण माहिती:-</h5>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="palak_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यार्थ्याच्या पालकाचे संपूर्ण नांव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="palak_address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पालकांचा निवासस्थानाचा पूर्ण पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="palak_mob" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="संपर्काचा दूरध्वनी क्रमांक ( एस. टी. डी. कोडसह / मोबाईल क्रमांक)" /> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" name="palak_email" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="ई-मेल पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="palak_vyavsay" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="विद्यार्थ्यांचा पालकांचा व्यवसाय" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="palak_naukri" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="पालक नोकरी करीत असल्यास नोकरीचा तपशील" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="palak_hudda" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="हुद्दा / पदनाम" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="number" name="palak_income" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पालकांस व्यवसाय नोकरीमधून मिळणारे वार्षिक उत्पन्न" /> 
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">पुरावा जोडावा:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="palakincome_cf" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="palak_officeadd" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="पालकांच्या कार्यालयाचा पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="palakoffice_mob" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="कार्यालयाचा दूरध्वनी क्रमांक (एस.टी.डी कोडसह)" /> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" name="palakoffice_email" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="कार्यालया ई-मेल पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h5 class="text-left" style="margin-bottom: 20px;">कुटुंबाचे सर्व मार्गानी मिळुन वार्षिक उत्पन्नाबाबतची माहिती :-</h5>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 text-left">
+                      <h6>
+                        कुटुंबातील सर्व व्यक्तीचे सन २०१८-१९ मधील सर्व मार्गाने मिळणारे एकूण उत्पन्न 
+                        (यामध्ये विद्यार्थी व कुटुंबात  इतर व्यक्ती नोकरी अथवा व्यवसाय करीत असल्यास 
+                        त्यांचे  एकत्रित उत्पन्न उत्पन्नाच्या दाखल्यात  नमूद करावे व त्याबाबतचे आयकर विवरणपत्र 
+                        अर्जासोबत सादर करावे. वडील हयात नसल्यास तसा अर्जात उल्लेख करून मृत्यूचा दाखला जोडणे 
+                        आवश्यक आहे किंवा विभक्त असल्यास तसे अर्जात नमूद करून त्याबाबतचे न्यायालयाचे कागदपत्र 
+                        जोडणे आवश्यक आहे):-
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-11 form-group text-left">वार्षिक उत्पन्न  <span><input type="text" name="yearly_income" required placeholder="रुपये"/></span>चा दाखला जोडलेले आहे काय? &emsp;&emsp;
+                      <label><input type="radio" name="yearincome_yn" id="chkYes4" onclick="ShowHideDiv4()" value="होय" required> होय </label>  &emsp;
+                      <label><input type="radio" name="yearincome_yn" id="chkNo4" onclick="ShowHideDiv4()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport4" style="display: none" >
+                <div class="input-icon">
+                  <div class="row"  >
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row">वार्षिक उत्पन्न जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="yearincome_cf" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-11 form-group text-left">आयकर विवरणपत्र  <span><input type="text" name="tax" required placeholder="रुपये"/></span> जोडलेले आहे काय? &emsp;&emsp;
+                      <label><input type="radio" name="tax_yn" id="chkYes5" onclick="ShowHideDiv5()" value="होय" required> होय </label>  &emsp;
+                      <label><input type="radio" name="tax_yn" id="chkNo5" onclick="ShowHideDiv5()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport5" style="display: none" >
+                <div class="input-icon">
+                  <div class="row"  >
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row">आयकर विवरणपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="tax_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">वडील हयात आहे / नाही? &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="vadil_yn" id="chkYes6" onclick="ShowHideDiv6()" value="नाही" required> नाही </label>  &emsp;
+                        <label><input type="radio" name="vadil_yn" id="chkNo6" onclick="ShowHideDiv6()" value="आहे" required> आहे</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport6" style="display: none" >
+                <div class="input-icon">
+                  <div class="row"  >
+                    <div class="col-md-4 text-left">
+                      <label class="form-group form-row">नसल्यास मृत्युचा दाखला जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="vadil_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 1px;">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">आई वडील विभक्त आहे काय? &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="nyayalay" id="chkYes7" onclick="ShowHideDiv7()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="nyayalay" id="chkNo7" onclick="ShowHideDiv7()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport7" style="display: none" >
+                <div class="input-icon">
+                  <div class="row"  >
+                    <div class="col-md-6 text-left">
+                      <label class="form-group form-row">असल्यास न्यायालयाचे संबंधित कागदपत्र जोडा:</label>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="file" name="nyayalay_cf" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h5 class="text-left" >विद्यार्थ्याच्या कुटुंबाची माहिती :- विद्यार्थ्याच्या माहितीसह (सोबत राशनकार्ड आवश्यक)</h5> <br>
+              <h6 class="text-left" style="margin-bottom: 10px;">विद्यार्थ्याच्या कुटुंबाचा तपशील :-</h6>
+              <div style="height:650px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>अ.क्र.</th>
+                      <th>संपूर्ण नांव </th>
+                      <th>वय </th>
+                      <th>विद्यार्थ्याशी असलेले नाते </th>
+                      <th>व्यवसाय </th>
+                      <th>एकूण वार्षिक उत्पन्न</th>
+                      <th>यापूर्वी राज्य / केंद्र शासनाच्या परदेश शिष्यवृत्तीचा लाभ घेतलेला आहे का ?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>१</td>
+                      <td><input type="text" name="sampurn_nav1"/></td>
+                      <td><input type="number" name="age1"/></td>
+                      <td>स्वतः</td>
+                      <td><input type="text" name="vyavsay1"/></td>
+                      <td><input type="number" name="income1"/></td>
+                      <td><input type="text" name="scholar_yn1"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>२</td>
+                      <td><input type="text" name="sampurn_nav2"/></td>
+                      <td><input type="number" name="age2"/></td>
+                      <td><input type="text" name="nate2"/></td>
+                      <td><input type="text" name="vyavsay2"/></td>
+                      <td><input type="number" name="income2"/></td>
+                      <td><input type="text" name="scholar_yn2"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td> ३</td>
+                      <td><input type="text" name="sampurn_nav3"/></td>
+                      <td><input type="number" name="age3"/></td>
+                      <td><input type="text" name="nate3"/></td>
+                      <td><input type="text" name="vyavsay3"/></td>
+                      <td><input type="number" name="income3"/></td>
+                      <td><input type="text" name="scholar_yn3"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>४</td>
+                      <td><input type="text" name="sampurn_nav4"/></td>
+                      <td><input type="number" name="age4"/></td>
+                      <td><input type="text" name="nate4"/></td>
+                      <td><input type="text" name="vyavsay4"/></td>
+                      <td><input type="number" name="income4"/></td>
+                      <td><input type="text" name="scholar_yn4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>५</td>
+                      <td><input type="text" name="sampurn_nav5"/></td>
+                      <td><input type="number" name="age5"/></td>
+                      <td><input type="text" name="nate5"/></td>
+                      <td><input type="text" name="vyavsay5"/></td>
+                      <td><input type="number" name="income5"/></td>
+                      <td><input type="text" name="scholar_yn5"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>६</td>
+                      <td><input type="text" name="sampurn_nav6"/></td>
+                      <td><input type="number" name="age6"/></td>
+                      <td><input type="text" name="nate6"/></td>
+                      <td><input type="text" name="vyavsay6"/></td>
+                      <td><input type="number" name="income6"/></td>
+                      <td><input type="text" name="scholar_yn6"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>७</td>
+                      <td><input type="text" name="sampurn_nav7"/></td>
+                      <td><input type="number" name="age7"/></td>
+                      <td><input type="text" name="nate7"/></td>
+                      <td><input type="text" name="vyavsay7"/></td>
+                      <td><input type="number" name="income7"/></td>
+                      <td><input type="text" name="scholar_yn7"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>८</td>
+                      <td><input type="text" name="sampurn_nav8"/></td>
+                      <td><input type="number" name="age8"/></td>
+                      <td><input type="text" name="nate8"/></td>
+                      <td><input type="text" name="vyavsay8"/></td>
+                      <td><input type="number" name="income8"/></td>
+                      <td><input type="text" name="scholar_yn8"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>९</td>
+                      <td><input type="text" name="sampurn_nav9"/></td>
+                      <td><input type="number" name="age9"/></td>
+                      <td><input type="text" name="nate9"/></td>
+                      <td><input type="text" name="vyavsay9"/></td>
+                      <td><input type="number" name="income9"/></td>
+                      <td><input type="text" name="scholar_yn9"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>१०</td>
+                      <td><input type="text" name="sampurn_nav10"/></td>
+                      <td><input type="number" name="age10"/></td>
+                      <td><input type="text" name="nate10"/></td>
+                      <td><input type="text" name="vyavsay10"/></td>
+                      <td><input type="number" name="income10"/></td>
+                      <td><input type="text" name="scholar_yn10"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>कुटुंबाचे एकून वार्षिक उत्पन्न</td>
+                      <td><input type="number" name="kutumb_income"/></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><br><br>
+              
+              <h6 class="text-left" style="margin-bottom: 10px;">विद्यार्थी वगळून कुटुंबातील इतर व्यक्तीने परदेश शिष्यवृत्ती योजनेचा लाभ घेतला असल्यास  :-</h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="pravesh_varsh" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="प्रवेशाचे वर्ष" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8">
+                      <input type="text" name="vidyapith" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="प्रवेश घेतलेले विद्यापीठ" /> 
+                    </div>
+                    <div class="col-md-3">
+                      <input type="text" name="desh" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="व देशाचे नाव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                      <input type="text" name="shasan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="महाराष्ट्र शासन / केंद्र शासन किंवा इतर राज्य " /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h5 class="text-left" style="margin-bottom: 15px;">परदेशातील शैक्षणिक संस्थेतील / विद्यापीठातील प्रवेशाबाबत माहिती :- </h5>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vidyapith_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यार्थ्याने प्रवेश घेतलेल्या परदेशातील विद्यापीठाचे नांव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="qsworld_rank" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="QS World University Ranking सन मे, २०१९ चे नमूद करावे" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <input type="text" name="vidyarthi_abhyas" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यार्थांने प्रवेश घेतलेल्या अभ्यासक्रमाचे नांव" /> 
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <select name="abhyas_swarup" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                         <option value="">अभ्यासक्रमाचे स्वरूप</option>
+                         <option value="पुर्णवेळ ">पुर्णवेळ </option>
+                         <option value="अर्धवेळ ">अर्धवेळ </option>
+                         <option value="Online ">Online </option>
+                         <option value="Executive">Executive</option>
+                     </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text" name="kalavadhi" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अभ्यासक्रमाचा किमान कालावधी" /> 
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-group form-row float-right">विद्यापीठ प्रवेश दिनांक :</label>
+                    </div>
+                    <div class="col-md-3">
+                      <input type="date" name="pravesh_dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" required/> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="pardesh_patta" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="परदेशातील विद्यापीठाच्या पत्रव्यवहाराचा संपूर्ण पत्ता" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="tel" name="pardesh_mob" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="परदेशातील विद्यापीठाचा दूरध्वनी क्रमांक (ISD कोडसह)" /> 
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" name="pardesh_email" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="परदेशातील विद्यापीठाचा ई-मेल" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <h5 class="text-left" style="margin-bottom: 15px;">ऑफर लेटर / I- २० नुसार परदेश शिक्षणासाठीचा खर्च :- </h5>
+              <div style="height:620px;overflow:auto;">
+                <table class="table table-bordered table-striped table-hover main_bany_text">
+                  <thead>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th rowspan="2">विद्यार्थ्याने परदेशातील अभ्यासक्रमासाठी भरलेल्या / भरावयाच्या फी (शुल्क) चा तपशील</th>
+                      <th colspan="2">एका वर्षाचा खर्च</th>
+                      <th colspan="2">संपूर्ण अभ्यासक्रमाचा खर्च</th>
+                    </tr>
+                    <tr class="text-center" style="font-size:14px;">
+                      <th>विदेशी चलनात </th>
+                      <th>भारतीय चलनात( १)</th>
+                      <th>विदेशी चलनात </th>
+                      <th>भारतीय चलनात (१)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td>शिक्षण फी</td>
+                      <td><input type="text" name="shikshan1"/></td>
+                      <td><input type="text" name="shikshan2"/></td>
+                      <td><input type="text" name="shikshan3"/></td>
+                      <td><input type="text" name="shikshan4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>परीक्षा फी</td>
+                      <td><input type="text" name="pariksha1"/></td>
+                      <td><input type="text" name="pariksha2"/></td>
+                      <td><input type="text" name="pariksha3"/></td>
+                      <td><input type="text" name="pariksha4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>नोंदणी फी</td>
+                      <td><input type="text" name="nondni1"/></td>
+                      <td><input type="text" name="nondni2"/></td>
+                      <td><input type="text" name="nondni3"/></td>
+                      <td><input type="text" name="nondni4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>जेवणाचा / राहण्याचा खर्च</td>
+                      <td><input type="text" name="jevan_rahne1"/></td>
+                      <td><input type="text" name="jevan_rahne2"/></td>
+                      <td><input type="text" name="jevan_rahne3"/></td>
+                      <td><input type="text" name="jevan_rahne4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>विमा खर्च</td>
+                      <td><input type="text" name="vima1"/></td>
+                      <td><input type="text" name="vima2"/></td>
+                      <td><input type="text" name="vima3"/></td>
+                      <td><input type="text" name="vima4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>अभ्यासक्रमासाठी आवश्यक असलेल्या इतर खर्च (तपशील जोडावा) </td>
+                      <td><input type="text" name="other1"/></td>
+                      <td><input type="text" name="other2"/></td>
+                      <td><input type="text" name="other3"/></td>
+                      <td><input type="text" name="other4"/></td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>एकूण सर्व खर्च</td>
+                      <td><input type="text" name="total1"/></td>
+                      <td><input type="text" name="total2" placeholder="रु"/></td>
+                      <td><input type="text" name="total3"/></td>
+                      <td><input type="text" name="total4" placeholder="रु"/></td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+              </div><br>
+              <h6 class="text-left" style="margin-bottom: 15px;">विद्यार्थ्याला खालीलपैकी मंजूर झालेल्या/ प्राप्त होणाऱ्या बाबींचा तपशील :- </h6>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="other_scholar" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="विद्यापीठातील इतर शिष्यवृत्ती" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="fellowship" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="Fellowship " /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="gtas" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="Graduate Teacher Assistance Ship  " /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="other_mandhan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="इतर मानधन " /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="campus" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="Campus Job / Library " /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                आम्ही असे जाहीर करतो की, वर सादर केलेली सर्व माहिती संपूर्णत: सत्य आहे हि माहिती खोटी आढळल्यास अर्जदार सदर शिष्यवृत्तीस अपात्र ठरले. 
+                तद्वतच या योजनेशी संबंधीत शासन निर्णयातील तरतुदीनुसार कारवाईस पात्र राहील.  
+              </p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                शासनाने वेळोवेळी निर्गमित केलेले शासन निर्णय, परिपत्रके, अटी व शर्ती मला बंधनकारक असतील. 
+                मी अनुसूचित जातीच्या मुलामुलींना परदेशात विशेष अध्ययन करण्यासाठी राजर्षी शाहू महाराज शिष्यवृत्ती 
+                योजना या योजनेतील शासन निर्णय व नियमावली वाचली असून त्यामधे नमूद सर्व भाग ,प्रतिज्ञापत्र, ना हरकत पत्र, 
+                Surety Bond व इतर आवश्यक बंधपत्रे व हमीपत्रे सादर करण्यास हरकत नाही व ती सर्व सोबत सादर करीत आहे. 
+                सदर शासन निर्णय दि . २७. ०६. २०१७  मधील “कर्तव्यात कसुर” हा परिच्छेद मी वाचून समजून घेतला आहे 
+                व तो मला मान्य असून मी सर्व बाबींचे पालन करीन व भारत देशाची कोणत्याही प्रकारची नामुष्की परदेशात 
+                होईल असे गैरवर्तन वा गैरकृत्य मी करणार नाही याबाबत याद्वारे मी हमी देत आहे.
+              </p>
+              <p class="text-left"> &emsp;&emsp;&emsp;&emsp;
+                माझी निवड झाल्यास मी तात्काळ परदेशातील भारतीय दुतावासाशी संपर्क करून तेथे माझी नोंदणी 
+                करून ती आपणास त्वरीत सादर करेन. 
+              </p>
+              <br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row float-right">ठिकाण:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="text" name="thikan" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">पालकाची सही:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="palak_sign" class="form-control" required />
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                      <input type="text" name="palak_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पालकाचे नांव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>      
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">विद्यार्थ्यांची सही:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="vidyarthi_sign" class="form-control" required />
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                      <input type="text" name="vidyarthi_nav" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="विद्यार्थ्यांचे नांव" /> 
+                    </div>
+                  </div>
+                </div>
+              </div> 
+
+        
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+
+  <script type="text/javascript">
+    function ShowHideDiv1() {
+        var chkYes1 = document.getElementById("chkYes1");
+        var dvPassport1 = document.getElementById("dvPassport1");
+        dvPassport1.style.display = chkYes1.checked ? "block" : "none";
+    }
+  </script>
+
+<script type="text/javascript">
+  function ShowHideDiv2() {
+      var chkYes2 = document.getElementById("chkYes2");
+      var dvPassport2 = document.getElementById("dvPassport2");
+      dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv3() {
+      var chkYes3 = document.getElementById("chkYes3");
+      var dvPassport3 = document.getElementById("dvPassport3");
+      dvPassport3.style.display = chkYes3.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv4() {
+      var chkYes4 = document.getElementById("chkYes4");
+      var dvPassport4 = document.getElementById("dvPassport4");
+      dvPassport4.style.display = chkYes4.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv5() {
+      var chkYes5 = document.getElementById("chkYes5");
+      var dvPassport5 = document.getElementById("dvPassport5");
+      dvPassport5.style.display = chkYes5.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv6() {
+      var chkYes6 = document.getElementById("chkYes6");
+      var dvPassport6 = document.getElementById("dvPassport6");
+      dvPassport6.style.display = chkYes6.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv7() {
+      var chkYes7 = document.getElementById("chkYes7");
+      var dvPassport7 = document.getElementById("dvPassport7");
+      dvPassport7.style.display = chkYes7.checked ? "block" : "none";
+  }
+</script>

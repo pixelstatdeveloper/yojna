@@ -1,0 +1,575 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center">
+        <div class="form-header text-center row">
+          <h5> महाराष्ट्र शासन, अल्पसंख्याक विकास विभाग </h5>
+       <h6>डॉ. झाकीर हुसेन मदरसा आधुनिकीकरण योजना - अर्जाचा नमुना </h6>
+        </div>
+      </br>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>मदरसाचे पूर्ण नाव</b></label>
+        </div>
+        <div class="col-md-9">
+          <label class="form-group form-row">: {{up.madarsa_name}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>मदरसाचा पत्रव्यवहाराचा पूर्ण पत्ता</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.madarsa_patta}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>मदरसाचा दूरध्वनी क्र.</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.mobile_number}}</label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>मदरसाचा website व email</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.email_id}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>मदरसा चालविणाऱ्या संस्थेचे नाव</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.sanstha_name}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>मदरसा चालविणाऱ्या संस्थेचा पूर्ण पत्ता</b></label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.sanstha_patta}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row text-left"><b>मदरसा चालविणाऱ्या संस्थेचा दूरध्वनी क्र.</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.mobile_number1}}</label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row text-left"><b>मदरसा चालविणाऱ्या संस्थेचा website व email</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.email_id1}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>संस्थेच्या अध्यक्षांचे पूर्ण नाव</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.adhyaksh_name}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>संस्थेच्या अध्यक्षांचा दूरध्वनी क्र.</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.mobile_number2}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>संस्थेच्या अध्यक्षांचा पूर्ण पत्ता</b> </label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.adhyaksh_patta}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>संस्थेच्या सचिवांचे पूर्ण नाव</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.sachiv_name}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>संस्थेच्या सचिवांचा दूरध्वनी क्र.</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.mobile_number3}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-group form-row text-left"><b>संस्थेच्या नोंदणीचा क्रमांक अ) वक्फ कायदा, आ) सार्वजनिक न्यास नोंदणी अधिनियम, १९५० अंतर्गत</b></label>
+        </div>
+        <div class="col-md-6">
+          <label class="form-group form-row">: {{up.nondani_kr}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-5">
+          <label class="form-group form-row text-left"><b>मदरशाचे खाते असलेल्या राष्ट्रीयकृत बँकेचे नाव</b></label>
+        </div>
+        <div class="col-md-7">
+          <label class="form-group form-row">: {{up.bank_name}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>खाते क्रमांक</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.acc_no}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>IFSC कोड</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.ifsc}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row text-left"><b>मदरशातील पटसंख्या (वयोगट निहाय स्वतंत्रपणे तक्ता प्रपत्र 3 मध्ये द्यावा.)</b></label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row">: {{up.patsankhya}}</label>
+        </div>
+        <div class="col-md-3">
+          <label class="form-group form-row text-left"><b>मदरशातील अभ्यासक्रमाचे माध्यम</b></label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.madhyam}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-group form-row text-left"><b>मदरसांमधील शिक्षक / शिक्षकांची संख्या (धार्मिक शिक्षक वगळून) (नियुक्तीचा दिनांक, शैक्षणिक पात्रता, प्रशिक्षित / अप्रशिक्षित इ. माहिती स्वतंत्रपणे जोडावी)</b></label>
+        </div>
+        <div class="col-md-6">
+          <label class="form-group form-row">: {{up.e_mahiti}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-6">
+          <label class="form-group form-row text-left"><b>मदरसांकडील सोई-सुविधा : अ) मदरसा संस्थेच्या मालकीच्या इमारतीमध्ये चालवली जाते व भाड्याच्या  इमारतीमध्ये तपशील द्यावा. आ) i) बांधकामाचा तपशील (सध्या उपलब्ध)</b></label>
+        </div>
+        <div class="col-md-6">
+          <label class="form-group form-row">: {{up.soi_suvidha}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:190px;overflow:auto;">
+    <table class="table table-bordered table-striped table-hover main_bany_text">
+      <thead>
+        <tr class="text-center" style="font-size:14px;">
+          <th></th>
+          <th>शैक्षणिक कार्य</th>
+          <th>निवासस्थान </th>
+          <th>स्वच्छता गृह</th>
+          <th>एकूण क्षेत्रफळ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center">
+          <td>खोल्यांची संख्या</td>
+          <td>{{up.kho_sankhya1}}</td>
+          <td>{{up.kho_sankhya2}}</td>
+          <td>{{up.kho_sankhya3}}</td>
+          <td>{{up.kho_sankhya4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>क्षेत्रफळ</td>
+          <td>{{up.kshetrafal1}}</td>
+          <td>{{up.kshetrafal2}}</td>
+          <td>{{up.kshetrafal3}}</td>
+          <td>{{up.kshetrafal4}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</br>
+<div class="form-group">
+  <div class="input-icon">
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-group form-row text-left"><b>मदरसांमधील पिण्याच्या पाण्याच्या सुविधांचा तपशील</b></label>
+      </div>
+      <div class="col-md-6">
+        <label class="form-group form-row">: {{up.pinych_pani}}</label>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-7">
+          <label class="form-group form-row"><b>मदर्साच्या मालकीची/भाड्याची स्थावर जंगम मालमत्ता आहे काय ?</b> </label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row">: {{up.malkichi}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>७/१२ उतारा</b> </label>
+        </div>
+        <div class="col-md-1">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+            style="width:120px!important;color:#fff"  href="/media/{{up.utara}}" target="blank"> पहा </a></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-5">
+          <label class="form-group form-row"><b>मदरसामध्ये इतर उपक्रम राबविले जातात काय?</b> </label>
+        </div>
+        <div class="col-md-7">
+          <label class="form-group form-row">: {{up.upkram}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row"><b>मागणी केलेल्या रकमेचा तपशील</b> </label>
+        </div>
+        <div class="col-md-8">
+          <label class="form-group form-row">: {{up.tapshil}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6 class="form-group text-left"><b>अ) भौतिक व शैक्षणिक सुविधा :</b></h6>
+ 
+    <table class="table table-bordered table-striped table-hover main_bany_text">
+      <thead>
+        <tr class="text-center" style="font-size:14px;">
+          <th>अ.क्र.</th>
+          <th>निर्माण करावयाच्या सुविधा</th>
+          <th>संख्या</th>
+          <th>दुरुस्तीची / बांधकामांची / खरेदीची किंमत प्रति नग</th>
+          <th>आवश्यक रक्कम रुपये</th>
+          <th>शेरा</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center">
+          <td>१</td>
+          <td>२</td>
+          <td>३</td>
+          <td>४</td>
+          <td>५</td>
+          <td>६</td>
+        </tr>
+        <tr class="text-center">
+          <td>१</td>
+          <td>मदरसाच्या इमारतीची</td>
+          <td>{{up.nutanikaran1}}</td>
+          <td>{{up.nutanikaran2}}</td>
+          <td>{{up.nutanikaran3}}</td>
+          <td>{{up.nutanikaran4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>अ) मदरसा खोल्यांची डागडुजी दुरुस्ती</td>
+          <td>{{up.dagduji1}}</td>
+          <td>{{up.dagduji2}}</td>
+          <td>{{up.dagduji3}}</td>
+          <td>{{up.dagduji4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>ब) छत दुरुस्ती</td>
+          <td>{{up.chhat1}}</td>
+          <td>{{up.chhat2}}</td>
+          <td>{{up.chhat3}}</td>
+          <td>{{up.chhat4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>क) मदरसा खोल्या मध्ये फरशी बसवणे</td>
+          <td>{{up.farshi1}}</td>
+          <td>{{up.farshi2}}</td>
+          <td>{{up.farshi3}}</td>
+          <td>{{up.farshi4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>ड) इतर</td>
+          <td>{{up.itar1}}</td>
+          <td>{{up.itar2}}</td>
+          <td>{{up.itar3}}</td>
+          <td>{{up.itar4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>२</td>
+          <td>पिण्याच्या पाण्याची सुविधा (कुलर / फिल्टर सह)</td>
+          <td>{{up.kooler1}}</td>
+          <td>{{up.kooler2}}</td>
+          <td>{{up.kooler3}}</td>
+          <td>{{up.kooler4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>३</td>
+          <td>स्वच्छतागृहे</td>
+          <td>{{up.swachhata1}}</td>
+          <td>{{up.swachhata2}}</td>
+          <td>{{up.swachhata3}}</td>
+          <td>{{up.swachhata4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>अ) नवीन स्वच्छतागृहे बांधणे</td>
+          <td>{{up.swachhtagruhe1}}</td>
+          <td>{{up.swachhtagruhe2}}</td>
+          <td>{{up.swachhtagruhe3}}</td>
+          <td>{{up.swachhtagruhe4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>४</td>
+          <td>शैक्षणिक कार्यासाठी आवश्यक फर्निचर</td>
+          <td>{{up.furniture1}}</td>
+          <td>{{up.furniture2}}</td>
+          <td>{{up.furniture3}}</td>
+          <td>{{up.furniture4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>अ) बेंचेस / डेक्स / टेबल कपाट / खुर्च्या</td>
+          <td>{{up.benches1}}</td>
+          <td>{{up.benches2}}</td>
+          <td>{{up.benches3}}</td>
+          <td>{{up.benches4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>५</td>
+          <td>इन्वर्टर ची सुविधा निर्माण करणे (मुंबई शहर व उपनगरे वगळून)</td>
+          <td>{{up.inverter1}}</td>
+          <td>{{up.inverter2}}</td>
+          <td>{{up.inverter3}}</td>
+          <td>{{up.inverter4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>६</td>
+          <td>मदरसांच्या निवासी इमारती चे नूतनीकरण व डागडुजी</td>
+          <td>{{up.imarat1}}</td>
+          <td>{{up.imarat2}}</td>
+          <td>{{up.imarat3}}</td>
+          <td>{{up.imarat4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>७</td>
+          <td>संगणक कक्ष</td>
+          <td>{{up.sanganak1}}</td>
+          <td>{{up.sanganak2}}</td>
+          <td>{{up.sanganak3}}</td>
+          <td>{{up.sanganak4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>अ) संगणक संख्या</td>
+          <td>{{up.sankhya1}}</td>
+          <td>{{up.sankhya2}}</td>
+          <td>{{up.sankhya3}}</td>
+          <td>{{up.sankhya4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>ब) प्रिंटर्स</td>
+          <td>{{up.printers1}}</td>
+          <td>{{up.printers2}}</td>
+          <td>{{up.printers3}}</td>
+          <td>{{up.printers4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>क) सॉफ्टवेअर्स</td>
+          <td>{{up.software1}}</td>
+          <td>{{up.software2}}</td>
+          <td>{{up.software3}}</td>
+          <td>{{up.software4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>ड) इतर साहित्य</td>
+          <td>{{up.itar_sahity1}}</td>
+          <td>{{up.itar_sahity2}}</td>
+          <td>{{up.itar_sahity3}}</td>
+          <td>{{up.itar_sahity4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>८</td>
+          <td>प्रयोगशाळा उभारणे / अद्यावत करणे (सविस्तर तपशील द्यावा)</td>
+          <td>{{up.prayogshala1}}</td>
+          <td>{{up.prayogshala2}}</td>
+          <td>{{up.prayogshala3}}</td>
+          <td>{{up.prayogshala4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td>९</td>
+          <td>ग्रंथालयासाठी</td>
+          <td>{{up.granthalay1}}</td>
+          <td>{{up.granthalay2}}</td>
+          <td>{{up.granthalay3}}</td>
+          <td>{{up.granthalay4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>अ) बुक बँक / क्रमिक पुस्तके खरेदी</td>
+          <td>{{up.book_bank1}}</td>
+          <td>{{up.book_bank2}}</td>
+          <td>{{up.book_bank3}}</td>
+          <td>{{up.book_bank4}}</td>
+        </tr>
+        <tr class="text-center">
+          <td></td>
+          <td>ब) इतर पुस्तके खरेदी</td>
+          <td>{{up.pustke_khredi1}}</td>
+          <td>{{up.pustke_khredi2}}</td>
+          <td>{{up.pustke_khredi3}}</td>
+          <td>{{up.pustke_khredi4}}</td>
+        </tr>
+      </tbody>
+    </table>
+</br>
+<h6 class="form-group text-left"><b>ब) शिक्षकांचे मानधन: रू </b> {{up.mandhan}}</h6>
+        <h6 class="form-group text-left">मागणी केलेली एकूण रक्कम : एकूण ((अ) + (ब)) रु <b>{{up.magni}}</b></h6>
+    </br>
+    <h6 class="form-group text-left">मी / आम्ही श्री. / श्रीमती <b>{{up.mi}}</b> व श्री. / श्रीमती <b>{{up.pramanit}}</b>
+      असे प्रमाणित करतो की , आमच्या <b>{{up.sansthedvara}}</b> संस्थेद्वारा संचलित <b>{{up.sanchalit}}</b> या मदरसांसाठी 
+      अनुदान मागणी संदर्भात उपरोक्त दिलेल्या सर्व माहितीची पडताळणी केली असून सर्व माहिती सत्य व बरोबर आहे.</h6>
+    </br>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>नाव</b> </label>
+        </div>
+        <div class="col-md-5">
+          <label class="form-group form-row">: {{up.name}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>सही</b> </label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+            style="width:120px!important;color:#fff"  href="/media/{{up.signature}}" target="blank"> सही पहा </a></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-3">
+          <label class="form-group form-row"><b>हुद्दा - सचिव / अध्यक्ष</b> </label>
+        </div>
+        <div class="col-md-5">
+          <label class="form-group form-row">: {{up.hudda}}</label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"><b>शिक्का</b> </label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+            style="width:120px!important;color:#fff"  href="/media/{{up.shikka}}" target="blank"> पहा </a></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-icon">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="form-group form-row text-left"><b>संस्थेच्या अध्यक्षांचे गट शिक्षण अधिकारी /शिक्षण निरीक्षक/ उपशिक्षणाधिकरी यांनी साक्षांकित केलेले छायाचित्र</b> </label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+            style="width:120px!important;color:#fff"  href="/media/{{up.photo1}}" target="blank"> पहा </a></label>
+        </div>
+        <div class="col-md-4">
+          <label class="form-group form-row text-left"><b>संस्थेच्या सचिवांचे गट शिक्षण अधिकारी/शिक्षण निरीक्षक/उपशिक्षणाधिकारी यांनी साक्षांकित केलेले छायाचित्र</b> </label>
+        </div>
+        <div class="col-md-2">
+          <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+            style="width:120px!important;color:#fff"  href="/media/{{up.photo2}}" target="blank"> पहा </a></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  
+  
+  
+
+  

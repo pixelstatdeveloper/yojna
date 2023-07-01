@@ -1,0 +1,378 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+          <form id="application_form" action="{% url 'web:bhumihin' scheme.id %}" method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+               <div class="form-header text-center">
+                <h6 style="margin-bottom: 5px;"> महाराष्ट्र शासन </h6>
+                <h5 style="margin-bottom: 15px;">आदिवासी विकास विभाग</h5>
+                <h5 style="margin-bottom: 5px;"><b>भूमिहीन दारिद्र्य रेषेखालील आदिवासींचे सबळीकरण व स्वाभिमान योजना - योजनेचा</b></h5>
+                <h5 style="margin-bottom: 12px;"><b>लाभ देण्यासाठी विहित नमुन्यातील अर्ज</b></h5>
+                <h6><b>(शा. नि. क्र. भुवायो २००३ / प्र. क्र. १४२ / का.९ दिनांक २४/२/२००४)</b></h6>
+               </div>
+
+              <br/><br>
+
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 10px;"> प्रति,</h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; प्रकल्प अधिकारी </h6>
+              <h6 class=" text-left" style="font-weight: 500; margin-bottom: 5px;">&emsp;&emsp; एकात्मिक आदिवासी विकास प्रकल्प</h6>
+              <h6 class=" text-left" style="font-weight: 500;">&emsp;&emsp; <span><input type="text" name="jilha" required placeholder="जिल्हा"></span></h6>
+              <br><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचे संपूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="huswife_name" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पती-पत्नीचे संपूर्ण नाव" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <textarea type="text" name="address" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="पूर्ण पत्ता"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="anu_jamat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                          placeholder="अनुसूचित जमातीचा उल्लेख" /> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="adim_jamat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="अ) आदिम जमाती (कातकरी,कोलाम व माडिया)" />
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="striya" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="ब) परितक्त्या स्त्रिया" />
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="form-group" >
+                    <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="vidhwa" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="क) विधवा स्त्रिया" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">दि.१/१/२००० रोजी भूमिहीन शेतमजूर आहे काय?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="bhumihin_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="bhumihin_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">दारिद्रय रेषेखालील आहे काय?  &emsp;&emsp;&emsp;&emsp;
+                        <label><input type="radio" name="daridrya_yn" id="chkYes1" onclick="ShowHideDiv1()" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="daridrya_yn" id="chkNo1" onclick="ShowHideDiv1()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport1" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">असल्यास,</label>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" name="daridrya_no" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        placeholder="कार्ड नं." />
+                    </div>
+                    <div class="col-md-4 float-right"><label>किंवा</label></div>
+                  </div><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="form-group form-row ">स्थानिक तलाठी/ग्रामसेवक यांचा दाखला जोडावा:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="talathi_cf" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="number" name="age" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="अर्जदाराचे अर्ज देतांना वय " />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                      <label class="form-group form-row ">लाभधारकास कृषी व पदुम विभाग, आदिवासी विकास विभाग यांच्याकडून बैलजोडी, सुधारित बी- बियाणे,विहिर,विद्युतपंप/तेलपंप ,पाईप पुरवठा केला आहे काय?</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label><input type="radio" name="labhdharak_yn" id="chkYes2" onclick="ShowHideDiv2()" value="होय" required> होय </label> 
+                        <label><input type="radio" name="labhdharak_yn" id="chkNo2" onclick="ShowHideDiv2()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport2" style="display: none" >
+                <div class="input-icon" >
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="tapshil" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                         placeholder="याचा तपशिल" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                      <label class="form-group form-row ">भूमिहीन शेतमजुरांना महसूल व वनविभागाने गायरान व अतिरिक्त जमीनीचे वाटप केले आहे काय ??</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label><input type="radio" name="jamin_yn" value="होय" required> होय </label>
+                      <label><input type="radio" name="jamin_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                      <label class="form-group form-row ">जमिनीच्या अतिक्रमणाबाबतची प्रकरणे़ अतिक्रमण अधिनियमांतर्गत महसूल अधिकाऱ्याकडे प्रलंबित आहेत काय?</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label><input type="radio" name="atikraman_yn" value="होय" required> होय </label> 
+                        <label><input type="radio" name="atikraman_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8 text-left">
+                      <label class="form-group form-row ">उपलब्ध करुन घ्यावयाच्या जमिनीकरिता ५० टक्के बिनव्याजी कर्ज व ५० टक्के रक्कम अनुदान       
+                        स्वरुपांत प्राप्त जमिन अन्य कोणत्याही व्यक्तीला विक्री व्दारे अथवा कोणत्याही कारणास्तव हस्तांतरित         
+                         करता येणार नाही. याबाबतचे प्रतिज्ञापत्र सादर केले आहे.</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="pratidnyapatra" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-8 text-left">
+                      <label class="form-group form-row ">मला लाभ मंजुर झाल्यास देण्यात येणारे कर्ज हे बिनव्याजी व १०वर्ष मुदतीकरिता असुन कर्जफेडीची     
+                        सुरुवात कर्ज मंजुरीनंतर २ वर्षानंतर सुरु करण्यात येईल याबाबतचे लेखी हमीपत्र दिले आहे.</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="hamipatra" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input type="text" name="mashagat" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="प्राप्त करुन दिलेली जमिन लाभार्थी कशाप्रकारे मशागत करणार आहे" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0px;" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-12 form-group text-left">शेती व्दारे मिळणाऱ्या उत्पन्नाचा तपशिल वेळोवेळी प्रकल्प कार्यालयास कळविण्यात येईल. &emsp;&emsp;
+                        <label><input type="radio" name="income_yn" value="होय" required> होय </label>  &emsp;
+                        <label><input type="radio" name="income_yn" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                 <div class="row">
+                  <div class="col-md-12">
+                    <select name="water_src" class="py-3 font-13 form-control" required style="display: block; width: 100%; height: calc(1.5em + .75rem + 2px); font-size: 1rem; font-weight: 400; line-height: 1.5;
+                        color: #212529; border: 1px solid #ced4da; padding: 0px 10px!important;">
+                      <option value="">पाण्याचे स्त्रोत</option>
+                      <option value="विहीर">विहीर</option>
+                      <option value="नदी">नदी</option>
+                      <option value="नाला ">नाला</option>
+                      <option value="तलाव">तलाव</option>
+                      <option value="पाट">पाट</option>
+                      <option value="अन्य मार्गाने">अन्य मार्गाने</option>
+                   </select>
+                  </div>
+                 </div>
+                </div>
+              </div>
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-10 text-left">
+                      <label class="form-group form-row ">प्रकल्प कार्यालयामार्फत अथवा इतर विभागामार्फत यापुर्वी सदर योजनेचा अथवा इतर योजनेचा लाभ घेतला आहे काय ?</label>
+                    </div>
+                    <div class="col-md-2">
+                      <label><input type="radio" name="yojnalabh_yn" id="chkYes3" onclick="ShowHideDiv3()" value="होय" required> होय </label> 
+                      <label><input type="radio" name="yojnalabh_yn" id="chkNo3" onclick="ShowHideDiv3()" value="नाही" required> नाही</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="dvPassport3" style="display: none" >
+                <div style="height:180px;overflow:auto;">
+                    <table class="table table-bordered table-striped table-hover main_bany_text">
+                      <thead>
+                        <tr class="text-center" style="font-size:14px;">
+                          <th>अ.क.</th>
+                          <th>योजनेचे नाव</th>
+                          <th>वर्ष </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td>१)</td>
+                          <td><input type="text" name="yojna1"/></td>
+                          <td><input type="number" name="year1"/></td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>२)</td>
+                          <td><input type="text" name="yojna2"/></td>
+                          <td><input type="number" name="year2"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+
+              <p class="text-left" style="word-spacing: 5px; margin-bottom: 15px;"> &emsp;&emsp;&emsp;&emsp;
+                वर नमुद अर्जात देण्यात आलेली माहिती खरी आहे, तपासणी दरम्यान माहिती खोटी आढळून    
+                आल्यास, मी स्वत: कायदेशीर कार्यवाहीस पात्र राहीन.
+              </p>
+              <p class="text-left" style="word-spacing: 5px; margin-bottom: 15px;"> &emsp;&emsp;&emsp;&emsp;
+                अर्ज स्विकारणे अथवा नाकारणे याचा पुर्ण अधिकार प्रकल्प अधिकारी यांना राहील. यासाठी माझी 
+                कोणतीही हरकत राहणार नाही.
+              </p>
+              <p class="text-left" style="word-spacing: 5px;"> &emsp;&emsp;&emsp;&emsp;
+                तरी उपरोक्त बाबींचा विचार करुन मला योजनेचा लाभ मिळावा ही विनंती.
+              </p><br>
+
+              <div class="form-group" >
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row">दिनांक:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="date" name="dinank" class="form-control rounded-0 py-3 font-13 sign-register-input" /> 
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                      <input type="text" name="place" class="form-control rounded-0 py-3 font-13 sign-register-input"
+                        required placeholder="स्थळ" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-icon">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <label class="form-group form-row ">फोटो:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="photo" class="form-control" required />
+                    </div>
+                    <div class="col-md-2">
+                      <label class="form-group form-row ">अर्जदाराची सही:</label>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="file" name="sign" class="form-control" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+       
+        <div class="row form-group p-0">
+          <label class="text-center font-weight-bold"><input type="checkbox" name="terms" required> I truly declare that above information is correct to the best of my knowledge</label>
+        </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+
+  <script type="text/javascript">
+    function ShowHideDiv1() {
+        var chkYes1 = document.getElementById("chkYes1");
+        var dvPassport1 = document.getElementById("dvPassport1");
+        dvPassport1.style.display = chkYes1.checked ? "block" : "none";
+    }
+  </script>
+
+<script type="text/javascript">
+  function ShowHideDiv2() {
+      var chkYes2 = document.getElementById("chkYes2");
+      var dvPassport2 = document.getElementById("dvPassport2");
+      dvPassport2.style.display = chkYes2.checked ? "block" : "none";
+  }
+</script>
+
+<script type="text/javascript">
+  function ShowHideDiv3() {
+      var chkYes3 = document.getElementById("chkYes3");
+      var dvPassport3 = document.getElementById("dvPassport3");
+      dvPassport3.style.display = chkYes3.checked ? "block" : "none";
+  }
+</script>

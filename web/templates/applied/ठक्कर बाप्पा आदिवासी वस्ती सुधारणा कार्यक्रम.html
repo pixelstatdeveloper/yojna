@@ -1,0 +1,201 @@
+<div class="container">
+  <div class="row">
+      <div class="col-12 text-center"><br>
+        <div class="form-header text-row">
+          <h4> ठक्कर बाप्पा आदिवासी वस्ती सुधारणा योजना </h4> 
+     </div>
+    <br/>
+            <h6 class=" text-left" style="font-weight: 500;"> प्रति,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> मा. प्रकल्प अधिकारी,</h6>
+            <h6 class=" text-left" style="font-weight: 500;"> एकात्मिक आदिवासी विकास प्रकल्प, </h6>
+            <h6 class=" text-left" style="font-weight: 500;"> नागपूर.</h6>
+            <br/>
+
+            <h6 class=" text-center" style="font-weight: 500;">सन <b> {{ up.san }}</b>  साठी ठक्कर बाप्पा आदिवासी वस्ती सुधार योजने अंतर्गत प्रस्ताव तयार करून मंजुरीसाठी पाठवीत आहोत.</h6>                
+            <br>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row"><b>ग्रामपंचायतीचे नाव</b>  </label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-group form-row">: {{ up.gp_name }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row"><b>ठक्कर बाप्पा मोहल्याचे नाव</b></label>
+                  </div>
+                  <div class="col-md-8">
+                      <label class="form-group form-row">: {{ up.tbarea_name }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="form-group form-row"><b> संपूर्ण पत्ता / तालुका / जिल्हा</b> </label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-group form-row">: {{ up.paripurn_patta }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5">
+                    <label class="form-group form-row"> <b>वस्तीची / गावाची / मोहल्याची एकूण लोकसंख्या</b> </label>
+                  </div>
+                  <div class="col-md-7">
+                      <label class="form-group form-row">: {{ up.total_population }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5">
+                    <label class="form-group form-row"> <b>त्यापैकी अनुसूचित जमातीची एकूण लोकसंख्या</b> </label>
+                  </div>
+                  <div class="col-md-7">
+                      <label class="form-group form-row">: {{ up.anusuchit_population }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5 text-left">
+                    <label class="form-group form-row"> <b>गावात / वस्तीत / मोहल्यात कोणत्या जाती / जमातीचे लोक राहतात</b> </label>
+                  </div>
+                  <div class="col-md-7">
+                      <label class="form-group form-row">: {{ up.living_castes }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-5 text-left">
+                    <label class="form-group form-row"><b>ठक्कर बाप्पा वस्ती सुधार योजनेत घ्यावयाच्या प्रस्तावित बांधकामाचा स्पष्ट उल्लेख करावा</b>  </label>
+                  </div>
+                  <div class="col-md-7">
+                      <label class="form-group form-row">: {{ up.prastav_bandhkam }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" style= "font-family: 'Arya', sans-serif!important;">
+              <div class="input-icon">
+                  <div class="row">
+                      <div class="col-8">
+                        <label class="form-group form-row"><b>ठक्कर बाप्पा वस्ती सुधार योजनेसाठी यापूर्वी अनुदान मिळाले होते का?</b></label>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="form-group form-row">: {{ up.bfor_anudan }}</label>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="form-group form-row"><b> मिळाल्यास किती? कोणत्या कामासाठी व केव्हा (वर्ष)?</b> </label>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-group form-row">: {{ up.anudan_amount }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-10 text-left">
+                      <label class="form-group form-row"> <b>प्रस्तावित बांधकामास मंजुरी मिळाल्यास मंजूर अनुदानापेक्षा येणारा जास्तीचा खर्च करण्यास ग्रामपंचायत तयार असल्याबाबतचा ग्रा.पं. चा लेखी ठराव देण्यात यावा</b>  </label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                      style="width:100px!important;color:#fff"  href="/media/{{up.gp_xtranudan}}" target="blank"> पहा </a></label>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-10">
+                      <label class="form-group form-row"><b>मंजूर बांधकाम सहा महिन्यात पूर्ण करून घेणेबाबत ग्रा. पं. चा ठराव जोडावा</b> </label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                      style="width:100px!important;color:#fff"  href="/media/{{up.gp_sixmonth}}" target="blank"> पहा </a></label> 
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-10 text-left">
+                      <label class="form-group form-row"><b>बांधकामास लागणारी जागा ग्रामपंचायतीच्या मालकीची असल्याचा तलाठयाचा दाखला (७/१२) सोबत जोडावा</b>  </label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                      style="width:100px!important;color:#fff"  href="/media/{{up.talathi_satbara}}" target="blank"> पहा </a></label> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <div class="input-icon">
+                <div class="row">
+                  <div class="col-md-10 text-left">
+                      <label class="form-group form-row"><b>ग्रामपंचायतच्या खाती असलेली शिल्लक रकमेचा लेखा तपशील जोडावा</b>  </label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                      style="width:100px!important;color:#fff"  href="/media/{{up.gp_shilak}}" target="blank"> पहा </a></label> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="form-group" >
+             <div class="input-icon">
+               <div class="row">
+                 <div class="col-md-1">
+                   <label class="form-group form-row"> <b>सरपंच</b> </label>
+                 </div>
+                 <div class="col-md-5">
+                  <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="width:100px!important;color:#fff"  href="/media/{{up.sarpanchsign}}" target="blank"> पहा </a></label>
+                 </div>
+                 <div class="col-md-1">
+                   <label class="form-group form-row"> <b>सचिव</b> </label>
+                 </div>
+                 <div class="col-md-5">
+                  <label class="form-group form-row"> <a class="btn btn-block rounded-0 white-color fables-main-hover-background-color fables-second-background-color font-16 semi-font"
+                    style="width:100px!important;color:#fff"  href="/media/{{up.sachivsign}}" target="blank"> पहा </a></label>
+                 </div>
+               </div>
+             </div>
+           </div>
+     
+</div>
+</div>
+</div>
+
+

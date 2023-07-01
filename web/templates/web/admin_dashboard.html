@@ -1,0 +1,178 @@
+{% extends 'web/layout1.html' %}
+{% load static %}
+{% load ui_tags %}
+{% block title %}Schemes{% endblock %}
+{% block description %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block keywords %} {% settings_value 'APP_NAME' %} {% endblock %}
+{% block css %} {% endblock %}
+{% block pre_load_js %}
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+{% endblock %}
+{% block body %}
+<!-- Start Menu -->
+<div class="Top-menu clear">
+
+  <ul class="menuDB topnav-right  ">
+    <li>
+      <a href="{% url 'web:depart_dashboard' %}" class="" style="color: black;">Dashboard</a>
+    </li>
+
+    <li>
+      <a href="{% url 'web:depart_1_stats' %}" class="" style="color: black;">Reports</a>
+    </li>
+
+
+  </ul>
+</div>
+
+<!-- End Menu -->
+<!-- Start DB -->
+
+<div class="SecurityDash">
+  <div class="SecDashCounter">
+    <p>Home / Dashboard</p>
+    <h5>Admin Dashboard</h5>
+  </div>
+  <div class="SecDashCounter">
+    <div class="iconbox"><a href=""><i class="fa fa-building"></i></a></div>
+    <div>
+      <p>Total Schemes</p>
+      <h5>{{ schemes_ct }}</h5>
+    </div>
+  </div>
+  <div class="SecDashCounter">
+    <div class="iconbox" style="background-color:#ffea00 ;"><a href=""><i class="fa fa-users"></i></a></div>
+    <div>
+      <p>Total Applicants</p>
+      <h5>{{applicant}}</h5>
+    </div>
+  </div>
+  <div class="SecDashCounter">
+    <div class="iconbox" style="background-color:#DC3545;"><a href=""><i class="fa fa-users"></i></a></div>
+    <div>
+      <p>Total Labharthi</p>
+      <h5>{{ labh }}</h5>
+    </div>
+  </div>
+</div>
+
+<div class="AdminDashboard clear">
+  <div class="WlcmAdmin">
+    <img src="{% static 'web/images/admin.png' %}" />
+    <h4>Welcome Admin</h4>
+  </div>
+  <div class="WorkerStatastics">
+    <h5>Application Statistic of the Month</h5>
+    <canvas id="statastics" style="max-width:600px"></canvas>
+  </div>
+  <div class="StatasticsMaleFemale">
+    <h5>Application status</h5>
+    <canvas id="TotalMaleFemale" style="width:150px; height:160px;"></canvas>
+  </div>
+</div>
+
+<!-- Endof DB -->
+<!-- <div class="container">
+      <div class="table-responsive">
+          <table class="table table-bordered table-striped table-hover main_bany_text" id="employee_data">
+            <thead >
+              <tr class="text-center" style="font-size:16px;">
+                <th scope="col">Sr.No</th>
+                <th scope="col">Scheme Name</th>
+                <th scope="col">No. of Applicants</th>
+                {%if request.user.role != 'Department clerk 2'%}
+                <th scope="col">Pending</th>
+                <th scope="col">In Progress</th>
+                <th scope="col">Approved</th>
+                <th scope="col">Verified</th>
+                <th scope="col">Rejected</th>
+                <th scope="col">Labharthi</th>
+                {%else%}
+                <th scope="col">Approved</th>
+                <th scope="col">Labharthi</th>
+                {%endif%}
+              </tr>
+            </thead>
+            <tbody>
+                {% for i in context%}
+              <tr>
+    
+                <th scope="row">{{i.sr_no}}</th>
+                <td><a href="{% url 'web:depart_1_scheme' i.scheme_id %}">{{i.scheme_name}}</a></td>
+                <td>{{i.schemes_user}}</td>
+                {%if request.user.role != 'Department clerk 2' %}
+                <td>{{i.schemes_pending}}</td>
+                <td>{{i.schemes_in_progress}}</td>
+                <td>{{i.schemes_approved}}</td>
+                <td>{{i.schemes_verified}}</td>
+                <td>{{i.schemes_rejected}}</td>
+                <td>{{i.schemes_labharthi}}</td>
+                {%else%}
+                <td>{{i.schemes_approved}}</td>
+                <td>{{i.schemes_labharthi}}</td>
+                {%endif%}
+              </tr>
+              {%endfor%}
+    
+            </tbody>
+          </table>
+      </div>
+          <div class="row">
+          <div class="col-md-12"> 
+            <button type="button" class="btn fables-second-background-color yojana_mainbotton" id="export_button" style="float:right; font-family: 'Arya', sans-serif!important;;margin:0px!important;">Download</button>
+          </div>
+       </div>
+    </div> -->
+<br>
+<br>
+<br>
+
+<script>
+  /* Line Chart */
+  // var xValues = ["Scheme1", "Scheme2", "Scheme3", "Scheme4", "Scheme5", "Scheme6", "Scheme7", "Scheme8", "Scheme9", "Scheme10", "Scheme11", "Scheme12", "Scheme13", "Scheme14", "Scheme15", "Scheme16", "Scheme17", "Scheme18",];
+  // var yValues = [1000, 500, 1500, 1000, 2000, 2500, 580, 450, 850, 900, 1200, 1700, 700, 2200, 300, 1100, 600, 2300];
+  var xValues = [{% for x in Schemes %} "{{ forloop.counter }}", {% endfor %}];
+	var yValues = [{% for y in result %} "{{y}}", {% endfor %}];
+  var barColors = ["#40dfcd", "#1F618D ", "#ffaa01", "#ffea00", "#304ffe", "#659c41", "#ab6503", "#33de89", "#9a470c", "#ed1c24", "#34495E", "#7D3C98", "#F1948A", "#A6ACAF", "#E59866", "#1C2833", "#196F3D", "#7B241C"];
+
+  new Chart("statastics", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      legend: { display: false },
+
+    }
+  });
+
+  /*pie chart */
+  var xValues = ["Pending", "Inprogress", "Approved", "Verified", "Rejected", "Labharthi"];
+  var yValues = ["{{ Pending }}", "{{ In_Progress }}", "{{ Approved }}", "{{ Verified }}", "{{ Rejected }}", "{{ labh }}"];
+  var barColors = [
+    "#304ffe",
+    "#ffa601",
+    "#40dfcd",
+    "#ffea00",
+    "#ed1c24",
+    "#659c41",
+
+  ];
+
+  new Chart("TotalMaleFemale", {
+    type: "pie",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+
+  });
+</script>
+{%endblock%}
